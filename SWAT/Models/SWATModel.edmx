@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SWATModel.Store" Alias="Self" Provider="iAnywhere.Data.SQLAnywhere" ProviderManifestToken="12" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="SWATModelStoreContainer">
+          <EntitySet Name="lkpCountry" EntityType="SWATModel.Store.lkpCountry" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpRegion" EntityType="SWATModel.Store.lkpRegion" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSubnational" EntityType="SWATModel.Store.lkpSubnational" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATLocation" EntityType="SWATModel.Store.tblSWATLocation" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATSurvey" EntityType="SWATModel.Store.tblSWATSurvey" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="Userids" EntityType="SWATModel.Store.Userids" store:Type="Tables" Schema="DBA" />
+          <AssociationSet Name="FK_lkpCountry_3_lkpRegion" Association="SWATModel.Store.FK_lkpCountry_3_lkpRegion">
+            <End Role="lkpRegion" EntitySet="lkpRegion" />
+            <End Role="lkpCountry" EntitySet="lkpCountry" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lkpSubnational_2_lkpCountry" Association="SWATModel.Store.FK_lkpSubnational_2_lkpCountry">
+            <End Role="lkpCountry" EntitySet="lkpCountry" />
+            <End Role="lkpSubnational" EntitySet="lkpSubnational" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATLocation_18_lkpCountry" Association="SWATModel.Store.FK_tblSWATLocation_18_lkpCountry">
+            <End Role="lkpCountry" EntitySet="lkpCountry" />
+            <End Role="tblSWATLocation" EntitySet="tblSWATLocation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATLocation_20_lkpRegion" Association="SWATModel.Store.FK_tblSWATLocation_20_lkpRegion">
+            <End Role="lkpRegion" EntitySet="lkpRegion" />
+            <End Role="tblSWATLocation" EntitySet="tblSWATLocation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATLocation_21_lkpSubnational" Association="SWATModel.Store.FK_tblSWATLocation_21_lkpSubnational">
+            <End Role="lkpSubnational" EntitySet="lkpSubnational" />
+            <End Role="tblSWATLocation" EntitySet="tblSWATLocation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSurvey_37_Userids" Association="SWATModel.Store.FK_tblSWATSurvey_37_Userids">
+            <End Role="Userids" EntitySet="Userids" />
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSurvey_38_tblSWATLocation" Association="SWATModel.Store.FK_tblSWATSurvey_38_tblSWATLocation">
+            <End Role="tblSWATLocation" EntitySet="tblSWATLocation" />
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="lkpCountry">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="254" />
+          <Property Name="CurrencyID" Type="int" />
+          <Property Name="RegionID" Type="int" />
+          <Property Name="CommonName" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="lkpRegion">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="lkpSubnational">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CountryID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="tblSWATLocation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="latitude" Type="float" Nullable="false" />
+          <Property Name="longitude" Type="float" Nullable="false" />
+          <Property Name="countryID" Type="int" Nullable="false" />
+          <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="regionID" Type="int" Nullable="false" />
+          <Property Name="subnationalID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSWATSurvey">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Status" Type="tinyint" />
+          <Property Name="StartTime" Type="datetime" />
+          <Property Name="EndTime" Type="datetime" />
+          <Property Name="LocationID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Userids">
+          <Key>
+            <PropertyRef Name="Userid" />
+          </Key>
+          <Property Name="Userid" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="varchar" Nullable="false" MaxLength="254" />
+          <Property Name="Password" Type="varchar" MaxLength="254" />
+          <Property Name="eMail" Type="varchar" MaxLength="254" />
+          <Property Name="Notes" Type="varchar(max)" />
+          <Property Name="SessionVars" Type="varchar(max)" />
+          <Property Name="secondaryId" Type="int" />
+          <Property Name="type" Type="int" Nullable="false" />
+          <Property Name="properties" Type="varchar" />
+          <Property Name="targetName" Type="varchar" />
+          <Property Name="NotifStatus" Type="varchar" MaxLength="128" />
+          <Property Name="NotifCode" Type="char" MaxLength="9" />
+          <Property Name="NotifReqCodeTime" Type="datetime" />
+          <Property Name="NotifActCodeTime" Type="datetime" />
+          <Property Name="PMEmailNotificationsEnabled" Type="bit" Nullable="false" />
+          <Property Name="UseOntarioMaps" Type="bit" Nullable="false" />
+          <Property Name="First_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Last_Name" Type="varchar" MaxLength="255" />
+          <Property Name="Address" Type="varchar" MaxLength="255" />
+          <Property Name="utmX" Type="decimal" Precision="30" Scale="10" />
+          <Property Name="utmY" Type="decimal" Precision="30" Scale="10" />
+          <Property Name="Joined" Type="datetime" Nullable="false" />
+          <Property Name="Interests" Type="varchar(max)" />
+          <Property Name="Workplace" Type="varchar" MaxLength="255" />
+          <Property Name="SecretQuestion" Type="varchar(max)" />
+          <Property Name="SecretAnswer" Type="varchar" MaxLength="255" />
+          <Property Name="AvatarUserPhotoID" Type="int" />
+          <Property Name="LastSuggestedContentDate" Type="datetime" />
+          <Property Name="FullName" Type="varchar" MaxLength="500" />
+        </EntityType>
+        <Association Name="FK_lkpCountry_3_lkpRegion">
+          <End Role="lkpRegion" Type="SWATModel.Store.lkpRegion" Multiplicity="0..1" />
+          <End Role="lkpCountry" Type="SWATModel.Store.lkpCountry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpRegion">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="lkpCountry">
+              <PropertyRef Name="RegionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lkpSubnational_2_lkpCountry">
+          <End Role="lkpCountry" Type="SWATModel.Store.lkpCountry" Multiplicity="1" />
+          <End Role="lkpSubnational" Type="SWATModel.Store.lkpSubnational" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpCountry">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="lkpSubnational">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATLocation_18_lkpCountry">
+          <End Role="lkpCountry" Type="SWATModel.Store.lkpCountry" Multiplicity="1" />
+          <End Role="tblSWATLocation" Type="SWATModel.Store.tblSWATLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpCountry">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATLocation">
+              <PropertyRef Name="countryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATLocation_20_lkpRegion">
+          <End Role="lkpRegion" Type="SWATModel.Store.lkpRegion" Multiplicity="1" />
+          <End Role="tblSWATLocation" Type="SWATModel.Store.tblSWATLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpRegion">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATLocation">
+              <PropertyRef Name="regionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATLocation_21_lkpSubnational">
+          <End Role="lkpSubnational" Type="SWATModel.Store.lkpSubnational" Multiplicity="1" />
+          <End Role="tblSWATLocation" Type="SWATModel.Store.tblSWATLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSubnational">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATLocation">
+              <PropertyRef Name="subnationalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSurvey_37_Userids">
+          <End Role="Userids" Type="SWATModel.Store.Userids" Multiplicity="1" />
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Userids">
+              <PropertyRef Name="Userid" />
+            </Principal>
+            <Dependent Role="tblSWATSurvey">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSurvey_38_tblSWATLocation">
+          <End Role="tblSWATLocation" Type="SWATModel.Store.tblSWATLocation" Multiplicity="1" />
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATLocation">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATSurvey">
+              <PropertyRef Name="LocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SWATModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="SWATEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="lkpCountries" EntityType="SWATModel.lkpCountry" />
+          <EntitySet Name="lkpRegions" EntityType="SWATModel.lkpRegion" />
+          <EntitySet Name="lkpSubnationals" EntityType="SWATModel.lkpSubnational" />
+          <EntitySet Name="tblSWATLocations" EntityType="SWATModel.tblSWATLocation" />
+          <EntitySet Name="Userids" EntityType="SWATModel.Userid" />
+          <AssociationSet Name="FK_lkpCountry_3_lkpRegion" Association="SWATModel.FK_lkpCountry_3_lkpRegion">
+            <End Role="lkpRegion" EntitySet="lkpRegions" />
+            <End Role="lkpCountry" EntitySet="lkpCountries" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lkpSubnational_2_lkpCountry" Association="SWATModel.FK_lkpSubnational_2_lkpCountry">
+            <End Role="lkpCountry" EntitySet="lkpCountries" />
+            <End Role="lkpSubnational" EntitySet="lkpSubnationals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATLocation_18_lkpCountry" Association="SWATModel.FK_tblSWATLocation_18_lkpCountry">
+            <End Role="lkpCountry" EntitySet="lkpCountries" />
+            <End Role="tblSWATLocation" EntitySet="tblSWATLocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATLocation_20_lkpRegion" Association="SWATModel.FK_tblSWATLocation_20_lkpRegion">
+            <End Role="lkpRegion" EntitySet="lkpRegions" />
+            <End Role="tblSWATLocation" EntitySet="tblSWATLocations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATLocation_21_lkpSubnational" Association="SWATModel.FK_tblSWATLocation_21_lkpSubnational">
+            <End Role="lkpSubnational" EntitySet="lkpSubnationals" />
+            <End Role="tblSWATLocation" EntitySet="tblSWATLocations" />
+          </AssociationSet>
+          <EntitySet Name="tblSWATSurveys" EntityType="SWATModel.tblSWATSurvey" />
+          <AssociationSet Name="FK_tblSWATSurvey_38_tblSWATLocation" Association="SWATModel.FK_tblSWATSurvey_38_tblSWATLocation">
+            <End Role="tblSWATLocation" EntitySet="tblSWATLocations" />
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSurvey_37_Userids" Association="SWATModel.FK_tblSWATSurvey_37_Userids">
+            <End Role="Userid" EntitySet="Userids" />
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="lkpCountry">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="CurrencyID" Type="Int32" />
+          <Property Name="RegionID" Type="Int32" />
+          <Property Name="CommonName" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="lkpRegion" Relationship="SWATModel.FK_lkpCountry_3_lkpRegion" FromRole="lkpCountry" ToRole="lkpRegion" />
+          <NavigationProperty Name="lkpSubnationals" Relationship="SWATModel.FK_lkpSubnational_2_lkpCountry" FromRole="lkpCountry" ToRole="lkpSubnational" />
+          <NavigationProperty Name="tblSWATLocations" Relationship="SWATModel.FK_tblSWATLocation_18_lkpCountry" FromRole="lkpCountry" ToRole="tblSWATLocation" />
+        </EntityType>
+        <EntityType Name="lkpRegion">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="lkpCountries" Relationship="SWATModel.FK_lkpCountry_3_lkpRegion" FromRole="lkpRegion" ToRole="lkpCountry" />
+          <NavigationProperty Name="tblSWATLocations" Relationship="SWATModel.FK_tblSWATLocation_20_lkpRegion" FromRole="lkpRegion" ToRole="tblSWATLocation" />
+        </EntityType>
+        <EntityType Name="lkpSubnational">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CountryID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="lkpCountry" Relationship="SWATModel.FK_lkpSubnational_2_lkpCountry" FromRole="lkpSubnational" ToRole="lkpCountry" />
+          <NavigationProperty Name="tblSWATLocations" Relationship="SWATModel.FK_tblSWATLocation_21_lkpSubnational" FromRole="lkpSubnational" ToRole="tblSWATLocation" />
+        </EntityType>
+        <EntityType Name="tblSWATLocation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="latitude" Type="Double" Nullable="false" />
+          <Property Name="longitude" Type="Double" Nullable="false" />
+          <Property Name="countryID" Type="Int32" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="regionID" Type="Int32" Nullable="false" />
+          <Property Name="subnationalID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="lkpCountry" Relationship="SWATModel.FK_tblSWATLocation_18_lkpCountry" FromRole="tblSWATLocation" ToRole="lkpCountry" />
+          <NavigationProperty Name="lkpRegion" Relationship="SWATModel.FK_tblSWATLocation_20_lkpRegion" FromRole="tblSWATLocation" ToRole="lkpRegion" />
+          <NavigationProperty Name="lkpSubnational" Relationship="SWATModel.FK_tblSWATLocation_21_lkpSubnational" FromRole="tblSWATLocation" ToRole="lkpSubnational" />
+          <NavigationProperty Name="tblSWATSurveys" Relationship="SWATModel.FK_tblSWATSurvey_38_tblSWATLocation" FromRole="tblSWATLocation" ToRole="tblSWATSurvey" />
+        </EntityType>
+        <EntityType Name="Userid">
+          <Key>
+            <PropertyRef Name="Userid1" />
+          </Key>
+          <Property Name="Userid1" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="Password" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="eMail" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="Notes" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="SessionVars" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="secondaryId" Type="Int32" />
+          <Property Name="type" Type="Int32" Nullable="false" />
+          <Property Name="properties" Type="String" MaxLength="32767" Unicode="false" FixedLength="false" />
+          <Property Name="targetName" Type="String" MaxLength="32767" Unicode="false" FixedLength="false" />
+          <Property Name="NotifStatus" Type="String" MaxLength="128" Unicode="false" FixedLength="false" />
+          <Property Name="NotifCode" Type="String" MaxLength="9" Unicode="false" FixedLength="true" />
+          <Property Name="NotifReqCodeTime" Type="DateTime" />
+          <Property Name="NotifActCodeTime" Type="DateTime" />
+          <Property Name="PMEmailNotificationsEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="UseOntarioMaps" Type="Boolean" Nullable="false" />
+          <Property Name="First_Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Last_Name" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="utmX" Type="Decimal" Precision="30" Scale="10" />
+          <Property Name="utmY" Type="Decimal" Precision="30" Scale="10" />
+          <Property Name="Joined" Type="DateTime" Nullable="false" />
+          <Property Name="Interests" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="Workplace" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="SecretQuestion" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="SecretAnswer" Type="String" MaxLength="255" Unicode="false" FixedLength="false" />
+          <Property Name="AvatarUserPhotoID" Type="Int32" />
+          <Property Name="LastSuggestedContentDate" Type="DateTime" />
+          <Property Name="FullName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tblSWATSurveys" Relationship="SWATModel.FK_tblSWATSurvey_37_Userids" FromRole="Userid" ToRole="tblSWATSurvey" />
+        </EntityType>
+        <Association Name="FK_lkpCountry_3_lkpRegion">
+          <End Role="lkpRegion" Type="SWATModel.lkpRegion" Multiplicity="0..1" />
+          <End Role="lkpCountry" Type="SWATModel.lkpCountry" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpRegion">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="lkpCountry">
+              <PropertyRef Name="RegionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lkpSubnational_2_lkpCountry">
+          <End Role="lkpCountry" Type="SWATModel.lkpCountry" Multiplicity="1" />
+          <End Role="lkpSubnational" Type="SWATModel.lkpSubnational" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpCountry">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="lkpSubnational">
+              <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATLocation_18_lkpCountry">
+          <End Role="lkpCountry" Type="SWATModel.lkpCountry" Multiplicity="1" />
+          <End Role="tblSWATLocation" Type="SWATModel.tblSWATLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpCountry">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATLocation">
+              <PropertyRef Name="countryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATLocation_20_lkpRegion">
+          <End Role="lkpRegion" Type="SWATModel.lkpRegion" Multiplicity="1" />
+          <End Role="tblSWATLocation" Type="SWATModel.tblSWATLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpRegion">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATLocation">
+              <PropertyRef Name="regionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATLocation_21_lkpSubnational">
+          <End Role="lkpSubnational" Type="SWATModel.lkpSubnational" Multiplicity="1" />
+          <End Role="tblSWATLocation" Type="SWATModel.tblSWATLocation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSubnational">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATLocation">
+              <PropertyRef Name="subnationalID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tblSWATSurvey">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="UserID" Nullable="false" />
+          <Property Type="Byte" Name="Status" />
+          <Property Type="DateTime" Name="StartTime" />
+          <Property Type="DateTime" Name="EndTime" />
+          <Property Type="Int32" Name="LocationID" Nullable="false" />
+          <NavigationProperty Name="tblSWATLocation" Relationship="SWATModel.FK_tblSWATSurvey_38_tblSWATLocation" FromRole="tblSWATSurvey" ToRole="tblSWATLocation" />
+          <NavigationProperty Name="Userid1" Relationship="SWATModel.FK_tblSWATSurvey_37_Userids" FromRole="tblSWATSurvey" ToRole="Userid" />
+        </EntityType>
+        <Association Name="FK_tblSWATSurvey_38_tblSWATLocation">
+          <End Type="SWATModel.tblSWATLocation" Role="tblSWATLocation" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATLocation">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATSurvey">
+              <PropertyRef Name="LocationID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSurvey_37_Userids">
+          <End Type="SWATModel.Userid" Role="Userid" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Userid">
+              <PropertyRef Name="Userid1" />
+            </Principal>
+            <Dependent Role="tblSWATSurvey">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SWATModelStoreContainer" CdmEntityContainer="SWATEntities">
+          <EntitySetMapping Name="lkpCountries">
+            <EntityTypeMapping TypeName="SWATModel.lkpCountry">
+              <MappingFragment StoreEntitySet="lkpCountry">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CurrencyID" ColumnName="CurrencyID" />
+                <ScalarProperty Name="RegionID" ColumnName="RegionID" />
+                <ScalarProperty Name="CommonName" ColumnName="CommonName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpRegions">
+            <EntityTypeMapping TypeName="SWATModel.lkpRegion">
+              <MappingFragment StoreEntitySet="lkpRegion">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSubnationals">
+            <EntityTypeMapping TypeName="SWATModel.lkpSubnational">
+              <MappingFragment StoreEntitySet="lkpSubnational">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATLocations">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATLocation">
+              <MappingFragment StoreEntitySet="tblSWATLocation">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="latitude" ColumnName="latitude" />
+                <ScalarProperty Name="longitude" ColumnName="longitude" />
+                <ScalarProperty Name="countryID" ColumnName="countryID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="regionID" ColumnName="regionID" />
+                <ScalarProperty Name="subnationalID" ColumnName="subnationalID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Userids">
+            <EntityTypeMapping TypeName="SWATModel.Userid">
+              <MappingFragment StoreEntitySet="Userids">
+                <ScalarProperty Name="Userid1" ColumnName="Userid" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="eMail" ColumnName="eMail" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="SessionVars" ColumnName="SessionVars" />
+                <ScalarProperty Name="secondaryId" ColumnName="secondaryId" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="properties" ColumnName="properties" />
+                <ScalarProperty Name="targetName" ColumnName="targetName" />
+                <ScalarProperty Name="NotifStatus" ColumnName="NotifStatus" />
+                <ScalarProperty Name="NotifCode" ColumnName="NotifCode" />
+                <ScalarProperty Name="NotifReqCodeTime" ColumnName="NotifReqCodeTime" />
+                <ScalarProperty Name="NotifActCodeTime" ColumnName="NotifActCodeTime" />
+                <ScalarProperty Name="PMEmailNotificationsEnabled" ColumnName="PMEmailNotificationsEnabled" />
+                <ScalarProperty Name="UseOntarioMaps" ColumnName="UseOntarioMaps" />
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="utmX" ColumnName="utmX" />
+                <ScalarProperty Name="utmY" ColumnName="utmY" />
+                <ScalarProperty Name="Joined" ColumnName="Joined" />
+                <ScalarProperty Name="Interests" ColumnName="Interests" />
+                <ScalarProperty Name="Workplace" ColumnName="Workplace" />
+                <ScalarProperty Name="SecretQuestion" ColumnName="SecretQuestion" />
+                <ScalarProperty Name="SecretAnswer" ColumnName="SecretAnswer" />
+                <ScalarProperty Name="AvatarUserPhotoID" ColumnName="AvatarUserPhotoID" />
+                <ScalarProperty Name="LastSuggestedContentDate" ColumnName="LastSuggestedContentDate" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATSurveys">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATSurvey">
+              <MappingFragment StoreEntitySet="tblSWATSurvey">
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

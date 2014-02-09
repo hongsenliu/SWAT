@@ -1,0 +1,84 @@
+﻿@model SWAT.Models.tblSWATLocation
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create New Survey</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal"> 
+        <h4>Community</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.name, "Settlement", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.name)
+                @Html.ValidationMessageFor(model => model.name)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.latitude, "Latitude", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.latitude)
+                @Html.ValidationMessageFor(model => model.latitude)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.longitude, "Longitude", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.longitude)
+                @Html.ValidationMessageFor(model => model.longitude)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.subnationalID, "Subnation", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("subnationalID", String.Empty)
+                @Html.ValidationMessageFor(model => model.subnationalID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.countryID, "Country", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("countryID", String.Empty)
+                @Html.ValidationMessageFor(model => model.countryID)
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.regionID, "Region", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("regionID", String.Empty)
+                @Html.ValidationMessageFor(model => model.regionID)
+            </div>
+        </div>
+
+        
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Next>" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Details", "User", new { id=ViewBag.uid}, null)
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

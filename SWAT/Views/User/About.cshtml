@@ -1,0 +1,31 @@
+﻿@model IEnumerable<SWAT.ViewModels.CountrySubnationalsGroup>
+
+@{
+    ViewBag.Title = "About - Country statistics";
+}
+
+<h2>About - Country statistics</h2>
+
+<table>
+    <tr>
+        <th>
+            Country Name
+        </th>
+        <th>
+            Subnationals
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    { 
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryName)
+            </td>
+            <td>
+                @item.SubNationalCount
+            </td>
+        </tr>
+    }
+</table>
+
