@@ -12,22 +12,17 @@ namespace SWAT.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class tblSWATSurvey
+    public partial class lkpSWATareaProtLU
     {
-        public tblSWATSurvey()
+        public lkpSWATareaProtLU()
         {
             this.tblSWATBackgroundinfoes = new HashSet<tblSWATBackgroundinfo>();
         }
     
-        public int ID { get; set; }
-        public int UserID { get; set; }
-        public Nullable<byte> Status { get; set; }
-        public Nullable<System.DateTime> StartTime { get; set; }
-        public Nullable<System.DateTime> EndTime { get; set; }
-        public int LocationID { get; set; }
+        public int id { get; set; }
+        public string Description { get; set; }
+        public Nullable<int> intorder { get; set; }
     
-        public virtual tblSWATLocation tblSWATLocation { get; set; }
-        public virtual Userid Userid1 { get; set; }
         public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes { get; set; }
     }
 }

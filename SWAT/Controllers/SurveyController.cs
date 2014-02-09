@@ -39,16 +39,36 @@ namespace SWAT.Controllers
         // GET: /Survey/Create
         public ActionResult Create(int UserID, int LocationID)
         {
-            
+            // Create a survey record
             tblSWATSurvey tblswatsurvey = new tblSWATSurvey();
             tblswatsurvey.LocationID = LocationID;
             tblswatsurvey.UserID = UserID;
             tblswatsurvey.StartTime = DateTime.Now;
             tblswatsurvey.Status = 1;
+            
             if (ModelState.IsValid)
             {
+                // Add and Save the survey record to database
                 db.tblSWATSurveys.Add(tblswatsurvey);
                 db.SaveChanges();
+                // Get the id of tblswatsurvey record (new record)
+                var newSurveyID = tblswatsurvey.ID;
+                var scorevars = db.lkpSWATScoreVars.ToList();
+                foreach (var scorevar in scorevars)
+                {
+                    tblSWATScore tblswatscore = new tblSWATScore();
+                    tblswatscore.SurveyID = newSurveyID;
+                    tblswatscore.VariableID = scorevar.ID;
+
+                    // For reference copy the score name from lkpSWATScoreVars table to tblSWATScore table varname field
+                    tblswatscore.VarName = scorevar.VarName;
+
+                    if (ModelState.IsValid)
+                    {
+                        db.tblSWATScores.Add(tblswatscore);
+                        db.SaveChanges();
+                    }
+                }
                 return RedirectToAction("Details", "User", new { id = UserID});
             }
 
