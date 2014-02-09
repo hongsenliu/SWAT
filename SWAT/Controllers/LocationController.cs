@@ -51,13 +51,14 @@ namespace SWAT.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="ID,latitude,longitude,countryID,name,regionID,subnationalID")] tblSWATLocation tblswatlocation)
+        public ActionResult Create([Bind(Include="ID,latitude,longitude,countryID,name,regionID,subnationalID")] tblSWATLocation tblswatlocation, int? uid)
         {
             if (ModelState.IsValid)
             {
                 db.tblSWATLocations.Add(tblswatlocation);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //var LocationID = tblswatlocation.ID;
+                return RedirectToAction("Create", "Survey", new { UserID = uid, LocationID = tblswatlocation.ID});
             }
 
             ViewBag.countryID = new SelectList(db.lkpCountries, "ID", "Name", tblswatlocation.countryID);
@@ -67,7 +68,7 @@ namespace SWAT.Controllers
         }
 
         // GET: /Location/Edit/5
-        public ActionResult Edit(int? id, int? uid)
+        public ActionResult Edit(int? id, int? uid, int? SurveyID)
         {
             
             if (id == null)
@@ -84,6 +85,7 @@ namespace SWAT.Controllers
             ViewBag.regionID = new SelectList(db.lkpRegions, "ID", "Name", tblswatlocation.regionID);
             ViewBag.subnationalID = new SelectList(db.lkpSubnationals, "ID", "Name", tblswatlocation.subnationalID);
             ViewBag.uid = uid;
+            ViewBag.SurveyID = SurveyID;
             return View(tblswatlocation);
         }
 
@@ -92,13 +94,13 @@ namespace SWAT.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="ID,latitude,longitude,countryID,name,regionID,subnationalID")] tblSWATLocation tblswatlocation)
+        public ActionResult Edit([Bind(Include="ID,latitude,longitude,countryID,name,regionID,subnationalID")] tblSWATLocation tblswatlocation, int? uid)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(tblswatlocation).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Details", "User", new { id=uid});
             }
             ViewBag.countryID = new SelectList(db.lkpCountries, "ID", "Name", tblswatlocation.countryID);
             ViewBag.regionID = new SelectList(db.lkpRegions, "ID", "Name", tblswatlocation.regionID);

@@ -12,37 +12,13 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>tblSWATLocation</h4>
+        <h4>Community</h4>
         <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.ID)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.latitude, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.latitude)
-                @Html.ValidationMessageFor(model => model.latitude)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.longitude, new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.longitude)
-                @Html.ValidationMessageFor(model => model.longitude)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.countryID, "countryID", new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("countryID", String.Empty)
-                @Html.ValidationMessageFor(model => model.countryID)
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.name, new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.name, "Settlement", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.name)
                 @Html.ValidationMessageFor(model => model.name)
@@ -50,18 +26,42 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.regionID, "regionID", new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.latitude, "Latitude", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("regionID", String.Empty)
-                @Html.ValidationMessageFor(model => model.regionID)
+                @Html.EditorFor(model => model.latitude)
+                @Html.ValidationMessageFor(model => model.latitude)
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.subnationalID, "subnationalID", new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.longitude, "Longitude", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.longitude)
+                @Html.ValidationMessageFor(model => model.longitude)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.subnationalID, "Subnation", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("subnationalID", String.Empty)
                 @Html.ValidationMessageFor(model => model.subnationalID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.countryID, "Country", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("countryID", String.Empty)
+                @Html.ValidationMessageFor(model => model.countryID)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.regionID, "Region", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("regionID", String.Empty)
+                @Html.ValidationMessageFor(model => model.regionID)
             </div>
         </div>
 

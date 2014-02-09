@@ -7,7 +7,7 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Userid</h4>
+    <h4>User Profile</h4>
 	<hr />
     <dl class="dl-horizontal">
         <dt>
@@ -146,7 +146,7 @@
             grid.Column("StartTime", header: "Start Date"),
             grid.Column("Status", header: "Status"),
             grid.Column(header: "", format: (item) => new HtmlString(
-                @Html.ActionLink("Edit", "Edit", "Location", new { uid = Model.Userid1, id = item.LocationID}, null).ToString() + " | "+
+                @Html.ActionLink("Edit", "Edit", "Location", new { uid = Model.Userid1, id = item.LocationID, SurveyID=item.ID}, null).ToString() + " | "+
                 @Html.ActionLink("Delete", "Delete", "Survey", new {id = item.id}, null).ToString()
                            )
             )));   

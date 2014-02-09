@@ -37,8 +37,21 @@ namespace SWAT.Controllers
         }
 
         // GET: /Survey/Create
-        public ActionResult Create()
+        public ActionResult Create(int UserID, int LocationID)
         {
+            
+            tblSWATSurvey tblswatsurvey = new tblSWATSurvey();
+            tblswatsurvey.LocationID = LocationID;
+            tblswatsurvey.UserID = UserID;
+            tblswatsurvey.StartTime = DateTime.Now;
+            tblswatsurvey.Status = 1;
+            if (ModelState.IsValid)
+            {
+                db.tblSWATSurveys.Add(tblswatsurvey);
+                db.SaveChanges();
+                return RedirectToAction("Details", "User", new { id = UserID});
+            }
+
             ViewBag.LocationID = new SelectList(db.tblSWATLocations, "ID", "name");
             ViewBag.UserID = new SelectList(db.Userids.Where(user => user.type == 0), "Userid1", "Username");
             return View();
