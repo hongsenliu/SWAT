@@ -58,6 +58,7 @@ namespace SWAT.Controllers
                 db.tblSWATLocations.Add(tblswatlocation);
                 db.SaveChanges();
                 //var LocationID = tblswatlocation.ID;
+                
                 return RedirectToAction("Create", "Survey", new { UserID = uid, LocationID = tblswatlocation.ID});
             }
 
@@ -94,13 +95,27 @@ namespace SWAT.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="ID,latitude,longitude,countryID,name,regionID,subnationalID")] tblSWATLocation tblswatlocation, int? uid)
+        public ActionResult Edit([Bind(Include="ID,latitude,longitude,countryID,name,regionID,subnationalID")] tblSWATLocation tblswatlocation, int? uid, int SurveyID)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(tblswatlocation).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Details", "User", new { id=uid});
+                var BackgrdInfo = db.tblSWATBackgroundinfoes.Where(item => item.SurveyID == SurveyID);
+                if (!BackgrdInfo.Any())
+                {
+                    tblSWATBackgroundinfo tblswatbackgroundinfo = new tblSWATBackgroundinfo();
+                    tblswatbackgroundinfo.SurveyID = SurveyID;
+                    db.tblSWATBackgroundinfoes.Add(tblswatbackgroundinfo);
+                    db.SaveChanges();
+                    var newBackgroundInfoID = tblswatbackgroundinfo.ID;
+                    return RedirectToAction("Edit", "Background", new { id = newBackgroundInfoID, SurveyID = SurveyID });
+                }
+                else
+                {
+                    return RedirectToAction("Edit", "Background", new { id = BackgrdInfo.Select(item => item.ID).First(), SurveyID = SurveyID });
+                }
+                //return RedirectToAction("Details", "User", new { id=uid});
             }
             ViewBag.countryID = new SelectList(db.lkpCountries, "ID", "Name", tblswatlocation.countryID);
             ViewBag.regionID = new SelectList(db.lkpRegions, "ID", "Name", tblswatlocation.regionID);

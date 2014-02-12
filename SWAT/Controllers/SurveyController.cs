@@ -69,11 +69,11 @@ namespace SWAT.Controllers
                         db.SaveChanges();
                     }
                 }
-                return RedirectToAction("Details", "User", new { id = UserID});
+                return RedirectToAction("Create", "Background", new { SurveyID = newSurveyID});
             }
 
-            ViewBag.LocationID = new SelectList(db.tblSWATLocations, "ID", "name");
-            ViewBag.UserID = new SelectList(db.Userids.Where(user => user.type == 0), "Userid1", "Username");
+            //ViewBag.LocationID = new SelectList(db.tblSWATLocations, "ID", "name");
+            //ViewBag.UserID = new SelectList(db.Userids.Where(user => user.type == 0), "Userid1", "Username");
             return View();
         }
 
@@ -91,8 +91,8 @@ namespace SWAT.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.LocationID = new SelectList(db.tblSWATLocations, "ID", "name", tblswatsurvey.LocationID);
-            ViewBag.UserID = new SelectList(db.Userids, "Userid1", "Username", tblswatsurvey.UserID);
+            //ViewBag.LocationID = new SelectList(db.tblSWATLocations, "ID", "name", tblswatsurvey.LocationID);
+            //ViewBag.UserID = new SelectList(db.Userids, "Userid1", "Username", tblswatsurvey.UserID);
             return View(tblswatsurvey);
         }
 
@@ -108,8 +108,8 @@ namespace SWAT.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.LocationID = new SelectList(db.tblSWATLocations, "ID", "name", tblswatsurvey.LocationID);
-            ViewBag.UserID = new SelectList(db.Userids, "Userid1", "Username", tblswatsurvey.UserID);
+            //ViewBag.LocationID = new SelectList(db.tblSWATLocations, "ID", "name", tblswatsurvey.LocationID);
+            //ViewBag.UserID = new SelectList(db.Userids, "Userid1", "Username", tblswatsurvey.UserID);
             return View(tblswatsurvey);
         }
 
@@ -126,8 +126,8 @@ namespace SWAT.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.LocationID = new SelectList(db.tblSWATLocations, "ID", "name", tblswatsurvey.LocationID);
-            ViewBag.UserID = new SelectList(db.Userids, "Userid1", "Username", tblswatsurvey.UserID);
+            //ViewBag.LocationID = new SelectList(db.tblSWATLocations, "ID", "name", tblswatsurvey.LocationID);
+           // ViewBag.UserID = new SelectList(db.Userids, "Userid1", "Username", tblswatsurvey.UserID);
             return View(tblswatsurvey);
         }
 
