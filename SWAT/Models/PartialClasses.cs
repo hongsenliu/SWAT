@@ -7,4 +7,9 @@ namespace SWAT.Models
     public partial class tblSWATLocation
     {
     }
+
+    [MetadataType(typeof(BackgroundMetadata))]
+    public partial class tblSWATBackgroundinfo
+    { 
+    }
 }
