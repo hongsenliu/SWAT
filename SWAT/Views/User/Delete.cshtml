@@ -1,0 +1,248 @@
+﻿@model SWAT.Models.Userid
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Userid</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SessionVars)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SessionVars)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.secondaryId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.secondaryId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.properties)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.properties)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.targetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.targetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NotifStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NotifStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NotifCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NotifCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NotifReqCodeTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NotifReqCodeTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NotifActCodeTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NotifActCodeTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PMEmailNotificationsEnabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PMEmailNotificationsEnabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UseOntarioMaps)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UseOntarioMaps)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.First_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.First_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Last_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Last_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.utmX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.utmX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.utmY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.utmY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Joined)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Joined)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Interests)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Interests)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Workplace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Workplace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecretQuestion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecretQuestion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SecretAnswer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SecretAnswer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AvatarUserPhotoID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvatarUserPhotoID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastSuggestedContentDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastSuggestedContentDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

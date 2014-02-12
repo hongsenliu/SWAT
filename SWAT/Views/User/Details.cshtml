@@ -1,0 +1,160 @@
+﻿@model SWAT.Models.Userid
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>User Profile</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eMail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eMail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Notes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Notes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.targetName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.targetName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NotifStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NotifStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PMEmailNotificationsEnabled)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PMEmailNotificationsEnabled)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.First_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.First_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Last_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Last_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Joined)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Joined)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Interests)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Interests)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Workplace)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Workplace)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastSuggestedContentDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastSuggestedContentDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+        
+
+    </dl>
+    <dl>
+        <dt>
+            My Surveys    
+        </dt>
+
+        <dd>
+             @Html.ActionLink("Create New Survey", "Create", "Location", new { uid = Model.Userid1 }, null)
+        </dd>
+    </dl>
+    <div>
+        @{
+            var grid = new WebGrid(Model.tblSWATSurveys, rowsPerPage: 5);
+            @grid.GetHtml(
+            tableStyle: "table",
+            columns: grid.Columns(
+            grid.Column("tblSWATLocation.name", header: "Settlement"),
+            grid.Column("tblSWATLocation.lkpSubnational.Name", header: "Subnation"),
+            grid.Column("tblSWATLocation.lkpCountry.CommonName", header: "Country"),
+            grid.Column("tblSWATLocation.lkpRegion.Name", header: "Region"),
+            grid.Column("StartTime", header: "Start Date"),
+            grid.Column("Status", header: "Status"),
+            grid.Column(header: "", format: (item) => new HtmlString(
+                @Html.ActionLink("Edit", "Edit", "Location", new { uid = Model.Userid1, id = item.LocationID, SurveyID=item.ID}, null).ToString() + " | "+
+                @Html.ActionLink("Delete", "Delete", "Survey", new {id = item.id}, null).ToString()
+                           )
+            )));   
+         }
+    </div>
+    </div>
+    
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Userid1 }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

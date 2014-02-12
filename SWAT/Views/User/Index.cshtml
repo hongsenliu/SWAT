@@ -1,0 +1,131 @@
+﻿@model PagedList.IPagedList<SWAT.Models.Userid>
+@using PagedList.Mvc;
+<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>Users</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+@using (Html.BeginForm("Index", "User", FormMethod.Get))
+{ 
+    <p>
+        Find by name: @Html.TextBox("keywords", ViewBag.CurrentFilter as string)
+        <input type="submit" value="Search" />
+    </p>
+}
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Username)*@
+            @Html.ActionLink("Username", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter})
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.eMail)*@
+            Email
+        </th>
+        <th>
+            Notes
+        </th>
+        
+        <th>
+            Target Name
+        </th>
+        <th>
+            Notification Status
+        </th>
+        <th>
+            PM Enable
+        </th>
+        <th>
+            First Name
+        </th>
+        <th>
+            Last Name
+        </th>
+        <th>
+            Address
+        </th>
+        <th>
+           @* @Html.DisplayNameFor(model => model.Joined)*@
+            @Html.ActionLink("Joined", "Index", new{sortOrder = ViewBag.JoinedSortParm, CurrentFilter = ViewBag.CurrentFilter})
+        </th>
+        <th>
+            Interests
+        </th>
+        <th>
+            Workplace
+        </th>
+        <th>
+            Last Suggested Content Date
+        </th>
+        <th>
+            Full Name
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.eMail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Notes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.targetName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NotifStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PMEmailNotificationsEnabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.First_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Last_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Joined)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Interests)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Workplace)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastSuggestedContentDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td style="min-width:150px;">
+            @Html.ActionLink("Edit", "Edit", new { id=item.Userid1 }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Userid1 }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Userid1 })
+        </td>
+    </tr>
+}
+
+</table>
+<br />
+@if( Model.PageCount > 0) 
+{
+    @:Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
+}
+
+@Html.PagedListPager(Model, page => Url.Action("Index", new{ page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter}))

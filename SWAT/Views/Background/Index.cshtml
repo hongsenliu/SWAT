@@ -1,0 +1,219 @@
+﻿@model IEnumerable<SWAT.Models.tblSWATBackgroundinfo>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Population)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numHouseholds)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numChildren)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PeoplePerHH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Area)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaForest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaAg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaInf)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaSw)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaWet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AreaNat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpBiome.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpClimateClassification.CCType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSoil.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATareaProtLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATmapAridity.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATurbanDistanceLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATWatershedsLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATareaBMLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATeconPrisLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATpriorLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATpriorLU1.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATpriorLU2.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATpriorLU3.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATpriorLU4.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATpriorLU5.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATpriorLU6.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATpriorLU7.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATYesNoLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATYesNoLU1.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATYesNoLU2.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Population)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numHouseholds)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numChildren)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PeoplePerHH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Area)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaForest)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaAg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaInf)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaSw)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaWet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AreaNat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpBiome.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpClimateClassification.CCType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSoil.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATareaProtLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATmapAridity.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATurbanDistanceLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATWatershedsLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSWATSurvey.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATareaBMLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATeconPrisLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATpriorLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATpriorLU1.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATpriorLU2.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATpriorLU3.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATpriorLU4.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATpriorLU5.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATpriorLU6.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATpriorLU7.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATYesNoLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATYesNoLU1.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATYesNoLU2.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
