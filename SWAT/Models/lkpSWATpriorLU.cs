@@ -14,8 +14,29 @@ namespace SWAT.Models
     
     public partial class lkpSWATpriorLU
     {
+        public lkpSWATpriorLU()
+        {
+            this.tblSWATBackgroundinfoes = new HashSet<tblSWATBackgroundinfo>();
+            this.tblSWATBackgroundinfoes1 = new HashSet<tblSWATBackgroundinfo>();
+            this.tblSWATBackgroundinfoes2 = new HashSet<tblSWATBackgroundinfo>();
+            this.tblSWATBackgroundinfoes3 = new HashSet<tblSWATBackgroundinfo>();
+            this.tblSWATBackgroundinfoes4 = new HashSet<tblSWATBackgroundinfo>();
+            this.tblSWATBackgroundinfoes5 = new HashSet<tblSWATBackgroundinfo>();
+            this.tblSWATBackgroundinfoes6 = new HashSet<tblSWATBackgroundinfo>();
+            this.tblSWATBackgroundinfoes7 = new HashSet<tblSWATBackgroundinfo>();
+        }
+    
         public int id { get; set; }
         public string Description { get; set; }
         public Nullable<int> intorder { get; set; }
+    
+        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes { get; set; }
+        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes1 { get; set; }
+        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes2 { get; set; }
+        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes3 { get; set; }
+        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes4 { get; set; }
+        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes5 { get; set; }
+        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes6 { get; set; }
+        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes7 { get; set; }
     }
 }

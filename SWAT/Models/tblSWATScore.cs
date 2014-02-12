@@ -23,10 +23,10 @@ namespace SWAT.Models
         public int SurveyID { get; set; }
         public int VariableID { get; set; }
         public Nullable<double> Value { get; set; }
-        public string Description { get; set; }
         public string VarName { get; set; }
+        public string Description { get; set; }
     
-        public virtual lkpSWATScoreVar lkpSWATScoreVar { get; set; }
+        public virtual lkpSWATScoreVarsLU lkpSWATScoreVarsLU { get; set; }
         public virtual ICollection<tblSWATVisualGrpScoreMap> tblSWATVisualGrpScoreMaps { get; set; }
     }
 }

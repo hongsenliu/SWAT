@@ -18,7 +18,7 @@ namespace SWAT.Models
         public int VisualGrpID { get; set; }
         public long ScoreID { get; set; }
     
-        public virtual tblSWATVisualGroup tblSWATVisualGroup { get; set; }
         public virtual tblSWATScore tblSWATScore { get; set; }
+        public virtual tblSWATVisualGroup tblSWATVisualGroup { get; set; }
     }
 }

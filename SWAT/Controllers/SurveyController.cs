@@ -53,14 +53,14 @@ namespace SWAT.Controllers
                 db.SaveChanges();
                 // Get the id of tblswatsurvey record (new record)
                 var newSurveyID = tblswatsurvey.ID;
-                var scorevars = db.lkpSWATScoreVars.ToList();
+                var scorevars = db.lkpSWATScoreVarsLUs.ToList();
                 foreach (var scorevar in scorevars)
                 {
                     tblSWATScore tblswatscore = new tblSWATScore();
                     tblswatscore.SurveyID = newSurveyID;
                     tblswatscore.VariableID = scorevar.ID;
 
-                    // For reference copy the score name from lkpSWATScoreVars table to tblSWATScore table varname field
+                    // For reference copy the score name from lkpSWATScoreVarsLU table to tblSWATScore table varname field
                     tblswatscore.VarName = scorevar.VarName;
 
                     if (ModelState.IsValid)

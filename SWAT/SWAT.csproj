@@ -99,6 +99,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CommunityInfo.js" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\animated-overlay.gif" />
@@ -170,6 +171,23 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <EntityDeploy Include="Models\SWATModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SWATModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\SWATModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SWATModel.edmx</DependentUpon>
+      <LastGenOutput>SWATModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\SWATModel.edmx.diagram">
+      <DependentUpon>SWATModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\SWATModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SWATModel.edmx</DependentUpon>
+      <LastGenOutput>SWATModel.cs</LastGenOutput>
+    </Content>
     <None Include="Scripts\jquery-2.1.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.0.js" />
     <Content Include="Scripts\jquery-2.1.0.min.js" />
@@ -186,6 +204,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BackgroundController.cs" />
     <Compile Include="Controllers\backup_LocationController.cs" />
     <Compile Include="Controllers\CountryController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
@@ -247,7 +266,10 @@
     <Compile Include="Models\lkpSWATscores_YesNoLUYesGood.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\lkpSWATScoreVar.cs">
+    <Compile Include="Models\lkpSWATScoreVarsLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATSectionLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATurbanDistanceLU.cs">
@@ -303,23 +325,6 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <Content Include="packages.config" />
-    <EntityDeploy Include="Models\SWATModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SWATModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\SWATModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SWATModel.edmx</DependentUpon>
-      <LastGenOutput>SWATModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\SWATModel.edmx.diagram">
-      <DependentUpon>SWATModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\SWATModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SWATModel.edmx</DependentUpon>
-      <LastGenOutput>SWATModel.cs</LastGenOutput>
-    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\User\Create.cshtml" />
@@ -354,6 +359,11 @@
     <Content Include="Views\Location\Index.cshtml" />
     <Content Include="Views\User\About.cshtml" />
     <Content Include="Views\Location\backup_Create.cshtml" />
+    <Content Include="Views\Background\Create.cshtml" />
+    <Content Include="Views\Background\Delete.cshtml" />
+    <Content Include="Views\Background\Details.cshtml" />
+    <Content Include="Views\Background\Edit.cshtml" />
+    <Content Include="Views\Background\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
