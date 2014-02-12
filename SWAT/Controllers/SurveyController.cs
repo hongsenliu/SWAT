@@ -151,6 +151,17 @@ namespace SWAT.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+
+            if (db.tblSWATBackgroundinfoes.Any(e => e.SurveyID == id))
+            {
+                tblSWATBackgroundinfo tblswatbackgroundinfo = db.tblSWATBackgroundinfoes.Single(e => e.SurveyID == id);
+                db.tblSWATBackgroundinfoes.Remove(tblswatbackgroundinfo);
+            }
+            var tblswatscores = db.tblSWATScores.Where(e => e.SurveyID == id);
+            foreach (tblSWATScore item in tblswatscores)
+            {
+                db.tblSWATScores.Remove(item);
+            }
             tblSWATSurvey tblswatsurvey = db.tblSWATSurveys.Find(id);
             db.tblSWATSurveys.Remove(tblswatsurvey);
             db.SaveChanges();

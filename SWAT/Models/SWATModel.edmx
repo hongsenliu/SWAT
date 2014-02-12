@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="SWATModel.Store" Alias="Self" Provider="iAnywhere.Data.SQLAnywhere" ProviderManifestToken="12" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="SWATModel.Store" Alias="Self" Provider="iAnywhere.Data.SQLAnywhere" ProviderManifestToken="12" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="SWATModelStoreContainer">
           <EntitySet Name="lkpBiome" EntityType="SWATModel.Store.lkpBiome" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpClimateClassification" EntityType="SWATModel.Store.lkpClimateClassification" store:Type="Tables" Schema="DBA" />
@@ -23,6 +23,12 @@
           <EntitySet Name="lkpSWATscores_econPris" EntityType="SWATModel.Store.lkpSWATscores_econPris" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_urbanDistance" EntityType="SWATModel.Store.lkpSWATscores_urbanDistance" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_YesNoLUYesGood" EntityType="SWATModel.Store.lkpSWATscores_YesNoLUYesGood" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATScoreVarSectionLU" EntityType="SWATModel.Store.lkpSWATScoreVarSectionLU" store:Type="Tables" store:Schema="DBA" store:Name="lkpSWATScoreVarSectionLU">
+            <DefiningQuery>SELECT 
+      [lkpSWATScoreVarSectionLU].[ScoreVarID] AS [ScoreVarID], 
+      [lkpSWATScoreVarSectionLU].[SectionID] AS [SectionID]
+      FROM [DBA].[lkpSWATScoreVarSectionLU] AS [lkpSWATScoreVarSectionLU]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="lkpSWATScoreVarsLU" EntityType="SWATModel.Store.lkpSWATScoreVarsLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATSectionLU" EntityType="SWATModel.Store.lkpSWATSectionLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATurbanDistanceLU" EntityType="SWATModel.Store.lkpSWATurbanDistanceLU" store:Type="Tables" Schema="DBA" />
@@ -42,6 +48,14 @@
           <AssociationSet Name="FK_lkpSubnational_2_lkpCountry" Association="SWATModel.Store.FK_lkpSubnational_2_lkpCountry">
             <End Role="lkpCountry" EntitySet="lkpCountry" />
             <End Role="lkpSubnational" EntitySet="lkpSubnational" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lkpSWATScoreVarSectionLU_4_lkpSWATScoreVarsLU" Association="SWATModel.Store.FK_lkpSWATScoreVarSectionLU_4_lkpSWATScoreVarsLU">
+            <End Role="lkpSWATScoreVarsLU" EntitySet="lkpSWATScoreVarsLU" />
+            <End Role="lkpSWATScoreVarSectionLU" EntitySet="lkpSWATScoreVarSectionLU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lkpSWATScoreVarSectionLU_5_lkpSWATSectionLU" Association="SWATModel.Store.FK_lkpSWATScoreVarSectionLU_5_lkpSWATSectionLU">
+            <End Role="lkpSWATSectionLU" EntitySet="lkpSWATSectionLU" />
+            <End Role="lkpSWATScoreVarSectionLU" EntitySet="lkpSWATScoreVarSectionLU" />
           </AssociationSet>
           <AssociationSet Name="FK_tblSWATBackgroundinfo_2_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_2_tblSWATSurvey">
             <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
@@ -297,6 +311,17 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'DBA.lkpSWATScoreVarSectionLU' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="lkpSWATScoreVarSectionLU">
+          <Key>
+            <PropertyRef Name="ScoreVarID" />
+            <PropertyRef Name="SectionID" />
+          </Key>
+          <Property Name="ScoreVarID" Type="int" Nullable="false" />
+          <Property Name="SectionID" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="lkpSWATScoreVarsLU">
           <Key>
             <PropertyRef Name="ID" />
@@ -480,6 +505,30 @@
             </Principal>
             <Dependent Role="lkpSubnational">
               <PropertyRef Name="CountryID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lkpSWATScoreVarSectionLU_4_lkpSWATScoreVarsLU">
+          <End Role="lkpSWATScoreVarsLU" Type="SWATModel.Store.lkpSWATScoreVarsLU" Multiplicity="1" />
+          <End Role="lkpSWATScoreVarSectionLU" Type="SWATModel.Store.lkpSWATScoreVarSectionLU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATScoreVarsLU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="lkpSWATScoreVarSectionLU">
+              <PropertyRef Name="ScoreVarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lkpSWATScoreVarSectionLU_5_lkpSWATSectionLU">
+          <End Role="lkpSWATSectionLU" Type="SWATModel.Store.lkpSWATSectionLU" Multiplicity="1" />
+          <End Role="lkpSWATScoreVarSectionLU" Type="SWATModel.Store.lkpSWATScoreVarSectionLU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATSectionLU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="lkpSWATScoreVarSectionLU">
+              <PropertyRef Name="SectionID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -831,8 +880,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="SWATModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -989,6 +1037,10 @@
           <AssociationSet Name="FK_tblSWATVisualGrpScoreMap_2_tblSWATVisualGroup" Association="SWATModel.FK_tblSWATVisualGrpScoreMap_2_tblSWATVisualGroup">
             <End Role="tblSWATVisualGroup" EntitySet="tblSWATVisualGroups" />
             <End Role="tblSWATVisualGrpScoreMap" EntitySet="tblSWATVisualGrpScoreMaps" />
+          </AssociationSet>
+          <AssociationSet Name="lkpSWATScoreVarSectionLU1" Association="SWATModel.lkpSWATScoreVarSectionLU1">
+            <End Role="lkpSWATScoreVarsLU" EntitySet="lkpSWATScoreVarsLUs" />
+            <End Role="lkpSWATSectionLU" EntitySet="lkpSWATSectionLUs" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="lkpBiome">
@@ -1158,6 +1210,7 @@
           <Property Name="VarName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="Description" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="tblSWATScores" Relationship="SWATModel.FK_tblSWATScore_3_lkpSWATScoreVarsLU" FromRole="lkpSWATScoreVarsLU" ToRole="tblSWATScore" />
+          <NavigationProperty Name="lkpSWATSectionLUs" Relationship="SWATModel.lkpSWATScoreVarSectionLU1" FromRole="lkpSWATScoreVarsLU" ToRole="lkpSWATSectionLU" />
         </EntityType>
         <EntityType Name="lkpSWATSectionLU">
           <Key>
@@ -1166,6 +1219,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
           <Property Name="SectionName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
           <Property Name="Description" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="lkpSWATScoreVarsLUs" Relationship="SWATModel.lkpSWATScoreVarSectionLU1" FromRole="lkpSWATSectionLU" ToRole="lkpSWATScoreVarsLU" />
         </EntityType>
         <EntityType Name="lkpSWATurbanDistanceLU">
           <Key>
@@ -1724,6 +1778,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="lkpSWATScoreVarSectionLU1">
+          <End Type="SWATModel.lkpSWATScoreVarsLU" Role="lkpSWATScoreVarsLU" Multiplicity="*" />
+          <End Type="SWATModel.lkpSWATSectionLU" Role="lkpSWATSectionLU" Multiplicity="*" />
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2058,6 +2116,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <AssociationSetMapping Name="lkpSWATScoreVarSectionLU1" TypeName="SWATModel.lkpSWATScoreVarSectionLU1" StoreEntitySet="lkpSWATScoreVarSectionLU">
+            <EndProperty Name="lkpSWATSectionLU">
+              <ScalarProperty Name="ID" ColumnName="SectionID" />
+            </EndProperty>
+            <EndProperty Name="lkpSWATScoreVarsLU">
+              <ScalarProperty Name="ID" ColumnName="ScoreVarID" />
+            </EndProperty>
+          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

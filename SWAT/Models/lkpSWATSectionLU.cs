@@ -14,8 +14,15 @@ namespace SWAT.Models
     
     public partial class lkpSWATSectionLU
     {
+        public lkpSWATSectionLU()
+        {
+            this.lkpSWATScoreVarsLUs = new HashSet<lkpSWATScoreVarsLU>();
+        }
+    
         public int ID { get; set; }
         public string SectionName { get; set; }
         public string Description { get; set; }
+    
+        public virtual ICollection<lkpSWATScoreVarsLU> lkpSWATScoreVarsLUs { get; set; }
     }
 }
