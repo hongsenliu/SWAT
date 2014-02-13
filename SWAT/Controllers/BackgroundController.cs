@@ -77,37 +77,73 @@ namespace SWAT.Controllers
             {
                 if (item.VarName == "ariditySCORE")
                 {
-                    var scoreIntorder = db.lkpSWATmapAridities.Find(tblswatbackgroundinfo.AridityID).intorder;
-                    var aridityScore = db.lkpSWATscores_Aridity.Single(e => e.intorder == scoreIntorder).Description;
-                    db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(aridityScore);
+                    if (tblswatbackgroundinfo.AridityID != null)
+                    {
+                        var scoreIntorder = db.lkpSWATmapAridities.Find(tblswatbackgroundinfo.AridityID).intorder;
+                        var aridityScore = db.lkpSWATscores_Aridity.Single(e => e.intorder == scoreIntorder).Description;
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(aridityScore);
+                    }
+                    else
+                    {
+                         db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = null;
+                    }
+                    
                     db.SaveChanges();
                 }
                 if (item.VarName == "econPrisSCORE")
                 {
-                    var scoreIntorder = db.lkpSWATeconPrisLUs.Find(tblswatbackgroundinfo.isEconPris).intorder;
-                    var econPrisScore = db.lkpSWATscores_econPris.Single(e => e.intorder == scoreIntorder).Description;
-                    db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(econPrisScore);
+                    if (tblswatbackgroundinfo.isEconPris != null)
+                    {
+                        var scoreIntorder = db.lkpSWATeconPrisLUs.Find(tblswatbackgroundinfo.isEconPris).intorder;
+                        var econPrisScore = db.lkpSWATscores_econPris.Single(e => e.intorder == scoreIntorder).Description;
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(econPrisScore);
+                    }
+                    else
+                    {
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = null;
+                    }
                     db.SaveChanges();
                 }
                 if (item.VarName == "areaBMSCORE")
                 {
-                    var scoreIntorder = db.lkpSWATareaBMLUs.Find(tblswatbackgroundinfo.AreaBmID).intorder;
-                    var areaBMScore = db.lkpSWATscores_areaBMLU.Single(e => e.intorder == scoreIntorder).Description;
-                    db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(areaBMScore);
+                    if (tblswatbackgroundinfo.AreaBmID != null)
+                    {
+                        var scoreIntorder = db.lkpSWATareaBMLUs.Find(tblswatbackgroundinfo.AreaBmID).intorder;
+                        var areaBMScore = db.lkpSWATscores_areaBMLU.Single(e => e.intorder == scoreIntorder).Description;
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(areaBMScore);
+                    }
+                    else
+                    {
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = null;
+                    }
                     db.SaveChanges();
                 }
                 if (item.VarName == "areaProtSCORE")
                 {
-                    var scoreIntorder = db.lkpSWATareaProtLUs.Find(tblswatbackgroundinfo.AreaProtID).intorder;
-                    var areaProtScore = db.lkpSWATscores_areaProt.Single(e => e.intorder == scoreIntorder).Description;
-                    db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(areaProtScore);
+                    if (tblswatbackgroundinfo.AreaProtID != null)
+                    {
+                        var scoreIntorder = db.lkpSWATareaProtLUs.Find(tblswatbackgroundinfo.AreaProtID).intorder;
+                        var areaProtScore = db.lkpSWATscores_areaProt.Single(e => e.intorder == scoreIntorder).Description;
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(areaProtScore);
+                    }
+                    else 
+                    {
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = null;
+                    }
                     db.SaveChanges();
                 }
                 if (item.VarName == "urbanDistanceSCORE")
                 {
-                    var scoreIntorder = db.lkpSWATurbanDistanceLUs.Find(tblswatbackgroundinfo.UrbanDistanceID).intorder;
-                    var urbanDistanceScore = db.lkpSWATscores_urbanDistance.Single(e => e.intorder == scoreIntorder).Description;
-                    db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(urbanDistanceScore);
+                    if (tblswatbackgroundinfo.UrbanDistanceID != null)
+                    {
+                        var scoreIntorder = db.lkpSWATurbanDistanceLUs.Find(tblswatbackgroundinfo.UrbanDistanceID).intorder;
+                        var urbanDistanceScore = db.lkpSWATscores_urbanDistance.Single(e => e.intorder == scoreIntorder).Description;
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(urbanDistanceScore);
+                    }
+                    else
+                    {
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = null;
+                    }
                     db.SaveChanges();
                 }
             }
