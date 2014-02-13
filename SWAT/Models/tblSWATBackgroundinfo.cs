@@ -20,7 +20,7 @@ namespace SWAT.Models
         public Nullable<int> SoilID { get; set; }
         public Nullable<int> EcoregionID { get; set; }
         public Nullable<int> WatershedID { get; set; }
-        public Nullable<int> AribityID { get; set; }
+        public Nullable<int> AridityID { get; set; }
         public Nullable<int> UrbanDistanceID { get; set; }
         public Nullable<long> Population { get; set; }
         public Nullable<int> numHouseholds { get; set; }
@@ -51,10 +51,23 @@ namespace SWAT.Models
         public virtual lkpBiome lkpBiome { get; set; }
         public virtual lkpClimateClassification lkpClimateClassification { get; set; }
         public virtual lkpSoil lkpSoil { get; set; }
+        public virtual lkpSWATareaBMLU lkpSWATareaBMLU { get; set; }
         public virtual lkpSWATareaProtLU lkpSWATareaProtLU { get; set; }
+        public virtual lkpSWATeconPrisLU lkpSWATeconPrisLU { get; set; }
         public virtual lkpSWATmapAridity lkpSWATmapAridity { get; set; }
+        public virtual lkpSWATpriorLU lkpSWATpriorLU { get; set; }
+        public virtual lkpSWATpriorLU lkpSWATpriorLU1 { get; set; }
+        public virtual lkpSWATpriorLU lkpSWATpriorLU2 { get; set; }
+        public virtual lkpSWATpriorLU lkpSWATpriorLU3 { get; set; }
+        public virtual lkpSWATpriorLU lkpSWATpriorLU4 { get; set; }
+        public virtual lkpSWATpriorLU lkpSWATpriorLU5 { get; set; }
+        public virtual lkpSWATpriorLU lkpSWATpriorLU6 { get; set; }
+        public virtual lkpSWATpriorLU lkpSWATpriorLU7 { get; set; }
         public virtual lkpSWATurbanDistanceLU lkpSWATurbanDistanceLU { get; set; }
         public virtual lkpSWATWatershedsLU lkpSWATWatershedsLU { get; set; }
+        public virtual lkpSWATYesNoLU lkpSWATYesNoLU { get; set; }
+        public virtual lkpSWATYesNoLU lkpSWATYesNoLU1 { get; set; }
+        public virtual lkpSWATYesNoLU lkpSWATYesNoLU2 { get; set; }
         public virtual tblSWATSurvey tblSWATSurvey { get; set; }
     }
 }

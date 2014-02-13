@@ -23,7 +23,14 @@
           <EntitySet Name="lkpSWATscores_econPris" EntityType="SWATModel.Store.lkpSWATscores_econPris" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_urbanDistance" EntityType="SWATModel.Store.lkpSWATscores_urbanDistance" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_YesNoLUYesGood" EntityType="SWATModel.Store.lkpSWATscores_YesNoLUYesGood" store:Type="Tables" Schema="DBA" />
-          <EntitySet Name="lkpSWATScoreVars" EntityType="SWATModel.Store.lkpSWATScoreVars" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATScoreVarSectionLU" EntityType="SWATModel.Store.lkpSWATScoreVarSectionLU" store:Type="Tables" store:Schema="DBA" store:Name="lkpSWATScoreVarSectionLU">
+            <DefiningQuery>SELECT 
+      [lkpSWATScoreVarSectionLU].[ScoreVarID] AS [ScoreVarID], 
+      [lkpSWATScoreVarSectionLU].[SectionID] AS [SectionID]
+      FROM [DBA].[lkpSWATScoreVarSectionLU] AS [lkpSWATScoreVarSectionLU]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="lkpSWATScoreVarsLU" EntityType="SWATModel.Store.lkpSWATScoreVarsLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATSectionLU" EntityType="SWATModel.Store.lkpSWATSectionLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATurbanDistanceLU" EntityType="SWATModel.Store.lkpSWATurbanDistanceLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATWatershedsLU" EntityType="SWATModel.Store.lkpSWATWatershedsLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATYesNoLU" EntityType="SWATModel.Store.lkpSWATYesNoLU" store:Type="Tables" Schema="DBA" />
@@ -42,36 +49,96 @@
             <End Role="lkpCountry" EntitySet="lkpCountry" />
             <End Role="lkpSubnational" EntitySet="lkpSubnational" />
           </AssociationSet>
+          <AssociationSet Name="FK_lkpSWATScoreVarSectionLU_4_lkpSWATScoreVarsLU" Association="SWATModel.Store.FK_lkpSWATScoreVarSectionLU_4_lkpSWATScoreVarsLU">
+            <End Role="lkpSWATScoreVarsLU" EntitySet="lkpSWATScoreVarsLU" />
+            <End Role="lkpSWATScoreVarSectionLU" EntitySet="lkpSWATScoreVarSectionLU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lkpSWATScoreVarSectionLU_5_lkpSWATSectionLU" Association="SWATModel.Store.FK_lkpSWATScoreVarSectionLU_5_lkpSWATSectionLU">
+            <End Role="lkpSWATSectionLU" EntitySet="lkpSWATSectionLU" />
+            <End Role="lkpSWATScoreVarSectionLU" EntitySet="lkpSWATScoreVarSectionLU" />
+          </AssociationSet>
           <AssociationSet Name="FK_tblSWATBackgroundinfo_2_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_2_tblSWATSurvey">
             <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
             <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblSWATBackgroundinfo_21_lkpClimateClassification" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_21_lkpClimateClassification">
-            <End Role="lkpClimateClassification" EntitySet="lkpClimateClassification" />
-            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tblSWATBackgroundinfo_22_lkpSoil" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_22_lkpSoil">
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_48_lkpSoil" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_48_lkpSoil">
             <End Role="lkpSoil" EntitySet="lkpSoil" />
             <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblSWATBackgroundinfo_29_lkpBiome" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_29_lkpBiome">
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_49_lkpBiome" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_49_lkpBiome">
             <End Role="lkpBiome" EntitySet="lkpBiome" />
             <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblSWATBackgroundinfo_30_lkpSWATWatershedsLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_30_lkpSWATWatershedsLU">
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_50_lkpClimateClassification" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_50_lkpClimateClassification">
+            <End Role="lkpClimateClassification" EntitySet="lkpClimateClassification" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_51_lkpSWATWatershedsLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_51_lkpSWATWatershedsLU">
             <End Role="lkpSWATWatershedsLU" EntitySet="lkpSWATWatershedsLU" />
             <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblSWATBackgroundinfo_31_lkpSWATmapAridity" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_31_lkpSWATmapAridity">
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_52_lkpSWATmapAridity" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_52_lkpSWATmapAridity">
             <End Role="lkpSWATmapAridity" EntitySet="lkpSWATmapAridity" />
             <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblSWATBackgroundinfo_32_lkpSWATurbanDistanceLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_32_lkpSWATurbanDistanceLU">
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_53_lkpSWATurbanDistanceLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_53_lkpSWATurbanDistanceLU">
             <End Role="lkpSWATurbanDistanceLU" EntitySet="lkpSWATurbanDistanceLU" />
             <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblSWATBackgroundinfo_33_lkpSWATareaProtLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_33_lkpSWATareaProtLU">
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_54_lkpSWATYesNoLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_54_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLU" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_55_lkpSWATYesNoLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_55_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLU" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_56_lkpSWATYesNoLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_56_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLU" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_57_lkpSWATeconPrisLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_57_lkpSWATeconPrisLU">
+            <End Role="lkpSWATeconPrisLU" EntitySet="lkpSWATeconPrisLU" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_58_lkpSWATareaProtLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_58_lkpSWATareaProtLU">
             <End Role="lkpSWATareaProtLU" EntitySet="lkpSWATareaProtLU" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_59_lkpSWATareaBMLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_59_lkpSWATareaBMLU">
+            <End Role="lkpSWATareaBMLU" EntitySet="lkpSWATareaBMLU" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_60_lkpSWATpriorLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_60_lkpSWATpriorLU">
+            <End Role="lkpSWATpriorLU" EntitySet="lkpSWATpriorLU" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_61_lkpSWATpriorLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_61_lkpSWATpriorLU">
+            <End Role="lkpSWATpriorLU" EntitySet="lkpSWATpriorLU" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_62_lkpSWATpriorLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_62_lkpSWATpriorLU">
+            <End Role="lkpSWATpriorLU" EntitySet="lkpSWATpriorLU" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_63_lkpSWATpriorLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_63_lkpSWATpriorLU">
+            <End Role="lkpSWATpriorLU" EntitySet="lkpSWATpriorLU" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_64_lkpSWATpriorLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_64_lkpSWATpriorLU">
+            <End Role="lkpSWATpriorLU" EntitySet="lkpSWATpriorLU" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_65_lkpSWATpriorLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_65_lkpSWATpriorLU">
+            <End Role="lkpSWATpriorLU" EntitySet="lkpSWATpriorLU" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_66_lkpSWATpriorLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_66_lkpSWATpriorLU">
+            <End Role="lkpSWATpriorLU" EntitySet="lkpSWATpriorLU" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_67_lkpSWATpriorLU" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_67_lkpSWATpriorLU">
+            <End Role="lkpSWATpriorLU" EntitySet="lkpSWATpriorLU" />
             <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfo" />
           </AssociationSet>
           <AssociationSet Name="FK_tblSWATLocation_18_lkpCountry" Association="SWATModel.Store.FK_tblSWATLocation_18_lkpCountry">
@@ -86,8 +153,8 @@
             <End Role="lkpSubnational" EntitySet="lkpSubnational" />
             <End Role="tblSWATLocation" EntitySet="tblSWATLocation" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblSWATScore_3_lkpSWATScoreVars" Association="SWATModel.Store.FK_tblSWATScore_3_lkpSWATScoreVars">
-            <End Role="lkpSWATScoreVars" EntitySet="lkpSWATScoreVars" />
+          <AssociationSet Name="FK_tblSWATScore_3_lkpSWATScoreVarsLU" Association="SWATModel.Store.FK_tblSWATScore_3_lkpSWATScoreVarsLU">
+            <End Role="lkpSWATScoreVarsLU" EntitySet="lkpSWATScoreVarsLU" />
             <End Role="tblSWATScore" EntitySet="tblSWATScore" />
           </AssociationSet>
           <AssociationSet Name="FK_tblSWATSurvey_37_Userids" Association="SWATModel.Store.FK_tblSWATSurvey_37_Userids">
@@ -244,13 +311,32 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
-        <EntityType Name="lkpSWATScoreVars">
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'DBA.lkpSWATScoreVarSectionLU' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="lkpSWATScoreVarSectionLU">
+          <Key>
+            <PropertyRef Name="ScoreVarID" />
+            <PropertyRef Name="SectionID" />
+          </Key>
+          <Property Name="ScoreVarID" Type="int" Nullable="false" />
+          <Property Name="SectionID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="lkpSWATScoreVarsLU">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="VarName" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="Description" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="lkpSWATSectionLU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SectionName" Type="varchar" MaxLength="50" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="254" />
         </EntityType>
         <EntityType Name="lkpSWATurbanDistanceLU">
           <Key>
@@ -286,7 +372,7 @@
           <Property Name="SoilID" Type="int" />
           <Property Name="EcoregionID" Type="int" />
           <Property Name="WatershedID" Type="int" />
-          <Property Name="AribityID" Type="int" />
+          <Property Name="AridityID" Type="int" />
           <Property Name="UrbanDistanceID" Type="int" />
           <Property Name="Population" Type="bigint" />
           <Property Name="numHouseholds" Type="int" />
@@ -422,6 +508,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_lkpSWATScoreVarSectionLU_4_lkpSWATScoreVarsLU">
+          <End Role="lkpSWATScoreVarsLU" Type="SWATModel.Store.lkpSWATScoreVarsLU" Multiplicity="1" />
+          <End Role="lkpSWATScoreVarSectionLU" Type="SWATModel.Store.lkpSWATScoreVarSectionLU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATScoreVarsLU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="lkpSWATScoreVarSectionLU">
+              <PropertyRef Name="ScoreVarID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lkpSWATScoreVarSectionLU_5_lkpSWATSectionLU">
+          <End Role="lkpSWATSectionLU" Type="SWATModel.Store.lkpSWATSectionLU" Multiplicity="1" />
+          <End Role="lkpSWATScoreVarSectionLU" Type="SWATModel.Store.lkpSWATScoreVarSectionLU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATSectionLU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="lkpSWATScoreVarSectionLU">
+              <PropertyRef Name="SectionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_tblSWATBackgroundinfo_2_tblSWATSurvey">
           <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="1" />
           <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
@@ -434,19 +544,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblSWATBackgroundinfo_21_lkpClimateClassification">
-          <End Role="lkpClimateClassification" Type="SWATModel.Store.lkpClimateClassification" Multiplicity="0..1" />
-          <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="lkpClimateClassification">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="tblSWATBackgroundinfo">
-              <PropertyRef Name="ClimateID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblSWATBackgroundinfo_22_lkpSoil">
+        <Association Name="FK_tblSWATBackgroundinfo_48_lkpSoil">
           <End Role="lkpSoil" Type="SWATModel.Store.lkpSoil" Multiplicity="0..1" />
           <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -458,7 +556,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblSWATBackgroundinfo_29_lkpBiome">
+        <Association Name="FK_tblSWATBackgroundinfo_49_lkpBiome">
           <End Role="lkpBiome" Type="SWATModel.Store.lkpBiome" Multiplicity="0..1" />
           <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -470,7 +568,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblSWATBackgroundinfo_30_lkpSWATWatershedsLU">
+        <Association Name="FK_tblSWATBackgroundinfo_50_lkpClimateClassification">
+          <End Role="lkpClimateClassification" Type="SWATModel.Store.lkpClimateClassification" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpClimateClassification">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="ClimateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_51_lkpSWATWatershedsLU">
           <End Role="lkpSWATWatershedsLU" Type="SWATModel.Store.lkpSWATWatershedsLU" Multiplicity="0..1" />
           <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -482,7 +592,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblSWATBackgroundinfo_31_lkpSWATmapAridity">
+        <Association Name="FK_tblSWATBackgroundinfo_52_lkpSWATmapAridity">
           <End Role="lkpSWATmapAridity" Type="SWATModel.Store.lkpSWATmapAridity" Multiplicity="0..1" />
           <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -490,11 +600,11 @@
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="tblSWATBackgroundinfo">
-              <PropertyRef Name="AribityID" />
+              <PropertyRef Name="AridityID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblSWATBackgroundinfo_32_lkpSWATurbanDistanceLU">
+        <Association Name="FK_tblSWATBackgroundinfo_53_lkpSWATurbanDistanceLU">
           <End Role="lkpSWATurbanDistanceLU" Type="SWATModel.Store.lkpSWATurbanDistanceLU" Multiplicity="0..1" />
           <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -506,7 +616,55 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblSWATBackgroundinfo_33_lkpSWATareaProtLU">
+        <Association Name="FK_tblSWATBackgroundinfo_54_lkpSWATYesNoLU">
+          <End Role="lkpSWATYesNoLU" Type="SWATModel.Store.lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="isEconAg" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_55_lkpSWATYesNoLU">
+          <End Role="lkpSWATYesNoLU" Type="SWATModel.Store.lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="isEconLs" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_56_lkpSWATYesNoLU">
+          <End Role="lkpSWATYesNoLU" Type="SWATModel.Store.lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="isEconDev" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_57_lkpSWATeconPrisLU">
+          <End Role="lkpSWATeconPrisLU" Type="SWATModel.Store.lkpSWATeconPrisLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATeconPrisLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="isEconPris" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_58_lkpSWATareaProtLU">
           <End Role="lkpSWATareaProtLU" Type="SWATModel.Store.lkpSWATareaProtLU" Multiplicity="0..1" />
           <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
           <ReferentialConstraint>
@@ -515,6 +673,114 @@
             </Principal>
             <Dependent Role="tblSWATBackgroundinfo">
               <PropertyRef Name="AreaProtID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_59_lkpSWATareaBMLU">
+          <End Role="lkpSWATareaBMLU" Type="SWATModel.Store.lkpSWATareaBMLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATareaBMLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="AreaBmID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_60_lkpSWATpriorLU">
+          <End Role="lkpSWATpriorLU" Type="SWATModel.Store.lkpSWATpriorLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpriorLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="PriorQuality" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_61_lkpSWATpriorLU">
+          <End Role="lkpSWATpriorLU" Type="SWATModel.Store.lkpSWATpriorLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpriorLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="PriorQuan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_62_lkpSWATpriorLU">
+          <End Role="lkpSWATpriorLU" Type="SWATModel.Store.lkpSWATpriorLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpriorLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="PriorSeasonal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_63_lkpSWATpriorLU">
+          <End Role="lkpSWATpriorLU" Type="SWATModel.Store.lkpSWATpriorLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpriorLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="PriorPolitics" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_64_lkpSWATpriorLU">
+          <End Role="lkpSWATpriorLU" Type="SWATModel.Store.lkpSWATpriorLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpriorLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="PriorHealth" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_65_lkpSWATpriorLU">
+          <End Role="lkpSWATpriorLU" Type="SWATModel.Store.lkpSWATpriorLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpriorLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="PriorFinances" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_66_lkpSWATpriorLU">
+          <End Role="lkpSWATpriorLU" Type="SWATModel.Store.lkpSWATpriorLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpriorLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="PriorAccessible" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_67_lkpSWATpriorLU">
+          <End Role="lkpSWATpriorLU" Type="SWATModel.Store.lkpSWATpriorLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.Store.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpriorLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="PriorEquity" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -554,11 +820,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblSWATScore_3_lkpSWATScoreVars">
-          <End Role="lkpSWATScoreVars" Type="SWATModel.Store.lkpSWATScoreVars" Multiplicity="1" />
+        <Association Name="FK_tblSWATScore_3_lkpSWATScoreVarsLU">
+          <End Role="lkpSWATScoreVarsLU" Type="SWATModel.Store.lkpSWATScoreVarsLU" Multiplicity="1" />
           <End Role="tblSWATScore" Type="SWATModel.Store.tblSWATScore" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="lkpSWATScoreVars">
+            <Principal Role="lkpSWATScoreVarsLU">
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="tblSWATScore">
@@ -619,11 +885,43 @@
     <edmx:ConceptualModels>
       <Schema Namespace="SWATModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="SWATEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="lkpBiomes" EntityType="SWATModel.lkpBiome" />
+          <EntitySet Name="lkpClimateClassifications" EntityType="SWATModel.lkpClimateClassification" />
           <EntitySet Name="lkpCountries" EntityType="SWATModel.lkpCountry" />
           <EntitySet Name="lkpRegions" EntityType="SWATModel.lkpRegion" />
+          <EntitySet Name="lkpSoils" EntityType="SWATModel.lkpSoil" />
           <EntitySet Name="lkpSubnationals" EntityType="SWATModel.lkpSubnational" />
+          <EntitySet Name="lkpSWATareaBMLUs" EntityType="SWATModel.lkpSWATareaBMLU" />
+          <EntitySet Name="lkpSWATareaProtLUs" EntityType="SWATModel.lkpSWATareaProtLU" />
+          <EntitySet Name="lkpSWATeconPrisLUs" EntityType="SWATModel.lkpSWATeconPrisLU" />
+          <EntitySet Name="lkpSWATmapAridities" EntityType="SWATModel.lkpSWATmapAridity" />
+          <EntitySet Name="lkpSWATpriorLUs" EntityType="SWATModel.lkpSWATpriorLU" />
+          <EntitySet Name="lkpSWATscores_areaBMLU" EntityType="SWATModel.lkpSWATscores_areaBMLU" />
+          <EntitySet Name="lkpSWATscores_areaProt" EntityType="SWATModel.lkpSWATscores_areaProt" />
+          <EntitySet Name="lkpSWATscores_Aridity" EntityType="SWATModel.lkpSWATscores_Aridity" />
+          <EntitySet Name="lkpSWATscores_econPris" EntityType="SWATModel.lkpSWATscores_econPris" />
+          <EntitySet Name="lkpSWATscores_urbanDistance" EntityType="SWATModel.lkpSWATscores_urbanDistance" />
+          <EntitySet Name="lkpSWATscores_YesNoLUYesGood" EntityType="SWATModel.lkpSWATscores_YesNoLUYesGood" />
+          <EntitySet Name="lkpSWATScoreVarsLUs" EntityType="SWATModel.lkpSWATScoreVarsLU" />
+          <EntitySet Name="lkpSWATSectionLUs" EntityType="SWATModel.lkpSWATSectionLU" />
+          <EntitySet Name="lkpSWATurbanDistanceLUs" EntityType="SWATModel.lkpSWATurbanDistanceLU" />
+          <EntitySet Name="lkpSWATWatershedsLUs" EntityType="SWATModel.lkpSWATWatershedsLU" />
+          <EntitySet Name="lkpSWATYesNoLUs" EntityType="SWATModel.lkpSWATYesNoLU" />
+          <EntitySet Name="tblSWATBackgroundinfoes" EntityType="SWATModel.tblSWATBackgroundinfo" />
           <EntitySet Name="tblSWATLocations" EntityType="SWATModel.tblSWATLocation" />
+          <EntitySet Name="tblSWATScores" EntityType="SWATModel.tblSWATScore" />
+          <EntitySet Name="tblSWATSurveys" EntityType="SWATModel.tblSWATSurvey" />
+          <EntitySet Name="tblSWATVisualGroups" EntityType="SWATModel.tblSWATVisualGroup" />
+          <EntitySet Name="tblSWATVisualGrpScoreMaps" EntityType="SWATModel.tblSWATVisualGrpScoreMap" />
           <EntitySet Name="Userids" EntityType="SWATModel.Userid" />
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_49_lkpBiome" Association="SWATModel.FK_tblSWATBackgroundinfo_49_lkpBiome">
+            <End Role="lkpBiome" EntitySet="lkpBiomes" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_50_lkpClimateClassification" Association="SWATModel.FK_tblSWATBackgroundinfo_50_lkpClimateClassification">
+            <End Role="lkpClimateClassification" EntitySet="lkpClimateClassifications" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
+          </AssociationSet>
           <AssociationSet Name="FK_lkpCountry_3_lkpRegion" Association="SWATModel.FK_lkpCountry_3_lkpRegion">
             <End Role="lkpRegion" EntitySet="lkpRegions" />
             <End Role="lkpCountry" EntitySet="lkpCountries" />
@@ -640,86 +938,130 @@
             <End Role="lkpRegion" EntitySet="lkpRegions" />
             <End Role="tblSWATLocation" EntitySet="tblSWATLocations" />
           </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_48_lkpSoil" Association="SWATModel.FK_tblSWATBackgroundinfo_48_lkpSoil">
+            <End Role="lkpSoil" EntitySet="lkpSoils" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
+          </AssociationSet>
           <AssociationSet Name="FK_tblSWATLocation_21_lkpSubnational" Association="SWATModel.FK_tblSWATLocation_21_lkpSubnational">
             <End Role="lkpSubnational" EntitySet="lkpSubnationals" />
             <End Role="tblSWATLocation" EntitySet="tblSWATLocations" />
           </AssociationSet>
-          <EntitySet Name="tblSWATSurveys" EntityType="SWATModel.tblSWATSurvey" />
-          <AssociationSet Name="FK_tblSWATSurvey_38_tblSWATLocation" Association="SWATModel.FK_tblSWATSurvey_38_tblSWATLocation">
-            <End Role="tblSWATLocation" EntitySet="tblSWATLocations" />
-            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tblSWATSurvey_37_Userids" Association="SWATModel.FK_tblSWATSurvey_37_Userids">
-            <End Role="Userid" EntitySet="Userids" />
-            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
-          </AssociationSet>
-          <EntitySet Name="lkpBiomes" EntityType="SWATModel.lkpBiome" />
-          <EntitySet Name="lkpClimateClassifications" EntityType="SWATModel.lkpClimateClassification" />
-          <EntitySet Name="lkpSoils" EntityType="SWATModel.lkpSoil" />
-          <EntitySet Name="lkpSWATareaBMLUs" EntityType="SWATModel.lkpSWATareaBMLU" />
-          <EntitySet Name="lkpSWATareaProtLUs" EntityType="SWATModel.lkpSWATareaProtLU" />
-          <EntitySet Name="lkpSWATeconPrisLUs" EntityType="SWATModel.lkpSWATeconPrisLU" />
-          <EntitySet Name="lkpSWATmapAridities" EntityType="SWATModel.lkpSWATmapAridity" />
-          <EntitySet Name="lkpSWATpriorLUs" EntityType="SWATModel.lkpSWATpriorLU" />
-          <EntitySet Name="lkpSWATscores_areaBMLU" EntityType="SWATModel.lkpSWATscores_areaBMLU" />
-          <EntitySet Name="lkpSWATscores_areaProt" EntityType="SWATModel.lkpSWATscores_areaProt" />
-          <EntitySet Name="lkpSWATscores_Aridity" EntityType="SWATModel.lkpSWATscores_Aridity" />
-          <EntitySet Name="lkpSWATscores_econPris" EntityType="SWATModel.lkpSWATscores_econPris" />
-          <EntitySet Name="lkpSWATscores_urbanDistance" EntityType="SWATModel.lkpSWATscores_urbanDistance" />
-          <EntitySet Name="lkpSWATscores_YesNoLUYesGood" EntityType="SWATModel.lkpSWATscores_YesNoLUYesGood" />
-          <EntitySet Name="lkpSWATurbanDistanceLUs" EntityType="SWATModel.lkpSWATurbanDistanceLU" />
-          <EntitySet Name="lkpSWATWatershedsLUs" EntityType="SWATModel.lkpSWATWatershedsLU" />
-          <EntitySet Name="lkpSWATYesNoLUs" EntityType="SWATModel.lkpSWATYesNoLU" />
-          <EntitySet Name="tblSWATBackgroundinfoes" EntityType="SWATModel.tblSWATBackgroundinfo" />
-          <EntitySet Name="tblSWATVisualGroups" EntityType="SWATModel.tblSWATVisualGroup" />
-          <EntitySet Name="tblSWATVisualGrpScoreMaps" EntityType="SWATModel.tblSWATVisualGrpScoreMap" />
-          <AssociationSet Name="FK_tblSWATBackgroundinfo_29_lkpBiome" Association="SWATModel.FK_tblSWATBackgroundinfo_29_lkpBiome">
-            <End Role="lkpBiome" EntitySet="lkpBiomes" />
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_59_lkpSWATareaBMLU" Association="SWATModel.FK_tblSWATBackgroundinfo_59_lkpSWATareaBMLU">
+            <End Role="lkpSWATareaBMLU" EntitySet="lkpSWATareaBMLUs" />
             <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblSWATBackgroundinfo_21_lkpClimateClassification" Association="SWATModel.FK_tblSWATBackgroundinfo_21_lkpClimateClassification">
-            <End Role="lkpClimateClassification" EntitySet="lkpClimateClassifications" />
-            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tblSWATBackgroundinfo_22_lkpSoil" Association="SWATModel.FK_tblSWATBackgroundinfo_22_lkpSoil">
-            <End Role="lkpSoil" EntitySet="lkpSoils" />
-            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
-          </AssociationSet>
-          <AssociationSet Name="FK_tblSWATBackgroundinfo_33_lkpSWATareaProtLU" Association="SWATModel.FK_tblSWATBackgroundinfo_33_lkpSWATareaProtLU">
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_58_lkpSWATareaProtLU" Association="SWATModel.FK_tblSWATBackgroundinfo_58_lkpSWATareaProtLU">
             <End Role="lkpSWATareaProtLU" EntitySet="lkpSWATareaProtLUs" />
             <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblSWATBackgroundinfo_31_lkpSWATmapAridity" Association="SWATModel.FK_tblSWATBackgroundinfo_31_lkpSWATmapAridity">
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_57_lkpSWATeconPrisLU" Association="SWATModel.FK_tblSWATBackgroundinfo_57_lkpSWATeconPrisLU">
+            <End Role="lkpSWATeconPrisLU" EntitySet="lkpSWATeconPrisLUs" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_52_lkpSWATmapAridity" Association="SWATModel.FK_tblSWATBackgroundinfo_52_lkpSWATmapAridity">
             <End Role="lkpSWATmapAridity" EntitySet="lkpSWATmapAridities" />
             <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblSWATBackgroundinfo_32_lkpSWATurbanDistanceLU" Association="SWATModel.FK_tblSWATBackgroundinfo_32_lkpSWATurbanDistanceLU">
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_60_lkpSWATpriorLU" Association="SWATModel.FK_tblSWATBackgroundinfo_60_lkpSWATpriorLU">
+            <End Role="lkpSWATpriorLU" EntitySet="lkpSWATpriorLUs" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_61_lkpSWATpriorLU" Association="SWATModel.FK_tblSWATBackgroundinfo_61_lkpSWATpriorLU">
+            <End Role="lkpSWATpriorLU" EntitySet="lkpSWATpriorLUs" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_62_lkpSWATpriorLU" Association="SWATModel.FK_tblSWATBackgroundinfo_62_lkpSWATpriorLU">
+            <End Role="lkpSWATpriorLU" EntitySet="lkpSWATpriorLUs" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_63_lkpSWATpriorLU" Association="SWATModel.FK_tblSWATBackgroundinfo_63_lkpSWATpriorLU">
+            <End Role="lkpSWATpriorLU" EntitySet="lkpSWATpriorLUs" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_64_lkpSWATpriorLU" Association="SWATModel.FK_tblSWATBackgroundinfo_64_lkpSWATpriorLU">
+            <End Role="lkpSWATpriorLU" EntitySet="lkpSWATpriorLUs" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_65_lkpSWATpriorLU" Association="SWATModel.FK_tblSWATBackgroundinfo_65_lkpSWATpriorLU">
+            <End Role="lkpSWATpriorLU" EntitySet="lkpSWATpriorLUs" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_66_lkpSWATpriorLU" Association="SWATModel.FK_tblSWATBackgroundinfo_66_lkpSWATpriorLU">
+            <End Role="lkpSWATpriorLU" EntitySet="lkpSWATpriorLUs" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_67_lkpSWATpriorLU" Association="SWATModel.FK_tblSWATBackgroundinfo_67_lkpSWATpriorLU">
+            <End Role="lkpSWATpriorLU" EntitySet="lkpSWATpriorLUs" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATScore_3_lkpSWATScoreVarsLU" Association="SWATModel.FK_tblSWATScore_3_lkpSWATScoreVarsLU">
+            <End Role="lkpSWATScoreVarsLU" EntitySet="lkpSWATScoreVarsLUs" />
+            <End Role="tblSWATScore" EntitySet="tblSWATScores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_53_lkpSWATurbanDistanceLU" Association="SWATModel.FK_tblSWATBackgroundinfo_53_lkpSWATurbanDistanceLU">
             <End Role="lkpSWATurbanDistanceLU" EntitySet="lkpSWATurbanDistanceLUs" />
             <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblSWATBackgroundinfo_30_lkpSWATWatershedsLU" Association="SWATModel.FK_tblSWATBackgroundinfo_30_lkpSWATWatershedsLU">
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_51_lkpSWATWatershedsLU" Association="SWATModel.FK_tblSWATBackgroundinfo_51_lkpSWATWatershedsLU">
             <End Role="lkpSWATWatershedsLU" EntitySet="lkpSWATWatershedsLUs" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_54_lkpSWATYesNoLU" Association="SWATModel.FK_tblSWATBackgroundinfo_54_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLUs" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_55_lkpSWATYesNoLU" Association="SWATModel.FK_tblSWATBackgroundinfo_55_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLUs" />
+            <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATBackgroundinfo_56_lkpSWATYesNoLU" Association="SWATModel.FK_tblSWATBackgroundinfo_56_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLUs" />
             <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
           </AssociationSet>
           <AssociationSet Name="FK_tblSWATBackgroundinfo_2_tblSWATSurvey" Association="SWATModel.FK_tblSWATBackgroundinfo_2_tblSWATSurvey">
             <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
             <End Role="tblSWATBackgroundinfo" EntitySet="tblSWATBackgroundinfoes" />
           </AssociationSet>
-          <AssociationSet Name="FK_tblSWATVisualGrpScoreMap_2_tblSWATVisualGroup" Association="SWATModel.FK_tblSWATVisualGrpScoreMap_2_tblSWATVisualGroup">
-            <End Role="tblSWATVisualGroup" EntitySet="tblSWATVisualGroups" />
-            <End Role="tblSWATVisualGrpScoreMap" EntitySet="tblSWATVisualGrpScoreMaps" />
-          </AssociationSet>
-          <EntitySet Name="lkpSWATScoreVars" EntityType="SWATModel.lkpSWATScoreVar" />
-          <EntitySet Name="tblSWATScores" EntityType="SWATModel.tblSWATScore" />
-          <AssociationSet Name="FK_tblSWATScore_3_lkpSWATScoreVars" Association="SWATModel.FK_tblSWATScore_3_lkpSWATScoreVars">
-            <End Role="lkpSWATScoreVar" EntitySet="lkpSWATScoreVars" />
-            <End Role="tblSWATScore" EntitySet="tblSWATScores" />
+          <AssociationSet Name="FK_tblSWATSurvey_38_tblSWATLocation" Association="SWATModel.FK_tblSWATSurvey_38_tblSWATLocation">
+            <End Role="tblSWATLocation" EntitySet="tblSWATLocations" />
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
           </AssociationSet>
           <AssociationSet Name="FK_tblSWATVisualGrpScoreMap_3_tblSWATScore" Association="SWATModel.FK_tblSWATVisualGrpScoreMap_3_tblSWATScore">
             <End Role="tblSWATScore" EntitySet="tblSWATScores" />
             <End Role="tblSWATVisualGrpScoreMap" EntitySet="tblSWATVisualGrpScoreMaps" />
           </AssociationSet>
-          </EntityContainer>
+          <AssociationSet Name="FK_tblSWATSurvey_37_Userids" Association="SWATModel.FK_tblSWATSurvey_37_Userids">
+            <End Role="Userids" EntitySet="Userids" />
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATVisualGrpScoreMap_2_tblSWATVisualGroup" Association="SWATModel.FK_tblSWATVisualGrpScoreMap_2_tblSWATVisualGroup">
+            <End Role="tblSWATVisualGroup" EntitySet="tblSWATVisualGroups" />
+            <End Role="tblSWATVisualGrpScoreMap" EntitySet="tblSWATVisualGrpScoreMaps" />
+          </AssociationSet>
+          <AssociationSet Name="lkpSWATScoreVarSectionLU1" Association="SWATModel.lkpSWATScoreVarSectionLU1">
+            <End Role="lkpSWATScoreVarsLU" EntitySet="lkpSWATScoreVarsLUs" />
+            <End Role="lkpSWATSectionLU" EntitySet="lkpSWATSectionLUs" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="lkpBiome">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_49_lkpBiome" FromRole="lkpBiome" ToRole="tblSWATBackgroundinfo" />
+        </EntityType>
+        <EntityType Name="lkpClimateClassification">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CCType" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="CCDescription" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="CCCriterion" Type="String" MaxLength="32767" Unicode="false" FixedLength="false" />
+          <Property Name="CCOrder" Type="Int32" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_50_lkpClimateClassification" FromRole="lkpClimateClassification" ToRole="tblSWATBackgroundinfo" />
+        </EntityType>
         <EntityType Name="lkpCountry">
           <Key>
             <PropertyRef Name="ID" />
@@ -742,6 +1084,14 @@
           <NavigationProperty Name="lkpCountries" Relationship="SWATModel.FK_lkpCountry_3_lkpRegion" FromRole="lkpRegion" ToRole="lkpCountry" />
           <NavigationProperty Name="tblSWATLocations" Relationship="SWATModel.FK_tblSWATLocation_20_lkpRegion" FromRole="lkpRegion" ToRole="tblSWATLocation" />
         </EntityType>
+        <EntityType Name="lkpSoil">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_48_lkpSoil" FromRole="lkpSoil" ToRole="tblSWATBackgroundinfo" />
+        </EntityType>
         <EntityType Name="lkpSubnational">
           <Key>
             <PropertyRef Name="ID" />
@@ -751,6 +1101,213 @@
           <Property Name="Name" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
           <NavigationProperty Name="lkpCountry" Relationship="SWATModel.FK_lkpSubnational_2_lkpCountry" FromRole="lkpSubnational" ToRole="lkpCountry" />
           <NavigationProperty Name="tblSWATLocations" Relationship="SWATModel.FK_tblSWATLocation_21_lkpSubnational" FromRole="lkpSubnational" ToRole="tblSWATLocation" />
+        </EntityType>
+        <EntityType Name="lkpSWATareaBMLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="intorder" Type="Int32" p1:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_59_lkpSWATareaBMLU" FromRole="lkpSWATareaBMLU" ToRole="tblSWATBackgroundinfo" />
+        </EntityType>
+        <EntityType Name="lkpSWATareaProtLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="intorder" Type="Int32" p1:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_58_lkpSWATareaProtLU" FromRole="lkpSWATareaProtLU" ToRole="tblSWATBackgroundinfo" />
+        </EntityType>
+        <EntityType Name="lkpSWATeconPrisLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="intorder" Type="Int32" p1:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_57_lkpSWATeconPrisLU" FromRole="lkpSWATeconPrisLU" ToRole="tblSWATBackgroundinfo" />
+        </EntityType>
+        <EntityType Name="lkpSWATmapAridity">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="intorder" Type="Int32" p1:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_52_lkpSWATmapAridity" FromRole="lkpSWATmapAridity" ToRole="tblSWATBackgroundinfo" />
+        </EntityType>
+        <EntityType Name="lkpSWATpriorLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="intorder" Type="Int32" p1:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_60_lkpSWATpriorLU" FromRole="lkpSWATpriorLU" ToRole="tblSWATBackgroundinfo" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes1" Relationship="SWATModel.FK_tblSWATBackgroundinfo_61_lkpSWATpriorLU" FromRole="lkpSWATpriorLU" ToRole="tblSWATBackgroundinfo" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes2" Relationship="SWATModel.FK_tblSWATBackgroundinfo_62_lkpSWATpriorLU" FromRole="lkpSWATpriorLU" ToRole="tblSWATBackgroundinfo" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes3" Relationship="SWATModel.FK_tblSWATBackgroundinfo_63_lkpSWATpriorLU" FromRole="lkpSWATpriorLU" ToRole="tblSWATBackgroundinfo" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes4" Relationship="SWATModel.FK_tblSWATBackgroundinfo_64_lkpSWATpriorLU" FromRole="lkpSWATpriorLU" ToRole="tblSWATBackgroundinfo" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes5" Relationship="SWATModel.FK_tblSWATBackgroundinfo_65_lkpSWATpriorLU" FromRole="lkpSWATpriorLU" ToRole="tblSWATBackgroundinfo" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes6" Relationship="SWATModel.FK_tblSWATBackgroundinfo_66_lkpSWATpriorLU" FromRole="lkpSWATpriorLU" ToRole="tblSWATBackgroundinfo" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes7" Relationship="SWATModel.FK_tblSWATBackgroundinfo_67_lkpSWATpriorLU" FromRole="lkpSWATpriorLU" ToRole="tblSWATBackgroundinfo" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_areaBMLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="intorder" Type="Int32" p1:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_areaProt">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="intorder" Type="Int32" p1:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_Aridity">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="intorder" Type="Int32" p1:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_econPris">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="intorder" Type="Int32" p1:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_urbanDistance">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="intorder" Type="Int32" p1:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_YesNoLUYesGood">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="intorder" Type="Int32" p1:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATScoreVarsLU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="VarName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tblSWATScores" Relationship="SWATModel.FK_tblSWATScore_3_lkpSWATScoreVarsLU" FromRole="lkpSWATScoreVarsLU" ToRole="tblSWATScore" />
+          <NavigationProperty Name="lkpSWATSectionLUs" Relationship="SWATModel.lkpSWATScoreVarSectionLU1" FromRole="lkpSWATScoreVarsLU" ToRole="lkpSWATSectionLU" />
+        </EntityType>
+        <EntityType Name="lkpSWATSectionLU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="SectionName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="lkpSWATScoreVarsLUs" Relationship="SWATModel.lkpSWATScoreVarSectionLU1" FromRole="lkpSWATSectionLU" ToRole="lkpSWATScoreVarsLU" />
+        </EntityType>
+        <EntityType Name="lkpSWATurbanDistanceLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="intorder" Type="Int32" p1:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_53_lkpSWATurbanDistanceLU" FromRole="lkpSWATurbanDistanceLU" ToRole="tblSWATBackgroundinfo" />
+        </EntityType>
+        <EntityType Name="lkpSWATWatershedsLU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="intorder" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_51_lkpSWATWatershedsLU" FromRole="lkpSWATWatershedsLU" ToRole="tblSWATBackgroundinfo" />
+        </EntityType>
+        <EntityType Name="lkpSWATYesNoLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="intorder" Type="Int32" p1:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_54_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATBackgroundinfo" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes1" Relationship="SWATModel.FK_tblSWATBackgroundinfo_55_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATBackgroundinfo" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes2" Relationship="SWATModel.FK_tblSWATBackgroundinfo_56_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATBackgroundinfo" />
+        </EntityType>
+        <EntityType Name="tblSWATBackgroundinfo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="Int32" Nullable="false" />
+          <Property Name="ClimateID" Type="Int32" />
+          <Property Name="SoilID" Type="Int32" />
+          <Property Name="EcoregionID" Type="Int32" />
+          <Property Name="WatershedID" Type="Int32" />
+          <Property Name="AridityID" Type="Int32" />
+          <Property Name="UrbanDistanceID" Type="Int32" />
+          <Property Name="Population" Type="Int64" />
+          <Property Name="numHouseholds" Type="Int32" />
+          <Property Name="numChildren" Type="Int32" />
+          <Property Name="PeoplePerHH" Type="Double" />
+          <Property Name="isEconAg" Type="Int32" />
+          <Property Name="isEconLs" Type="Int32" />
+          <Property Name="isEconDev" Type="Int32" />
+          <Property Name="isEconPris" Type="Int32" />
+          <Property Name="Area" Type="Double" />
+          <Property Name="AreaForest" Type="Double" />
+          <Property Name="AreaAg" Type="Double" />
+          <Property Name="AreaInf" Type="Double" />
+          <Property Name="AreaSw" Type="Double" />
+          <Property Name="AreaWet" Type="Double" />
+          <Property Name="AreaNat" Type="Double" />
+          <Property Name="AreaProtID" Type="Int32" />
+          <Property Name="AreaBmID" Type="Int32" />
+          <Property Name="PriorQuality" Type="Int32" />
+          <Property Name="PriorQuan" Type="Int32" />
+          <Property Name="PriorSeasonal" Type="Int32" />
+          <Property Name="PriorPolitics" Type="Int32" />
+          <Property Name="PriorHealth" Type="Int32" />
+          <Property Name="PriorFinances" Type="Int32" />
+          <Property Name="PriorAccessible" Type="Int32" />
+          <Property Name="PriorEquity" Type="Int32" />
+          <NavigationProperty Name="lkpBiome" Relationship="SWATModel.FK_tblSWATBackgroundinfo_49_lkpBiome" FromRole="tblSWATBackgroundinfo" ToRole="lkpBiome" />
+          <NavigationProperty Name="lkpClimateClassification" Relationship="SWATModel.FK_tblSWATBackgroundinfo_50_lkpClimateClassification" FromRole="tblSWATBackgroundinfo" ToRole="lkpClimateClassification" />
+          <NavigationProperty Name="lkpSoil" Relationship="SWATModel.FK_tblSWATBackgroundinfo_48_lkpSoil" FromRole="tblSWATBackgroundinfo" ToRole="lkpSoil" />
+          <NavigationProperty Name="lkpSWATareaBMLU" Relationship="SWATModel.FK_tblSWATBackgroundinfo_59_lkpSWATareaBMLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATareaBMLU" />
+          <NavigationProperty Name="lkpSWATareaProtLU" Relationship="SWATModel.FK_tblSWATBackgroundinfo_58_lkpSWATareaProtLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATareaProtLU" />
+          <NavigationProperty Name="lkpSWATeconPrisLU" Relationship="SWATModel.FK_tblSWATBackgroundinfo_57_lkpSWATeconPrisLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATeconPrisLU" />
+          <NavigationProperty Name="lkpSWATmapAridity" Relationship="SWATModel.FK_tblSWATBackgroundinfo_52_lkpSWATmapAridity" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATmapAridity" />
+          <NavigationProperty Name="lkpSWATpriorLU" Relationship="SWATModel.FK_tblSWATBackgroundinfo_60_lkpSWATpriorLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATpriorLU" />
+          <NavigationProperty Name="lkpSWATpriorLU1" Relationship="SWATModel.FK_tblSWATBackgroundinfo_61_lkpSWATpriorLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATpriorLU" />
+          <NavigationProperty Name="lkpSWATpriorLU2" Relationship="SWATModel.FK_tblSWATBackgroundinfo_62_lkpSWATpriorLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATpriorLU" />
+          <NavigationProperty Name="lkpSWATpriorLU3" Relationship="SWATModel.FK_tblSWATBackgroundinfo_63_lkpSWATpriorLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATpriorLU" />
+          <NavigationProperty Name="lkpSWATpriorLU4" Relationship="SWATModel.FK_tblSWATBackgroundinfo_64_lkpSWATpriorLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATpriorLU" />
+          <NavigationProperty Name="lkpSWATpriorLU5" Relationship="SWATModel.FK_tblSWATBackgroundinfo_65_lkpSWATpriorLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATpriorLU" />
+          <NavigationProperty Name="lkpSWATpriorLU6" Relationship="SWATModel.FK_tblSWATBackgroundinfo_66_lkpSWATpriorLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATpriorLU" />
+          <NavigationProperty Name="lkpSWATpriorLU7" Relationship="SWATModel.FK_tblSWATBackgroundinfo_67_lkpSWATpriorLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATpriorLU" />
+          <NavigationProperty Name="lkpSWATurbanDistanceLU" Relationship="SWATModel.FK_tblSWATBackgroundinfo_53_lkpSWATurbanDistanceLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATurbanDistanceLU" />
+          <NavigationProperty Name="lkpSWATWatershedsLU" Relationship="SWATModel.FK_tblSWATBackgroundinfo_51_lkpSWATWatershedsLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATWatershedsLU" />
+          <NavigationProperty Name="lkpSWATYesNoLU" Relationship="SWATModel.FK_tblSWATBackgroundinfo_54_lkpSWATYesNoLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATYesNoLU" />
+          <NavigationProperty Name="lkpSWATYesNoLU1" Relationship="SWATModel.FK_tblSWATBackgroundinfo_55_lkpSWATYesNoLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATYesNoLU" />
+          <NavigationProperty Name="lkpSWATYesNoLU2" Relationship="SWATModel.FK_tblSWATBackgroundinfo_56_lkpSWATYesNoLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATYesNoLU" />
+          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATBackgroundinfo_2_tblSWATSurvey" FromRole="tblSWATBackgroundinfo" ToRole="tblSWATSurvey" />
         </EntityType>
         <EntityType Name="tblSWATLocation">
           <Key>
@@ -767,6 +1324,52 @@
           <NavigationProperty Name="lkpRegion" Relationship="SWATModel.FK_tblSWATLocation_20_lkpRegion" FromRole="tblSWATLocation" ToRole="lkpRegion" />
           <NavigationProperty Name="lkpSubnational" Relationship="SWATModel.FK_tblSWATLocation_21_lkpSubnational" FromRole="tblSWATLocation" ToRole="lkpSubnational" />
           <NavigationProperty Name="tblSWATSurveys" Relationship="SWATModel.FK_tblSWATSurvey_38_tblSWATLocation" FromRole="tblSWATLocation" ToRole="tblSWATSurvey" />
+        </EntityType>
+        <EntityType Name="tblSWATScore">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="Int32" Nullable="false" />
+          <Property Name="VariableID" Type="Int32" Nullable="false" />
+          <Property Name="Value" Type="Double" />
+          <Property Name="VarName" Type="String" Nullable="false" MaxLength="254" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="542" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="lkpSWATScoreVarsLU" Relationship="SWATModel.FK_tblSWATScore_3_lkpSWATScoreVarsLU" FromRole="tblSWATScore" ToRole="lkpSWATScoreVarsLU" />
+          <NavigationProperty Name="tblSWATVisualGrpScoreMaps" Relationship="SWATModel.FK_tblSWATVisualGrpScoreMap_3_tblSWATScore" FromRole="tblSWATScore" ToRole="tblSWATVisualGrpScoreMap" />
+        </EntityType>
+        <EntityType Name="tblSWATSurvey">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Status" Type="Byte" />
+          <Property Name="StartTime" Type="DateTime" />
+          <Property Name="EndTime" Type="DateTime" />
+          <Property Name="LocationID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_2_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATBackgroundinfo" />
+          <NavigationProperty Name="tblSWATLocation" Relationship="SWATModel.FK_tblSWATSurvey_38_tblSWATLocation" FromRole="tblSWATSurvey" ToRole="tblSWATLocation" />
+          <NavigationProperty Name="Userid1" Relationship="SWATModel.FK_tblSWATSurvey_37_Userids" FromRole="tblSWATSurvey" ToRole="Userids" />
+        </EntityType>
+        <EntityType Name="tblSWATVisualGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="GroupName" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="254" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="tblSWATVisualGrpScoreMaps" Relationship="SWATModel.FK_tblSWATVisualGrpScoreMap_2_tblSWATVisualGroup" FromRole="tblSWATVisualGroup" ToRole="tblSWATVisualGrpScoreMap" />
+        </EntityType>
+        <EntityType Name="tblSWATVisualGrpScoreMap">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="VisualGrpID" Type="Int32" Nullable="false" />
+          <Property Name="ScoreID" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="tblSWATScore" Relationship="SWATModel.FK_tblSWATVisualGrpScoreMap_3_tblSWATScore" FromRole="tblSWATVisualGrpScoreMap" ToRole="tblSWATScore" />
+          <NavigationProperty Name="tblSWATVisualGroup" Relationship="SWATModel.FK_tblSWATVisualGrpScoreMap_2_tblSWATVisualGroup" FromRole="tblSWATVisualGrpScoreMap" ToRole="tblSWATVisualGroup" />
         </EntityType>
         <EntityType Name="Userid">
           <Key>
@@ -801,8 +1404,32 @@
           <Property Name="AvatarUserPhotoID" Type="Int32" />
           <Property Name="LastSuggestedContentDate" Type="DateTime" />
           <Property Name="FullName" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
-          <NavigationProperty Name="tblSWATSurveys" Relationship="SWATModel.FK_tblSWATSurvey_37_Userids" FromRole="Userid" ToRole="tblSWATSurvey" />
+          <NavigationProperty Name="tblSWATSurveys" Relationship="SWATModel.FK_tblSWATSurvey_37_Userids" FromRole="Userids" ToRole="tblSWATSurvey" />
         </EntityType>
+        <Association Name="FK_tblSWATBackgroundinfo_49_lkpBiome">
+          <End Role="lkpBiome" Type="SWATModel.lkpBiome" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpBiome">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="EcoregionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_50_lkpClimateClassification">
+          <End Role="lkpClimateClassification" Type="SWATModel.lkpClimateClassification" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpClimateClassification">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="ClimateID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_lkpCountry_3_lkpRegion">
           <End Role="lkpRegion" Type="SWATModel.lkpRegion" Multiplicity="0..1" />
           <End Role="lkpCountry" Type="SWATModel.lkpCountry" Multiplicity="*" />
@@ -851,6 +1478,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_48_lkpSoil">
+          <End Role="lkpSoil" Type="SWATModel.lkpSoil" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSoil">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="SoilID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_tblSWATLocation_21_lkpSubnational">
           <End Role="lkpSubnational" Type="SWATModel.lkpSubnational" Multiplicity="1" />
           <End Role="tblSWATLocation" Type="SWATModel.tblSWATLocation" Multiplicity="*" />
@@ -863,291 +1502,21 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityType Name="tblSWATSurvey">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int32" Name="UserID" Nullable="false" />
-          <Property Type="Byte" Name="Status" />
-          <Property Type="DateTime" Name="StartTime" />
-          <Property Type="DateTime" Name="EndTime" />
-          <Property Type="Int32" Name="LocationID" Nullable="false" />
-          <NavigationProperty Name="tblSWATLocation" Relationship="SWATModel.FK_tblSWATSurvey_38_tblSWATLocation" FromRole="tblSWATSurvey" ToRole="tblSWATLocation" />
-          <NavigationProperty Name="Userid1" Relationship="SWATModel.FK_tblSWATSurvey_37_Userids" FromRole="tblSWATSurvey" ToRole="Userid" />
-          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_2_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATBackgroundinfo" />
-        </EntityType>
-        <Association Name="FK_tblSWATSurvey_38_tblSWATLocation">
-          <End Type="SWATModel.tblSWATLocation" Role="tblSWATLocation" Multiplicity="1" />
-          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="*" />
+        <Association Name="FK_tblSWATBackgroundinfo_59_lkpSWATareaBMLU">
+          <End Role="lkpSWATareaBMLU" Type="SWATModel.lkpSWATareaBMLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="tblSWATLocation">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="tblSWATSurvey">
-              <PropertyRef Name="LocationID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblSWATSurvey_37_Userids">
-          <End Type="SWATModel.Userid" Role="Userid" Multiplicity="1" />
-          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Userid">
-              <PropertyRef Name="Userid1" />
-            </Principal>
-            <Dependent Role="tblSWATSurvey">
-              <PropertyRef Name="UserID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="lkpBiome">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Description" Nullable="false" MaxLength="254" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_29_lkpBiome" FromRole="lkpBiome" ToRole="tblSWATBackgroundinfo" />
-        </EntityType>
-        <EntityType Name="lkpClimateClassification">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="CCType" MaxLength="254" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="CCDescription" MaxLength="254" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="CCCriterion" MaxLength="32767" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="CCOrder" />
-          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_21_lkpClimateClassification" FromRole="lkpClimateClassification" ToRole="tblSWATBackgroundinfo" />
-        </EntityType>
-        <EntityType Name="lkpSoil">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Name" Nullable="false" MaxLength="254" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_22_lkpSoil" FromRole="lkpSoil" ToRole="tblSWATBackgroundinfo" />
-        </EntityType>
-        <EntityType Name="lkpSWATareaBMLU">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
-        <EntityType Name="lkpSWATareaProtLU">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_33_lkpSWATareaProtLU" FromRole="lkpSWATareaProtLU" ToRole="tblSWATBackgroundinfo" />
-        </EntityType>
-        <EntityType Name="lkpSWATeconPrisLU">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
-        <EntityType Name="lkpSWATmapAridity">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_31_lkpSWATmapAridity" FromRole="lkpSWATmapAridity" ToRole="tblSWATBackgroundinfo" />
-        </EntityType>
-        <EntityType Name="lkpSWATpriorLU">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
-        <EntityType Name="lkpSWATscores_areaBMLU">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
-        <EntityType Name="lkpSWATscores_areaProt">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
-        <EntityType Name="lkpSWATscores_Aridity">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
-        <EntityType Name="lkpSWATscores_econPris">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
-        <EntityType Name="lkpSWATscores_urbanDistance">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
-        <EntityType Name="lkpSWATscores_YesNoLUYesGood">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
-        <EntityType Name="lkpSWATurbanDistanceLU">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_32_lkpSWATurbanDistanceLU" FromRole="lkpSWATurbanDistanceLU" ToRole="tblSWATBackgroundinfo" />
-        </EntityType>
-        <EntityType Name="lkpSWATWatershedsLU">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Description" Nullable="false" MaxLength="254" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="intorder" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_30_lkpSWATWatershedsLU" FromRole="lkpSWATWatershedsLU" ToRole="tblSWATBackgroundinfo" />
-        </EntityType>
-        <EntityType Name="lkpSWATYesNoLU">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
-          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
-        </EntityType>
-        <EntityType Name="tblSWATBackgroundinfo">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int32" Name="SurveyID" Nullable="false" />
-          <Property Type="Int32" Name="ClimateID" />
-          <Property Type="Int32" Name="SoilID" />
-          <Property Type="Int32" Name="EcoregionID" />
-          <Property Type="Int32" Name="WatershedID" />
-          <Property Type="Int32" Name="AribityID" />
-          <Property Type="Int32" Name="UrbanDistanceID" />
-          <Property Type="Int64" Name="Population" />
-          <Property Type="Int32" Name="numHouseholds" />
-          <Property Type="Int32" Name="numChildren" />
-          <Property Type="Double" Name="PeoplePerHH" />
-          <Property Type="Int32" Name="isEconAg" />
-          <Property Type="Int32" Name="isEconLs" />
-          <Property Type="Int32" Name="isEconDev" />
-          <Property Type="Int32" Name="isEconPris" />
-          <Property Type="Double" Name="Area" />
-          <Property Type="Double" Name="AreaForest" />
-          <Property Type="Double" Name="AreaAg" />
-          <Property Type="Double" Name="AreaInf" />
-          <Property Type="Double" Name="AreaSw" />
-          <Property Type="Double" Name="AreaWet" />
-          <Property Type="Double" Name="AreaNat" />
-          <Property Type="Int32" Name="AreaProtID" />
-          <Property Type="Int32" Name="AreaBmID" />
-          <Property Type="Int32" Name="PriorQuality" />
-          <Property Type="Int32" Name="PriorQuan" />
-          <Property Type="Int32" Name="PriorSeasonal" />
-          <Property Type="Int32" Name="PriorPolitics" />
-          <Property Type="Int32" Name="PriorHealth" />
-          <Property Type="Int32" Name="PriorFinances" />
-          <Property Type="Int32" Name="PriorAccessible" />
-          <Property Type="Int32" Name="PriorEquity" />
-          <NavigationProperty Name="lkpBiome" Relationship="SWATModel.FK_tblSWATBackgroundinfo_29_lkpBiome" FromRole="tblSWATBackgroundinfo" ToRole="lkpBiome" />
-          <NavigationProperty Name="lkpClimateClassification" Relationship="SWATModel.FK_tblSWATBackgroundinfo_21_lkpClimateClassification" FromRole="tblSWATBackgroundinfo" ToRole="lkpClimateClassification" />
-          <NavigationProperty Name="lkpSoil" Relationship="SWATModel.FK_tblSWATBackgroundinfo_22_lkpSoil" FromRole="tblSWATBackgroundinfo" ToRole="lkpSoil" />
-          <NavigationProperty Name="lkpSWATareaProtLU" Relationship="SWATModel.FK_tblSWATBackgroundinfo_33_lkpSWATareaProtLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATareaProtLU" />
-          <NavigationProperty Name="lkpSWATmapAridity" Relationship="SWATModel.FK_tblSWATBackgroundinfo_31_lkpSWATmapAridity" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATmapAridity" />
-          <NavigationProperty Name="lkpSWATurbanDistanceLU" Relationship="SWATModel.FK_tblSWATBackgroundinfo_32_lkpSWATurbanDistanceLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATurbanDistanceLU" />
-          <NavigationProperty Name="lkpSWATWatershedsLU" Relationship="SWATModel.FK_tblSWATBackgroundinfo_30_lkpSWATWatershedsLU" FromRole="tblSWATBackgroundinfo" ToRole="lkpSWATWatershedsLU" />
-          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATBackgroundinfo_2_tblSWATSurvey" FromRole="tblSWATBackgroundinfo" ToRole="tblSWATSurvey" />
-        </EntityType>
-        <EntityType Name="tblSWATVisualGroup">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="GroupName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="tblSWATVisualGrpScoreMaps" Relationship="SWATModel.FK_tblSWATVisualGrpScoreMap_2_tblSWATVisualGroup" FromRole="tblSWATVisualGroup" ToRole="tblSWATVisualGrpScoreMap" />
-        </EntityType>
-        <EntityType Name="tblSWATVisualGrpScoreMap">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int32" Name="VisualGrpID" Nullable="false" />
-          <Property Type="Int64" Name="ScoreID" Nullable="false" />
-          <NavigationProperty Name="tblSWATVisualGroup" Relationship="SWATModel.FK_tblSWATVisualGrpScoreMap_2_tblSWATVisualGroup" FromRole="tblSWATVisualGrpScoreMap" ToRole="tblSWATVisualGroup" />
-          <NavigationProperty Name="tblSWATScore" Relationship="SWATModel.FK_tblSWATVisualGrpScoreMap_3_tblSWATScore" FromRole="tblSWATVisualGrpScoreMap" ToRole="tblSWATScore" />
-        </EntityType>
-        <Association Name="FK_tblSWATBackgroundinfo_29_lkpBiome">
-          <End Type="SWATModel.lkpBiome" Role="lkpBiome" Multiplicity="0..1" />
-          <End Type="SWATModel.tblSWATBackgroundinfo" Role="tblSWATBackgroundinfo" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="lkpBiome">
-              <PropertyRef Name="ID" />
+            <Principal Role="lkpSWATareaBMLU">
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="tblSWATBackgroundinfo">
-              <PropertyRef Name="EcoregionID" />
+              <PropertyRef Name="AreaBmID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblSWATBackgroundinfo_21_lkpClimateClassification">
-          <End Type="SWATModel.lkpClimateClassification" Role="lkpClimateClassification" Multiplicity="0..1" />
-          <End Type="SWATModel.tblSWATBackgroundinfo" Role="tblSWATBackgroundinfo" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="lkpClimateClassification">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="tblSWATBackgroundinfo">
-              <PropertyRef Name="ClimateID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblSWATBackgroundinfo_22_lkpSoil">
-          <End Type="SWATModel.lkpSoil" Role="lkpSoil" Multiplicity="0..1" />
-          <End Type="SWATModel.tblSWATBackgroundinfo" Role="tblSWATBackgroundinfo" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="lkpSoil">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="tblSWATBackgroundinfo">
-              <PropertyRef Name="SoilID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_tblSWATBackgroundinfo_33_lkpSWATareaProtLU">
-          <End Type="SWATModel.lkpSWATareaProtLU" Role="lkpSWATareaProtLU" Multiplicity="0..1" />
-          <End Type="SWATModel.tblSWATBackgroundinfo" Role="tblSWATBackgroundinfo" Multiplicity="*" />
+        <Association Name="FK_tblSWATBackgroundinfo_58_lkpSWATareaProtLU">
+          <End Role="lkpSWATareaProtLU" Type="SWATModel.lkpSWATareaProtLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="lkpSWATareaProtLU">
               <PropertyRef Name="id" />
@@ -1157,21 +1526,141 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblSWATBackgroundinfo_31_lkpSWATmapAridity">
-          <End Type="SWATModel.lkpSWATmapAridity" Role="lkpSWATmapAridity" Multiplicity="0..1" />
-          <End Type="SWATModel.tblSWATBackgroundinfo" Role="tblSWATBackgroundinfo" Multiplicity="*" />
+        <Association Name="FK_tblSWATBackgroundinfo_57_lkpSWATeconPrisLU">
+          <End Role="lkpSWATeconPrisLU" Type="SWATModel.lkpSWATeconPrisLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATeconPrisLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="isEconPris" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_52_lkpSWATmapAridity">
+          <End Role="lkpSWATmapAridity" Type="SWATModel.lkpSWATmapAridity" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="lkpSWATmapAridity">
               <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="tblSWATBackgroundinfo">
-              <PropertyRef Name="AribityID" />
+              <PropertyRef Name="AridityID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblSWATBackgroundinfo_32_lkpSWATurbanDistanceLU">
-          <End Type="SWATModel.lkpSWATurbanDistanceLU" Role="lkpSWATurbanDistanceLU" Multiplicity="0..1" />
-          <End Type="SWATModel.tblSWATBackgroundinfo" Role="tblSWATBackgroundinfo" Multiplicity="*" />
+        <Association Name="FK_tblSWATBackgroundinfo_60_lkpSWATpriorLU">
+          <End Role="lkpSWATpriorLU" Type="SWATModel.lkpSWATpriorLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpriorLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="PriorQuality" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_61_lkpSWATpriorLU">
+          <End Role="lkpSWATpriorLU" Type="SWATModel.lkpSWATpriorLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpriorLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="PriorQuan" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_62_lkpSWATpriorLU">
+          <End Role="lkpSWATpriorLU" Type="SWATModel.lkpSWATpriorLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpriorLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="PriorSeasonal" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_63_lkpSWATpriorLU">
+          <End Role="lkpSWATpriorLU" Type="SWATModel.lkpSWATpriorLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpriorLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="PriorPolitics" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_64_lkpSWATpriorLU">
+          <End Role="lkpSWATpriorLU" Type="SWATModel.lkpSWATpriorLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpriorLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="PriorHealth" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_65_lkpSWATpriorLU">
+          <End Role="lkpSWATpriorLU" Type="SWATModel.lkpSWATpriorLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpriorLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="PriorFinances" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_66_lkpSWATpriorLU">
+          <End Role="lkpSWATpriorLU" Type="SWATModel.lkpSWATpriorLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpriorLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="PriorAccessible" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_67_lkpSWATpriorLU">
+          <End Role="lkpSWATpriorLU" Type="SWATModel.lkpSWATpriorLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpriorLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="PriorEquity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATScore_3_lkpSWATScoreVarsLU">
+          <End Role="lkpSWATScoreVarsLU" Type="SWATModel.lkpSWATScoreVarsLU" Multiplicity="1" />
+          <End Role="tblSWATScore" Type="SWATModel.tblSWATScore" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATScoreVarsLU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATScore">
+              <PropertyRef Name="VariableID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_53_lkpSWATurbanDistanceLU">
+          <End Role="lkpSWATurbanDistanceLU" Type="SWATModel.lkpSWATurbanDistanceLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="lkpSWATurbanDistanceLU">
               <PropertyRef Name="id" />
@@ -1181,9 +1670,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblSWATBackgroundinfo_30_lkpSWATWatershedsLU">
-          <End Type="SWATModel.lkpSWATWatershedsLU" Role="lkpSWATWatershedsLU" Multiplicity="0..1" />
-          <End Type="SWATModel.tblSWATBackgroundinfo" Role="tblSWATBackgroundinfo" Multiplicity="*" />
+        <Association Name="FK_tblSWATBackgroundinfo_51_lkpSWATWatershedsLU">
+          <End Role="lkpSWATWatershedsLU" Type="SWATModel.lkpSWATWatershedsLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="lkpSWATWatershedsLU">
               <PropertyRef Name="ID" />
@@ -1193,9 +1682,45 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_54_lkpSWATYesNoLU">
+          <End Role="lkpSWATYesNoLU" Type="SWATModel.lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="isEconAg" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_55_lkpSWATYesNoLU">
+          <End Role="lkpSWATYesNoLU" Type="SWATModel.lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="isEconLs" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATBackgroundinfo_56_lkpSWATYesNoLU">
+          <End Role="lkpSWATYesNoLU" Type="SWATModel.lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATBackgroundinfo">
+              <PropertyRef Name="isEconDev" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_tblSWATBackgroundinfo_2_tblSWATSurvey">
-          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
-          <End Type="SWATModel.tblSWATBackgroundinfo" Role="tblSWATBackgroundinfo" Multiplicity="*" />
+          <End Role="tblSWATSurvey" Type="SWATModel.tblSWATSurvey" Multiplicity="1" />
+          <End Role="tblSWATBackgroundinfo" Type="SWATModel.tblSWATBackgroundinfo" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tblSWATSurvey">
               <PropertyRef Name="ID" />
@@ -1205,55 +1730,21 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_tblSWATVisualGrpScoreMap_2_tblSWATVisualGroup">
-          <End Type="SWATModel.tblSWATVisualGroup" Role="tblSWATVisualGroup" Multiplicity="1" />
-          <End Type="SWATModel.tblSWATVisualGrpScoreMap" Role="tblSWATVisualGrpScoreMap" Multiplicity="*" />
+        <Association Name="FK_tblSWATSurvey_38_tblSWATLocation">
+          <End Role="tblSWATLocation" Type="SWATModel.tblSWATLocation" Multiplicity="1" />
+          <End Role="tblSWATSurvey" Type="SWATModel.tblSWATSurvey" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="tblSWATVisualGroup">
+            <Principal Role="tblSWATLocation">
               <PropertyRef Name="ID" />
             </Principal>
-            <Dependent Role="tblSWATVisualGrpScoreMap">
-              <PropertyRef Name="VisualGrpID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityType Name="lkpSWATScoreVar">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="String" Name="VarName" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="tblSWATScores" Relationship="SWATModel.FK_tblSWATScore_3_lkpSWATScoreVars" FromRole="lkpSWATScoreVar" ToRole="tblSWATScore" />
-        </EntityType>
-        <EntityType Name="tblSWATScore">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int32" Name="SurveyID" Nullable="false" />
-          <Property Type="Int32" Name="VariableID" Nullable="false" />
-          <Property Type="Double" Name="Value" />
-          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="lkpSWATScoreVar" Relationship="SWATModel.FK_tblSWATScore_3_lkpSWATScoreVars" FromRole="tblSWATScore" ToRole="lkpSWATScoreVar" />
-          <NavigationProperty Name="tblSWATVisualGrpScoreMaps" Relationship="SWATModel.FK_tblSWATVisualGrpScoreMap_3_tblSWATScore" FromRole="tblSWATScore" ToRole="tblSWATVisualGrpScoreMap" />
-          <Property Type="String" Name="VarName" Nullable="false" MaxLength="254" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <Association Name="FK_tblSWATScore_3_lkpSWATScoreVars">
-          <End Type="SWATModel.lkpSWATScoreVar" Role="lkpSWATScoreVar" Multiplicity="1" />
-          <End Type="SWATModel.tblSWATScore" Role="tblSWATScore" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="lkpSWATScoreVar">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="tblSWATScore">
-              <PropertyRef Name="VariableID" />
+            <Dependent Role="tblSWATSurvey">
+              <PropertyRef Name="LocationID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_tblSWATVisualGrpScoreMap_3_tblSWATScore">
-          <End Type="SWATModel.tblSWATScore" Role="tblSWATScore" Multiplicity="1" />
-          <End Type="SWATModel.tblSWATVisualGrpScoreMap" Role="tblSWATVisualGrpScoreMap" Multiplicity="*" />
+          <End Role="tblSWATScore" Type="SWATModel.tblSWATScore" Multiplicity="1" />
+          <End Role="tblSWATVisualGrpScoreMap" Type="SWATModel.tblSWATVisualGrpScoreMap" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="tblSWATScore">
               <PropertyRef Name="ID" />
@@ -1263,12 +1754,59 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        </Schema>
+        <Association Name="FK_tblSWATSurvey_37_Userids">
+          <End Role="Userids" Type="SWATModel.Userid" Multiplicity="1" />
+          <End Role="tblSWATSurvey" Type="SWATModel.tblSWATSurvey" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Userids">
+              <PropertyRef Name="Userid1" />
+            </Principal>
+            <Dependent Role="tblSWATSurvey">
+              <PropertyRef Name="UserID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATVisualGrpScoreMap_2_tblSWATVisualGroup">
+          <End Role="tblSWATVisualGroup" Type="SWATModel.tblSWATVisualGroup" Multiplicity="1" />
+          <End Role="tblSWATVisualGrpScoreMap" Type="SWATModel.tblSWATVisualGrpScoreMap" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATVisualGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATVisualGrpScoreMap">
+              <PropertyRef Name="VisualGrpID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="lkpSWATScoreVarSectionLU1">
+          <End Type="SWATModel.lkpSWATScoreVarsLU" Role="lkpSWATScoreVarsLU" Multiplicity="*" />
+          <End Type="SWATModel.lkpSWATSectionLU" Role="lkpSWATSectionLU" Multiplicity="*" />
+        </Association>
+      </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="SWATModelStoreContainer" CdmEntityContainer="SWATEntities">
+          <EntitySetMapping Name="lkpBiomes">
+            <EntityTypeMapping TypeName="SWATModel.lkpBiome">
+              <MappingFragment StoreEntitySet="lkpBiome">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpClimateClassifications">
+            <EntityTypeMapping TypeName="SWATModel.lkpClimateClassification">
+              <MappingFragment StoreEntitySet="lkpClimateClassification">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="CCType" ColumnName="CCType" />
+                <ScalarProperty Name="CCDescription" ColumnName="CCDescription" />
+                <ScalarProperty Name="CCCriterion" ColumnName="CCCriterion" />
+                <ScalarProperty Name="CCOrder" ColumnName="CCOrder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="lkpCountries">
             <EntityTypeMapping TypeName="SWATModel.lkpCountry">
               <MappingFragment StoreEntitySet="lkpCountry">
@@ -1288,12 +1826,203 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="lkpSoils">
+            <EntityTypeMapping TypeName="SWATModel.lkpSoil">
+              <MappingFragment StoreEntitySet="lkpSoil">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="lkpSubnationals">
             <EntityTypeMapping TypeName="SWATModel.lkpSubnational">
               <MappingFragment StoreEntitySet="lkpSubnational">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="CountryID" ColumnName="CountryID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATareaBMLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATareaBMLU">
+              <MappingFragment StoreEntitySet="lkpSWATareaBMLU">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATareaProtLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATareaProtLU">
+              <MappingFragment StoreEntitySet="lkpSWATareaProtLU">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATeconPrisLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATeconPrisLU">
+              <MappingFragment StoreEntitySet="lkpSWATeconPrisLU">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATmapAridities">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATmapAridity">
+              <MappingFragment StoreEntitySet="lkpSWATmapAridity">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATpriorLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATpriorLU">
+              <MappingFragment StoreEntitySet="lkpSWATpriorLU">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_areaBMLU">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_areaBMLU">
+              <MappingFragment StoreEntitySet="lkpSWATscores_areaBMLU">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_areaProt">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_areaProt">
+              <MappingFragment StoreEntitySet="lkpSWATscores_areaProt">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_Aridity">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_Aridity">
+              <MappingFragment StoreEntitySet="lkpSWATscores_Aridity">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_econPris">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_econPris">
+              <MappingFragment StoreEntitySet="lkpSWATscores_econPris">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_urbanDistance">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_urbanDistance">
+              <MappingFragment StoreEntitySet="lkpSWATscores_urbanDistance">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_YesNoLUYesGood">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_YesNoLUYesGood">
+              <MappingFragment StoreEntitySet="lkpSWATscores_YesNoLUYesGood">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATScoreVarsLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATScoreVarsLU">
+              <MappingFragment StoreEntitySet="lkpSWATScoreVarsLU">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="VarName" ColumnName="VarName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATSectionLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATSectionLU">
+              <MappingFragment StoreEntitySet="lkpSWATSectionLU">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SectionName" ColumnName="SectionName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATurbanDistanceLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATurbanDistanceLU">
+              <MappingFragment StoreEntitySet="lkpSWATurbanDistanceLU">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATWatershedsLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATWatershedsLU">
+              <MappingFragment StoreEntitySet="lkpSWATWatershedsLU">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATYesNoLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATYesNoLU">
+              <MappingFragment StoreEntitySet="lkpSWATYesNoLU">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATBackgroundinfoes">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATBackgroundinfo">
+              <MappingFragment StoreEntitySet="tblSWATBackgroundinfo">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ClimateID" ColumnName="ClimateID" />
+                <ScalarProperty Name="SoilID" ColumnName="SoilID" />
+                <ScalarProperty Name="EcoregionID" ColumnName="EcoregionID" />
+                <ScalarProperty Name="WatershedID" ColumnName="WatershedID" />
+                <ScalarProperty Name="AridityID" ColumnName="AridityID" />
+                <ScalarProperty Name="UrbanDistanceID" ColumnName="UrbanDistanceID" />
+                <ScalarProperty Name="Population" ColumnName="Population" />
+                <ScalarProperty Name="numHouseholds" ColumnName="numHouseholds" />
+                <ScalarProperty Name="numChildren" ColumnName="numChildren" />
+                <ScalarProperty Name="PeoplePerHH" ColumnName="PeoplePerHH" />
+                <ScalarProperty Name="isEconAg" ColumnName="isEconAg" />
+                <ScalarProperty Name="isEconLs" ColumnName="isEconLs" />
+                <ScalarProperty Name="isEconDev" ColumnName="isEconDev" />
+                <ScalarProperty Name="isEconPris" ColumnName="isEconPris" />
+                <ScalarProperty Name="Area" ColumnName="Area" />
+                <ScalarProperty Name="AreaForest" ColumnName="AreaForest" />
+                <ScalarProperty Name="AreaAg" ColumnName="AreaAg" />
+                <ScalarProperty Name="AreaInf" ColumnName="AreaInf" />
+                <ScalarProperty Name="AreaSw" ColumnName="AreaSw" />
+                <ScalarProperty Name="AreaWet" ColumnName="AreaWet" />
+                <ScalarProperty Name="AreaNat" ColumnName="AreaNat" />
+                <ScalarProperty Name="AreaProtID" ColumnName="AreaProtID" />
+                <ScalarProperty Name="AreaBmID" ColumnName="AreaBmID" />
+                <ScalarProperty Name="PriorQuality" ColumnName="PriorQuality" />
+                <ScalarProperty Name="PriorQuan" ColumnName="PriorQuan" />
+                <ScalarProperty Name="PriorSeasonal" ColumnName="PriorSeasonal" />
+                <ScalarProperty Name="PriorPolitics" ColumnName="PriorPolitics" />
+                <ScalarProperty Name="PriorHealth" ColumnName="PriorHealth" />
+                <ScalarProperty Name="PriorFinances" ColumnName="PriorFinances" />
+                <ScalarProperty Name="PriorAccessible" ColumnName="PriorAccessible" />
+                <ScalarProperty Name="PriorEquity" ColumnName="PriorEquity" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1307,6 +2036,48 @@
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="regionID" ColumnName="regionID" />
                 <ScalarProperty Name="subnationalID" ColumnName="subnationalID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATScores">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATScore">
+              <MappingFragment StoreEntitySet="tblSWATScore">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="VariableID" ColumnName="VariableID" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="VarName" ColumnName="VarName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATSurveys">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATSurvey">
+              <MappingFragment StoreEntitySet="tblSWATSurvey">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
+                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATVisualGroups">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATVisualGroup">
+              <MappingFragment StoreEntitySet="tblSWATVisualGroup">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATVisualGrpScoreMaps">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATVisualGrpScoreMap">
+              <MappingFragment StoreEntitySet="tblSWATVisualGrpScoreMap">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="VisualGrpID" ColumnName="VisualGrpID" />
+                <ScalarProperty Name="ScoreID" ColumnName="ScoreID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1345,249 +2116,14 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="tblSWATSurveys">
-            <EntityTypeMapping TypeName="SWATModel.tblSWATSurvey">
-              <MappingFragment StoreEntitySet="tblSWATSurvey">
-                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
-                <ScalarProperty Name="EndTime" ColumnName="EndTime" />
-                <ScalarProperty Name="StartTime" ColumnName="StartTime" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpBiomes">
-            <EntityTypeMapping TypeName="SWATModel.lkpBiome">
-              <MappingFragment StoreEntitySet="lkpBiome">
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpClimateClassifications">
-            <EntityTypeMapping TypeName="SWATModel.lkpClimateClassification">
-              <MappingFragment StoreEntitySet="lkpClimateClassification">
-                <ScalarProperty Name="CCOrder" ColumnName="CCOrder" />
-                <ScalarProperty Name="CCCriterion" ColumnName="CCCriterion" />
-                <ScalarProperty Name="CCDescription" ColumnName="CCDescription" />
-                <ScalarProperty Name="CCType" ColumnName="CCType" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpSoils">
-            <EntityTypeMapping TypeName="SWATModel.lkpSoil">
-              <MappingFragment StoreEntitySet="lkpSoil">
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpSWATareaBMLUs">
-            <EntityTypeMapping TypeName="SWATModel.lkpSWATareaBMLU">
-              <MappingFragment StoreEntitySet="lkpSWATareaBMLU">
-                <ScalarProperty Name="intorder" ColumnName="intorder" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpSWATareaProtLUs">
-            <EntityTypeMapping TypeName="SWATModel.lkpSWATareaProtLU">
-              <MappingFragment StoreEntitySet="lkpSWATareaProtLU">
-                <ScalarProperty Name="intorder" ColumnName="intorder" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpSWATeconPrisLUs">
-            <EntityTypeMapping TypeName="SWATModel.lkpSWATeconPrisLU">
-              <MappingFragment StoreEntitySet="lkpSWATeconPrisLU">
-                <ScalarProperty Name="intorder" ColumnName="intorder" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpSWATmapAridities">
-            <EntityTypeMapping TypeName="SWATModel.lkpSWATmapAridity">
-              <MappingFragment StoreEntitySet="lkpSWATmapAridity">
-                <ScalarProperty Name="intorder" ColumnName="intorder" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpSWATpriorLUs">
-            <EntityTypeMapping TypeName="SWATModel.lkpSWATpriorLU">
-              <MappingFragment StoreEntitySet="lkpSWATpriorLU">
-                <ScalarProperty Name="intorder" ColumnName="intorder" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpSWATscores_areaBMLU">
-            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_areaBMLU">
-              <MappingFragment StoreEntitySet="lkpSWATscores_areaBMLU">
-                <ScalarProperty Name="intorder" ColumnName="intorder" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpSWATscores_areaProt">
-            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_areaProt">
-              <MappingFragment StoreEntitySet="lkpSWATscores_areaProt">
-                <ScalarProperty Name="intorder" ColumnName="intorder" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpSWATscores_Aridity">
-            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_Aridity">
-              <MappingFragment StoreEntitySet="lkpSWATscores_Aridity">
-                <ScalarProperty Name="intorder" ColumnName="intorder" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpSWATscores_econPris">
-            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_econPris">
-              <MappingFragment StoreEntitySet="lkpSWATscores_econPris">
-                <ScalarProperty Name="intorder" ColumnName="intorder" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpSWATscores_urbanDistance">
-            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_urbanDistance">
-              <MappingFragment StoreEntitySet="lkpSWATscores_urbanDistance">
-                <ScalarProperty Name="intorder" ColumnName="intorder" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpSWATscores_YesNoLUYesGood">
-            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_YesNoLUYesGood">
-              <MappingFragment StoreEntitySet="lkpSWATscores_YesNoLUYesGood">
-                <ScalarProperty Name="intorder" ColumnName="intorder" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpSWATurbanDistanceLUs">
-            <EntityTypeMapping TypeName="SWATModel.lkpSWATurbanDistanceLU">
-              <MappingFragment StoreEntitySet="lkpSWATurbanDistanceLU">
-                <ScalarProperty Name="intorder" ColumnName="intorder" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpSWATWatershedsLUs">
-            <EntityTypeMapping TypeName="SWATModel.lkpSWATWatershedsLU">
-              <MappingFragment StoreEntitySet="lkpSWATWatershedsLU">
-                <ScalarProperty Name="intorder" ColumnName="intorder" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpSWATYesNoLUs">
-            <EntityTypeMapping TypeName="SWATModel.lkpSWATYesNoLU">
-              <MappingFragment StoreEntitySet="lkpSWATYesNoLU">
-                <ScalarProperty Name="intorder" ColumnName="intorder" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="id" ColumnName="id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tblSWATBackgroundinfoes">
-            <EntityTypeMapping TypeName="SWATModel.tblSWATBackgroundinfo">
-              <MappingFragment StoreEntitySet="tblSWATBackgroundinfo">
-                <ScalarProperty Name="PriorEquity" ColumnName="PriorEquity" />
-                <ScalarProperty Name="PriorAccessible" ColumnName="PriorAccessible" />
-                <ScalarProperty Name="PriorFinances" ColumnName="PriorFinances" />
-                <ScalarProperty Name="PriorHealth" ColumnName="PriorHealth" />
-                <ScalarProperty Name="PriorPolitics" ColumnName="PriorPolitics" />
-                <ScalarProperty Name="PriorSeasonal" ColumnName="PriorSeasonal" />
-                <ScalarProperty Name="PriorQuan" ColumnName="PriorQuan" />
-                <ScalarProperty Name="PriorQuality" ColumnName="PriorQuality" />
-                <ScalarProperty Name="AreaBmID" ColumnName="AreaBmID" />
-                <ScalarProperty Name="AreaProtID" ColumnName="AreaProtID" />
-                <ScalarProperty Name="AreaNat" ColumnName="AreaNat" />
-                <ScalarProperty Name="AreaWet" ColumnName="AreaWet" />
-                <ScalarProperty Name="AreaSw" ColumnName="AreaSw" />
-                <ScalarProperty Name="AreaInf" ColumnName="AreaInf" />
-                <ScalarProperty Name="AreaAg" ColumnName="AreaAg" />
-                <ScalarProperty Name="AreaForest" ColumnName="AreaForest" />
-                <ScalarProperty Name="Area" ColumnName="Area" />
-                <ScalarProperty Name="isEconPris" ColumnName="isEconPris" />
-                <ScalarProperty Name="isEconDev" ColumnName="isEconDev" />
-                <ScalarProperty Name="isEconLs" ColumnName="isEconLs" />
-                <ScalarProperty Name="isEconAg" ColumnName="isEconAg" />
-                <ScalarProperty Name="PeoplePerHH" ColumnName="PeoplePerHH" />
-                <ScalarProperty Name="numChildren" ColumnName="numChildren" />
-                <ScalarProperty Name="numHouseholds" ColumnName="numHouseholds" />
-                <ScalarProperty Name="Population" ColumnName="Population" />
-                <ScalarProperty Name="UrbanDistanceID" ColumnName="UrbanDistanceID" />
-                <ScalarProperty Name="AribityID" ColumnName="AribityID" />
-                <ScalarProperty Name="WatershedID" ColumnName="WatershedID" />
-                <ScalarProperty Name="EcoregionID" ColumnName="EcoregionID" />
-                <ScalarProperty Name="SoilID" ColumnName="SoilID" />
-                <ScalarProperty Name="ClimateID" ColumnName="ClimateID" />
-                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tblSWATVisualGroups">
-            <EntityTypeMapping TypeName="SWATModel.tblSWATVisualGroup">
-              <MappingFragment StoreEntitySet="tblSWATVisualGroup">
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tblSWATVisualGrpScoreMaps">
-            <EntityTypeMapping TypeName="SWATModel.tblSWATVisualGrpScoreMap">
-              <MappingFragment StoreEntitySet="tblSWATVisualGrpScoreMap">
-                <ScalarProperty Name="ScoreID" ColumnName="ScoreID" />
-                <ScalarProperty Name="VisualGrpID" ColumnName="VisualGrpID" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="lkpSWATScoreVars">
-            <EntityTypeMapping TypeName="SWATModel.lkpSWATScoreVar">
-              <MappingFragment StoreEntitySet="lkpSWATScoreVars">
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="VarName" ColumnName="VarName" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tblSWATScores">
-            <EntityTypeMapping TypeName="SWATModel.tblSWATScore">
-              <MappingFragment StoreEntitySet="tblSWATScore">
-                <ScalarProperty Name="VarName" ColumnName="VarName" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Value" ColumnName="Value" />
-                <ScalarProperty Name="VariableID" ColumnName="VariableID" />
-                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
+          <AssociationSetMapping Name="lkpSWATScoreVarSectionLU1" TypeName="SWATModel.lkpSWATScoreVarSectionLU1" StoreEntitySet="lkpSWATScoreVarSectionLU">
+            <EndProperty Name="lkpSWATSectionLU">
+              <ScalarProperty Name="ID" ColumnName="SectionID" />
+            </EndProperty>
+            <EndProperty Name="lkpSWATScoreVarsLU">
+              <ScalarProperty Name="ID" ColumnName="ScoreVarID" />
+            </EndProperty>
+          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -26,8 +26,8 @@ namespace SWAT.Models
         public Nullable<System.DateTime> EndTime { get; set; }
         public int LocationID { get; set; }
     
+        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes { get; set; }
         public virtual tblSWATLocation tblSWATLocation { get; set; }
         public virtual Userid Userid1 { get; set; }
-        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes { get; set; }
     }
 }

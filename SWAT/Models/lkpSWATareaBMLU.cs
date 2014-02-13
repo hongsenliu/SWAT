@@ -14,8 +14,15 @@ namespace SWAT.Models
     
     public partial class lkpSWATareaBMLU
     {
+        public lkpSWATareaBMLU()
+        {
+            this.tblSWATBackgroundinfoes = new HashSet<tblSWATBackgroundinfo>();
+        }
+    
         public int id { get; set; }
         public string Description { get; set; }
         public Nullable<int> intorder { get; set; }
+    
+        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes { get; set; }
     }
 }

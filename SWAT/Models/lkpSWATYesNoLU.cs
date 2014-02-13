@@ -14,8 +14,19 @@ namespace SWAT.Models
     
     public partial class lkpSWATYesNoLU
     {
+        public lkpSWATYesNoLU()
+        {
+            this.tblSWATBackgroundinfoes = new HashSet<tblSWATBackgroundinfo>();
+            this.tblSWATBackgroundinfoes1 = new HashSet<tblSWATBackgroundinfo>();
+            this.tblSWATBackgroundinfoes2 = new HashSet<tblSWATBackgroundinfo>();
+        }
+    
         public int id { get; set; }
         public string Description { get; set; }
         public Nullable<int> intorder { get; set; }
+    
+        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes { get; set; }
+        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes1 { get; set; }
+        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes2 { get; set; }
     }
 }

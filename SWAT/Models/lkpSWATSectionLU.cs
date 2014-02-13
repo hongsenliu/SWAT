@@ -12,17 +12,17 @@ namespace SWAT.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class lkpSWATeconPrisLU
+    public partial class lkpSWATSectionLU
     {
-        public lkpSWATeconPrisLU()
+        public lkpSWATSectionLU()
         {
-            this.tblSWATBackgroundinfoes = new HashSet<tblSWATBackgroundinfo>();
+            this.lkpSWATScoreVarsLUs = new HashSet<lkpSWATScoreVarsLU>();
         }
     
-        public int id { get; set; }
+        public int ID { get; set; }
+        public string SectionName { get; set; }
         public string Description { get; set; }
-        public Nullable<int> intorder { get; set; }
     
-        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes { get; set; }
+        public virtual ICollection<lkpSWATScoreVarsLU> lkpSWATScoreVarsLUs { get; set; }
     }
 }

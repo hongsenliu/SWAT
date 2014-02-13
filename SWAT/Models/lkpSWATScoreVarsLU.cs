@@ -12,11 +12,12 @@ namespace SWAT.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class lkpSWATScoreVar
+    public partial class lkpSWATScoreVarsLU
     {
-        public lkpSWATScoreVar()
+        public lkpSWATScoreVarsLU()
         {
             this.tblSWATScores = new HashSet<tblSWATScore>();
+            this.lkpSWATSectionLUs = new HashSet<lkpSWATSectionLU>();
         }
     
         public int ID { get; set; }
@@ -24,5 +25,6 @@ namespace SWAT.Models
         public string Description { get; set; }
     
         public virtual ICollection<tblSWATScore> tblSWATScores { get; set; }
+        public virtual ICollection<lkpSWATSectionLU> lkpSWATSectionLUs { get; set; }
     }
 }
