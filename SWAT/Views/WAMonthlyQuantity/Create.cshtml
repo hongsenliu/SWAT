@@ -21,14 +21,6 @@
         @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
 
         <div class="form-group">
-            @Html.LabelFor(model => model.SurveyID, "SurveyID", new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.DropDownList("SurveyID", String.Empty)
-                @Html.ValidationMessageFor(model => model.SurveyID)
-            </div>
-        </div>
-
-        <div class="form-group">
             @Html.LabelFor(model => model.January, "January", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("January", String.Empty)
