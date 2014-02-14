@@ -146,22 +146,42 @@ namespace SWAT.Controllers
             return View(tblswatsurvey);
         }
 
+        private void DeleteRelatedRecords(int id)
+        {
+            var tblswatwamonthlyquantity = db.tblSWATWAMonthlyQuantities.Where(e => e.SurveyID == id);
+            foreach (tblSWATWAMonthlyQuantity item in tblswatwamonthlyquantity)
+            {
+                db.tblSWATWAMonthlyQuantities.Remove(item);
+            }
+
+            var tblswatbackgroundinfos = db.tblSWATBackgroundinfoes.Where(e => e.SurveyID == id);
+            foreach(tblSWATBackgroundinfo item in tblswatbackgroundinfos)
+            {
+                db.tblSWATBackgroundinfoes.Remove(item);
+            }
+
+            var tblswatwaprecipitations = db.tblSWATWAPrecipitations.Where(e => e.SurveyID == id);
+            foreach(tblSWATWAPrecipitation item in tblswatwaprecipitations)
+            {
+                db.tblSWATWAPrecipitations.Remove(item);
+            }
+
+            var tblswatscores = db.tblSWATScores.Where(e => e.SurveyID == id);
+            foreach (tblSWATScore item in tblswatscores)
+            {
+                db.tblSWATScores.Remove(item);
+            }
+
+            db.SaveChanges();
+        }
         // POST: /Survey/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
 
-            if (db.tblSWATBackgroundinfoes.Any(e => e.SurveyID == id))
-            {
-                tblSWATBackgroundinfo tblswatbackgroundinfo = db.tblSWATBackgroundinfoes.Single(e => e.SurveyID == id);
-                db.tblSWATBackgroundinfoes.Remove(tblswatbackgroundinfo);
-            }
-            var tblswatscores = db.tblSWATScores.Where(e => e.SurveyID == id);
-            foreach (tblSWATScore item in tblswatscores)
-            {
-                db.tblSWATScores.Remove(item);
-            }
+            DeleteRelatedRecords(id);
+            
             tblSWATSurvey tblswatsurvey = db.tblSWATSurveys.Find(id);
             db.tblSWATSurveys.Remove(tblswatsurvey);
             db.SaveChanges();

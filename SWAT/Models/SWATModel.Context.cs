@@ -54,5 +54,10 @@ namespace SWAT.Models
         public DbSet<tblSWATVisualGroup> tblSWATVisualGroups { get; set; }
         public DbSet<tblSWATVisualGrpScoreMap> tblSWATVisualGrpScoreMaps { get; set; }
         public DbSet<Userid> Userids { get; set; }
+        public DbSet<tblSWATWAPrecipitation> tblSWATWAPrecipitations { get; set; }
+        public DbSet<lkpSWATprecipLU> lkpSWATprecipLUs { get; set; }
+        public DbSet<lkpSWATscores_precip> lkpSWATscores_precip { get; set; }
+        public DbSet<lkpSWATwaterMonthLU> lkpSWATwaterMonthLUs { get; set; }
+        public DbSet<tblSWATWAMonthlyQuantity> tblSWATWAMonthlyQuantities { get; set; }
     }
 }

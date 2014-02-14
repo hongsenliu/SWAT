@@ -17,6 +17,8 @@ namespace SWAT.Models
         public tblSWATSurvey()
         {
             this.tblSWATBackgroundinfoes = new HashSet<tblSWATBackgroundinfo>();
+            this.tblSWATWAPrecipitations = new HashSet<tblSWATWAPrecipitation>();
+            this.tblSWATWAMonthlyQuantities = new HashSet<tblSWATWAMonthlyQuantity>();
         }
     
         public int ID { get; set; }
@@ -29,5 +31,7 @@ namespace SWAT.Models
         public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes { get; set; }
         public virtual tblSWATLocation tblSWATLocation { get; set; }
         public virtual Userid Userid1 { get; set; }
+        public virtual ICollection<tblSWATWAPrecipitation> tblSWATWAPrecipitations { get; set; }
+        public virtual ICollection<tblSWATWAMonthlyQuantity> tblSWATWAMonthlyQuantities { get; set; }
     }
 }

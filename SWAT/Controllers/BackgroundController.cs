@@ -179,20 +179,17 @@ namespace SWAT.Controllers
                 db.Entry(tblswatbackgroundinfo).State = EntityState.Modified;
                 db.SaveChanges();
                 updateScores(tblswatbackgroundinfo);
-                return RedirectToAction("Index");
+                return RedirectToAction("Create", "WAPrecipitation", new { SurveyID = tblswatbackgroundinfo.SurveyID});
             }
             if (ModelState.IsValid)
             {
                 db.tblSWATBackgroundinfoes.Add(tblswatbackgroundinfo);
                 db.SaveChanges();
-                //var aridityOrder = db.lkpSWATmapAridities.Find(tblswatbackgroundinfo.AridityID).intorder;
-                //var aridityScore = db.lkpSWATscores_Aridity.Where(item => item.intorder == aridityOrder).Select(item => item.Description).First();
-                //var scoreID = db.tblSWATScores.Where(item => item.SurveyID == tblswatbackgroundinfo.SurveyID && item.VarName == "ariditySCORE");
                 updateScores(tblswatbackgroundinfo);
-                
-                
 
-                return RedirectToAction("Index");
+
+
+                return RedirectToAction("Create", "WAPrecipitation", new { SurveyID = tblswatbackgroundinfo.SurveyID });
             }
 
             ViewBag.EcoregionID = new SelectList(db.lkpBiomes, "ID", "Description", tblswatbackgroundinfo.EcoregionID);
@@ -284,7 +281,23 @@ namespace SWAT.Controllers
                 db.Entry(tblswatbackgroundinfo).State = EntityState.Modified;
                 db.SaveChanges();
                 updateScores(tblswatbackgroundinfo);
-                return RedirectToAction("Index");
+
+                // If there is not a WAPreciptation with the current survey (SurveyID) then create one and redirecto to its edit link.
+                var waprecip = db.tblSWATWAPrecipitations.Where(e => e.SurveyID == tblswatbackgroundinfo.SurveyID);
+                if (!waprecip.Any())
+                {
+                    tblSWATWAPrecipitation tblswatwaprecipitation = new tblSWATWAPrecipitation();
+                    tblswatwaprecipitation.SurveyID = tblswatbackgroundinfo.SurveyID;
+                    db.tblSWATWAPrecipitations.Add(tblswatwaprecipitation);
+                    db.SaveChanges();
+                    var newWAPreciptationID = tblswatwaprecipitation.ID;
+                    return RedirectToAction("Edit", "WAPrecipitation", new { id = tblswatwaprecipitation.ID, SurveyID = tblswatwaprecipitation.SurveyID });
+                }
+                else 
+                {
+                    return RedirectToAction("Edit", "WAPrecipitation", new { id = waprecip.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID).ID, SurveyID = tblswatbackgroundinfo.SurveyID });
+                }
+                //return RedirectToAction("Index");
             }
             ViewBag.EcoregionID = new SelectList(db.lkpBiomes, "ID", "Description", tblswatbackgroundinfo.EcoregionID);
             ViewBag.ClimateID = new SelectList(db.lkpClimateClassifications, "ID", "CCType", tblswatbackgroundinfo.ClimateID);

@@ -12,4 +12,9 @@ namespace SWAT.Models
     public partial class tblSWATBackgroundinfo
     { 
     }
+
+    [MetadataType(typeof(WAPrecipitationMetadata))]
+    public partial class tblSWATWAPrecipitation
+    {
+    }
 }

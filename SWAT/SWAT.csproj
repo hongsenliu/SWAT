@@ -173,7 +173,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\SWATModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SWATModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>SWATModel1.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <Content Include="Models\SWATModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -212,6 +212,8 @@
     <Compile Include="Controllers\SubnationController.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\WAMonthlyQuantityController.cs" />
+    <Compile Include="Controllers\WAPrecipitationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -245,6 +247,9 @@
     <Compile Include="Models\lkpSWATmapAridity.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATprecipLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATpriorLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -260,6 +265,9 @@
     <Compile Include="Models\lkpSWATscores_econPris.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATscores_precip.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATscores_urbanDistance.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -273,6 +281,9 @@
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATurbanDistanceLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATwaterMonthLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATWatershedsLU.cs">
@@ -298,6 +309,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SWATModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\SWATModel1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SWATModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\tblSWATBackgroundinfo.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -314,6 +330,12 @@
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSWATVisualGrpScoreMap.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSWATWAMonthlyQuantity.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSWATWAPrecipitation.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Userid.cs">
@@ -364,6 +386,16 @@
     <Content Include="Views\Background\Details.cshtml" />
     <Content Include="Views\Background\Edit.cshtml" />
     <Content Include="Views\Background\Index.cshtml" />
+    <Content Include="Views\WAPrecipitation\Create.cshtml" />
+    <Content Include="Views\WAPrecipitation\Delete.cshtml" />
+    <Content Include="Views\WAPrecipitation\Details.cshtml" />
+    <Content Include="Views\WAPrecipitation\Edit.cshtml" />
+    <Content Include="Views\WAPrecipitation\Index.cshtml" />
+    <Content Include="Views\WAMonthlyQuantity\Create.cshtml" />
+    <Content Include="Views\WAMonthlyQuantity\Delete.cshtml" />
+    <Content Include="Views\WAMonthlyQuantity\Details.cshtml" />
+    <Content Include="Views\WAMonthlyQuantity\Edit.cshtml" />
+    <Content Include="Views\WAMonthlyQuantity\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

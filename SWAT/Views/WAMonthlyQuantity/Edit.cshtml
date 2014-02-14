@@ -1,0 +1,135 @@
+﻿@model SWAT.Models.tblSWATWAMonthlyQuantity
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Water Availability</h4>
+        <hr />
+        <p>
+            Please rate each month as having more than enough water, just enough water, or not enough water to satisfy community needs
+        </p>
+
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.January, "January", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("January", String.Empty)
+                @Html.ValidationMessageFor(model => model.January)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.February, "February", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("February", String.Empty)
+                @Html.ValidationMessageFor(model => model.February)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.March, "March", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("March", String.Empty)
+                @Html.ValidationMessageFor(model => model.March)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.April, "April", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("April", String.Empty)
+                @Html.ValidationMessageFor(model => model.April)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.May, "May", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("May", String.Empty)
+                @Html.ValidationMessageFor(model => model.May)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.June, "June", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("June", String.Empty)
+                @Html.ValidationMessageFor(model => model.June)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.July, "July", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("July", String.Empty)
+                @Html.ValidationMessageFor(model => model.July)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.August, "August", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("August", String.Empty)
+                @Html.ValidationMessageFor(model => model.August)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.September, "September", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("September", String.Empty)
+                @Html.ValidationMessageFor(model => model.September)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.October, "October", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("October", String.Empty)
+                @Html.ValidationMessageFor(model => model.October)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.November, "November", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("November", String.Empty)
+                @Html.ValidationMessageFor(model => model.November)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.December, "December", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("December", String.Empty)
+                @Html.ValidationMessageFor(model => model.December)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
