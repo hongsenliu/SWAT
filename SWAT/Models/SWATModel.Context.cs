@@ -59,5 +59,9 @@ namespace SWAT.Models
         public DbSet<lkpSWATscores_precip> lkpSWATscores_precip { get; set; }
         public DbSet<lkpSWATwaterMonthLU> lkpSWATwaterMonthLUs { get; set; }
         public DbSet<tblSWATWAMonthlyQuantity> tblSWATWAMonthlyQuantities { get; set; }
+        public DbSet<lkpSWATprecipVarAltLU> lkpSWATprecipVarAltLUs { get; set; }
+        public DbSet<lkpSWATprecipVardivMeanLU> lkpSWATprecipVardivMeanLUs { get; set; }
+        public DbSet<lkpSWATscores_precipVar> lkpSWATscores_precipVar { get; set; }
+        public DbSet<tblSWATWAannualPrecip> tblSWATWAannualPrecips { get; set; }
     }
 }

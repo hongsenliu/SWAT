@@ -148,6 +148,12 @@ namespace SWAT.Controllers
 
         private void DeleteRelatedRecords(int id)
         {
+            var tblswatwaannualprecip = db.tblSWATWAannualPrecips.Where(e => e.SurveyID == id);
+            foreach (tblSWATWAannualPrecip item in tblswatwaannualprecip)
+            {
+                db.tblSWATWAannualPrecips.Remove(item);
+            }
+
             var tblswatwamonthlyquantity = db.tblSWATWAMonthlyQuantities.Where(e => e.SurveyID == id);
             foreach (tblSWATWAMonthlyQuantity item in tblswatwamonthlyquantity)
             {
@@ -180,11 +186,12 @@ namespace SWAT.Controllers
         public ActionResult DeleteConfirmed(int id)
         {
 
-            DeleteRelatedRecords(id);
+            
             
             tblSWATSurvey tblswatsurvey = db.tblSWATSurveys.Find(id);
             db.tblSWATSurveys.Remove(tblswatsurvey);
             db.SaveChanges();
+            DeleteRelatedRecords(id);
             //return RedirectToAction("Index");
             return RedirectToAction("Details", "User", new { id=tblswatsurvey.UserID });
         }

@@ -47,24 +47,38 @@ namespace SWAT.Controllers
 
         private void updateScores(tblSWATWAPrecipitation tblswatwaprecipitation)
         {
-            var precipTotal = tblswatwaprecipitation.January.GetValueOrDefault(0) + tblswatwaprecipitation.February.GetValueOrDefault(0) + tblswatwaprecipitation.March.GetValueOrDefault(0)
-                             + tblswatwaprecipitation.April.GetValueOrDefault(0) + tblswatwaprecipitation.May.GetValueOrDefault(0) + tblswatwaprecipitation.June.GetValueOrDefault(0)
-                             + tblswatwaprecipitation.July.GetValueOrDefault(0) + tblswatwaprecipitation.August.GetValueOrDefault(0) + tblswatwaprecipitation.September.GetValueOrDefault(0)
-                             + tblswatwaprecipitation.October.GetValueOrDefault(0) + tblswatwaprecipitation.November.GetValueOrDefault(0) + tblswatwaprecipitation.December.GetValueOrDefault(0);
-            db.tblSWATScores.Single(e => e.SurveyID == tblswatwaprecipitation.SurveyID && e.VarName == "precipTotal").Value = precipTotal;
-            int? precipScoreIntorder = null;
-            foreach (var item in db.lkpSWATprecipLUs.OrderByDescending(e => e.Description))
+            double? [] precips = {tblswatwaprecipitation.January, tblswatwaprecipitation.February, tblswatwaprecipitation.March,
+                             tblswatwaprecipitation.April, tblswatwaprecipitation.May, tblswatwaprecipitation.June,
+                             tblswatwaprecipitation.July, tblswatwaprecipitation.August, tblswatwaprecipitation.September,
+                             tblswatwaprecipitation.October, tblswatwaprecipitation.November, tblswatwaprecipitation.December};
+            double? precipTotal = null;
+            foreach (double? precip in precips)
             {
-                if (Double.Parse(item.Description) <= precipTotal)
+                if (precip != null)
                 {
-                    precipScoreIntorder = item.intorder;
-                    break;
+                    precipTotal = precipTotal.GetValueOrDefault(0) + precip;
                 }
             }
-            double? precipScore = Double.Parse(db.lkpSWATscores_precip.Single(e => e.intorder == precipScoreIntorder).Description);
-            var tblswatscore = db.tblSWATScores.Single(e => e.SurveyID == tblswatwaprecipitation.SurveyID && e.VarName == "precipSCORE");
-            tblswatscore.Value = precipScore;
-
+            db.tblSWATScores.Single(e => e.SurveyID == tblswatwaprecipitation.SurveyID && e.VarName == "precipTotal").Value = precipTotal;
+            if (precipTotal != null)
+            {
+                int? precipScoreIntorder = null;
+                foreach (var item in db.lkpSWATprecipLUs.OrderByDescending(e => e.Description))
+                {
+                    if (Double.Parse(item.Description) <= precipTotal)
+                    {
+                        precipScoreIntorder = item.intorder;
+                        break;
+                    }
+                }
+                double? precipScore = Double.Parse(db.lkpSWATscores_precip.Single(e => e.intorder == precipScoreIntorder).Description);
+                var tblswatscore = db.tblSWATScores.Single(e => e.SurveyID == tblswatwaprecipitation.SurveyID && e.VarName == "precipSCORE");
+                tblswatscore.Value = precipScore;
+            }
+            else
+            {
+                db.tblSWATScores.Single(e => e.SurveyID == tblswatwaprecipitation.SurveyID && e.VarName == "precipSCORE").Value = null;
+            }
             db.SaveChanges();
         }
 
@@ -75,19 +89,19 @@ namespace SWAT.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include="ID,SurveyID,January,February,March,April,May,June,July,August,September,October,November,December")] tblSWATWAPrecipitation tblswatwaprecipitation)
         {
-            var waprecipIDs = db.tblSWATWAPrecipitations.Where(e => e.SurveyID == tblswatwaprecipitation.SurveyID).Select(e => e.ID);
-            if (waprecipIDs.Any())
-            {
-                var waprecipID = waprecipIDs.First();
-                tblswatwaprecipitation.ID = waprecipID;
-                db.Entry(tblswatwaprecipitation).State = EntityState.Modified;
-                db.SaveChanges();
-                updateScores(tblswatwaprecipitation);
-                return RedirectToAction("Create", "WAMonthlyQuantity", new { SurveyID = tblswatwaprecipitation.SurveyID});
-            }
-
             if (ModelState.IsValid)
             {
+                var waprecipIDs = db.tblSWATWAPrecipitations.Where(e => e.SurveyID == tblswatwaprecipitation.SurveyID).Select(e => e.ID);
+                if (waprecipIDs.Any())
+                {
+                    var waprecipID = waprecipIDs.First();
+                    tblswatwaprecipitation.ID = waprecipID;
+                    db.Entry(tblswatwaprecipitation).State = EntityState.Modified;
+                    db.SaveChanges();
+                    updateScores(tblswatwaprecipitation);
+                    return RedirectToAction("Create", "WAMonthlyQuantity", new { SurveyID = tblswatwaprecipitation.SurveyID });
+                }
+
                 db.tblSWATWAPrecipitations.Add(tblswatwaprecipitation);
                 db.SaveChanges();
                 updateScores(tblswatwaprecipitation);

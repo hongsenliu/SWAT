@@ -17,4 +17,9 @@ namespace SWAT.Models
     public partial class tblSWATWAPrecipitation
     {
     }
+
+    [MetadataType(typeof(WAannualPrecipMetadata))]
+    public partial class tblSWATWAannualPrecip
+    { 
+    }
 }

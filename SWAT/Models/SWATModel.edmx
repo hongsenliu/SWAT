@@ -17,12 +17,15 @@
           <EntitySet Name="lkpSWATeconPrisLU" EntityType="SWATModel.Store.lkpSWATeconPrisLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATmapAridity" EntityType="SWATModel.Store.lkpSWATmapAridity" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATprecipLU" EntityType="SWATModel.Store.lkpSWATprecipLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATprecipVarAltLU" EntityType="SWATModel.Store.lkpSWATprecipVarAltLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATprecipVardivMeanLU" EntityType="SWATModel.Store.lkpSWATprecipVardivMeanLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATpriorLU" EntityType="SWATModel.Store.lkpSWATpriorLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_areaBMLU" EntityType="SWATModel.Store.lkpSWATscores_areaBMLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_areaProt" EntityType="SWATModel.Store.lkpSWATscores_areaProt" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_Aridity" EntityType="SWATModel.Store.lkpSWATscores_Aridity" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_econPris" EntityType="SWATModel.Store.lkpSWATscores_econPris" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_precip" EntityType="SWATModel.Store.lkpSWATscores_precip" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_precipVar" EntityType="SWATModel.Store.lkpSWATscores_precipVar" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_urbanDistance" EntityType="SWATModel.Store.lkpSWATscores_urbanDistance" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_YesNoLUYesGood" EntityType="SWATModel.Store.lkpSWATscores_YesNoLUYesGood" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATScoreVarSectionLU" EntityType="SWATModel.Store.lkpSWATScoreVarSectionLU" store:Type="Tables" store:Schema="DBA" store:Name="lkpSWATScoreVarSectionLU">
@@ -43,6 +46,7 @@
           <EntitySet Name="tblSWATSurvey" EntityType="SWATModel.Store.tblSWATSurvey" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATVisualGroup" EntityType="SWATModel.Store.tblSWATVisualGroup" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATVisualGrpScoreMap" EntityType="SWATModel.Store.tblSWATVisualGrpScoreMap" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATWAannualPrecip" EntityType="SWATModel.Store.tblSWATWAannualPrecip" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAMonthlyQuantity" EntityType="SWATModel.Store.tblSWATWAMonthlyQuantity" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAPrecipitation" EntityType="SWATModel.Store.tblSWATWAPrecipitation" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="Userids" EntityType="SWATModel.Store.Userids" store:Type="Tables" Schema="DBA" />
@@ -177,6 +181,14 @@
           <AssociationSet Name="FK_tblSWATVisualGrpScoreMap_3_tblSWATScore" Association="SWATModel.Store.FK_tblSWATVisualGrpScoreMap_3_tblSWATScore">
             <End Role="tblSWATScore" EntitySet="tblSWATScore" />
             <End Role="tblSWATVisualGrpScoreMap" EntitySet="tblSWATVisualGrpScoreMap" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAannualPrecip_16_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATWAannualPrecip_16_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+            <End Role="tblSWATWAannualPrecip" EntitySet="tblSWATWAannualPrecip" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAannualPrecip_17_lkpSWATprecipVarAltLU" Association="SWATModel.Store.FK_tblSWATWAannualPrecip_17_lkpSWATprecipVarAltLU">
+            <End Role="lkpSWATprecipVarAltLU" EntitySet="lkpSWATprecipVarAltLU" />
+            <End Role="tblSWATWAannualPrecip" EntitySet="tblSWATWAannualPrecip" />
           </AssociationSet>
           <AssociationSet Name="FK_tblSWATWAMonthlyQuantity_10_lkpSWATwaterMonthLU" Association="SWATModel.Store.FK_tblSWATWAMonthlyQuantity_10_lkpSWATwaterMonthLU">
             <End Role="lkpSWATwaterMonthLU" EntitySet="lkpSWATwaterMonthLU" />
@@ -324,6 +336,22 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATprecipVarAltLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATprecipVardivMeanLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATpriorLU">
           <Key>
             <PropertyRef Name="id" />
@@ -365,6 +393,14 @@
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATscores_precip">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_precipVar">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -534,6 +570,15 @@
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="VisualGrpID" Type="int" Nullable="false" />
           <Property Name="ScoreID" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSWATWAannualPrecip">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="int" Nullable="false" />
+          <Property Name="precipVar" Type="float" />
+          <Property Name="precipVarALT" Type="int" />
         </EntityType>
         <EntityType Name="tblSWATWAMonthlyQuantity">
           <Key>
@@ -1003,6 +1048,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_tblSWATWAannualPrecip_16_tblSWATSurvey">
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="1" />
+          <End Role="tblSWATWAannualPrecip" Type="SWATModel.Store.tblSWATWAannualPrecip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWAannualPrecip">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAannualPrecip_17_lkpSWATprecipVarAltLU">
+          <End Role="lkpSWATprecipVarAltLU" Type="SWATModel.Store.lkpSWATprecipVarAltLU" Multiplicity="0..1" />
+          <End Role="tblSWATWAannualPrecip" Type="SWATModel.Store.tblSWATWAannualPrecip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATprecipVarAltLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAannualPrecip">
+              <PropertyRef Name="precipVarALT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_tblSWATWAMonthlyQuantity_10_lkpSWATwaterMonthLU">
           <End Role="lkpSWATwaterMonthLU" Type="SWATModel.Store.lkpSWATwaterMonthLU" Multiplicity="0..1" />
           <End Role="tblSWATWAMonthlyQuantity" Type="SWATModel.Store.tblSWATWAMonthlyQuantity" Multiplicity="*" />
@@ -1394,6 +1463,18 @@
             <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
             <End Role="tblSWATWAMonthlyQuantity" EntitySet="tblSWATWAMonthlyQuantities" />
           </AssociationSet>
+          <EntitySet Name="lkpSWATprecipVarAltLUs" EntityType="SWATModel.lkpSWATprecipVarAltLU" />
+          <EntitySet Name="lkpSWATprecipVardivMeanLUs" EntityType="SWATModel.lkpSWATprecipVardivMeanLU" />
+          <EntitySet Name="lkpSWATscores_precipVar" EntityType="SWATModel.lkpSWATscores_precipVar" />
+          <EntitySet Name="tblSWATWAannualPrecips" EntityType="SWATModel.tblSWATWAannualPrecip" />
+          <AssociationSet Name="FK_tblSWATWAannualPrecip_17_lkpSWATprecipVarAltLU" Association="SWATModel.FK_tblSWATWAannualPrecip_17_lkpSWATprecipVarAltLU">
+            <End Role="lkpSWATprecipVarAltLU" EntitySet="lkpSWATprecipVarAltLUs" />
+            <End Role="tblSWATWAannualPrecip" EntitySet="tblSWATWAannualPrecips" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAannualPrecip_16_tblSWATSurvey" Association="SWATModel.FK_tblSWATWAannualPrecip_16_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+            <End Role="tblSWATWAannualPrecip" EntitySet="tblSWATWAannualPrecips" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="lkpBiome">
           <Key>
@@ -1705,6 +1786,7 @@
           <NavigationProperty Name="Userid1" Relationship="SWATModel.FK_tblSWATSurvey_37_Userids" FromRole="tblSWATSurvey" ToRole="Userids" />
           <NavigationProperty Name="tblSWATWAPrecipitations" Relationship="SWATModel.FK_tblSWATWAPrecipitation_3_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAPrecipitation" />
           <NavigationProperty Name="tblSWATWAMonthlyQuantities" Relationship="SWATModel.FK_tblSWATWAMonthlyQuantity_15_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAMonthlyQuantity" />
+          <NavigationProperty Name="tblSWATWAannualPrecips" Relationship="SWATModel.FK_tblSWATWAannualPrecip_16_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAannualPrecip" />
         </EntityType>
         <EntityType Name="tblSWATVisualGroup">
           <Key>
@@ -2392,6 +2474,66 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="lkpSWATprecipVarAltLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWAannualPrecips" Relationship="SWATModel.FK_tblSWATWAannualPrecip_17_lkpSWATprecipVarAltLU" FromRole="lkpSWATprecipVarAltLU" ToRole="tblSWATWAannualPrecip" />
+        </EntityType>
+        <EntityType Name="lkpSWATprecipVardivMeanLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_precipVar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="tblSWATWAannualPrecip">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SurveyID" Nullable="false" />
+          <Property Type="Double" Name="precipVar" />
+          <Property Type="Int32" Name="precipVarALT" />
+          <NavigationProperty Name="lkpSWATprecipVarAltLU" Relationship="SWATModel.FK_tblSWATWAannualPrecip_17_lkpSWATprecipVarAltLU" FromRole="tblSWATWAannualPrecip" ToRole="lkpSWATprecipVarAltLU" />
+          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATWAannualPrecip_16_tblSWATSurvey" FromRole="tblSWATWAannualPrecip" ToRole="tblSWATSurvey" />
+        </EntityType>
+        <Association Name="FK_tblSWATWAannualPrecip_17_lkpSWATprecipVarAltLU">
+          <End Type="SWATModel.lkpSWATprecipVarAltLU" Role="lkpSWATprecipVarAltLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWAannualPrecip" Role="tblSWATWAannualPrecip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATprecipVarAltLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAannualPrecip">
+              <PropertyRef Name="precipVarALT" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAannualPrecip_16_tblSWATSurvey">
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATWAannualPrecip" Role="tblSWATWAannualPrecip" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWAannualPrecip">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2796,6 +2938,43 @@
                 <ScalarProperty Name="March" ColumnName="March" />
                 <ScalarProperty Name="February" ColumnName="February" />
                 <ScalarProperty Name="January" ColumnName="January" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATprecipVarAltLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATprecipVarAltLU">
+              <MappingFragment StoreEntitySet="lkpSWATprecipVarAltLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATprecipVardivMeanLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATprecipVardivMeanLU">
+              <MappingFragment StoreEntitySet="lkpSWATprecipVardivMeanLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_precipVar">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_precipVar">
+              <MappingFragment StoreEntitySet="lkpSWATscores_precipVar">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATWAannualPrecips">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATWAannualPrecip">
+              <MappingFragment StoreEntitySet="tblSWATWAannualPrecip">
+                <ScalarProperty Name="precipVarALT" ColumnName="precipVarALT" />
+                <ScalarProperty Name="precipVar" ColumnName="precipVar" />
                 <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>

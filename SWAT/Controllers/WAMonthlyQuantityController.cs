@@ -37,8 +37,13 @@ namespace SWAT.Controllers
         }
 
         // GET: /WAMonthlyQuantity/Create
-        public ActionResult Create()
+        public ActionResult Create(int? SurveyID)
         {
+            if (SurveyID == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+
             ViewBag.August = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description");
             ViewBag.September = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description");
             ViewBag.October = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description");
@@ -51,99 +56,34 @@ namespace SWAT.Controllers
             ViewBag.May = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description");
             ViewBag.June = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description");
             ViewBag.July = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description");
-            ViewBag.SurveyID = new SelectList(db.tblSWATSurveys, "ID", "ID");
+            //ViewBag.SurveyID = new SelectList(db.tblSWATSurveys, "ID", "ID");
             return View();
         }
 
         private void updateScores(tblSWATWAMonthlyQuantity tblswatwamonthlyquantity)
         {
-            int wamqTot = 0;
-            if (tblswatwamonthlyquantity.January != null)
+            int?[] monthlyQuantities = {tblswatwamonthlyquantity.January, tblswatwamonthlyquantity.February, tblswatwamonthlyquantity.March,
+                                        tblswatwamonthlyquantity.April, tblswatwamonthlyquantity.May, tblswatwamonthlyquantity.June, 
+                                        tblswatwamonthlyquantity.July, tblswatwamonthlyquantity.August, tblswatwamonthlyquantity.September,
+                                        tblswatwamonthlyquantity.October, tblswatwamonthlyquantity.November, tblswatwamonthlyquantity.December
+                                       };
+            int? wamqTot = null;
+            foreach (int? monthlyQuanity in monthlyQuantities)
             {
-                if (db.lkpSWATwaterMonthLUs.Find(tblswatwamonthlyquantity.January).intorder < 3)
+                if (monthlyQuanity != null)
                 {
-                    wamqTot++;
+                    if (db.lkpSWATwaterMonthLUs.Find(monthlyQuanity).intorder < 3)
+                    {
+                        wamqTot = wamqTot.GetValueOrDefault(0) + 1;
+                    }
                 }
             }
-            if (tblswatwamonthlyquantity.February != null)
+            double? waterScore = null;
+            if (wamqTot != null)
             {
-                if (db.lkpSWATwaterMonthLUs.Find(tblswatwamonthlyquantity.February).intorder < 3)
-                {
-                    wamqTot++;
-                }
-            }
-            if (tblswatwamonthlyquantity.March != null)
-            {
-                if (db.lkpSWATwaterMonthLUs.Find(tblswatwamonthlyquantity.March).intorder < 3)
-                {
-                    wamqTot++;
-                }
-            }
-            if (tblswatwamonthlyquantity.April != null)
-            {
-                if (db.lkpSWATwaterMonthLUs.Find(tblswatwamonthlyquantity.April).intorder < 3)
-                {
-                    wamqTot++;
-                }
-            }
-            if (tblswatwamonthlyquantity.May != null)
-            {
-                if (db.lkpSWATwaterMonthLUs.Find(tblswatwamonthlyquantity.May).intorder < 3)
-                {
-                    wamqTot++;
-                }
-            }
-            if (tblswatwamonthlyquantity.June != null)
-            {
-                if (db.lkpSWATwaterMonthLUs.Find(tblswatwamonthlyquantity.June).intorder < 3)
-                {
-                    wamqTot++;
-                }
-            }
-            if (tblswatwamonthlyquantity.July != null)
-            {
-                if (db.lkpSWATwaterMonthLUs.Find(tblswatwamonthlyquantity.July).intorder < 3)
-                {
-                    wamqTot++;
-                }
-            }
-            if (tblswatwamonthlyquantity.August != null)
-            {
-                if (db.lkpSWATwaterMonthLUs.Find(tblswatwamonthlyquantity.August).intorder < 3)
-                {
-                    wamqTot++;
-                }
-            }
-            if (tblswatwamonthlyquantity.September != null)
-            {
-                if (db.lkpSWATwaterMonthLUs.Find(tblswatwamonthlyquantity.September).intorder < 3)
-                {
-                    wamqTot++;
-                }
-            }
-            if (tblswatwamonthlyquantity.October != null)
-            {
-                if (db.lkpSWATwaterMonthLUs.Find(tblswatwamonthlyquantity.October).intorder < 3)
-                {
-                    wamqTot++;
-                }
-            }
-            if (tblswatwamonthlyquantity.November != null)
-            {
-                if (db.lkpSWATwaterMonthLUs.Find(tblswatwamonthlyquantity.November).intorder < 3)
-                {
-                    wamqTot++;
-                }
-            }
-            if (tblswatwamonthlyquantity.December != null)
-            {
-                if (db.lkpSWATwaterMonthLUs.Find(tblswatwamonthlyquantity.December).intorder < 3)
-                {
-                    wamqTot++;
-                }
+                waterScore = wamqTot / 12.0;
             }
 
-            double waterScore = wamqTot / 12.0;
             db.tblSWATScores.Single(e => e.SurveyID == tblswatwamonthlyquantity.SurveyID && e.VarName == "waterTot").Value = wamqTot;
             db.tblSWATScores.Single(e => e.SurveyID == tblswatwamonthlyquantity.SurveyID && e.VarName == "waterSCORE").Value = waterScore;
             db.SaveChanges();
@@ -156,23 +96,25 @@ namespace SWAT.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include="ID,SurveyID,January,February,March,April,May,June,July,August,September,October,November,December")] tblSWATWAMonthlyQuantity tblswatwamonthlyquantity)
         {
-            var wamqIDs = db.tblSWATWAMonthlyQuantities.Where(e => e.SurveyID == tblswatwamonthlyquantity.SurveyID).Select(e => e.ID);
-            if (wamqIDs.Any())
-            {
-                var wamqID = wamqIDs.First();
-                tblswatwamonthlyquantity.ID = wamqID;
-                db.Entry(tblswatwamonthlyquantity).State = EntityState.Modified;
-                db.SaveChanges();
-                updateScores(tblswatwamonthlyquantity);
-                return RedirectToAction("Index");
-                //return RedirectToAction("Create", "WAMonthlyQuantity", new { SurveyID = tblswatwaprecipitation.SurveyID });
-            }
             if (ModelState.IsValid)
             {
+                var wamqIDs = db.tblSWATWAMonthlyQuantities.Where(e => e.SurveyID == tblswatwamonthlyquantity.SurveyID).Select(e => e.ID);
+                if (wamqIDs.Any())
+                {
+                    var wamqID = wamqIDs.First();
+                    tblswatwamonthlyquantity.ID = wamqID;
+                    db.Entry(tblswatwamonthlyquantity).State = EntityState.Modified;
+                    db.SaveChanges();
+                    updateScores(tblswatwamonthlyquantity);
+                    //return RedirectToAction("Index");
+                    return RedirectToAction("Create", "WAannualPrecip", new { SurveyID = tblswatwamonthlyquantity.SurveyID });
+                }
+
                 db.tblSWATWAMonthlyQuantities.Add(tblswatwamonthlyquantity);
                 db.SaveChanges();
                 updateScores(tblswatwamonthlyquantity);
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
+                return RedirectToAction("Create", "WAannualPrecip", new { SurveyID = tblswatwamonthlyquantity.SurveyID });
             }
 
             ViewBag.August = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description", tblswatwamonthlyquantity.August);
@@ -187,7 +129,7 @@ namespace SWAT.Controllers
             ViewBag.May = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description", tblswatwamonthlyquantity.May);
             ViewBag.June = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description", tblswatwamonthlyquantity.June);
             ViewBag.July = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description", tblswatwamonthlyquantity.July);
-            ViewBag.SurveyID = new SelectList(db.tblSWATSurveys, "ID", "ID", tblswatwamonthlyquantity.SurveyID);
+            // ViewBag.SurveyID = new SelectList(db.tblSWATSurveys, "ID", "ID", tblswatwamonthlyquantity.SurveyID);
             return View(tblswatwamonthlyquantity);
         }
 
@@ -215,7 +157,7 @@ namespace SWAT.Controllers
             ViewBag.May = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description", tblswatwamonthlyquantity.May);
             ViewBag.June = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description", tblswatwamonthlyquantity.June);
             ViewBag.July = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description", tblswatwamonthlyquantity.July);
-            ViewBag.SurveyID = new SelectList(db.tblSWATSurveys, "ID", "ID", tblswatwamonthlyquantity.SurveyID);
+           // ViewBag.SurveyID = new SelectList(db.tblSWATSurveys, "ID", "ID", tblswatwamonthlyquantity.SurveyID);
             return View(tblswatwamonthlyquantity);
         }
 
@@ -231,7 +173,24 @@ namespace SWAT.Controllers
                 db.Entry(tblswatwamonthlyquantity).State = EntityState.Modified;
                 db.SaveChanges();
                 updateScores(tblswatwamonthlyquantity);
-                return RedirectToAction("Index");
+
+                // If there is not any WAannualPrecip with the current survey (SurveyID) then create one and redirecto to its edit link.
+                var annualPrecips = db.tblSWATWAannualPrecips.Where(e => e.SurveyID == tblswatwamonthlyquantity.SurveyID);
+                if (!annualPrecips.Any())
+                {
+                    tblSWATWAannualPrecip tblswatwaannualprecip = new tblSWATWAannualPrecip();
+                    tblswatwaannualprecip.SurveyID = tblswatwamonthlyquantity.SurveyID;
+                    db.tblSWATWAannualPrecips.Add(tblswatwaannualprecip);
+                    db.SaveChanges();
+
+                    int newWAannualPrecipID = tblswatwaannualprecip.ID;
+                    return RedirectToAction("Edit", "WAannualPrecip", new { id = newWAannualPrecipID, SurveyID = tblswatwaannualprecip.SurveyID });
+                }
+                else
+                {
+                    return RedirectToAction("Edit", "WAannualPrecip", new { id = annualPrecips.Single(e => e.SurveyID == tblswatwamonthlyquantity.SurveyID).ID, SurveyID = tblswatwamonthlyquantity.SurveyID });
+                }
+                // return RedirectToAction("Index");
             }
             ViewBag.August = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description", tblswatwamonthlyquantity.August);
             ViewBag.September = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description", tblswatwamonthlyquantity.September);
@@ -245,7 +204,7 @@ namespace SWAT.Controllers
             ViewBag.May = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description", tblswatwamonthlyquantity.May);
             ViewBag.June = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description", tblswatwamonthlyquantity.June);
             ViewBag.July = new SelectList(db.lkpSWATwaterMonthLUs, "id", "Description", tblswatwamonthlyquantity.July);
-            ViewBag.SurveyID = new SelectList(db.tblSWATSurveys, "ID", "ID", tblswatwamonthlyquantity.SurveyID);
+          //  ViewBag.SurveyID = new SelectList(db.tblSWATSurveys, "ID", "ID", tblswatwamonthlyquantity.SurveyID);
             return View(tblswatwamonthlyquantity);
         }
 

@@ -85,6 +85,12 @@
         <AssociationConnector Association="SWATModel.FK_tblSWATWAMonthlyQuantity_8_lkpSWATwaterMonthLU" />
         <AssociationConnector Association="SWATModel.FK_tblSWATWAMonthlyQuantity_9_lkpSWATwaterMonthLU" />
         <AssociationConnector Association="SWATModel.FK_tblSWATWAMonthlyQuantity_15_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATprecipVarAltLU" Width="1.5" PointX="2.2351643285877838" PointY="24.535121273498572" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATprecipVardivMeanLU" Width="1.5" PointX="11.074488747433986" PointY="26.777241898131205" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_precipVar" Width="1.5" PointX="7.7468356805605971" PointY="9.7362660065927855" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATWAannualPrecip" Width="1.5" PointX="2.6784939331368047" PointY="24.728551876139154" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAannualPrecip_17_lkpSWATprecipVarAltLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAannualPrecip_16_tblSWATSurvey" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

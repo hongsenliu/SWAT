@@ -171,18 +171,20 @@ namespace SWAT.Controllers
                 ModelState.AddModelError("AreaSw", "The sum of Forest(%), Agriculture(%), Infrastructure(%), Source Water(%) and Wetlands(%) cannot exceed 100.");
                 ModelState.AddModelError("AreaWet", "The sum of Forest(%), Agriculture(%), Infrastructure(%), Source Water(%) and Wetlands(%) cannot exceed 100.");
             }
-            var backgrdIDs = db.tblSWATBackgroundinfoes.Where(item => item.SurveyID == tblswatbackgroundinfo.SurveyID).Select(item => item.ID);
-            if (backgrdIDs.Any())
-            {
-                var backgrdID = backgrdIDs.First();
-                tblswatbackgroundinfo.ID = backgrdID;
-                db.Entry(tblswatbackgroundinfo).State = EntityState.Modified;
-                db.SaveChanges();
-                updateScores(tblswatbackgroundinfo);
-                return RedirectToAction("Create", "WAPrecipitation", new { SurveyID = tblswatbackgroundinfo.SurveyID});
-            }
+            
             if (ModelState.IsValid)
             {
+                var backgrdIDs = db.tblSWATBackgroundinfoes.Where(item => item.SurveyID == tblswatbackgroundinfo.SurveyID).Select(item => item.ID);
+                if (backgrdIDs.Any())
+                {
+                    var backgrdID = backgrdIDs.First();
+                    tblswatbackgroundinfo.ID = backgrdID;
+                    db.Entry(tblswatbackgroundinfo).State = EntityState.Modified;
+                    db.SaveChanges();
+                    updateScores(tblswatbackgroundinfo);
+                    return RedirectToAction("Create", "WAPrecipitation", new { SurveyID = tblswatbackgroundinfo.SurveyID });
+                }
+
                 db.tblSWATBackgroundinfoes.Add(tblswatbackgroundinfo);
                 db.SaveChanges();
                 updateScores(tblswatbackgroundinfo);

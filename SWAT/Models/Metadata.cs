@@ -65,52 +65,62 @@ namespace SWAT.Models
     public class WAPrecipitationMetadata
     {
         [Display(Name = "Average precipitation of January")]
-        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        [Range(0.0001, double.MaxValue, ErrorMessage = "The value is out of range.")]
         public Nullable<double> January { get; set; }
 
         [Display(Name = "Average precipitation of February")]
-        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        [Range(0.0001, double.MaxValue, ErrorMessage = "The value is out of range.")]
         public Nullable<double> February { get; set; }
 
         [Display(Name = "Average precipitation of March")]
-        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        [Range(0.0001, double.MaxValue, ErrorMessage = "The value is out of range.")]
         public Nullable<double> March { get; set; }
 
         [Display(Name = "Average precipitation of April")]
-        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        [Range(0.0001, double.MaxValue, ErrorMessage = "The value is out of range.")]
         public Nullable<double> April { get; set; }
 
         [Display(Name = "Average precipitation of May")]
-        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        [Range(0.0001, double.MaxValue, ErrorMessage = "The value is out of range.")]
         public Nullable<double> May { get; set; }
 
         [Display(Name = "Average precipitation of June")]
-        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        [Range(0.0001, double.MaxValue, ErrorMessage = "The value is out of range.")]
         public Nullable<double> June { get; set; }
 
         [Display(Name = "Average precipitation of July")]
-        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        [Range(0.0001, double.MaxValue, ErrorMessage = "The value is out of range.")]
         public Nullable<double> July { get; set; }
 
         [Display(Name = "Average precipitation of August")]
-        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        [Range(0.0001, double.MaxValue, ErrorMessage = "The value is out of range.")]
         public Nullable<double> August { get; set; }
 
         [Display(Name = "Average precipitation of September")]
-        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        [Range(0.0001, double.MaxValue, ErrorMessage = "The value is out of range.")]
         public Nullable<double> September { get; set; }
 
         [Display(Name = "Average precipitation of October")]
-        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        [Range(0.0001, double.MaxValue, ErrorMessage = "The value is out of range.")]
         public Nullable<double> October { get; set; }
 
         [Display(Name = "Average precipitation of November")]
-        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        [Range(0.0001, double.MaxValue, ErrorMessage = "The value is out of range.")]
         public Nullable<double> November { get; set; }
 
         [Display(Name = "Average precipitation of December")]
-        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        [Range(0.0001, double.MaxValue, ErrorMessage = "The value is out of range.")]
         public Nullable<double> December { get; set; }
     
+    }
+
+    public class WAannualPrecipMetadata
+    {
+        [Display(Name = "Standard Deviation of annual precipitation")]
+        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> precipVar { get; set; }
+
+        [Display(Name = "Annual Precipitation")]
+        public Nullable<int> precipVarALT { get; set; }
     }
 }

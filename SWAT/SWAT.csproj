@@ -164,6 +164,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Content\WAannualPrecip.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -212,6 +213,7 @@
     <Compile Include="Controllers\SubnationController.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\WAannualPrecipController.cs" />
     <Compile Include="Controllers\WAMonthlyQuantityController.cs" />
     <Compile Include="Controllers\WAPrecipitationController.cs" />
     <Compile Include="Global.asax.cs">
@@ -250,6 +252,12 @@
     <Compile Include="Models\lkpSWATprecipLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATprecipVarAltLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATprecipVardivMeanLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATpriorLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -266,6 +274,9 @@
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATscores_precip.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_precipVar.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATscores_urbanDistance.cs">
@@ -332,6 +343,9 @@
     <Compile Include="Models\tblSWATVisualGrpScoreMap.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\tblSWATWAannualPrecip.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\tblSWATWAMonthlyQuantity.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -396,6 +410,11 @@
     <Content Include="Views\WAMonthlyQuantity\Details.cshtml" />
     <Content Include="Views\WAMonthlyQuantity\Edit.cshtml" />
     <Content Include="Views\WAMonthlyQuantity\Index.cshtml" />
+    <Content Include="Views\WAannualPrecip\Create.cshtml" />
+    <Content Include="Views\WAannualPrecip\Delete.cshtml" />
+    <Content Include="Views\WAannualPrecip\Details.cshtml" />
+    <Content Include="Views\WAannualPrecip\Edit.cshtml" />
+    <Content Include="Views\WAannualPrecip\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
