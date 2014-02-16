@@ -123,4 +123,23 @@ namespace SWAT.Models
         [Display(Name = "Annual Precipitation")]
         public Nullable<int> precipVarALT { get; set; }
     }
+
+    public class WAClimateChangeMetadata
+    {
+        [Display(Name = "Dryer")]
+        public bool climateDryer { get; set; }
+
+        [Display(Name = "Wetter")]
+        public bool climateWetter { get; set; }
+
+        [Display(Name = "Colder")]
+        public bool climateColder { get; set; }
+
+        [Display(Name = "Hotter")]
+        public bool climateHotter { get; set; }
+
+        [Display(Name = "Seasons")]
+        public bool climateSeasons { get; set; }
+
+    }
 }

@@ -148,6 +148,12 @@ namespace SWAT.Controllers
 
         private void DeleteRelatedRecords(int id)
         {
+            var tblswatwaclimatechange = db.tblSWATWAclimateChanges.Where(e => e.SurveyID == id);
+            foreach (tblSWATWAclimateChange item in tblswatwaclimatechange)
+            {
+                db.tblSWATWAclimateChanges.Remove(item);
+            }
+
             var tblswatwaannualprecip = db.tblSWATWAannualPrecips.Where(e => e.SurveyID == id);
             foreach (tblSWATWAannualPrecip item in tblswatwaannualprecip)
             {

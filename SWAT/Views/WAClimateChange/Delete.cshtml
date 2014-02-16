@@ -1,0 +1,72 @@
+﻿@model SWAT.Models.tblSWATWAclimateChange
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblSWATWAclimateChange</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.climateDryer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.climateDryer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.climateWetter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.climateWetter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.climateColder)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.climateColder)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.climateHotter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.climateHotter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.climateSeasons)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.climateSeasons)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

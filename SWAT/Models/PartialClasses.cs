@@ -22,4 +22,9 @@ namespace SWAT.Models
     public partial class tblSWATWAannualPrecip
     { 
     }
+
+    [MetadataType(typeof(WAClimateChangeMetadata))]
+    public partial class tblSWATWAclimateChange
+    { 
+    }
 }

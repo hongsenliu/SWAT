@@ -47,6 +47,7 @@
           <EntitySet Name="tblSWATVisualGroup" EntityType="SWATModel.Store.tblSWATVisualGroup" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATVisualGrpScoreMap" EntityType="SWATModel.Store.tblSWATVisualGrpScoreMap" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAannualPrecip" EntityType="SWATModel.Store.tblSWATWAannualPrecip" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATWAclimateChange" EntityType="SWATModel.Store.tblSWATWAclimateChange" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAMonthlyQuantity" EntityType="SWATModel.Store.tblSWATWAMonthlyQuantity" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAPrecipitation" EntityType="SWATModel.Store.tblSWATWAPrecipitation" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="Userids" EntityType="SWATModel.Store.Userids" store:Type="Tables" Schema="DBA" />
@@ -189,6 +190,10 @@
           <AssociationSet Name="FK_tblSWATWAannualPrecip_17_lkpSWATprecipVarAltLU" Association="SWATModel.Store.FK_tblSWATWAannualPrecip_17_lkpSWATprecipVarAltLU">
             <End Role="lkpSWATprecipVarAltLU" EntitySet="lkpSWATprecipVarAltLU" />
             <End Role="tblSWATWAannualPrecip" EntitySet="tblSWATWAannualPrecip" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAclimateChange_17_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATWAclimateChange_17_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+            <End Role="tblSWATWAclimateChange" EntitySet="tblSWATWAclimateChange" />
           </AssociationSet>
           <AssociationSet Name="FK_tblSWATWAMonthlyQuantity_10_lkpSWATwaterMonthLU" Association="SWATModel.Store.FK_tblSWATWAMonthlyQuantity_10_lkpSWATwaterMonthLU">
             <End Role="lkpSWATwaterMonthLU" EntitySet="lkpSWATwaterMonthLU" />
@@ -579,6 +584,18 @@
           <Property Name="SurveyID" Type="int" Nullable="false" />
           <Property Name="precipVar" Type="float" />
           <Property Name="precipVarALT" Type="int" />
+        </EntityType>
+        <EntityType Name="tblSWATWAclimateChange">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="int" Nullable="false" />
+          <Property Name="climateDryer" Type="bit" Nullable="false" />
+          <Property Name="climateWetter" Type="bit" Nullable="false" />
+          <Property Name="climateColder" Type="bit" Nullable="false" />
+          <Property Name="climateHotter" Type="bit" Nullable="false" />
+          <Property Name="climateSeasons" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="tblSWATWAMonthlyQuantity">
           <Key>
@@ -1072,6 +1089,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_tblSWATWAclimateChange_17_tblSWATSurvey">
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="1" />
+          <End Role="tblSWATWAclimateChange" Type="SWATModel.Store.tblSWATWAclimateChange" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWAclimateChange">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_tblSWATWAMonthlyQuantity_10_lkpSWATwaterMonthLU">
           <End Role="lkpSWATwaterMonthLU" Type="SWATModel.Store.lkpSWATwaterMonthLU" Multiplicity="0..1" />
           <End Role="tblSWATWAMonthlyQuantity" Type="SWATModel.Store.tblSWATWAMonthlyQuantity" Multiplicity="*" />
@@ -1475,6 +1504,11 @@
             <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
             <End Role="tblSWATWAannualPrecip" EntitySet="tblSWATWAannualPrecips" />
           </AssociationSet>
+          <EntitySet Name="tblSWATWAclimateChanges" EntityType="SWATModel.tblSWATWAclimateChange" />
+          <AssociationSet Name="FK_tblSWATWAclimateChange_17_tblSWATSurvey" Association="SWATModel.FK_tblSWATWAclimateChange_17_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+            <End Role="tblSWATWAclimateChange" EntitySet="tblSWATWAclimateChanges" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="lkpBiome">
           <Key>
@@ -1787,6 +1821,7 @@
           <NavigationProperty Name="tblSWATWAPrecipitations" Relationship="SWATModel.FK_tblSWATWAPrecipitation_3_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAPrecipitation" />
           <NavigationProperty Name="tblSWATWAMonthlyQuantities" Relationship="SWATModel.FK_tblSWATWAMonthlyQuantity_15_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAMonthlyQuantity" />
           <NavigationProperty Name="tblSWATWAannualPrecips" Relationship="SWATModel.FK_tblSWATWAannualPrecip_16_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAannualPrecip" />
+          <NavigationProperty Name="tblSWATWAclimateChanges" Relationship="SWATModel.FK_tblSWATWAclimateChange_17_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAclimateChange" />
         </EntityType>
         <EntityType Name="tblSWATVisualGroup">
           <Key>
@@ -2534,6 +2569,31 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="tblSWATWAclimateChange">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SurveyID" Nullable="false" />
+          <Property Type="Boolean" Name="climateDryer" Nullable="false" />
+          <Property Type="Boolean" Name="climateWetter" Nullable="false" />
+          <Property Type="Boolean" Name="climateColder" Nullable="false" />
+          <Property Type="Boolean" Name="climateHotter" Nullable="false" />
+          <Property Type="Boolean" Name="climateSeasons" Nullable="false" />
+          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATWAclimateChange_17_tblSWATSurvey" FromRole="tblSWATWAclimateChange" ToRole="tblSWATSurvey" />
+        </EntityType>
+        <Association Name="FK_tblSWATWAclimateChange_17_tblSWATSurvey">
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATWAclimateChange" Role="tblSWATWAclimateChange" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWAclimateChange">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2975,6 +3035,19 @@
               <MappingFragment StoreEntitySet="tblSWATWAannualPrecip">
                 <ScalarProperty Name="precipVarALT" ColumnName="precipVarALT" />
                 <ScalarProperty Name="precipVar" ColumnName="precipVar" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATWAclimateChanges">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATWAclimateChange">
+              <MappingFragment StoreEntitySet="tblSWATWAclimateChange">
+                <ScalarProperty Name="climateSeasons" ColumnName="climateSeasons" />
+                <ScalarProperty Name="climateHotter" ColumnName="climateHotter" />
+                <ScalarProperty Name="climateColder" ColumnName="climateColder" />
+                <ScalarProperty Name="climateWetter" ColumnName="climateWetter" />
+                <ScalarProperty Name="climateDryer" ColumnName="climateDryer" />
                 <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>

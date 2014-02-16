@@ -214,6 +214,7 @@
     <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\WAannualPrecipController.cs" />
+    <Compile Include="Controllers\WAClimateChangeController.cs" />
     <Compile Include="Controllers\WAMonthlyQuantityController.cs" />
     <Compile Include="Controllers\WAPrecipitationController.cs" />
     <Compile Include="Global.asax.cs">
@@ -346,6 +347,9 @@
     <Compile Include="Models\tblSWATWAannualPrecip.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\tblSWATWAclimateChange.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\tblSWATWAMonthlyQuantity.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -415,6 +419,11 @@
     <Content Include="Views\WAannualPrecip\Details.cshtml" />
     <Content Include="Views\WAannualPrecip\Edit.cshtml" />
     <Content Include="Views\WAannualPrecip\Index.cshtml" />
+    <Content Include="Views\WAClimateChange\Create.cshtml" />
+    <Content Include="Views\WAClimateChange\Delete.cshtml" />
+    <Content Include="Views\WAClimateChange\Details.cshtml" />
+    <Content Include="Views\WAClimateChange\Edit.cshtml" />
+    <Content Include="Views\WAClimateChange\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

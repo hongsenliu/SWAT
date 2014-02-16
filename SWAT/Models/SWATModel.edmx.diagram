@@ -91,6 +91,8 @@
         <EntityTypeShape EntityType="SWATModel.tblSWATWAannualPrecip" Width="1.5" PointX="2.6784939331368047" PointY="24.728551876139154" />
         <AssociationConnector Association="SWATModel.FK_tblSWATWAannualPrecip_17_lkpSWATprecipVarAltLU" />
         <AssociationConnector Association="SWATModel.FK_tblSWATWAannualPrecip_16_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATWAclimateChange" Width="1.5" PointX="8.0479784459099069" PointY="10.059293110882534" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAclimateChange_17_tblSWATSurvey" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
