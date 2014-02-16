@@ -1,0 +1,128 @@
+﻿@model SWAT.Models.tblSWATWAPrecipitation
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblSWATWAPrecipitation</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SurveyID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SurveyID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.January)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.January)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.February)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.February)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.March)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.March)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.April)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.April)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.May)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.May)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.June)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.June)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.July)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.July)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.August)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.August)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.September)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.September)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.October)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.October)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.November)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.November)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.December)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.December)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

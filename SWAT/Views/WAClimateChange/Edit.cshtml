@@ -1,0 +1,95 @@
+﻿@model SWAT.Models.tblSWATWAclimateChange
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit - Water Availability</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Climate and Rainwater - Part IV</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+
+        <p>
+            Have you noticed any of the following changes in your climate over the last 50 years?
+        </p>
+        <hr />
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.climateDryer, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <p>
+                    It is dryer now than it used to be
+                </p>
+                @Html.EditorFor(model => model.climateDryer)
+                @Html.ValidationMessageFor(model => model.climateDryer)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.climateWetter, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <p>
+                    It is wetter now than it used to be
+                </p>
+                @Html.EditorFor(model => model.climateWetter)
+                @Html.ValidationMessageFor(model => model.climateWetter)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.climateColder, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <p>
+                    It is colder now than it used to be
+                </p>
+                @Html.EditorFor(model => model.climateColder)
+                @Html.ValidationMessageFor(model => model.climateColder)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.climateHotter, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <p>
+                    It is hotter now than it used to be
+                </p>
+                @Html.EditorFor(model => model.climateHotter)
+                @Html.ValidationMessageFor(model => model.climateHotter)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.climateSeasons, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <p>
+                    The seasons change at different times
+                </p>
+                @Html.EditorFor(model => model.climateSeasons)
+                @Html.ValidationMessageFor(model => model.climateSeasons)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

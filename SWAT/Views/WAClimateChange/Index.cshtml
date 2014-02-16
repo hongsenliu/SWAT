@@ -1,0 +1,63 @@
+﻿@model IEnumerable<SWAT.Models.tblSWATWAclimateChange>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.climateDryer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.climateWetter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.climateColder)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.climateHotter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.climateSeasons)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.climateDryer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.climateWetter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.climateColder)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.climateHotter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.climateSeasons)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSWATSurvey.ID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

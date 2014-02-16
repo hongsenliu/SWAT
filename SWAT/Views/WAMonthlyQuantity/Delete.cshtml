@@ -1,0 +1,128 @@
+﻿@model SWAT.Models.tblSWATWAMonthlyQuantity
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblSWATWAMonthlyQuantity</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.lkpSWATwaterMonthLU.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkpSWATwaterMonthLU.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkpSWATwaterMonthLU1.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkpSWATwaterMonthLU1.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkpSWATwaterMonthLU2.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkpSWATwaterMonthLU2.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkpSWATwaterMonthLU3.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkpSWATwaterMonthLU3.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkpSWATwaterMonthLU4.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkpSWATwaterMonthLU4.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkpSWATwaterMonthLU5.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkpSWATwaterMonthLU5.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkpSWATwaterMonthLU6.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkpSWATwaterMonthLU6.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkpSWATwaterMonthLU7.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkpSWATwaterMonthLU7.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkpSWATwaterMonthLU8.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkpSWATwaterMonthLU8.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkpSWATwaterMonthLU9.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkpSWATwaterMonthLU9.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkpSWATwaterMonthLU10.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkpSWATwaterMonthLU10.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkpSWATwaterMonthLU11.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkpSWATwaterMonthLU11.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c82380afeb6a4327a32357853aceec25" Name="Diagram1" ZoomLevel="133">
+      <Diagram DiagramId="c82380afeb6a4327a32357853aceec25" Name="Diagram1" ZoomLevel="100">
         <EntityTypeShape EntityType="SWATModel.lkpBiome" Width="1.5" PointX="0.75" PointY="9.5" IsExpanded="true" />
         <EntityTypeShape EntityType="SWATModel.lkpClimateClassification" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SWATModel.lkpCountry" Width="1.5" PointX="1.5" PointY="49.25" IsExpanded="true" />
@@ -66,6 +66,40 @@
         <AssociationConnector Association="SWATModel.FK_tblSWATSurvey_37_Userids" ManuallyRouted="false" />
         <AssociationConnector Association="SWATModel.FK_tblSWATVisualGrpScoreMap_2_tblSWATVisualGroup" ManuallyRouted="false" />
         <AssociationConnector Association="SWATModel.lkpSWATScoreVarSectionLU1" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATWAPrecipitation" Width="1.5" PointX="0.82714859621000869" PointY="1.9243810483833688" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATprecipLU" Width="1.5" PointX="3.3580567610254777" PointY="11.241321032513548" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_precip" Width="1.5" PointX="7.2060099687455264" PointY="16.7821350622839" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAPrecipitation_3_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATwaterMonthLU" Width="1.5" PointX="11.946857292180349" PointY="11.345186715640681" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATWAMonthlyQuantity" Width="1.5" PointX="11.590051788645821" PointY="26.584397745590842" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAMonthlyQuantity_10_lkpSWATwaterMonthLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAMonthlyQuantity_11_lkpSWATwaterMonthLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAMonthlyQuantity_12_lkpSWATwaterMonthLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAMonthlyQuantity_13_lkpSWATwaterMonthLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAMonthlyQuantity_14_lkpSWATwaterMonthLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAMonthlyQuantity_3_lkpSWATwaterMonthLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAMonthlyQuantity_4_lkpSWATwaterMonthLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAMonthlyQuantity_5_lkpSWATwaterMonthLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAMonthlyQuantity_6_lkpSWATwaterMonthLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAMonthlyQuantity_7_lkpSWATwaterMonthLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAMonthlyQuantity_8_lkpSWATwaterMonthLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAMonthlyQuantity_9_lkpSWATwaterMonthLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAMonthlyQuantity_15_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATprecipVarAltLU" Width="1.5" PointX="2.2351643285877838" PointY="24.535121273498572" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATprecipVardivMeanLU" Width="1.5" PointX="11.074488747433986" PointY="26.777241898131205" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_precipVar" Width="1.5" PointX="7.7468356805605971" PointY="9.7362660065927855" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATWAannualPrecip" Width="1.5" PointX="2.6784939331368047" PointY="24.728551876139154" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAannualPrecip_17_lkpSWATprecipVarAltLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAannualPrecip_16_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATWAclimateChange" Width="1.5" PointX="8.0479784459099069" PointY="10.059293110882534" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAclimateChange_17_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATextremeEventsLU" Width="1.5" PointX="3.7713411821850302" PointY="28.177729306825309" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_extremeEvents" Width="1.5" PointX="11.177087824408471" PointY="31.443734153846155" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATWAextremeEvent" Width="1.5" PointX="10.121302819867294" PointY="18.393109389763843" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAextremeEvent_19_lkpSWATextremeEventsLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAextremeEvent_20_lkpSWATextremeEventsLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAextremeEvent_21_lkpSWATextremeEventsLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAextremeEvent_18_tblSWATSurvey" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

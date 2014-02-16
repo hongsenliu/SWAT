@@ -1,0 +1,66 @@
+﻿@model SWAT.Models.tblSWATWAclimateChange
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblSWATWAclimateChange</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.climateDryer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.climateDryer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.climateWetter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.climateWetter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.climateColder)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.climateColder)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.climateHotter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.climateHotter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.climateSeasons)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.climateSeasons)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

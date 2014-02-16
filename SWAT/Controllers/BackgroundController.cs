@@ -77,37 +77,73 @@ namespace SWAT.Controllers
             {
                 if (item.VarName == "ariditySCORE")
                 {
-                    var scoreIntorder = db.lkpSWATmapAridities.Find(tblswatbackgroundinfo.AridityID).intorder;
-                    var aridityScore = db.lkpSWATscores_Aridity.Single(e => e.intorder == scoreIntorder).Description;
-                    db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(aridityScore);
+                    if (tblswatbackgroundinfo.AridityID != null)
+                    {
+                        var scoreIntorder = db.lkpSWATmapAridities.Find(tblswatbackgroundinfo.AridityID).intorder;
+                        var aridityScore = db.lkpSWATscores_Aridity.Single(e => e.intorder == scoreIntorder).Description;
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(aridityScore);
+                    }
+                    else
+                    {
+                         db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = null;
+                    }
+                    
                     db.SaveChanges();
                 }
                 if (item.VarName == "econPrisSCORE")
                 {
-                    var scoreIntorder = db.lkpSWATeconPrisLUs.Find(tblswatbackgroundinfo.isEconPris).intorder;
-                    var econPrisScore = db.lkpSWATscores_econPris.Single(e => e.intorder == scoreIntorder).Description;
-                    db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(econPrisScore);
+                    if (tblswatbackgroundinfo.isEconPris != null)
+                    {
+                        var scoreIntorder = db.lkpSWATeconPrisLUs.Find(tblswatbackgroundinfo.isEconPris).intorder;
+                        var econPrisScore = db.lkpSWATscores_econPris.Single(e => e.intorder == scoreIntorder).Description;
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(econPrisScore);
+                    }
+                    else
+                    {
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = null;
+                    }
                     db.SaveChanges();
                 }
                 if (item.VarName == "areaBMSCORE")
                 {
-                    var scoreIntorder = db.lkpSWATareaBMLUs.Find(tblswatbackgroundinfo.AreaBmID).intorder;
-                    var areaBMScore = db.lkpSWATscores_areaBMLU.Single(e => e.intorder == scoreIntorder).Description;
-                    db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(areaBMScore);
+                    if (tblswatbackgroundinfo.AreaBmID != null)
+                    {
+                        var scoreIntorder = db.lkpSWATareaBMLUs.Find(tblswatbackgroundinfo.AreaBmID).intorder;
+                        var areaBMScore = db.lkpSWATscores_areaBMLU.Single(e => e.intorder == scoreIntorder).Description;
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(areaBMScore);
+                    }
+                    else
+                    {
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = null;
+                    }
                     db.SaveChanges();
                 }
                 if (item.VarName == "areaProtSCORE")
                 {
-                    var scoreIntorder = db.lkpSWATareaProtLUs.Find(tblswatbackgroundinfo.AreaProtID).intorder;
-                    var areaProtScore = db.lkpSWATscores_areaProt.Single(e => e.intorder == scoreIntorder).Description;
-                    db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(areaProtScore);
+                    if (tblswatbackgroundinfo.AreaProtID != null)
+                    {
+                        var scoreIntorder = db.lkpSWATareaProtLUs.Find(tblswatbackgroundinfo.AreaProtID).intorder;
+                        var areaProtScore = db.lkpSWATscores_areaProt.Single(e => e.intorder == scoreIntorder).Description;
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(areaProtScore);
+                    }
+                    else 
+                    {
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = null;
+                    }
                     db.SaveChanges();
                 }
                 if (item.VarName == "urbanDistanceSCORE")
                 {
-                    var scoreIntorder = db.lkpSWATurbanDistanceLUs.Find(tblswatbackgroundinfo.UrbanDistanceID).intorder;
-                    var urbanDistanceScore = db.lkpSWATscores_urbanDistance.Single(e => e.intorder == scoreIntorder).Description;
-                    db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(urbanDistanceScore);
+                    if (tblswatbackgroundinfo.UrbanDistanceID != null)
+                    {
+                        var scoreIntorder = db.lkpSWATurbanDistanceLUs.Find(tblswatbackgroundinfo.UrbanDistanceID).intorder;
+                        var urbanDistanceScore = db.lkpSWATscores_urbanDistance.Single(e => e.intorder == scoreIntorder).Description;
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = Double.Parse(urbanDistanceScore);
+                    }
+                    else
+                    {
+                        db.tblSWATScores.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID && e.VariableID == item.ID).Value = null;
+                    }
                     db.SaveChanges();
                 }
             }
@@ -135,28 +171,27 @@ namespace SWAT.Controllers
                 ModelState.AddModelError("AreaSw", "The sum of Forest(%), Agriculture(%), Infrastructure(%), Source Water(%) and Wetlands(%) cannot exceed 100.");
                 ModelState.AddModelError("AreaWet", "The sum of Forest(%), Agriculture(%), Infrastructure(%), Source Water(%) and Wetlands(%) cannot exceed 100.");
             }
-            var backgrdIDs = db.tblSWATBackgroundinfoes.Where(item => item.SurveyID == tblswatbackgroundinfo.SurveyID).Select(item => item.ID);
-            if (backgrdIDs.Any())
-            {
-                var backgrdID = backgrdIDs.First();
-                tblswatbackgroundinfo.ID = backgrdID;
-                db.Entry(tblswatbackgroundinfo).State = EntityState.Modified;
-                db.SaveChanges();
-                updateScores(tblswatbackgroundinfo);
-                return RedirectToAction("Index");
-            }
+            
             if (ModelState.IsValid)
             {
+                var backgrdIDs = db.tblSWATBackgroundinfoes.Where(item => item.SurveyID == tblswatbackgroundinfo.SurveyID).Select(item => item.ID);
+                if (backgrdIDs.Any())
+                {
+                    var backgrdID = backgrdIDs.First();
+                    tblswatbackgroundinfo.ID = backgrdID;
+                    db.Entry(tblswatbackgroundinfo).State = EntityState.Modified;
+                    db.SaveChanges();
+                    updateScores(tblswatbackgroundinfo);
+                    return RedirectToAction("Create", "WAPrecipitation", new { SurveyID = tblswatbackgroundinfo.SurveyID });
+                }
+
                 db.tblSWATBackgroundinfoes.Add(tblswatbackgroundinfo);
                 db.SaveChanges();
-                //var aridityOrder = db.lkpSWATmapAridities.Find(tblswatbackgroundinfo.AridityID).intorder;
-                //var aridityScore = db.lkpSWATscores_Aridity.Where(item => item.intorder == aridityOrder).Select(item => item.Description).First();
-                //var scoreID = db.tblSWATScores.Where(item => item.SurveyID == tblswatbackgroundinfo.SurveyID && item.VarName == "ariditySCORE");
                 updateScores(tblswatbackgroundinfo);
-                
-                
 
-                return RedirectToAction("Index");
+
+
+                return RedirectToAction("Create", "WAPrecipitation", new { SurveyID = tblswatbackgroundinfo.SurveyID });
             }
 
             ViewBag.EcoregionID = new SelectList(db.lkpBiomes, "ID", "Description", tblswatbackgroundinfo.EcoregionID);
@@ -248,7 +283,23 @@ namespace SWAT.Controllers
                 db.Entry(tblswatbackgroundinfo).State = EntityState.Modified;
                 db.SaveChanges();
                 updateScores(tblswatbackgroundinfo);
-                return RedirectToAction("Index");
+
+                // If there is not a WAPreciptation with the current survey (SurveyID) then create one and redirecto to its edit link.
+                var waprecip = db.tblSWATWAPrecipitations.Where(e => e.SurveyID == tblswatbackgroundinfo.SurveyID);
+                if (!waprecip.Any())
+                {
+                    tblSWATWAPrecipitation tblswatwaprecipitation = new tblSWATWAPrecipitation();
+                    tblswatwaprecipitation.SurveyID = tblswatbackgroundinfo.SurveyID;
+                    db.tblSWATWAPrecipitations.Add(tblswatwaprecipitation);
+                    db.SaveChanges();
+                    var newWAPreciptationID = tblswatwaprecipitation.ID;
+                    return RedirectToAction("Edit", "WAPrecipitation", new { id = tblswatwaprecipitation.ID, SurveyID = tblswatwaprecipitation.SurveyID });
+                }
+                else 
+                {
+                    return RedirectToAction("Edit", "WAPrecipitation", new { id = waprecip.Single(e => e.SurveyID == tblswatbackgroundinfo.SurveyID).ID, SurveyID = tblswatbackgroundinfo.SurveyID });
+                }
+                //return RedirectToAction("Index");
             }
             ViewBag.EcoregionID = new SelectList(db.lkpBiomes, "ID", "Description", tblswatbackgroundinfo.EcoregionID);
             ViewBag.ClimateID = new SelectList(db.lkpClimateClassifications, "ID", "CCType", tblswatbackgroundinfo.ClimateID);

@@ -146,25 +146,65 @@ namespace SWAT.Controllers
             return View(tblswatsurvey);
         }
 
+        private void DeleteRelatedRecords(int id)
+        {
+            var tblswatwaextremeevent = db.tblSWATWAextremeEvents.Where(e => e.SurveyID == id);
+            foreach (tblSWATWAextremeEvent item in tblswatwaextremeevent)
+            {
+                db.tblSWATWAextremeEvents.Remove(item);
+            }
+
+            var tblswatwaclimatechange = db.tblSWATWAclimateChanges.Where(e => e.SurveyID == id);
+            foreach (tblSWATWAclimateChange item in tblswatwaclimatechange)
+            {
+                db.tblSWATWAclimateChanges.Remove(item);
+            }
+
+            var tblswatwaannualprecip = db.tblSWATWAannualPrecips.Where(e => e.SurveyID == id);
+            foreach (tblSWATWAannualPrecip item in tblswatwaannualprecip)
+            {
+                db.tblSWATWAannualPrecips.Remove(item);
+            }
+
+            var tblswatwamonthlyquantity = db.tblSWATWAMonthlyQuantities.Where(e => e.SurveyID == id);
+            foreach (tblSWATWAMonthlyQuantity item in tblswatwamonthlyquantity)
+            {
+                db.tblSWATWAMonthlyQuantities.Remove(item);
+            }
+
+            var tblswatbackgroundinfos = db.tblSWATBackgroundinfoes.Where(e => e.SurveyID == id);
+            foreach(tblSWATBackgroundinfo item in tblswatbackgroundinfos)
+            {
+                db.tblSWATBackgroundinfoes.Remove(item);
+            }
+
+            var tblswatwaprecipitations = db.tblSWATWAPrecipitations.Where(e => e.SurveyID == id);
+            foreach(tblSWATWAPrecipitation item in tblswatwaprecipitations)
+            {
+                db.tblSWATWAPrecipitations.Remove(item);
+            }
+
+            var tblswatscores = db.tblSWATScores.Where(e => e.SurveyID == id);
+            foreach (tblSWATScore item in tblswatscores)
+            {
+                db.tblSWATScores.Remove(item);
+            }
+
+            db.SaveChanges();
+        }
         // POST: /Survey/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
 
-            if (db.tblSWATBackgroundinfoes.Any(e => e.SurveyID == id))
-            {
-                tblSWATBackgroundinfo tblswatbackgroundinfo = db.tblSWATBackgroundinfoes.Single(e => e.SurveyID == id);
-                db.tblSWATBackgroundinfoes.Remove(tblswatbackgroundinfo);
-            }
-            var tblswatscores = db.tblSWATScores.Where(e => e.SurveyID == id);
-            foreach (tblSWATScore item in tblswatscores)
-            {
-                db.tblSWATScores.Remove(item);
-            }
+            
+            
             tblSWATSurvey tblswatsurvey = db.tblSWATSurveys.Find(id);
             db.tblSWATSurveys.Remove(tblswatsurvey);
+            DeleteRelatedRecords(id);
             db.SaveChanges();
+            
             //return RedirectToAction("Index");
             return RedirectToAction("Details", "User", new { id=tblswatsurvey.UserID });
         }

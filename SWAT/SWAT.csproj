@@ -164,6 +164,8 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Content\WAannualPrecip.js" />
+    <Content Include="Content\WAExtremeEvent.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -173,7 +175,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\SWATModel.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SWATModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>SWATModel1.Designer.cs</LastGenOutput>
     </EntityDeploy>
     <Content Include="Models\SWATModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -212,6 +214,11 @@
     <Compile Include="Controllers\SubnationController.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Controllers\UserController.cs" />
+    <Compile Include="Controllers\WAannualPrecipController.cs" />
+    <Compile Include="Controllers\WAClimateChangeController.cs" />
+    <Compile Include="Controllers\WAExtremeEventController.cs" />
+    <Compile Include="Controllers\WAMonthlyQuantityController.cs" />
+    <Compile Include="Controllers\WAPrecipitationController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -242,7 +249,19 @@
     <Compile Include="Models\lkpSWATeconPrisLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATextremeEventsLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATmapAridity.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATprecipLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATprecipVarAltLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATprecipVardivMeanLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATpriorLU.cs">
@@ -260,6 +279,15 @@
     <Compile Include="Models\lkpSWATscores_econPris.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATscores_extremeEvents.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_precip.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_precipVar.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATscores_urbanDistance.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -273,6 +301,9 @@
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATurbanDistanceLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATwaterMonthLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATWatershedsLU.cs">
@@ -298,6 +329,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SWATModel.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\SWATModel1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SWATModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Models\tblSWATBackgroundinfo.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -314,6 +350,21 @@
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSWATVisualGrpScoreMap.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSWATWAannualPrecip.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSWATWAclimateChange.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSWATWAextremeEvent.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSWATWAMonthlyQuantity.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSWATWAPrecipitation.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Userid.cs">
@@ -364,6 +415,31 @@
     <Content Include="Views\Background\Details.cshtml" />
     <Content Include="Views\Background\Edit.cshtml" />
     <Content Include="Views\Background\Index.cshtml" />
+    <Content Include="Views\WAPrecipitation\Create.cshtml" />
+    <Content Include="Views\WAPrecipitation\Delete.cshtml" />
+    <Content Include="Views\WAPrecipitation\Details.cshtml" />
+    <Content Include="Views\WAPrecipitation\Edit.cshtml" />
+    <Content Include="Views\WAPrecipitation\Index.cshtml" />
+    <Content Include="Views\WAMonthlyQuantity\Create.cshtml" />
+    <Content Include="Views\WAMonthlyQuantity\Delete.cshtml" />
+    <Content Include="Views\WAMonthlyQuantity\Details.cshtml" />
+    <Content Include="Views\WAMonthlyQuantity\Edit.cshtml" />
+    <Content Include="Views\WAMonthlyQuantity\Index.cshtml" />
+    <Content Include="Views\WAannualPrecip\Create.cshtml" />
+    <Content Include="Views\WAannualPrecip\Delete.cshtml" />
+    <Content Include="Views\WAannualPrecip\Details.cshtml" />
+    <Content Include="Views\WAannualPrecip\Edit.cshtml" />
+    <Content Include="Views\WAannualPrecip\Index.cshtml" />
+    <Content Include="Views\WAClimateChange\Create.cshtml" />
+    <Content Include="Views\WAClimateChange\Delete.cshtml" />
+    <Content Include="Views\WAClimateChange\Details.cshtml" />
+    <Content Include="Views\WAClimateChange\Edit.cshtml" />
+    <Content Include="Views\WAClimateChange\Index.cshtml" />
+    <Content Include="Views\WAExtremeEvent\Create.cshtml" />
+    <Content Include="Views\WAExtremeEvent\Delete.cshtml" />
+    <Content Include="Views\WAExtremeEvent\Details.cshtml" />
+    <Content Include="Views\WAExtremeEvent\Edit.cshtml" />
+    <Content Include="Views\WAExtremeEvent\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
