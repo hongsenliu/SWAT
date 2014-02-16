@@ -3,6 +3,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SWAT.Models
 {
+    [MetadataType(typeof(WARiskPrepMetadata))]
+    public partial class tblSWATWAriskPrep
+    { 
+    }
+
     [MetadataType(typeof(LocationMetadata))]
     public partial class tblSWATLocation
     {

@@ -114,14 +114,15 @@ namespace SWAT.Controllers
                     db.Entry(tblswatwaextremeevent).State = EntityState.Modified;
                     db.SaveChanges();
                     updateScores(tblswatwaextremeevent);
-                    return RedirectToAction("Index");
-                    //return RedirectToAction("Create", "WAClimateChange", new { SurveyID = tblswatwaclimatechange.SurveyID });
+                    //return RedirectToAction("Index");
+                    return RedirectToAction("Create", "WARiskPrep", new { SurveyID = tblswatwaextremeevent.SurveyID });
                 }
 
                 db.tblSWATWAextremeEvents.Add(tblswatwaextremeevent);
                 updateScores(tblswatwaextremeevent);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
+                return RedirectToAction("Create", "WARiskPrep", new { SurveyID = tblswatwaextremeevent.SurveyID });
             }
 
             ViewBag.extremeDry = new SelectList(db.lkpSWATextremeEventsLUs, "id", "Description", tblswatwaextremeevent.extremeDry);
@@ -168,7 +169,25 @@ namespace SWAT.Controllers
                 db.Entry(tblswatwaextremeevent).State = EntityState.Modified;
                 db.SaveChanges();
                 updateScores(tblswatwaextremeevent);
-                return RedirectToAction("Index");
+
+                // If there is not any WARiskPrep with the current survey (SurveyID) then create one and redirect to its edit link.
+                var riskPreps = db.tblSWATWAriskPreps.Where(e => e.SurveyID == tblswatwaextremeevent.SurveyID);
+                if (!riskPreps.Any())
+                {
+                    tblSWATWAriskPrep tblswatwariskprep = new tblSWATWAriskPrep();
+                    tblswatwariskprep.SurveyID = tblswatwaextremeevent.SurveyID;
+                    db.tblSWATWAriskPreps.Add(tblswatwariskprep);
+                    db.SaveChanges();
+
+                    int newRiskPrepID = tblswatwariskprep.ID;
+                    return RedirectToAction("Edit", "WARiskPrep", new { id = newRiskPrepID, SurveyID = tblswatwariskprep.SurveyID });
+                }
+                else
+                {
+                    return RedirectToAction("Edit", "WARiskPrep", new { id = riskPreps.Single(e => e.SurveyID == tblswatwaextremeevent.SurveyID).ID, SurveyID = tblswatwaextremeevent.SurveyID });
+                }
+
+                //return RedirectToAction("Index");
             }
             ViewBag.extremeDry = new SelectList(db.lkpSWATextremeEventsLUs, "id", "Description", tblswatwaextremeevent.extremeDry);
             ViewBag.extremeFlood = new SelectList(db.lkpSWATextremeEventsLUs, "id", "Description", tblswatwaextremeevent.extremeFlood);

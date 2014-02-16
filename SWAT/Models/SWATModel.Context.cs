@@ -67,5 +67,10 @@ namespace SWAT.Models
         public DbSet<lkpSWATextremeEventsLU> lkpSWATextremeEventsLUs { get; set; }
         public DbSet<lkpSWATscores_extremeEvents> lkpSWATscores_extremeEvents { get; set; }
         public DbSet<tblSWATWAextremeEvent> tblSWATWAextremeEvents { get; set; }
+        public DbSet<lkpSWATextremePrepLU> lkpSWATextremePrepLUs { get; set; }
+        public DbSet<lkpSWATextremeRiskLU> lkpSWATextremeRiskLUs { get; set; }
+        public DbSet<lkpSWATscores_extremePrep> lkpSWATscores_extremePrep { get; set; }
+        public DbSet<lkpSWATscores_extremeRISK> lkpSWATscores_extremeRISK { get; set; }
+        public DbSet<tblSWATWAriskPrep> tblSWATWAriskPreps { get; set; }
     }
 }

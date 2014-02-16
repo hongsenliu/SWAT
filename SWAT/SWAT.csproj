@@ -166,6 +166,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
     <Content Include="Content\WAannualPrecip.js" />
     <Content Include="Content\WAExtremeEvent.js" />
+    <Content Include="Content\WARiskPrep.js" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -219,6 +220,7 @@
     <Compile Include="Controllers\WAExtremeEventController.cs" />
     <Compile Include="Controllers\WAMonthlyQuantityController.cs" />
     <Compile Include="Controllers\WAPrecipitationController.cs" />
+    <Compile Include="Controllers\WARiskPrepController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -252,6 +254,12 @@
     <Compile Include="Models\lkpSWATextremeEventsLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATextremePrepLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATextremeRiskLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATmapAridity.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -280,6 +288,12 @@
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATscores_extremeEvents.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_extremePrep.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_extremeRISK.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATscores_precip.cs">
@@ -367,6 +381,9 @@
     <Compile Include="Models\tblSWATWAPrecipitation.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\tblSWATWAriskPrep.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Userid.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -440,6 +457,11 @@
     <Content Include="Views\WAExtremeEvent\Details.cshtml" />
     <Content Include="Views\WAExtremeEvent\Edit.cshtml" />
     <Content Include="Views\WAExtremeEvent\Index.cshtml" />
+    <Content Include="Views\WARiskPrep\Create.cshtml" />
+    <Content Include="Views\WARiskPrep\Delete.cshtml" />
+    <Content Include="Views\WARiskPrep\Details.cshtml" />
+    <Content Include="Views\WARiskPrep\Edit.cshtml" />
+    <Content Include="Views\WARiskPrep\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

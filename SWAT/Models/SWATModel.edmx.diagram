@@ -100,6 +100,18 @@
         <AssociationConnector Association="SWATModel.FK_tblSWATWAextremeEvent_20_lkpSWATextremeEventsLU" />
         <AssociationConnector Association="SWATModel.FK_tblSWATWAextremeEvent_21_lkpSWATextremeEventsLU" />
         <AssociationConnector Association="SWATModel.FK_tblSWATWAextremeEvent_18_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATextremePrepLU" Width="1.5" PointX="8.5481593983937785" PointY="28.997635750564577" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATextremeRiskLU" Width="1.5" PointX="0.16620342254927542" PointY="18.031530239633998" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_extremePrep" Width="1.5" PointX="4.0427721291979646" PointY="0.16000935442746123" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_extremeRISK" Width="1.5" PointX="1.9530168277924025" PointY="11.212644552445338" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATWAriskPrep" Width="1.5" PointX="4.4766746240093713" PointY="12.431101238555788" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAriskPrep_23_lkpSWATextremePrepLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAriskPrep_24_lkpSWATextremePrepLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAriskPrep_25_lkpSWATextremePrepLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAriskPrep_20_lkpSWATextremeRiskLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAriskPrep_21_lkpSWATextremeRiskLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAriskPrep_22_lkpSWATextremeRiskLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAriskPrep_19_tblSWATSurvey" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

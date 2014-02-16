@@ -3,6 +3,27 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SWAT.Models
 {
+    public class WARiskPrepMetadata
+    {
+        [Display(Name = "Risk of Fire")]
+        public Nullable<int> riskFire { get; set; }
+
+        [Display(Name = "Risk of Flood")]
+        public Nullable<int> riskFlood { get; set; }
+
+        [Display(Name = "Risk of Drought")]
+        public Nullable<int> riskDrought { get; set; }
+
+        [Display(Name = "Preparedness for Fire")]
+        public Nullable<int> prepFire { get; set; }
+
+        [Display(Name = "Preparedness for Flood")]
+        public Nullable<int> prepFlood { get; set; }
+
+        [Display(Name = "Preparedness for Drought")]
+        public Nullable<int> prepDrought { get; set; }
+    }
+
     public class LocationMetadata
     {
         [Required(ErrorMessage="Settlement Name is required.")]

@@ -16,6 +16,8 @@
           <EntitySet Name="lkpSWATareaProtLU" EntityType="SWATModel.Store.lkpSWATareaProtLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATeconPrisLU" EntityType="SWATModel.Store.lkpSWATeconPrisLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATextremeEventsLU" EntityType="SWATModel.Store.lkpSWATextremeEventsLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATextremePrepLU" EntityType="SWATModel.Store.lkpSWATextremePrepLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATextremeRiskLU" EntityType="SWATModel.Store.lkpSWATextremeRiskLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATmapAridity" EntityType="SWATModel.Store.lkpSWATmapAridity" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATprecipLU" EntityType="SWATModel.Store.lkpSWATprecipLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATprecipVarAltLU" EntityType="SWATModel.Store.lkpSWATprecipVarAltLU" store:Type="Tables" Schema="DBA" />
@@ -26,6 +28,8 @@
           <EntitySet Name="lkpSWATscores_Aridity" EntityType="SWATModel.Store.lkpSWATscores_Aridity" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_econPris" EntityType="SWATModel.Store.lkpSWATscores_econPris" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_extremeEvents" EntityType="SWATModel.Store.lkpSWATscores_extremeEvents" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_extremePrep" EntityType="SWATModel.Store.lkpSWATscores_extremePrep" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_extremeRISK" EntityType="SWATModel.Store.lkpSWATscores_extremeRISK" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_precip" EntityType="SWATModel.Store.lkpSWATscores_precip" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_precipVar" EntityType="SWATModel.Store.lkpSWATscores_precipVar" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_urbanDistance" EntityType="SWATModel.Store.lkpSWATscores_urbanDistance" store:Type="Tables" Schema="DBA" />
@@ -53,6 +57,7 @@
           <EntitySet Name="tblSWATWAextremeEvent" EntityType="SWATModel.Store.tblSWATWAextremeEvent" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAMonthlyQuantity" EntityType="SWATModel.Store.tblSWATWAMonthlyQuantity" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAPrecipitation" EntityType="SWATModel.Store.tblSWATWAPrecipitation" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATWAriskPrep" EntityType="SWATModel.Store.tblSWATWAriskPrep" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="Userids" EntityType="SWATModel.Store.Userids" store:Type="Tables" Schema="DBA" />
           <AssociationSet Name="FK_lkpCountry_3_lkpRegion" Association="SWATModel.Store.FK_lkpCountry_3_lkpRegion">
             <End Role="lkpRegion" EntitySet="lkpRegion" />
@@ -270,6 +275,34 @@
             <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
             <End Role="tblSWATWAPrecipitation" EntitySet="tblSWATWAPrecipitation" />
           </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAriskPrep_19_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATWAriskPrep_19_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+            <End Role="tblSWATWAriskPrep" EntitySet="tblSWATWAriskPrep" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAriskPrep_20_lkpSWATextremeRiskLU" Association="SWATModel.Store.FK_tblSWATWAriskPrep_20_lkpSWATextremeRiskLU">
+            <End Role="lkpSWATextremeRiskLU" EntitySet="lkpSWATextremeRiskLU" />
+            <End Role="tblSWATWAriskPrep" EntitySet="tblSWATWAriskPrep" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAriskPrep_21_lkpSWATextremeRiskLU" Association="SWATModel.Store.FK_tblSWATWAriskPrep_21_lkpSWATextremeRiskLU">
+            <End Role="lkpSWATextremeRiskLU" EntitySet="lkpSWATextremeRiskLU" />
+            <End Role="tblSWATWAriskPrep" EntitySet="tblSWATWAriskPrep" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAriskPrep_22_lkpSWATextremeRiskLU" Association="SWATModel.Store.FK_tblSWATWAriskPrep_22_lkpSWATextremeRiskLU">
+            <End Role="lkpSWATextremeRiskLU" EntitySet="lkpSWATextremeRiskLU" />
+            <End Role="tblSWATWAriskPrep" EntitySet="tblSWATWAriskPrep" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAriskPrep_23_lkpSWATextremePrepLU" Association="SWATModel.Store.FK_tblSWATWAriskPrep_23_lkpSWATextremePrepLU">
+            <End Role="lkpSWATextremePrepLU" EntitySet="lkpSWATextremePrepLU" />
+            <End Role="tblSWATWAriskPrep" EntitySet="tblSWATWAriskPrep" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAriskPrep_24_lkpSWATextremePrepLU" Association="SWATModel.Store.FK_tblSWATWAriskPrep_24_lkpSWATextremePrepLU">
+            <End Role="lkpSWATextremePrepLU" EntitySet="lkpSWATextremePrepLU" />
+            <End Role="tblSWATWAriskPrep" EntitySet="tblSWATWAriskPrep" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAriskPrep_25_lkpSWATextremePrepLU" Association="SWATModel.Store.FK_tblSWATWAriskPrep_25_lkpSWATextremePrepLU">
+            <End Role="lkpSWATextremePrepLU" EntitySet="lkpSWATextremePrepLU" />
+            <End Role="tblSWATWAriskPrep" EntitySet="tblSWATWAriskPrep" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="lkpBiome">
           <Key>
@@ -352,6 +385,22 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATextremePrepLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATextremeRiskLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATmapAridity">
           <Key>
             <PropertyRef Name="id" />
@@ -425,6 +474,22 @@
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATscores_extremeEvents">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_extremePrep">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_extremeRISK">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -680,6 +745,19 @@
           <Property Name="October" Type="float" />
           <Property Name="November" Type="float" />
           <Property Name="December" Type="float" />
+        </EntityType>
+        <EntityType Name="tblSWATWAriskPrep">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="int" Nullable="false" />
+          <Property Name="riskFire" Type="int" />
+          <Property Name="riskFlood" Type="int" />
+          <Property Name="riskDrought" Type="int" />
+          <Property Name="prepFire" Type="int" />
+          <Property Name="prepFlood" Type="int" />
+          <Property Name="prepDrought" Type="int" />
         </EntityType>
         <EntityType Name="Userids">
           <Key>
@@ -1363,6 +1441,90 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_tblSWATWAriskPrep_19_tblSWATSurvey">
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="1" />
+          <End Role="tblSWATWAriskPrep" Type="SWATModel.Store.tblSWATWAriskPrep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWAriskPrep">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAriskPrep_20_lkpSWATextremeRiskLU">
+          <End Role="lkpSWATextremeRiskLU" Type="SWATModel.Store.lkpSWATextremeRiskLU" Multiplicity="0..1" />
+          <End Role="tblSWATWAriskPrep" Type="SWATModel.Store.tblSWATWAriskPrep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremeRiskLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAriskPrep">
+              <PropertyRef Name="riskFire" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAriskPrep_21_lkpSWATextremeRiskLU">
+          <End Role="lkpSWATextremeRiskLU" Type="SWATModel.Store.lkpSWATextremeRiskLU" Multiplicity="0..1" />
+          <End Role="tblSWATWAriskPrep" Type="SWATModel.Store.tblSWATWAriskPrep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremeRiskLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAriskPrep">
+              <PropertyRef Name="riskFlood" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAriskPrep_22_lkpSWATextremeRiskLU">
+          <End Role="lkpSWATextremeRiskLU" Type="SWATModel.Store.lkpSWATextremeRiskLU" Multiplicity="0..1" />
+          <End Role="tblSWATWAriskPrep" Type="SWATModel.Store.tblSWATWAriskPrep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremeRiskLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAriskPrep">
+              <PropertyRef Name="riskDrought" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAriskPrep_23_lkpSWATextremePrepLU">
+          <End Role="lkpSWATextremePrepLU" Type="SWATModel.Store.lkpSWATextremePrepLU" Multiplicity="0..1" />
+          <End Role="tblSWATWAriskPrep" Type="SWATModel.Store.tblSWATWAriskPrep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremePrepLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAriskPrep">
+              <PropertyRef Name="prepFire" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAriskPrep_24_lkpSWATextremePrepLU">
+          <End Role="lkpSWATextremePrepLU" Type="SWATModel.Store.lkpSWATextremePrepLU" Multiplicity="0..1" />
+          <End Role="tblSWATWAriskPrep" Type="SWATModel.Store.tblSWATWAriskPrep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremePrepLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAriskPrep">
+              <PropertyRef Name="prepFlood" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAriskPrep_25_lkpSWATextremePrepLU">
+          <End Role="lkpSWATextremePrepLU" Type="SWATModel.Store.lkpSWATextremePrepLU" Multiplicity="0..1" />
+          <End Role="tblSWATWAriskPrep" Type="SWATModel.Store.tblSWATWAriskPrep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremePrepLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAriskPrep">
+              <PropertyRef Name="prepDrought" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -1621,6 +1783,39 @@
           <AssociationSet Name="FK_tblSWATWAextremeEvent_18_tblSWATSurvey" Association="SWATModel.FK_tblSWATWAextremeEvent_18_tblSWATSurvey">
             <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
             <End Role="tblSWATWAextremeEvent" EntitySet="tblSWATWAextremeEvents" />
+          </AssociationSet>
+          <EntitySet Name="lkpSWATextremePrepLUs" EntityType="SWATModel.lkpSWATextremePrepLU" />
+          <EntitySet Name="lkpSWATextremeRiskLUs" EntityType="SWATModel.lkpSWATextremeRiskLU" />
+          <EntitySet Name="lkpSWATscores_extremePrep" EntityType="SWATModel.lkpSWATscores_extremePrep" />
+          <EntitySet Name="lkpSWATscores_extremeRISK" EntityType="SWATModel.lkpSWATscores_extremeRISK" />
+          <EntitySet Name="tblSWATWAriskPreps" EntityType="SWATModel.tblSWATWAriskPrep" />
+          <AssociationSet Name="FK_tblSWATWAriskPrep_23_lkpSWATextremePrepLU" Association="SWATModel.FK_tblSWATWAriskPrep_23_lkpSWATextremePrepLU">
+            <End Role="lkpSWATextremePrepLU" EntitySet="lkpSWATextremePrepLUs" />
+            <End Role="tblSWATWAriskPrep" EntitySet="tblSWATWAriskPreps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAriskPrep_24_lkpSWATextremePrepLU" Association="SWATModel.FK_tblSWATWAriskPrep_24_lkpSWATextremePrepLU">
+            <End Role="lkpSWATextremePrepLU" EntitySet="lkpSWATextremePrepLUs" />
+            <End Role="tblSWATWAriskPrep" EntitySet="tblSWATWAriskPreps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAriskPrep_25_lkpSWATextremePrepLU" Association="SWATModel.FK_tblSWATWAriskPrep_25_lkpSWATextremePrepLU">
+            <End Role="lkpSWATextremePrepLU" EntitySet="lkpSWATextremePrepLUs" />
+            <End Role="tblSWATWAriskPrep" EntitySet="tblSWATWAriskPreps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAriskPrep_20_lkpSWATextremeRiskLU" Association="SWATModel.FK_tblSWATWAriskPrep_20_lkpSWATextremeRiskLU">
+            <End Role="lkpSWATextremeRiskLU" EntitySet="lkpSWATextremeRiskLUs" />
+            <End Role="tblSWATWAriskPrep" EntitySet="tblSWATWAriskPreps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAriskPrep_21_lkpSWATextremeRiskLU" Association="SWATModel.FK_tblSWATWAriskPrep_21_lkpSWATextremeRiskLU">
+            <End Role="lkpSWATextremeRiskLU" EntitySet="lkpSWATextremeRiskLUs" />
+            <End Role="tblSWATWAriskPrep" EntitySet="tblSWATWAriskPreps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAriskPrep_22_lkpSWATextremeRiskLU" Association="SWATModel.FK_tblSWATWAriskPrep_22_lkpSWATextremeRiskLU">
+            <End Role="lkpSWATextremeRiskLU" EntitySet="lkpSWATextremeRiskLUs" />
+            <End Role="tblSWATWAriskPrep" EntitySet="tblSWATWAriskPreps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAriskPrep_19_tblSWATSurvey" Association="SWATModel.FK_tblSWATWAriskPrep_19_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+            <End Role="tblSWATWAriskPrep" EntitySet="tblSWATWAriskPreps" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="lkpBiome">
@@ -1936,6 +2131,7 @@
           <NavigationProperty Name="tblSWATWAannualPrecips" Relationship="SWATModel.FK_tblSWATWAannualPrecip_16_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAannualPrecip" />
           <NavigationProperty Name="tblSWATWAclimateChanges" Relationship="SWATModel.FK_tblSWATWAclimateChange_17_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAclimateChange" />
           <NavigationProperty Name="tblSWATWAextremeEvents" Relationship="SWATModel.FK_tblSWATWAextremeEvent_18_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAextremeEvent" />
+          <NavigationProperty Name="tblSWATWAriskPreps" Relationship="SWATModel.FK_tblSWATWAriskPrep_19_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAriskPrep" />
         </EntityType>
         <EntityType Name="tblSWATVisualGroup">
           <Key>
@@ -2790,6 +2986,148 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="lkpSWATextremePrepLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWAriskPreps" Relationship="SWATModel.FK_tblSWATWAriskPrep_23_lkpSWATextremePrepLU" FromRole="lkpSWATextremePrepLU" ToRole="tblSWATWAriskPrep" />
+          <NavigationProperty Name="tblSWATWAriskPreps1" Relationship="SWATModel.FK_tblSWATWAriskPrep_24_lkpSWATextremePrepLU" FromRole="lkpSWATextremePrepLU" ToRole="tblSWATWAriskPrep" />
+          <NavigationProperty Name="tblSWATWAriskPreps2" Relationship="SWATModel.FK_tblSWATWAriskPrep_25_lkpSWATextremePrepLU" FromRole="lkpSWATextremePrepLU" ToRole="tblSWATWAriskPrep" />
+        </EntityType>
+        <EntityType Name="lkpSWATextremeRiskLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWAriskPreps" Relationship="SWATModel.FK_tblSWATWAriskPrep_20_lkpSWATextremeRiskLU" FromRole="lkpSWATextremeRiskLU" ToRole="tblSWATWAriskPrep" />
+          <NavigationProperty Name="tblSWATWAriskPreps1" Relationship="SWATModel.FK_tblSWATWAriskPrep_21_lkpSWATextremeRiskLU" FromRole="lkpSWATextremeRiskLU" ToRole="tblSWATWAriskPrep" />
+          <NavigationProperty Name="tblSWATWAriskPreps2" Relationship="SWATModel.FK_tblSWATWAriskPrep_22_lkpSWATextremeRiskLU" FromRole="lkpSWATextremeRiskLU" ToRole="tblSWATWAriskPrep" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_extremePrep">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_extremeRISK">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="tblSWATWAriskPrep">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SurveyID" Nullable="false" />
+          <Property Type="Int32" Name="riskFire" />
+          <Property Type="Int32" Name="riskFlood" />
+          <Property Type="Int32" Name="riskDrought" />
+          <Property Type="Int32" Name="prepFire" />
+          <Property Type="Int32" Name="prepFlood" />
+          <Property Type="Int32" Name="prepDrought" />
+          <NavigationProperty Name="lkpSWATextremePrepLU" Relationship="SWATModel.FK_tblSWATWAriskPrep_23_lkpSWATextremePrepLU" FromRole="tblSWATWAriskPrep" ToRole="lkpSWATextremePrepLU" />
+          <NavigationProperty Name="lkpSWATextremePrepLU1" Relationship="SWATModel.FK_tblSWATWAriskPrep_24_lkpSWATextremePrepLU" FromRole="tblSWATWAriskPrep" ToRole="lkpSWATextremePrepLU" />
+          <NavigationProperty Name="lkpSWATextremePrepLU2" Relationship="SWATModel.FK_tblSWATWAriskPrep_25_lkpSWATextremePrepLU" FromRole="tblSWATWAriskPrep" ToRole="lkpSWATextremePrepLU" />
+          <NavigationProperty Name="lkpSWATextremeRiskLU" Relationship="SWATModel.FK_tblSWATWAriskPrep_20_lkpSWATextremeRiskLU" FromRole="tblSWATWAriskPrep" ToRole="lkpSWATextremeRiskLU" />
+          <NavigationProperty Name="lkpSWATextremeRiskLU1" Relationship="SWATModel.FK_tblSWATWAriskPrep_21_lkpSWATextremeRiskLU" FromRole="tblSWATWAriskPrep" ToRole="lkpSWATextremeRiskLU" />
+          <NavigationProperty Name="lkpSWATextremeRiskLU2" Relationship="SWATModel.FK_tblSWATWAriskPrep_22_lkpSWATextremeRiskLU" FromRole="tblSWATWAriskPrep" ToRole="lkpSWATextremeRiskLU" />
+          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATWAriskPrep_19_tblSWATSurvey" FromRole="tblSWATWAriskPrep" ToRole="tblSWATSurvey" />
+        </EntityType>
+        <Association Name="FK_tblSWATWAriskPrep_23_lkpSWATextremePrepLU">
+          <End Type="SWATModel.lkpSWATextremePrepLU" Role="lkpSWATextremePrepLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWAriskPrep" Role="tblSWATWAriskPrep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremePrepLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAriskPrep">
+              <PropertyRef Name="prepFire" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAriskPrep_24_lkpSWATextremePrepLU">
+          <End Type="SWATModel.lkpSWATextremePrepLU" Role="lkpSWATextremePrepLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWAriskPrep" Role="tblSWATWAriskPrep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremePrepLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAriskPrep">
+              <PropertyRef Name="prepFlood" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAriskPrep_25_lkpSWATextremePrepLU">
+          <End Type="SWATModel.lkpSWATextremePrepLU" Role="lkpSWATextremePrepLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWAriskPrep" Role="tblSWATWAriskPrep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremePrepLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAriskPrep">
+              <PropertyRef Name="prepDrought" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAriskPrep_20_lkpSWATextremeRiskLU">
+          <End Type="SWATModel.lkpSWATextremeRiskLU" Role="lkpSWATextremeRiskLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWAriskPrep" Role="tblSWATWAriskPrep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremeRiskLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAriskPrep">
+              <PropertyRef Name="riskFire" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAriskPrep_21_lkpSWATextremeRiskLU">
+          <End Type="SWATModel.lkpSWATextremeRiskLU" Role="lkpSWATextremeRiskLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWAriskPrep" Role="tblSWATWAriskPrep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremeRiskLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAriskPrep">
+              <PropertyRef Name="riskFlood" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAriskPrep_22_lkpSWATextremeRiskLU">
+          <End Type="SWATModel.lkpSWATextremeRiskLU" Role="lkpSWATextremeRiskLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWAriskPrep" Role="tblSWATWAriskPrep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremeRiskLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAriskPrep">
+              <PropertyRef Name="riskDrought" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAriskPrep_19_tblSWATSurvey">
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATWAriskPrep" Role="tblSWATWAriskPrep" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWAriskPrep">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -3274,6 +3612,56 @@
                 <ScalarProperty Name="extremeOther" ColumnName="extremeOther" />
                 <ScalarProperty Name="extremeFlood" ColumnName="extremeFlood" />
                 <ScalarProperty Name="extremeDry" ColumnName="extremeDry" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATextremePrepLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATextremePrepLU">
+              <MappingFragment StoreEntitySet="lkpSWATextremePrepLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATextremeRiskLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATextremeRiskLU">
+              <MappingFragment StoreEntitySet="lkpSWATextremeRiskLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_extremePrep">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_extremePrep">
+              <MappingFragment StoreEntitySet="lkpSWATscores_extremePrep">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_extremeRISK">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_extremeRISK">
+              <MappingFragment StoreEntitySet="lkpSWATscores_extremeRISK">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATWAriskPreps">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATWAriskPrep">
+              <MappingFragment StoreEntitySet="tblSWATWAriskPrep">
+                <ScalarProperty Name="prepDrought" ColumnName="prepDrought" />
+                <ScalarProperty Name="prepFlood" ColumnName="prepFlood" />
+                <ScalarProperty Name="prepFire" ColumnName="prepFire" />
+                <ScalarProperty Name="riskDrought" ColumnName="riskDrought" />
+                <ScalarProperty Name="riskFlood" ColumnName="riskFlood" />
+                <ScalarProperty Name="riskFire" ColumnName="riskFire" />
                 <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
