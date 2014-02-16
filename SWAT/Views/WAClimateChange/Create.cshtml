@@ -4,7 +4,7 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
+<h2>Create - Water Availability</h2>
 
 
 @using (Html.BeginForm()) 
@@ -12,7 +12,7 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Water Availability</h4>
+        <h4>Climate and Rainwater - Part IV</h4>
         <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
