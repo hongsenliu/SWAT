@@ -21,6 +21,7 @@ namespace SWAT.Models
             this.tblSWATWAMonthlyQuantities = new HashSet<tblSWATWAMonthlyQuantity>();
             this.tblSWATWAannualPrecips = new HashSet<tblSWATWAannualPrecip>();
             this.tblSWATWAclimateChanges = new HashSet<tblSWATWAclimateChange>();
+            this.tblSWATWAextremeEvents = new HashSet<tblSWATWAextremeEvent>();
         }
     
         public int ID { get; set; }
@@ -37,5 +38,6 @@ namespace SWAT.Models
         public virtual ICollection<tblSWATWAMonthlyQuantity> tblSWATWAMonthlyQuantities { get; set; }
         public virtual ICollection<tblSWATWAannualPrecip> tblSWATWAannualPrecips { get; set; }
         public virtual ICollection<tblSWATWAclimateChange> tblSWATWAclimateChanges { get; set; }
+        public virtual ICollection<tblSWATWAextremeEvent> tblSWATWAextremeEvents { get; set; }
     }
 }

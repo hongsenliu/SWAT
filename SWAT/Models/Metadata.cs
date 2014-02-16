@@ -142,4 +142,19 @@ namespace SWAT.Models
         public bool climateSeasons { get; set; }
 
     }
+
+    public class WAExtremeEventMetadata
+    {
+        [Display(Name="Extreme Dry")]
+        public Nullable<int> extremeDry { get; set; }
+
+        [Display(Name = "Extreme Flood")]
+        public Nullable<int> extremeFlood { get; set; }
+
+        [Display(Name = "Extreme Other Events")]
+        public Nullable<int> extremeOther { get; set; }
+
+        [Display(Name = "Other? (Please specify)")]
+        public string extremeOtherComment { get; set; }
+    }
 }

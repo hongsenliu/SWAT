@@ -44,7 +44,6 @@ namespace SWAT.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
 
-            ViewBag.SurveyID = new SelectList(db.tblSWATSurveys, "ID", "ID");
             return View();
         }
 
@@ -81,22 +80,22 @@ namespace SWAT.Controllers
                 var climateChangeIDs = db.tblSWATWAclimateChanges.Where(e => e.SurveyID == tblswatwaclimatechange.SurveyID).Select(e => e.ID);
                 if (climateChangeIDs.Any())
                 {
-                    int annualPrecipId = climateChangeIDs.First();
-                    tblswatwaclimatechange.ID = annualPrecipId;
+                    int climateChangeId = climateChangeIDs.First();
+                    tblswatwaclimatechange.ID = climateChangeId;
                     db.Entry(tblswatwaclimatechange).State = EntityState.Modified;
                     db.SaveChanges();
                     updateScores(tblswatwaclimatechange);
-                    return RedirectToAction("Index");
-                    //return RedirectToAction("Create", "WAClimateChange", new { SurveyID = tblswatwaclimatechange.SurveyID });
+                    //return RedirectToAction("Index");
+                    return RedirectToAction("Create", "WAExtremeEvent", new { SurveyID = tblswatwaclimatechange.SurveyID });
                 }
                 
                 db.tblSWATWAclimateChanges.Add(tblswatwaclimatechange);
                 db.SaveChanges();
                 updateScores(tblswatwaclimatechange);
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
+                return RedirectToAction("Create", "WAExtremeEvent", new { SurveyID = tblswatwaclimatechange.SurveyID });
             }
 
-            ViewBag.SurveyID = new SelectList(db.tblSWATSurveys, "ID", "ID", tblswatwaclimatechange.SurveyID);
             return View(tblswatwaclimatechange);
         }
 
@@ -112,7 +111,6 @@ namespace SWAT.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.SurveyID = new SelectList(db.tblSWATSurveys, "ID", "ID", tblswatwaclimatechange.SurveyID);
             return View(tblswatwaclimatechange);
         }
 
@@ -129,9 +127,25 @@ namespace SWAT.Controllers
                 db.SaveChanges();
                 updateScores(tblswatwaclimatechange);
 
-                return RedirectToAction("Index");
+                // If there is not any WAExtremeEvent with the current survey (SurveyID) then create one and redirect to its edit link.
+                var extremeEvents = db.tblSWATWAextremeEvents.Where(e => e.SurveyID == tblswatwaclimatechange.SurveyID);
+                if (!extremeEvents.Any())
+                {
+                    tblSWATWAextremeEvent tblswatwaextremeevent = new tblSWATWAextremeEvent();
+                    tblswatwaextremeevent.SurveyID = tblswatwaclimatechange.SurveyID;
+                    db.tblSWATWAextremeEvents.Add(tblswatwaextremeevent);
+                    db.SaveChanges();
+
+                    int newExtremeEventID = tblswatwaextremeevent.ID;
+                    return RedirectToAction("Edit", "WAExtremeEvent", new { id = newExtremeEventID, SurveyID = tblswatwaextremeevent.SurveyID });
+                }
+                else
+                {
+                    return RedirectToAction("Edit", "WAExtremeEvent", new { id = extremeEvents.Single(e => e.SurveyID == tblswatwaclimatechange.SurveyID).ID, SurveyID = tblswatwaclimatechange.SurveyID });
+                }
+
+                //return RedirectToAction("Index");
             }
-            ViewBag.SurveyID = new SelectList(db.tblSWATSurveys, "ID", "ID", tblswatwaclimatechange.SurveyID);
             return View(tblswatwaclimatechange);
         }
 

@@ -15,6 +15,7 @@
           <EntitySet Name="lkpSWATareaBMLU" EntityType="SWATModel.Store.lkpSWATareaBMLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATareaProtLU" EntityType="SWATModel.Store.lkpSWATareaProtLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATeconPrisLU" EntityType="SWATModel.Store.lkpSWATeconPrisLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATextremeEventsLU" EntityType="SWATModel.Store.lkpSWATextremeEventsLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATmapAridity" EntityType="SWATModel.Store.lkpSWATmapAridity" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATprecipLU" EntityType="SWATModel.Store.lkpSWATprecipLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATprecipVarAltLU" EntityType="SWATModel.Store.lkpSWATprecipVarAltLU" store:Type="Tables" Schema="DBA" />
@@ -24,6 +25,7 @@
           <EntitySet Name="lkpSWATscores_areaProt" EntityType="SWATModel.Store.lkpSWATscores_areaProt" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_Aridity" EntityType="SWATModel.Store.lkpSWATscores_Aridity" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_econPris" EntityType="SWATModel.Store.lkpSWATscores_econPris" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_extremeEvents" EntityType="SWATModel.Store.lkpSWATscores_extremeEvents" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_precip" EntityType="SWATModel.Store.lkpSWATscores_precip" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_precipVar" EntityType="SWATModel.Store.lkpSWATscores_precipVar" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_urbanDistance" EntityType="SWATModel.Store.lkpSWATscores_urbanDistance" store:Type="Tables" Schema="DBA" />
@@ -48,6 +50,7 @@
           <EntitySet Name="tblSWATVisualGrpScoreMap" EntityType="SWATModel.Store.tblSWATVisualGrpScoreMap" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAannualPrecip" EntityType="SWATModel.Store.tblSWATWAannualPrecip" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAclimateChange" EntityType="SWATModel.Store.tblSWATWAclimateChange" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATWAextremeEvent" EntityType="SWATModel.Store.tblSWATWAextremeEvent" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAMonthlyQuantity" EntityType="SWATModel.Store.tblSWATWAMonthlyQuantity" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAPrecipitation" EntityType="SWATModel.Store.tblSWATWAPrecipitation" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="Userids" EntityType="SWATModel.Store.Userids" store:Type="Tables" Schema="DBA" />
@@ -195,6 +198,22 @@
             <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
             <End Role="tblSWATWAclimateChange" EntitySet="tblSWATWAclimateChange" />
           </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAextremeEvent_18_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATWAextremeEvent_18_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+            <End Role="tblSWATWAextremeEvent" EntitySet="tblSWATWAextremeEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAextremeEvent_19_lkpSWATextremeEventsLU" Association="SWATModel.Store.FK_tblSWATWAextremeEvent_19_lkpSWATextremeEventsLU">
+            <End Role="lkpSWATextremeEventsLU" EntitySet="lkpSWATextremeEventsLU" />
+            <End Role="tblSWATWAextremeEvent" EntitySet="tblSWATWAextremeEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAextremeEvent_20_lkpSWATextremeEventsLU" Association="SWATModel.Store.FK_tblSWATWAextremeEvent_20_lkpSWATextremeEventsLU">
+            <End Role="lkpSWATextremeEventsLU" EntitySet="lkpSWATextremeEventsLU" />
+            <End Role="tblSWATWAextremeEvent" EntitySet="tblSWATWAextremeEvent" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAextremeEvent_21_lkpSWATextremeEventsLU" Association="SWATModel.Store.FK_tblSWATWAextremeEvent_21_lkpSWATextremeEventsLU">
+            <End Role="lkpSWATextremeEventsLU" EntitySet="lkpSWATextremeEventsLU" />
+            <End Role="tblSWATWAextremeEvent" EntitySet="tblSWATWAextremeEvent" />
+          </AssociationSet>
           <AssociationSet Name="FK_tblSWATWAMonthlyQuantity_10_lkpSWATwaterMonthLU" Association="SWATModel.Store.FK_tblSWATWAMonthlyQuantity_10_lkpSWATwaterMonthLU">
             <End Role="lkpSWATwaterMonthLU" EntitySet="lkpSWATwaterMonthLU" />
             <End Role="tblSWATWAMonthlyQuantity" EntitySet="tblSWATWAMonthlyQuantity" />
@@ -325,6 +344,14 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATextremeEventsLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATmapAridity">
           <Key>
             <PropertyRef Name="id" />
@@ -390,6 +417,14 @@
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATscores_econPris">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_extremeEvents">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -596,6 +631,17 @@
           <Property Name="climateColder" Type="bit" Nullable="false" />
           <Property Name="climateHotter" Type="bit" Nullable="false" />
           <Property Name="climateSeasons" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSWATWAextremeEvent">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="int" Nullable="false" />
+          <Property Name="extremeDry" Type="int" />
+          <Property Name="extremeFlood" Type="int" />
+          <Property Name="extremeOther" Type="int" />
+          <Property Name="extremeOtherComment" Type="varchar" MaxLength="254" />
         </EntityType>
         <EntityType Name="tblSWATWAMonthlyQuantity">
           <Key>
@@ -1101,6 +1147,54 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_tblSWATWAextremeEvent_18_tblSWATSurvey">
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="1" />
+          <End Role="tblSWATWAextremeEvent" Type="SWATModel.Store.tblSWATWAextremeEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWAextremeEvent">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAextremeEvent_19_lkpSWATextremeEventsLU">
+          <End Role="lkpSWATextremeEventsLU" Type="SWATModel.Store.lkpSWATextremeEventsLU" Multiplicity="0..1" />
+          <End Role="tblSWATWAextremeEvent" Type="SWATModel.Store.tblSWATWAextremeEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremeEventsLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAextremeEvent">
+              <PropertyRef Name="extremeDry" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAextremeEvent_20_lkpSWATextremeEventsLU">
+          <End Role="lkpSWATextremeEventsLU" Type="SWATModel.Store.lkpSWATextremeEventsLU" Multiplicity="0..1" />
+          <End Role="tblSWATWAextremeEvent" Type="SWATModel.Store.tblSWATWAextremeEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremeEventsLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAextremeEvent">
+              <PropertyRef Name="extremeFlood" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAextremeEvent_21_lkpSWATextremeEventsLU">
+          <End Role="lkpSWATextremeEventsLU" Type="SWATModel.Store.lkpSWATextremeEventsLU" Multiplicity="0..1" />
+          <End Role="tblSWATWAextremeEvent" Type="SWATModel.Store.tblSWATWAextremeEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremeEventsLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAextremeEvent">
+              <PropertyRef Name="extremeOther" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_tblSWATWAMonthlyQuantity_10_lkpSWATwaterMonthLU">
           <End Role="lkpSWATwaterMonthLU" Type="SWATModel.Store.lkpSWATwaterMonthLU" Multiplicity="0..1" />
           <End Role="tblSWATWAMonthlyQuantity" Type="SWATModel.Store.tblSWATWAMonthlyQuantity" Multiplicity="*" />
@@ -1509,6 +1603,25 @@
             <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
             <End Role="tblSWATWAclimateChange" EntitySet="tblSWATWAclimateChanges" />
           </AssociationSet>
+          <EntitySet Name="lkpSWATextremeEventsLUs" EntityType="SWATModel.lkpSWATextremeEventsLU" />
+          <EntitySet Name="lkpSWATscores_extremeEvents" EntityType="SWATModel.lkpSWATscores_extremeEvents" />
+          <EntitySet Name="tblSWATWAextremeEvents" EntityType="SWATModel.tblSWATWAextremeEvent" />
+          <AssociationSet Name="FK_tblSWATWAextremeEvent_19_lkpSWATextremeEventsLU" Association="SWATModel.FK_tblSWATWAextremeEvent_19_lkpSWATextremeEventsLU">
+            <End Role="lkpSWATextremeEventsLU" EntitySet="lkpSWATextremeEventsLUs" />
+            <End Role="tblSWATWAextremeEvent" EntitySet="tblSWATWAextremeEvents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAextremeEvent_20_lkpSWATextremeEventsLU" Association="SWATModel.FK_tblSWATWAextremeEvent_20_lkpSWATextremeEventsLU">
+            <End Role="lkpSWATextremeEventsLU" EntitySet="lkpSWATextremeEventsLUs" />
+            <End Role="tblSWATWAextremeEvent" EntitySet="tblSWATWAextremeEvents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAextremeEvent_21_lkpSWATextremeEventsLU" Association="SWATModel.FK_tblSWATWAextremeEvent_21_lkpSWATextremeEventsLU">
+            <End Role="lkpSWATextremeEventsLU" EntitySet="lkpSWATextremeEventsLUs" />
+            <End Role="tblSWATWAextremeEvent" EntitySet="tblSWATWAextremeEvents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAextremeEvent_18_tblSWATSurvey" Association="SWATModel.FK_tblSWATWAextremeEvent_18_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+            <End Role="tblSWATWAextremeEvent" EntitySet="tblSWATWAextremeEvents" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="lkpBiome">
           <Key>
@@ -1822,6 +1935,7 @@
           <NavigationProperty Name="tblSWATWAMonthlyQuantities" Relationship="SWATModel.FK_tblSWATWAMonthlyQuantity_15_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAMonthlyQuantity" />
           <NavigationProperty Name="tblSWATWAannualPrecips" Relationship="SWATModel.FK_tblSWATWAannualPrecip_16_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAannualPrecip" />
           <NavigationProperty Name="tblSWATWAclimateChanges" Relationship="SWATModel.FK_tblSWATWAclimateChange_17_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAclimateChange" />
+          <NavigationProperty Name="tblSWATWAextremeEvents" Relationship="SWATModel.FK_tblSWATWAextremeEvent_18_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAextremeEvent" />
         </EntityType>
         <EntityType Name="tblSWATVisualGroup">
           <Key>
@@ -2594,6 +2708,88 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="lkpSWATextremeEventsLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWAextremeEvents" Relationship="SWATModel.FK_tblSWATWAextremeEvent_19_lkpSWATextremeEventsLU" FromRole="lkpSWATextremeEventsLU" ToRole="tblSWATWAextremeEvent" />
+          <NavigationProperty Name="tblSWATWAextremeEvents1" Relationship="SWATModel.FK_tblSWATWAextremeEvent_20_lkpSWATextremeEventsLU" FromRole="lkpSWATextremeEventsLU" ToRole="tblSWATWAextremeEvent" />
+          <NavigationProperty Name="tblSWATWAextremeEvents2" Relationship="SWATModel.FK_tblSWATWAextremeEvent_21_lkpSWATextremeEventsLU" FromRole="lkpSWATextremeEventsLU" ToRole="tblSWATWAextremeEvent" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_extremeEvents">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="tblSWATWAextremeEvent">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SurveyID" Nullable="false" />
+          <Property Type="Int32" Name="extremeDry" />
+          <Property Type="Int32" Name="extremeFlood" />
+          <Property Type="Int32" Name="extremeOther" />
+          <NavigationProperty Name="lkpSWATextremeEventsLU" Relationship="SWATModel.FK_tblSWATWAextremeEvent_19_lkpSWATextremeEventsLU" FromRole="tblSWATWAextremeEvent" ToRole="lkpSWATextremeEventsLU" />
+          <NavigationProperty Name="lkpSWATextremeEventsLU1" Relationship="SWATModel.FK_tblSWATWAextremeEvent_20_lkpSWATextremeEventsLU" FromRole="tblSWATWAextremeEvent" ToRole="lkpSWATextremeEventsLU" />
+          <NavigationProperty Name="lkpSWATextremeEventsLU2" Relationship="SWATModel.FK_tblSWATWAextremeEvent_21_lkpSWATextremeEventsLU" FromRole="tblSWATWAextremeEvent" ToRole="lkpSWATextremeEventsLU" />
+          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATWAextremeEvent_18_tblSWATSurvey" FromRole="tblSWATWAextremeEvent" ToRole="tblSWATSurvey" />
+          <Property Type="String" Name="extremeOtherComment" MaxLength="254" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <Association Name="FK_tblSWATWAextremeEvent_19_lkpSWATextremeEventsLU">
+          <End Type="SWATModel.lkpSWATextremeEventsLU" Role="lkpSWATextremeEventsLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWAextremeEvent" Role="tblSWATWAextremeEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremeEventsLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAextremeEvent">
+              <PropertyRef Name="extremeDry" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAextremeEvent_20_lkpSWATextremeEventsLU">
+          <End Type="SWATModel.lkpSWATextremeEventsLU" Role="lkpSWATextremeEventsLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWAextremeEvent" Role="tblSWATWAextremeEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremeEventsLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAextremeEvent">
+              <PropertyRef Name="extremeFlood" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAextremeEvent_21_lkpSWATextremeEventsLU">
+          <End Type="SWATModel.lkpSWATextremeEventsLU" Role="lkpSWATextremeEventsLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWAextremeEvent" Role="tblSWATWAextremeEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATextremeEventsLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAextremeEvent">
+              <PropertyRef Name="extremeOther" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAextremeEvent_18_tblSWATSurvey">
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATWAextremeEvent" Role="tblSWATWAextremeEvent" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWAextremeEvent">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -3048,6 +3244,36 @@
                 <ScalarProperty Name="climateColder" ColumnName="climateColder" />
                 <ScalarProperty Name="climateWetter" ColumnName="climateWetter" />
                 <ScalarProperty Name="climateDryer" ColumnName="climateDryer" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATextremeEventsLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATextremeEventsLU">
+              <MappingFragment StoreEntitySet="lkpSWATextremeEventsLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_extremeEvents">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_extremeEvents">
+              <MappingFragment StoreEntitySet="lkpSWATscores_extremeEvents">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATWAextremeEvents">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATWAextremeEvent">
+              <MappingFragment StoreEntitySet="tblSWATWAextremeEvent">
+                <ScalarProperty Name="extremeOtherComment" ColumnName="extremeOtherComment" />
+                <ScalarProperty Name="extremeOther" ColumnName="extremeOther" />
+                <ScalarProperty Name="extremeFlood" ColumnName="extremeFlood" />
+                <ScalarProperty Name="extremeDry" ColumnName="extremeDry" />
                 <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>

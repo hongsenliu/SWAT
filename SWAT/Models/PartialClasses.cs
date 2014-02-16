@@ -27,4 +27,9 @@ namespace SWAT.Models
     public partial class tblSWATWAclimateChange
     { 
     }
+
+    [MetadataType(typeof(WAExtremeEventMetadata))]
+    public partial class tblSWATWAextremeEvent
+    { 
+    }
 }

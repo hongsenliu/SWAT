@@ -148,6 +148,12 @@ namespace SWAT.Controllers
 
         private void DeleteRelatedRecords(int id)
         {
+            var tblswatwaextremeevent = db.tblSWATWAextremeEvents.Where(e => e.SurveyID == id);
+            foreach (tblSWATWAextremeEvent item in tblswatwaextremeevent)
+            {
+                db.tblSWATWAextremeEvents.Remove(item);
+            }
+
             var tblswatwaclimatechange = db.tblSWATWAclimateChanges.Where(e => e.SurveyID == id);
             foreach (tblSWATWAclimateChange item in tblswatwaclimatechange)
             {
@@ -196,8 +202,9 @@ namespace SWAT.Controllers
             
             tblSWATSurvey tblswatsurvey = db.tblSWATSurveys.Find(id);
             db.tblSWATSurveys.Remove(tblswatsurvey);
-            db.SaveChanges();
             DeleteRelatedRecords(id);
+            db.SaveChanges();
+            
             //return RedirectToAction("Index");
             return RedirectToAction("Details", "User", new { id=tblswatsurvey.UserID });
         }

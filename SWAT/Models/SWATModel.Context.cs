@@ -64,5 +64,8 @@ namespace SWAT.Models
         public DbSet<lkpSWATscores_precipVar> lkpSWATscores_precipVar { get; set; }
         public DbSet<tblSWATWAannualPrecip> tblSWATWAannualPrecips { get; set; }
         public DbSet<tblSWATWAclimateChange> tblSWATWAclimateChanges { get; set; }
+        public DbSet<lkpSWATextremeEventsLU> lkpSWATextremeEventsLUs { get; set; }
+        public DbSet<lkpSWATscores_extremeEvents> lkpSWATscores_extremeEvents { get; set; }
+        public DbSet<tblSWATWAextremeEvent> tblSWATWAextremeEvents { get; set; }
     }
 }

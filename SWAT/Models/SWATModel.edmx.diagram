@@ -93,6 +93,13 @@
         <AssociationConnector Association="SWATModel.FK_tblSWATWAannualPrecip_16_tblSWATSurvey" />
         <EntityTypeShape EntityType="SWATModel.tblSWATWAclimateChange" Width="1.5" PointX="8.0479784459099069" PointY="10.059293110882534" />
         <AssociationConnector Association="SWATModel.FK_tblSWATWAclimateChange_17_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATextremeEventsLU" Width="1.5" PointX="3.7713411821850302" PointY="28.177729306825309" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_extremeEvents" Width="1.5" PointX="11.177087824408471" PointY="31.443734153846155" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATWAextremeEvent" Width="1.5" PointX="10.121302819867294" PointY="18.393109389763843" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAextremeEvent_19_lkpSWATextremeEventsLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAextremeEvent_20_lkpSWATextremeEventsLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAextremeEvent_21_lkpSWATextremeEventsLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAextremeEvent_18_tblSWATSurvey" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
