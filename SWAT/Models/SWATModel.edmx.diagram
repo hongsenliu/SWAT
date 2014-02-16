@@ -112,6 +112,20 @@
         <AssociationConnector Association="SWATModel.FK_tblSWATWAriskPrep_21_lkpSWATextremeRiskLU" />
         <AssociationConnector Association="SWATModel.FK_tblSWATWAriskPrep_22_lkpSWATextremeRiskLU" />
         <AssociationConnector Association="SWATModel.FK_tblSWATWAriskPrep_19_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATrunoffLU" Width="1.5" PointX="11.935166230395048" PointY="10.905796160411926" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_runoff" Width="1.5" PointX="6.8821203386793464" PointY="25.340399083374255" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_surfaceVar" Width="1.5" PointX="8.2688865830511258" PointY="12.323046451584924" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATsurfaceVarLU" Width="1.5" PointX="8.8907943726008725" PointY="18.97232268144019" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATWAsurfaceWater" Width="1.5" PointX="6.6005051390270264" PointY="18.657337718949346" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAsurfaceWater_21_lkpSWATrunoffLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAsurfaceWater_22_lkpSWATsurfaceVarLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAsurfaceWater_20_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATgwAvailabilityLU" Width="1.5" PointX="9.9511882560100346" PointY="5.9290548292589627" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_gwAvailability" Width="1.5" PointX="10.228611984396638" PointY="28.721023230217874" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATWAgroundWater" Width="1.5" PointX="9.9437835486343982" PointY="16.010165415708983" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAgroundWater_22_lkpSWATgwAvailabilityLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAgroundWater_57_lkpSWATYesNoLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWAgroundWater_21_tblSWATSurvey" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

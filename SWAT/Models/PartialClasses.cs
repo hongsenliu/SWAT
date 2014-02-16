@@ -3,6 +3,16 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SWAT.Models
 {
+    [MetadataType(typeof(WAGroundWaterMetadata))]
+    public partial class tblSWATWAgroundWater
+    {
+    }
+
+    [MetadataType(typeof(WASurfaceWaterMetadata))]
+    public partial class tblSWATWAsurfaceWater
+    { 
+    }
+
     [MetadataType(typeof(WARiskPrepMetadata))]
     public partial class tblSWATWAriskPrep
     { 

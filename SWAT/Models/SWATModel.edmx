@@ -18,11 +18,13 @@
           <EntitySet Name="lkpSWATextremeEventsLU" EntityType="SWATModel.Store.lkpSWATextremeEventsLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATextremePrepLU" EntityType="SWATModel.Store.lkpSWATextremePrepLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATextremeRiskLU" EntityType="SWATModel.Store.lkpSWATextremeRiskLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATgwAvailabilityLU" EntityType="SWATModel.Store.lkpSWATgwAvailabilityLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATmapAridity" EntityType="SWATModel.Store.lkpSWATmapAridity" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATprecipLU" EntityType="SWATModel.Store.lkpSWATprecipLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATprecipVarAltLU" EntityType="SWATModel.Store.lkpSWATprecipVarAltLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATprecipVardivMeanLU" EntityType="SWATModel.Store.lkpSWATprecipVardivMeanLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATpriorLU" EntityType="SWATModel.Store.lkpSWATpriorLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATrunoffLU" EntityType="SWATModel.Store.lkpSWATrunoffLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_areaBMLU" EntityType="SWATModel.Store.lkpSWATscores_areaBMLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_areaProt" EntityType="SWATModel.Store.lkpSWATscores_areaProt" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_Aridity" EntityType="SWATModel.Store.lkpSWATscores_Aridity" store:Type="Tables" Schema="DBA" />
@@ -30,8 +32,11 @@
           <EntitySet Name="lkpSWATscores_extremeEvents" EntityType="SWATModel.Store.lkpSWATscores_extremeEvents" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_extremePrep" EntityType="SWATModel.Store.lkpSWATscores_extremePrep" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_extremeRISK" EntityType="SWATModel.Store.lkpSWATscores_extremeRISK" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_gwAvailability" EntityType="SWATModel.Store.lkpSWATscores_gwAvailability" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_precip" EntityType="SWATModel.Store.lkpSWATscores_precip" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_precipVar" EntityType="SWATModel.Store.lkpSWATscores_precipVar" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_runoff" EntityType="SWATModel.Store.lkpSWATscores_runoff" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_surfaceVar" EntityType="SWATModel.Store.lkpSWATscores_surfaceVar" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_urbanDistance" EntityType="SWATModel.Store.lkpSWATscores_urbanDistance" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_YesNoLUYesGood" EntityType="SWATModel.Store.lkpSWATscores_YesNoLUYesGood" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATScoreVarSectionLU" EntityType="SWATModel.Store.lkpSWATScoreVarSectionLU" store:Type="Tables" store:Schema="DBA" store:Name="lkpSWATScoreVarSectionLU">
@@ -42,6 +47,7 @@
           </EntitySet>
           <EntitySet Name="lkpSWATScoreVarsLU" EntityType="SWATModel.Store.lkpSWATScoreVarsLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATSectionLU" EntityType="SWATModel.Store.lkpSWATSectionLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATsurfaceVarLU" EntityType="SWATModel.Store.lkpSWATsurfaceVarLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATurbanDistanceLU" EntityType="SWATModel.Store.lkpSWATurbanDistanceLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATwaterMonthLU" EntityType="SWATModel.Store.lkpSWATwaterMonthLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATWatershedsLU" EntityType="SWATModel.Store.lkpSWATWatershedsLU" store:Type="Tables" Schema="DBA" />
@@ -55,9 +61,11 @@
           <EntitySet Name="tblSWATWAannualPrecip" EntityType="SWATModel.Store.tblSWATWAannualPrecip" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAclimateChange" EntityType="SWATModel.Store.tblSWATWAclimateChange" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAextremeEvent" EntityType="SWATModel.Store.tblSWATWAextremeEvent" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATWAgroundWater" EntityType="SWATModel.Store.tblSWATWAgroundWater" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAMonthlyQuantity" EntityType="SWATModel.Store.tblSWATWAMonthlyQuantity" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAPrecipitation" EntityType="SWATModel.Store.tblSWATWAPrecipitation" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAriskPrep" EntityType="SWATModel.Store.tblSWATWAriskPrep" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATWAsurfaceWater" EntityType="SWATModel.Store.tblSWATWAsurfaceWater" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="Userids" EntityType="SWATModel.Store.Userids" store:Type="Tables" Schema="DBA" />
           <AssociationSet Name="FK_lkpCountry_3_lkpRegion" Association="SWATModel.Store.FK_lkpCountry_3_lkpRegion">
             <End Role="lkpRegion" EntitySet="lkpRegion" />
@@ -219,6 +227,18 @@
             <End Role="lkpSWATextremeEventsLU" EntitySet="lkpSWATextremeEventsLU" />
             <End Role="tblSWATWAextremeEvent" EntitySet="tblSWATWAextremeEvent" />
           </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAgroundWater_21_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATWAgroundWater_21_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+            <End Role="tblSWATWAgroundWater" EntitySet="tblSWATWAgroundWater" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAgroundWater_22_lkpSWATgwAvailabilityLU" Association="SWATModel.Store.FK_tblSWATWAgroundWater_22_lkpSWATgwAvailabilityLU">
+            <End Role="lkpSWATgwAvailabilityLU" EntitySet="lkpSWATgwAvailabilityLU" />
+            <End Role="tblSWATWAgroundWater" EntitySet="tblSWATWAgroundWater" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAgroundWater_57_lkpSWATYesNoLU" Association="SWATModel.Store.FK_tblSWATWAgroundWater_57_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLU" />
+            <End Role="tblSWATWAgroundWater" EntitySet="tblSWATWAgroundWater" />
+          </AssociationSet>
           <AssociationSet Name="FK_tblSWATWAMonthlyQuantity_10_lkpSWATwaterMonthLU" Association="SWATModel.Store.FK_tblSWATWAMonthlyQuantity_10_lkpSWATwaterMonthLU">
             <End Role="lkpSWATwaterMonthLU" EntitySet="lkpSWATwaterMonthLU" />
             <End Role="tblSWATWAMonthlyQuantity" EntitySet="tblSWATWAMonthlyQuantity" />
@@ -302,6 +322,18 @@
           <AssociationSet Name="FK_tblSWATWAriskPrep_25_lkpSWATextremePrepLU" Association="SWATModel.Store.FK_tblSWATWAriskPrep_25_lkpSWATextremePrepLU">
             <End Role="lkpSWATextremePrepLU" EntitySet="lkpSWATextremePrepLU" />
             <End Role="tblSWATWAriskPrep" EntitySet="tblSWATWAriskPrep" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAsurfaceWater_20_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATWAsurfaceWater_20_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+            <End Role="tblSWATWAsurfaceWater" EntitySet="tblSWATWAsurfaceWater" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAsurfaceWater_21_lkpSWATrunoffLU" Association="SWATModel.Store.FK_tblSWATWAsurfaceWater_21_lkpSWATrunoffLU">
+            <End Role="lkpSWATrunoffLU" EntitySet="lkpSWATrunoffLU" />
+            <End Role="tblSWATWAsurfaceWater" EntitySet="tblSWATWAsurfaceWater" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAsurfaceWater_22_lkpSWATsurfaceVarLU" Association="SWATModel.Store.FK_tblSWATWAsurfaceWater_22_lkpSWATsurfaceVarLU">
+            <End Role="lkpSWATsurfaceVarLU" EntitySet="lkpSWATsurfaceVarLU" />
+            <End Role="tblSWATWAsurfaceWater" EntitySet="tblSWATWAsurfaceWater" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="lkpBiome">
@@ -401,6 +433,14 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATgwAvailabilityLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATmapAridity">
           <Key>
             <PropertyRef Name="id" />
@@ -440,6 +480,14 @@
           <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATrunoffLU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="254" />
+          <Property Name="intorder" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATscores_areaBMLU">
           <Key>
@@ -497,6 +545,14 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATscores_gwAvailability">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATscores_precip">
           <Key>
             <PropertyRef Name="id" />
@@ -506,6 +562,22 @@
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATscores_precipVar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_runoff">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="float" Nullable="false" />
+          <Property Name="intorder" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_surfaceVar">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -555,6 +627,14 @@
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="SectionName" Type="varchar" MaxLength="50" />
           <Property Name="Description" Type="varchar" Nullable="false" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="lkpSWATsurfaceVarLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATurbanDistanceLU">
           <Key>
@@ -708,6 +788,15 @@
           <Property Name="extremeOther" Type="int" />
           <Property Name="extremeOtherComment" Type="varchar" MaxLength="254" />
         </EntityType>
+        <EntityType Name="tblSWATWAgroundWater">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="int" Nullable="false" />
+          <Property Name="gwAvailability" Type="int" />
+          <Property Name="gwReliability" Type="int" />
+        </EntityType>
         <EntityType Name="tblSWATWAMonthlyQuantity">
           <Key>
             <PropertyRef Name="ID" />
@@ -758,6 +847,15 @@
           <Property Name="prepFire" Type="int" />
           <Property Name="prepFlood" Type="int" />
           <Property Name="prepDrought" Type="int" />
+        </EntityType>
+        <EntityType Name="tblSWATWAsurfaceWater">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="int" Nullable="false" />
+          <Property Name="runoff" Type="int" />
+          <Property Name="surfaceVar" Type="int" />
         </EntityType>
         <EntityType Name="Userids">
           <Key>
@@ -1273,6 +1371,42 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_tblSWATWAgroundWater_21_tblSWATSurvey">
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="1" />
+          <End Role="tblSWATWAgroundWater" Type="SWATModel.Store.tblSWATWAgroundWater" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWAgroundWater">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAgroundWater_22_lkpSWATgwAvailabilityLU">
+          <End Role="lkpSWATgwAvailabilityLU" Type="SWATModel.Store.lkpSWATgwAvailabilityLU" Multiplicity="0..1" />
+          <End Role="tblSWATWAgroundWater" Type="SWATModel.Store.tblSWATWAgroundWater" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATgwAvailabilityLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAgroundWater">
+              <PropertyRef Name="gwAvailability" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAgroundWater_57_lkpSWATYesNoLU">
+          <End Role="lkpSWATYesNoLU" Type="SWATModel.Store.lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Role="tblSWATWAgroundWater" Type="SWATModel.Store.tblSWATWAgroundWater" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAgroundWater">
+              <PropertyRef Name="gwReliability" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_tblSWATWAMonthlyQuantity_10_lkpSWATwaterMonthLU">
           <End Role="lkpSWATwaterMonthLU" Type="SWATModel.Store.lkpSWATwaterMonthLU" Multiplicity="0..1" />
           <End Role="tblSWATWAMonthlyQuantity" Type="SWATModel.Store.tblSWATWAMonthlyQuantity" Multiplicity="*" />
@@ -1522,6 +1656,42 @@
             </Principal>
             <Dependent Role="tblSWATWAriskPrep">
               <PropertyRef Name="prepDrought" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAsurfaceWater_20_tblSWATSurvey">
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="1" />
+          <End Role="tblSWATWAsurfaceWater" Type="SWATModel.Store.tblSWATWAsurfaceWater" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWAsurfaceWater">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAsurfaceWater_21_lkpSWATrunoffLU">
+          <End Role="lkpSWATrunoffLU" Type="SWATModel.Store.lkpSWATrunoffLU" Multiplicity="0..1" />
+          <End Role="tblSWATWAsurfaceWater" Type="SWATModel.Store.tblSWATWAsurfaceWater" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATrunoffLU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWAsurfaceWater">
+              <PropertyRef Name="runoff" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAsurfaceWater_22_lkpSWATsurfaceVarLU">
+          <End Role="lkpSWATsurfaceVarLU" Type="SWATModel.Store.lkpSWATsurfaceVarLU" Multiplicity="0..1" />
+          <End Role="tblSWATWAsurfaceWater" Type="SWATModel.Store.tblSWATWAsurfaceWater" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATsurfaceVarLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAsurfaceWater">
+              <PropertyRef Name="surfaceVar" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1817,6 +1987,38 @@
             <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
             <End Role="tblSWATWAriskPrep" EntitySet="tblSWATWAriskPreps" />
           </AssociationSet>
+          <EntitySet Name="lkpSWATrunoffLUs" EntityType="SWATModel.lkpSWATrunoffLU" />
+          <EntitySet Name="lkpSWATscores_runoff" EntityType="SWATModel.lkpSWATscores_runoff" />
+          <EntitySet Name="lkpSWATscores_surfaceVar" EntityType="SWATModel.lkpSWATscores_surfaceVar" />
+          <EntitySet Name="lkpSWATsurfaceVarLUs" EntityType="SWATModel.lkpSWATsurfaceVarLU" />
+          <EntitySet Name="tblSWATWAsurfaceWaters" EntityType="SWATModel.tblSWATWAsurfaceWater" />
+          <AssociationSet Name="FK_tblSWATWAsurfaceWater_21_lkpSWATrunoffLU" Association="SWATModel.FK_tblSWATWAsurfaceWater_21_lkpSWATrunoffLU">
+            <End Role="lkpSWATrunoffLU" EntitySet="lkpSWATrunoffLUs" />
+            <End Role="tblSWATWAsurfaceWater" EntitySet="tblSWATWAsurfaceWaters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAsurfaceWater_22_lkpSWATsurfaceVarLU" Association="SWATModel.FK_tblSWATWAsurfaceWater_22_lkpSWATsurfaceVarLU">
+            <End Role="lkpSWATsurfaceVarLU" EntitySet="lkpSWATsurfaceVarLUs" />
+            <End Role="tblSWATWAsurfaceWater" EntitySet="tblSWATWAsurfaceWaters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAsurfaceWater_20_tblSWATSurvey" Association="SWATModel.FK_tblSWATWAsurfaceWater_20_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+            <End Role="tblSWATWAsurfaceWater" EntitySet="tblSWATWAsurfaceWaters" />
+          </AssociationSet>
+          <EntitySet Name="lkpSWATgwAvailabilityLUs" EntityType="SWATModel.lkpSWATgwAvailabilityLU" />
+          <EntitySet Name="lkpSWATscores_gwAvailability" EntityType="SWATModel.lkpSWATscores_gwAvailability" />
+          <EntitySet Name="tblSWATWAgroundWaters" EntityType="SWATModel.tblSWATWAgroundWater" />
+          <AssociationSet Name="FK_tblSWATWAgroundWater_22_lkpSWATgwAvailabilityLU" Association="SWATModel.FK_tblSWATWAgroundWater_22_lkpSWATgwAvailabilityLU">
+            <End Role="lkpSWATgwAvailabilityLU" EntitySet="lkpSWATgwAvailabilityLUs" />
+            <End Role="tblSWATWAgroundWater" EntitySet="tblSWATWAgroundWaters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAgroundWater_57_lkpSWATYesNoLU" Association="SWATModel.FK_tblSWATWAgroundWater_57_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLUs" />
+            <End Role="tblSWATWAgroundWater" EntitySet="tblSWATWAgroundWaters" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWAgroundWater_21_tblSWATSurvey" Association="SWATModel.FK_tblSWATWAgroundWater_21_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+            <End Role="tblSWATWAgroundWater" EntitySet="tblSWATWAgroundWaters" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="lkpBiome">
           <Key>
@@ -2024,6 +2226,7 @@
           <NavigationProperty Name="tblSWATBackgroundinfoes" Relationship="SWATModel.FK_tblSWATBackgroundinfo_54_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATBackgroundinfo" />
           <NavigationProperty Name="tblSWATBackgroundinfoes1" Relationship="SWATModel.FK_tblSWATBackgroundinfo_55_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATBackgroundinfo" />
           <NavigationProperty Name="tblSWATBackgroundinfoes2" Relationship="SWATModel.FK_tblSWATBackgroundinfo_56_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATBackgroundinfo" />
+          <NavigationProperty Name="tblSWATWAgroundWaters" Relationship="SWATModel.FK_tblSWATWAgroundWater_57_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATWAgroundWater" />
         </EntityType>
         <EntityType Name="tblSWATBackgroundinfo">
           <Key>
@@ -2132,6 +2335,8 @@
           <NavigationProperty Name="tblSWATWAclimateChanges" Relationship="SWATModel.FK_tblSWATWAclimateChange_17_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAclimateChange" />
           <NavigationProperty Name="tblSWATWAextremeEvents" Relationship="SWATModel.FK_tblSWATWAextremeEvent_18_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAextremeEvent" />
           <NavigationProperty Name="tblSWATWAriskPreps" Relationship="SWATModel.FK_tblSWATWAriskPrep_19_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAriskPrep" />
+          <NavigationProperty Name="tblSWATWAsurfaceWaters" Relationship="SWATModel.FK_tblSWATWAsurfaceWater_20_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAsurfaceWater" />
+          <NavigationProperty Name="tblSWATWAgroundWaters" Relationship="SWATModel.FK_tblSWATWAgroundWater_21_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAgroundWater" />
         </EntityType>
         <EntityType Name="tblSWATVisualGroup">
           <Key>
@@ -3128,6 +3333,153 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="lkpSWATrunoffLU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" Nullable="false" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWAsurfaceWaters" Relationship="SWATModel.FK_tblSWATWAsurfaceWater_21_lkpSWATrunoffLU" FromRole="lkpSWATrunoffLU" ToRole="tblSWATWAsurfaceWater" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_runoff">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Double" Name="Description" Nullable="false" />
+          <Property Type="Int32" Name="intorder" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_surfaceVar">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATsurfaceVarLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWAsurfaceWaters" Relationship="SWATModel.FK_tblSWATWAsurfaceWater_22_lkpSWATsurfaceVarLU" FromRole="lkpSWATsurfaceVarLU" ToRole="tblSWATWAsurfaceWater" />
+        </EntityType>
+        <EntityType Name="tblSWATWAsurfaceWater">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SurveyID" Nullable="false" />
+          <Property Type="Int32" Name="runoff" />
+          <Property Type="Int32" Name="surfaceVar" />
+          <NavigationProperty Name="lkpSWATrunoffLU" Relationship="SWATModel.FK_tblSWATWAsurfaceWater_21_lkpSWATrunoffLU" FromRole="tblSWATWAsurfaceWater" ToRole="lkpSWATrunoffLU" />
+          <NavigationProperty Name="lkpSWATsurfaceVarLU" Relationship="SWATModel.FK_tblSWATWAsurfaceWater_22_lkpSWATsurfaceVarLU" FromRole="tblSWATWAsurfaceWater" ToRole="lkpSWATsurfaceVarLU" />
+          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATWAsurfaceWater_20_tblSWATSurvey" FromRole="tblSWATWAsurfaceWater" ToRole="tblSWATSurvey" />
+        </EntityType>
+        <Association Name="FK_tblSWATWAsurfaceWater_21_lkpSWATrunoffLU">
+          <End Type="SWATModel.lkpSWATrunoffLU" Role="lkpSWATrunoffLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWAsurfaceWater" Role="tblSWATWAsurfaceWater" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATrunoffLU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWAsurfaceWater">
+              <PropertyRef Name="runoff" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAsurfaceWater_22_lkpSWATsurfaceVarLU">
+          <End Type="SWATModel.lkpSWATsurfaceVarLU" Role="lkpSWATsurfaceVarLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWAsurfaceWater" Role="tblSWATWAsurfaceWater" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATsurfaceVarLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAsurfaceWater">
+              <PropertyRef Name="surfaceVar" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAsurfaceWater_20_tblSWATSurvey">
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATWAsurfaceWater" Role="tblSWATWAsurfaceWater" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWAsurfaceWater">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="lkpSWATgwAvailabilityLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWAgroundWaters" Relationship="SWATModel.FK_tblSWATWAgroundWater_22_lkpSWATgwAvailabilityLU" FromRole="lkpSWATgwAvailabilityLU" ToRole="tblSWATWAgroundWater" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_gwAvailability">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="tblSWATWAgroundWater">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SurveyID" Nullable="false" />
+          <Property Type="Int32" Name="gwAvailability" />
+          <Property Type="Int32" Name="gwReliability" />
+          <NavigationProperty Name="lkpSWATgwAvailabilityLU" Relationship="SWATModel.FK_tblSWATWAgroundWater_22_lkpSWATgwAvailabilityLU" FromRole="tblSWATWAgroundWater" ToRole="lkpSWATgwAvailabilityLU" />
+          <NavigationProperty Name="lkpSWATYesNoLU" Relationship="SWATModel.FK_tblSWATWAgroundWater_57_lkpSWATYesNoLU" FromRole="tblSWATWAgroundWater" ToRole="lkpSWATYesNoLU" />
+          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATWAgroundWater_21_tblSWATSurvey" FromRole="tblSWATWAgroundWater" ToRole="tblSWATSurvey" />
+        </EntityType>
+        <Association Name="FK_tblSWATWAgroundWater_22_lkpSWATgwAvailabilityLU">
+          <End Type="SWATModel.lkpSWATgwAvailabilityLU" Role="lkpSWATgwAvailabilityLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWAgroundWater" Role="tblSWATWAgroundWater" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATgwAvailabilityLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAgroundWater">
+              <PropertyRef Name="gwAvailability" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAgroundWater_57_lkpSWATYesNoLU">
+          <End Type="SWATModel.lkpSWATYesNoLU" Role="lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWAgroundWater" Role="tblSWATWAgroundWater" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWAgroundWater">
+              <PropertyRef Name="gwReliability" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWAgroundWater_21_tblSWATSurvey">
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATWAgroundWater" Role="tblSWATWAgroundWater" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWAgroundWater">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -3662,6 +4014,80 @@
                 <ScalarProperty Name="riskDrought" ColumnName="riskDrought" />
                 <ScalarProperty Name="riskFlood" ColumnName="riskFlood" />
                 <ScalarProperty Name="riskFire" ColumnName="riskFire" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATrunoffLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATrunoffLU">
+              <MappingFragment StoreEntitySet="lkpSWATrunoffLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_runoff">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_runoff">
+              <MappingFragment StoreEntitySet="lkpSWATscores_runoff">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_surfaceVar">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_surfaceVar">
+              <MappingFragment StoreEntitySet="lkpSWATscores_surfaceVar">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATsurfaceVarLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATsurfaceVarLU">
+              <MappingFragment StoreEntitySet="lkpSWATsurfaceVarLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATWAsurfaceWaters">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATWAsurfaceWater">
+              <MappingFragment StoreEntitySet="tblSWATWAsurfaceWater">
+                <ScalarProperty Name="surfaceVar" ColumnName="surfaceVar" />
+                <ScalarProperty Name="runoff" ColumnName="runoff" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATgwAvailabilityLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATgwAvailabilityLU">
+              <MappingFragment StoreEntitySet="lkpSWATgwAvailabilityLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_gwAvailability">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_gwAvailability">
+              <MappingFragment StoreEntitySet="lkpSWATscores_gwAvailability">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATWAgroundWaters">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATWAgroundWater">
+              <MappingFragment StoreEntitySet="tblSWATWAgroundWater">
+                <ScalarProperty Name="gwReliability" ColumnName="gwReliability" />
+                <ScalarProperty Name="gwAvailability" ColumnName="gwAvailability" />
                 <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>

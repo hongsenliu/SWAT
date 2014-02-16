@@ -12,13 +12,10 @@ namespace SWAT.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class lkpSWATYesNoLU
+    public partial class lkpSWATgwAvailabilityLU
     {
-        public lkpSWATYesNoLU()
+        public lkpSWATgwAvailabilityLU()
         {
-            this.tblSWATBackgroundinfoes = new HashSet<tblSWATBackgroundinfo>();
-            this.tblSWATBackgroundinfoes1 = new HashSet<tblSWATBackgroundinfo>();
-            this.tblSWATBackgroundinfoes2 = new HashSet<tblSWATBackgroundinfo>();
             this.tblSWATWAgroundWaters = new HashSet<tblSWATWAgroundWater>();
         }
     
@@ -26,9 +23,6 @@ namespace SWAT.Models
         public string Description { get; set; }
         public Nullable<int> intorder { get; set; }
     
-        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes { get; set; }
-        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes1 { get; set; }
-        public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes2 { get; set; }
         public virtual ICollection<tblSWATWAgroundWater> tblSWATWAgroundWaters { get; set; }
     }
 }

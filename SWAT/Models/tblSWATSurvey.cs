@@ -23,6 +23,8 @@ namespace SWAT.Models
             this.tblSWATWAclimateChanges = new HashSet<tblSWATWAclimateChange>();
             this.tblSWATWAextremeEvents = new HashSet<tblSWATWAextremeEvent>();
             this.tblSWATWAriskPreps = new HashSet<tblSWATWAriskPrep>();
+            this.tblSWATWAsurfaceWaters = new HashSet<tblSWATWAsurfaceWater>();
+            this.tblSWATWAgroundWaters = new HashSet<tblSWATWAgroundWater>();
         }
     
         public int ID { get; set; }
@@ -41,5 +43,7 @@ namespace SWAT.Models
         public virtual ICollection<tblSWATWAclimateChange> tblSWATWAclimateChanges { get; set; }
         public virtual ICollection<tblSWATWAextremeEvent> tblSWATWAextremeEvents { get; set; }
         public virtual ICollection<tblSWATWAriskPrep> tblSWATWAriskPreps { get; set; }
+        public virtual ICollection<tblSWATWAsurfaceWater> tblSWATWAsurfaceWaters { get; set; }
+        public virtual ICollection<tblSWATWAgroundWater> tblSWATWAgroundWaters { get; set; }
     }
 }

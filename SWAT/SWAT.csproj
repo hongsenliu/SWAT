@@ -218,9 +218,11 @@
     <Compile Include="Controllers\WAannualPrecipController.cs" />
     <Compile Include="Controllers\WAClimateChangeController.cs" />
     <Compile Include="Controllers\WAExtremeEventController.cs" />
+    <Compile Include="Controllers\WAGroundWaterController.cs" />
     <Compile Include="Controllers\WAMonthlyQuantityController.cs" />
     <Compile Include="Controllers\WAPrecipitationController.cs" />
     <Compile Include="Controllers\WARiskPrepController.cs" />
+    <Compile Include="Controllers\WASurfaceWaterController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -260,6 +262,9 @@
     <Compile Include="Models\lkpSWATextremeRiskLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATgwAvailabilityLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATmapAridity.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -273,6 +278,9 @@
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATpriorLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATrunoffLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATscores_areaBMLU.cs">
@@ -296,10 +304,19 @@
     <Compile Include="Models\lkpSWATscores_extremeRISK.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATscores_gwAvailability.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATscores_precip.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATscores_precipVar.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_runoff.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_surfaceVar.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATscores_urbanDistance.cs">
@@ -312,6 +329,9 @@
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATSectionLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATsurfaceVarLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATurbanDistanceLU.cs">
@@ -375,6 +395,9 @@
     <Compile Include="Models\tblSWATWAextremeEvent.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\tblSWATWAgroundWater.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\tblSWATWAMonthlyQuantity.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -382,6 +405,9 @@
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSWATWAriskPrep.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSWATWAsurfaceWater.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Userid.cs">
@@ -462,6 +488,16 @@
     <Content Include="Views\WARiskPrep\Details.cshtml" />
     <Content Include="Views\WARiskPrep\Edit.cshtml" />
     <Content Include="Views\WARiskPrep\Index.cshtml" />
+    <Content Include="Views\WASurfaceWater\Create.cshtml" />
+    <Content Include="Views\WASurfaceWater\Delete.cshtml" />
+    <Content Include="Views\WASurfaceWater\Details.cshtml" />
+    <Content Include="Views\WASurfaceWater\Edit.cshtml" />
+    <Content Include="Views\WASurfaceWater\Index.cshtml" />
+    <Content Include="Views\WAGroundWater\Create.cshtml" />
+    <Content Include="Views\WAGroundWater\Delete.cshtml" />
+    <Content Include="Views\WAGroundWater\Details.cshtml" />
+    <Content Include="Views\WAGroundWater\Edit.cshtml" />
+    <Content Include="Views\WAGroundWater\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

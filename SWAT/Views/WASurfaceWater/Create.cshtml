@@ -1,0 +1,57 @@
+﻿@model SWAT.Models.tblSWATWAsurfaceWater
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create - Water Availability</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Surface Water</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+
+        <p>
+            NO Question?
+        </p>
+        <div class="form-group">
+            @Html.LabelFor(model => model.runoff, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("runoff", String.Empty)
+                @Html.ValidationMessageFor(model => model.runoff)
+            </div>
+        </div>
+
+        <hr />
+        <p>
+            How much does the water level (for lakes and streams) change over the course of the year?
+        </p>
+        <div class="form-group">
+            @Html.LabelFor(model => model.surfaceVar, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("surfaceVar", String.Empty)
+                @Html.ValidationMessageFor(model => model.surfaceVar)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

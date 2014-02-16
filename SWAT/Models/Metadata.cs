@@ -3,6 +3,24 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SWAT.Models
 {
+    public class WAGroundWaterMetadata
+    {
+        [Display(Name = "Ground Water Availability")]
+        public Nullable<int> gwAvailability { get; set; }
+
+        [Display(Name = "Ground Water Reliability")]
+        public Nullable<int> gwReliability { get; set; }
+    }
+
+    public class WASurfaceWaterMetadata
+    {
+        [Display(Name = "Runoff")]
+        public Nullable<int> runoff { get; set; }
+
+        [Display(Name = "Suface Water Level")]
+        public Nullable<int> surfaceVar { get; set; }
+    }
+
     public class WARiskPrepMetadata
     {
         [Display(Name = "Risk of Fire")]

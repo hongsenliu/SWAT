@@ -148,6 +148,12 @@ namespace SWAT.Controllers
 
         private void DeleteRelatedRecords(int id)
         {
+            var tblswatwasurfacewater = db.tblSWATWAsurfaceWaters.Where(e => e.SurveyID == id);
+            foreach (tblSWATWAsurfaceWater item in tblswatwasurfacewater)
+            {
+                db.tblSWATWAsurfaceWaters.Remove(item);
+            }
+
             var tblswatwaextremeevent = db.tblSWATWAextremeEvents.Where(e => e.SurveyID == id);
             foreach (tblSWATWAextremeEvent item in tblswatwaextremeevent)
             {

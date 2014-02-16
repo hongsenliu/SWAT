@@ -72,5 +72,13 @@ namespace SWAT.Models
         public DbSet<lkpSWATscores_extremePrep> lkpSWATscores_extremePrep { get; set; }
         public DbSet<lkpSWATscores_extremeRISK> lkpSWATscores_extremeRISK { get; set; }
         public DbSet<tblSWATWAriskPrep> tblSWATWAriskPreps { get; set; }
+        public DbSet<lkpSWATrunoffLU> lkpSWATrunoffLUs { get; set; }
+        public DbSet<lkpSWATscores_runoff> lkpSWATscores_runoff { get; set; }
+        public DbSet<lkpSWATscores_surfaceVar> lkpSWATscores_surfaceVar { get; set; }
+        public DbSet<lkpSWATsurfaceVarLU> lkpSWATsurfaceVarLUs { get; set; }
+        public DbSet<tblSWATWAsurfaceWater> tblSWATWAsurfaceWaters { get; set; }
+        public DbSet<lkpSWATgwAvailabilityLU> lkpSWATgwAvailabilityLUs { get; set; }
+        public DbSet<lkpSWATscores_gwAvailability> lkpSWATscores_gwAvailability { get; set; }
+        public DbSet<tblSWATWAgroundWater> tblSWATWAgroundWaters { get; set; }
     }
 }

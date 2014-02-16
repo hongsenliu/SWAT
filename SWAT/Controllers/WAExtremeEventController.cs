@@ -119,8 +119,8 @@ namespace SWAT.Controllers
                 }
 
                 db.tblSWATWAextremeEvents.Add(tblswatwaextremeevent);
-                updateScores(tblswatwaextremeevent);
                 db.SaveChanges();
+                updateScores(tblswatwaextremeevent);
                 //return RedirectToAction("Index");
                 return RedirectToAction("Create", "WARiskPrep", new { SurveyID = tblswatwaextremeevent.SurveyID });
             }
