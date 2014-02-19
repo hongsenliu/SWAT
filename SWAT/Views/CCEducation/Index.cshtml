@@ -1,0 +1,57 @@
+﻿@model IEnumerable<SWAT.Models.tblSWATCCedu>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.eduPrim)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.eduSec)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.eduGradWomen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.eduGradMen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.eduPrim)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.eduSec)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.eduGradWomen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.eduGradMen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSWATSurvey.ID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

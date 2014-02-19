@@ -148,10 +148,52 @@ namespace SWAT.Controllers
 
         private void DeleteRelatedRecords(int id)
         {
+            var tblswatccfinancial = db.tblSWATCCfinancials.Where(e => e.SurveyID == id);
+            foreach(tblSWATCCfinancial item in tblswatccfinancial)
+            {
+               db.tblSWATCCfinancials.Remove(item);
+            }
+
+            var tblswatccindig = db.tblSWATCCindigs.Where(e => e.SurveyID == id);
+            foreach (tblSWATCCindig item in tblswatccindig)
+            {
+                db.tblSWATCCindigs.Remove(item);
+            }
+
+            var tblswatccschool = db.tblSWATCCschools.Where(e => e.SurveyID == id);
+            foreach (tblSWATCCschool item in tblswatccschool)
+            {
+                db.tblSWATCCschools.Remove(item);
+            }
+
+            var tblswatcctrain = db.tblSWATCCtrains.Where(e => e.SurveyID == id);
+            foreach (tblSWATCCtrain item in tblswatcctrain)
+            {
+                db.tblSWATCCtrains.Remove(item);
+            }
+
+            var tblswatcceduc = db.tblSWATCCedus.Where(e => e.SurveyID == id);
+            foreach (tblSWATCCedu item in tblswatcceduc)
+            {
+                db.tblSWATCCedus.Remove(item);
+            }
+
+            var tblswatwagroundwater = db.tblSWATWAgroundWaters.Where(e => e.SurveyID == id);
+            foreach (tblSWATWAgroundWater item in tblswatwagroundwater)
+            {
+                db.tblSWATWAgroundWaters.Remove(item);
+            }
+
             var tblswatwasurfacewater = db.tblSWATWAsurfaceWaters.Where(e => e.SurveyID == id);
             foreach (tblSWATWAsurfaceWater item in tblswatwasurfacewater)
             {
                 db.tblSWATWAsurfaceWaters.Remove(item);
+            }
+
+            var tblswatwariskprep = db.tblSWATWAriskPreps.Where(e => e.SurveyID == id);
+            foreach (tblSWATWAriskPrep item in tblswatwariskprep)
+            {
+                db.tblSWATWAriskPreps.Remove(item);
             }
 
             var tblswatwaextremeevent = db.tblSWATWAextremeEvents.Where(e => e.SurveyID == id);

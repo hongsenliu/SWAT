@@ -3,6 +3,122 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SWAT.Models
 {
+    public class CCFinancialMetadata
+    {
+        [Display(Name = "% of Households")]
+        [Range(0, 100, ErrorMessage = "The value is out of range")]
+        public Nullable<double> income { get; set; }
+
+        [Display(Name = "Land or real estate")]
+        public bool assetsCom1 { get; set; }
+
+        [Display(Name = "Equipment")]
+        public bool assetsCom2 { get; set; }
+
+        [Display(Name = "Cash")]
+        public bool assetsCom3 { get; set; }
+
+        [Display(Name = "Other investments (stocks, bonds, etc.)")]
+        public bool assetsCom4 { get; set; }
+
+        [Display(Name = "Land or real estate")]
+        public bool assetsInd1 { get; set; }
+
+        [Display(Name = "Equipment")]
+        public bool assetsInd2 { get; set; }
+
+        [Display(Name = "Cash")]
+        public bool assetsInd3 { get; set; }
+
+        [Display(Name = "Other investments (stocks, bonds, etc.)")]
+        public bool assetsInd4 { get; set; }
+    }
+
+    public class CCIndigMetadata
+    {
+        [Display(Name = "Indigenous Popluation")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range")]
+        public Nullable<int> indigPop { get; set; }
+
+        [Display(Name = "Longterm Popluation")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range")]
+        public Nullable<int> longtermPop { get; set; }
+    }
+
+    public class CCSchoolMetadata
+    {
+        [Display(Name = "% of children")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> schoolAttend { get; set; }
+
+        [Display(Name = "Elementary School")]
+        public bool schoolInstitution1 { get; set; }
+
+        [Display(Name = "Secondary School")]
+        public bool schoolInstitution2 { get; set; }
+
+        [Display(Name = "Technical Institute")]
+        public bool schoolInstitution3 { get; set; }
+
+        [Display(Name = "College/University")]
+        public bool schoolInstitution4 { get; set; }
+
+        [Display(Name = "Access to Health and Hygiene")]
+        public Nullable<int> schoolHHAccess { get; set; }
+    }
+
+    public class CCTrainMetadata
+    {
+        [Display(Name = "Administrative supervisor")]
+        public bool trainProf1 { get; set; }
+
+        [Display(Name = "Health scientist (nurse, doctor, researcher)")]
+        public bool trainProf2 { get; set; }
+
+        [Display(Name = "Engineer")]
+        public bool trainProf3 { get; set; }
+
+        [Display(Name = "Lawyer")]
+        public bool trainProf4 { get; set; }
+
+        [Display(Name = "Accountant")]
+        public bool trainProf5 { get; set; }
+
+        [Display(Name = "Mechanic")]
+        public bool trainTech1 { get; set; }
+
+        [Display(Name = "Laboratory technician")]
+        public bool trainTech2 { get; set; }
+
+        [Display(Name = "Water system operator")]
+        public bool trainTech3 { get; set; }
+
+        [Display(Name = "Administrative Assistant")]
+        public bool trainTech4 { get; set; }
+
+        [Display(Name = "IT Technician")]
+        public bool trainTech5 { get; set; }
+    }
+
+    public class CCEducationMetadata
+    {
+        [Display(Name = "% of Primary School")]
+        [Range(0, 100, ErrorMessage="The value is out of range")]
+        public Nullable<double> eduPrim { get; set; }
+
+        [Display(Name = "% in Secondary School")]
+        [Range(0, 100, ErrorMessage = "The value is out of range")]
+        public Nullable<double> eduSec { get; set; }
+
+        [Display(Name = "% of Women Finished Secondary School")]
+        [Range(0, 100, ErrorMessage = "The value is out of range")]
+        public Nullable<double> eduGradWomen { get; set; }
+
+        [Display(Name = "% of Men Finished Secondary School")]
+        [Range(0, 100, ErrorMessage = "The value is out of range")]
+        public Nullable<double> eduGradMen { get; set; }
+    }
+
     public class WAGroundWaterMetadata
     {
         [Display(Name = "Ground Water Availability")]
@@ -61,9 +177,11 @@ namespace SWAT.Models
 
     public class BackgroundMetadata
     {
+        [Required]
         [Range(1, int.MaxValue, ErrorMessage = "The population has to be an integer and >0.")]
         public Nullable<long> Population;
 
+        [Required]
         [Display(Name = "Number of Households")]
         [Range(1, int.MaxValue, ErrorMessage = "The number of households has to be an integer and >0.")]
         public Nullable<int> numHouseholds;

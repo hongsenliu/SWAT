@@ -93,15 +93,15 @@ namespace SWAT.Controllers
                     db.Entry(tblswatwagroundwater).State = EntityState.Modified;
                     db.SaveChanges();
                     updateScores(tblswatwagroundwater);
-                    return RedirectToAction("Index");
-                    // return RedirectToAction("Create", "WAGroundWater", new { SurveyID = tblswatwasurfacewater.SurveyID });
+                    // return RedirectToAction("Index");
+                    return RedirectToAction("Create", "CCEducation", new { SurveyID = tblswatwagroundwater.SurveyID });
                 }
 
                 db.tblSWATWAgroundWaters.Add(tblswatwagroundwater);
                 db.SaveChanges();
                 updateScores(tblswatwagroundwater);
-
-                return RedirectToAction("Index");
+                return RedirectToAction("Create", "CCEducation", new { SurveyID = tblswatwagroundwater.SurveyID });
+                // return RedirectToAction("Index");
             }
 
             ViewBag.gwAvailability = new SelectList(db.lkpSWATgwAvailabilityLUs, "id", "Description", tblswatwagroundwater.gwAvailability);
@@ -139,7 +139,24 @@ namespace SWAT.Controllers
                 db.SaveChanges();
                 updateScores(tblswatwagroundwater);
 
-                return RedirectToAction("Index");
+                // If there is not any CCEducation with the current survey (SurveyID) then create one and redirect to its edit link.
+                var educations = db.tblSWATCCedus.Where(e => e.SurveyID == tblswatwagroundwater.SurveyID);
+                if (!educations.Any())
+                {
+                    tblSWATCCedu tblswatccedu = new tblSWATCCedu();
+                    tblswatccedu.SurveyID = tblswatwagroundwater.SurveyID;
+                    db.tblSWATCCedus.Add(tblswatccedu);
+                    db.SaveChanges();
+
+                    int newEducationID = tblswatccedu.ID;
+                    return RedirectToAction("Edit", "CCEducation", new { id = newEducationID, SurveyID = tblswatccedu.SurveyID });
+                }
+                else
+                {
+                    return RedirectToAction("Edit", "CCEducation", new { id = educations.Single(e => e.SurveyID == tblswatwagroundwater.SurveyID).ID, SurveyID = tblswatwagroundwater.SurveyID });
+                }
+
+                //return RedirectToAction("Index");
             }
             ViewBag.gwAvailability = new SelectList(db.lkpSWATgwAvailabilityLUs, "id", "Description", tblswatwagroundwater.gwAvailability);
             ViewBag.gwReliability = new SelectList(db.lkpSWATYesNoLUs, "id", "Description", tblswatwagroundwater.gwReliability);

@@ -1,0 +1,93 @@
+﻿@model SWAT.Models.tblSWATCCschool
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create - Community Capacity</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Knowledge Capital - Schools</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+        
+        <p>
+            @ViewBag.Question1
+        </p>
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.schoolAttend, new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.schoolAttend)%
+                @Html.ValidationMessageFor(model => model.schoolAttend)
+            </div>
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question2
+        </p>
+        <div class="form-group">
+            @Html.LabelFor(model => model.schoolInstitution1, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.schoolInstitution1)
+                @Html.ValidationMessageFor(model => model.schoolInstitution1)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.schoolInstitution2, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.schoolInstitution2)
+                @Html.ValidationMessageFor(model => model.schoolInstitution2)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.schoolInstitution3, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.schoolInstitution3)
+                @Html.ValidationMessageFor(model => model.schoolInstitution3)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.schoolInstitution4, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.schoolInstitution4)
+                @Html.ValidationMessageFor(model => model.schoolInstitution4)
+            </div>
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question3
+        </p>
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.schoolHHAccess, new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.DropDownList("schoolHHAccess", String.Empty)
+                @Html.ValidationMessageFor(model => model.schoolHHAccess)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

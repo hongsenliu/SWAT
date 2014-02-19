@@ -1,0 +1,93 @@
+﻿@model IEnumerable<SWAT.Models.tblSWATCCtrain>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.trainProf1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainProf2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainProf3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainProf4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainProf5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainTech1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainTech2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainTech3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainTech4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainTech5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainProf1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainProf2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainProf3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainProf4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainProf5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainTech1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainTech2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainTech3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainTech4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainTech5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSWATSurvey.ID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

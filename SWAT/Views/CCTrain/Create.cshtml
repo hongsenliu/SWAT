@@ -1,0 +1,122 @@
+﻿@model SWAT.Models.tblSWATCCtrain
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create - Community Capacity</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Knowledge Capital - Knowledge and Training</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+
+        <p>
+            @ViewBag.Question1
+        </p>
+        <div class="form-group">
+            @Html.LabelFor(model => model.trainProf1, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.trainProf1)
+                @Html.ValidationMessageFor(model => model.trainProf1)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.trainProf2, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.trainProf2)
+                @Html.ValidationMessageFor(model => model.trainProf2)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.trainProf3, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.trainProf3)
+                @Html.ValidationMessageFor(model => model.trainProf3)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.trainProf4, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.trainProf4)
+                @Html.ValidationMessageFor(model => model.trainProf4)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.trainProf5, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.trainProf5)
+                @Html.ValidationMessageFor(model => model.trainProf5)
+            </div>
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question2
+        </p>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.trainTech1, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.trainTech1)
+                @Html.ValidationMessageFor(model => model.trainTech1)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.trainTech2, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.trainTech2)
+                @Html.ValidationMessageFor(model => model.trainTech2)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.trainTech3, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.trainTech3)
+                @Html.ValidationMessageFor(model => model.trainTech3)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.trainTech4, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.trainTech4)
+                @Html.ValidationMessageFor(model => model.trainTech4)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.trainTech5, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.trainTech5)
+                @Html.ValidationMessageFor(model => model.trainTech5)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

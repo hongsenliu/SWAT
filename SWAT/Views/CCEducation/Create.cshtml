@@ -1,0 +1,77 @@
+﻿@model SWAT.Models.tblSWATCCedu
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create - Community Capacity</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Knowledge Capital - Education</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+        <p>
+            @ViewBag.Question1
+        </p>
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.eduPrim, new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.eduPrim)%
+                @Html.ValidationMessageFor(model => model.eduPrim)
+            </div>
+        </div>
+
+        <p>
+            @ViewBag.Question2
+        </p>
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.eduSec, new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.eduSec)%
+                @Html.ValidationMessageFor(model => model.eduSec)
+            </div>
+        </div>
+
+        <p>
+            @ViewBag.Question3
+        </p>
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.eduGradWomen, new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.eduGradWomen)%
+                @Html.ValidationMessageFor(model => model.eduGradWomen)
+            </div>
+        </div>
+
+        <p>
+            @ViewBag.Question4
+        </p>
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.eduGradMen, new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.eduGradMen)%
+                @Html.ValidationMessageFor(model => model.eduGradMen)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

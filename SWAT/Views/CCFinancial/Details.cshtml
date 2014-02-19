@@ -1,0 +1,106 @@
+﻿@model SWAT.Models.tblSWATCCfinancial
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblSWATCCfinancial</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.income)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.income)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assetsCom1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assetsCom1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assetsCom2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assetsCom2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assetsCom3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assetsCom3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assetsCom4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assetsCom4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assetsInd1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assetsInd1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assetsInd2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assetsInd2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assetsInd3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assetsInd3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assetsInd4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assetsInd4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkpSWATroscaLU.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkpSWATroscaLU.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

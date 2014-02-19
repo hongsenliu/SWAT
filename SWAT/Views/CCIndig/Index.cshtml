@@ -1,0 +1,63 @@
+﻿@model IEnumerable<SWAT.Models.tblSWATCCindig>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SurveyID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.indigPop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.indigPopPerCapita)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.longtermPop)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.longtermPopPerCapita)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SurveyID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.indigPop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.indigPopPerCapita)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.longtermPop)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.longtermPopPerCapita)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSWATSurvey.ID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

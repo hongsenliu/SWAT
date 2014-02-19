@@ -155,7 +155,7 @@ namespace SWAT.Controllers
                     return RedirectToAction("Edit", "WAGroundWater", new { id = groundWaters.Single(e => e.SurveyID == tblswatwasurfacewater.SurveyID).ID, SurveyID = tblswatwasurfacewater.SurveyID });
                 }
 
-                return RedirectToAction("Index");
+                // return RedirectToAction("Index");
             }
             ViewBag.runoff = new SelectList(db.lkpSWATrunoffLUs, "ID", "Description", tblswatwasurfacewater.runoff);
             ViewBag.surfaceVar = new SelectList(db.lkpSWATsurfaceVarLUs, "id", "Description", tblswatwasurfacewater.surfaceVar);

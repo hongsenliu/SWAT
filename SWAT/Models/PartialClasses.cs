@@ -3,6 +3,31 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SWAT.Models
 {
+    [MetadataType(typeof(CCFinancialMetadata))]
+    public partial class tblSWATCCfinancial
+    { 
+    }
+
+    [MetadataType(typeof(CCIndigMetadata))]
+    public partial class tblSWATCCindig
+    {
+    }
+
+    [MetadataType(typeof(CCSchoolMetadata))]
+    public partial class tblSWATCCschool
+    { 
+    }
+
+    [MetadataType(typeof(CCTrainMetadata))]
+    public partial class tblSWATCCtrain
+    {
+    }
+
+    [MetadataType(typeof(CCEducationMetadata))]
+    public partial class tblSWATCCedu
+    { 
+    }
+
     [MetadataType(typeof(WAGroundWaterMetadata))]
     public partial class tblSWATWAgroundWater
     {

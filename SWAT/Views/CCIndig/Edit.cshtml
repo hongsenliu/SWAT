@@ -1,0 +1,67 @@
+﻿@model SWAT.Models.tblSWATCCindig
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit - Community Capacity</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Knowledge Capital - Indigenous Knowledge</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.indigPop, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.indigPop)
+                @Html.ValidationMessageFor(model => model.indigPop)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.indigPopPerCapita, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.indigPopPerCapita)
+                @Html.ValidationMessageFor(model => model.indigPopPerCapita)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.longtermPop, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.longtermPop)
+                @Html.ValidationMessageFor(model => model.longtermPop)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.longtermPopPerCapita, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.longtermPopPerCapita)
+                @Html.ValidationMessageFor(model => model.longtermPopPerCapita)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

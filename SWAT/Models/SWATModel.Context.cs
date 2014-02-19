@@ -50,7 +50,6 @@ namespace SWAT.Models
         public DbSet<tblSWATBackgroundinfo> tblSWATBackgroundinfoes { get; set; }
         public DbSet<tblSWATLocation> tblSWATLocations { get; set; }
         public DbSet<tblSWATScore> tblSWATScores { get; set; }
-        public DbSet<tblSWATSurvey> tblSWATSurveys { get; set; }
         public DbSet<tblSWATVisualGroup> tblSWATVisualGroups { get; set; }
         public DbSet<tblSWATVisualGrpScoreMap> tblSWATVisualGrpScoreMaps { get; set; }
         public DbSet<Userid> Userids { get; set; }
@@ -80,5 +79,21 @@ namespace SWAT.Models
         public DbSet<lkpSWATgwAvailabilityLU> lkpSWATgwAvailabilityLUs { get; set; }
         public DbSet<lkpSWATscores_gwAvailability> lkpSWATscores_gwAvailability { get; set; }
         public DbSet<tblSWATWAgroundWater> tblSWATWAgroundWaters { get; set; }
+        public DbSet<lkpSWATeduGradDiffLU> lkpSWATeduGradDiffLUs { get; set; }
+        public DbSet<lkpSWATscores_eduGradDiff> lkpSWATscores_eduGradDiff { get; set; }
+        public DbSet<tblSWATCCedu> tblSWATCCedus { get; set; }
+        public DbSet<tblSWATCCtrain> tblSWATCCtrains { get; set; }
+        public DbSet<lkpSWAT5rankLU> lkpSWAT5rankLU { get; set; }
+        public DbSet<lkpSWATscores_5rankAlwaysGood> lkpSWATscores_5rankAlwaysGood { get; set; }
+        public DbSet<tblSWATCCschool> tblSWATCCschools { get; set; }
+        public DbSet<lkpSWATindigPopLU> lkpSWATindigPopLUs { get; set; }
+        public DbSet<lkpSWATlongtermPopLU> lkpSWATlongtermPopLUs { get; set; }
+        public DbSet<lkpSWATscores_indigPop> lkpSWATscores_indigPop { get; set; }
+        public DbSet<lkpSWATscores_longtermPop> lkpSWATscores_longtermPop { get; set; }
+        public DbSet<tblSWATCCindig> tblSWATCCindigs { get; set; }
+        public DbSet<tblSWATSurvey> tblSWATSurveys { get; set; }
+        public DbSet<lkpSWATroscaLU> lkpSWATroscaLUs { get; set; }
+        public DbSet<lkpSWATscores_rosca> lkpSWATscores_rosca { get; set; }
+        public DbSet<tblSWATCCfinancial> tblSWATCCfinancials { get; set; }
     }
 }

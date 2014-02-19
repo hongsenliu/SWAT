@@ -1,0 +1,112 @@
+﻿@model SWAT.Models.tblSWATCCfinancial
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblSWATCCfinancial</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.income)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.income)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assetsCom1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assetsCom1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assetsCom2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assetsCom2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assetsCom3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assetsCom3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assetsCom4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assetsCom4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assetsInd1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assetsInd1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assetsInd2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assetsInd2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assetsInd3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assetsInd3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assetsInd4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assetsInd4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkpSWATroscaLU.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkpSWATroscaLU.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

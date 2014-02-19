@@ -1,0 +1,106 @@
+﻿@model SWAT.Models.tblSWATCCtrain
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblSWATCCtrain</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.trainProf1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trainProf1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trainProf2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trainProf2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trainProf3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trainProf3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trainProf4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trainProf4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trainProf5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trainProf5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trainTech1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trainTech1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trainTech2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trainTech2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trainTech3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trainTech3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trainTech4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trainTech4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.trainTech5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.trainTech5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

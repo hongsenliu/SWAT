@@ -1,0 +1,66 @@
+﻿@model SWAT.Models.tblSWATCCindig
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblSWATCCindig</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SurveyID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SurveyID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.indigPop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.indigPop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.indigPopPerCapita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.indigPopPerCapita)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.longtermPop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.longtermPop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.longtermPopPerCapita)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.longtermPopPerCapita)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

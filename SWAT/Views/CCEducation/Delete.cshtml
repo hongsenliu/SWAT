@@ -1,0 +1,64 @@
+﻿@model SWAT.Models.tblSWATCCedu
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>tblSWATCCedu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.eduPrim)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eduPrim)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eduSec)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eduSec)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eduGradWomen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eduGradWomen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.eduGradMen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.eduGradMen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -209,6 +209,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BackgroundController.cs" />
     <Compile Include="Controllers\backup_LocationController.cs" />
+    <Compile Include="Controllers\CCEducationController.cs" />
+    <Compile Include="Controllers\CCFinancialController.cs" />
+    <Compile Include="Controllers\CCIndigController.cs" />
+    <Compile Include="Controllers\CCSchoolController.cs" />
+    <Compile Include="Controllers\CCTrainController.cs" />
     <Compile Include="Controllers\CountryController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\RegionController.cs" />
@@ -244,6 +249,9 @@
     <Compile Include="Models\lkpSubnational.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWAT5rankLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATareaBMLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -251,6 +259,9 @@
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATeconPrisLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATeduGradDiffLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATextremeEventsLU.cs">
@@ -263,6 +274,12 @@
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATgwAvailabilityLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATindigPopLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATlongtermPopLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATmapAridity.cs">
@@ -280,7 +297,13 @@
     <Compile Include="Models\lkpSWATpriorLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATroscaLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATrunoffLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_5rankAlwaysGood.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATscores_areaBMLU.cs">
@@ -295,6 +318,9 @@
     <Compile Include="Models\lkpSWATscores_econPris.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATscores_eduGradDiff.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATscores_extremeEvents.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -307,10 +333,19 @@
     <Compile Include="Models\lkpSWATscores_gwAvailability.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATscores_indigPop.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_longtermPop.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATscores_precip.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATscores_precipVar.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_rosca.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATscores_runoff.cs">
@@ -369,6 +404,21 @@
       <DependentUpon>SWATModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSWATBackgroundinfo.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSWATCCedu.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSWATCCfinancial.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSWATCCindig.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSWATCCschool.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSWATCCtrain.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSWATLocation.cs">
@@ -498,6 +548,31 @@
     <Content Include="Views\WAGroundWater\Details.cshtml" />
     <Content Include="Views\WAGroundWater\Edit.cshtml" />
     <Content Include="Views\WAGroundWater\Index.cshtml" />
+    <Content Include="Views\CCEducation\Create.cshtml" />
+    <Content Include="Views\CCEducation\Delete.cshtml" />
+    <Content Include="Views\CCEducation\Details.cshtml" />
+    <Content Include="Views\CCEducation\Edit.cshtml" />
+    <Content Include="Views\CCEducation\Index.cshtml" />
+    <Content Include="Views\CCTrain\Create.cshtml" />
+    <Content Include="Views\CCTrain\Delete.cshtml" />
+    <Content Include="Views\CCTrain\Details.cshtml" />
+    <Content Include="Views\CCTrain\Edit.cshtml" />
+    <Content Include="Views\CCTrain\Index.cshtml" />
+    <Content Include="Views\CCSchool\Create.cshtml" />
+    <Content Include="Views\CCSchool\Delete.cshtml" />
+    <Content Include="Views\CCSchool\Details.cshtml" />
+    <Content Include="Views\CCSchool\Edit.cshtml" />
+    <Content Include="Views\CCSchool\Index.cshtml" />
+    <Content Include="Views\CCIndig\Create.cshtml" />
+    <Content Include="Views\CCIndig\Delete.cshtml" />
+    <Content Include="Views\CCIndig\Details.cshtml" />
+    <Content Include="Views\CCIndig\Edit.cshtml" />
+    <Content Include="Views\CCIndig\Index.cshtml" />
+    <Content Include="Views\CCFinancial\Create.cshtml" />
+    <Content Include="Views\CCFinancial\Delete.cshtml" />
+    <Content Include="Views\CCFinancial\Details.cshtml" />
+    <Content Include="Views\CCFinancial\Edit.cshtml" />
+    <Content Include="Views\CCFinancial\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

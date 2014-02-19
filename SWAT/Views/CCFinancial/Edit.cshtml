@@ -1,0 +1,115 @@
+﻿@model SWAT.Models.tblSWATCCfinancial
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit - Community Capacity</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Financial Capital</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.income, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.income)%
+                @Html.ValidationMessageFor(model => model.income)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.rosca, "rosca", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("rosca", String.Empty)
+                @Html.ValidationMessageFor(model => model.rosca)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.assetsCom1, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.assetsCom1)
+                @Html.ValidationMessageFor(model => model.assetsCom1)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.assetsCom2, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.assetsCom2)
+                @Html.ValidationMessageFor(model => model.assetsCom2)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.assetsCom3, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.assetsCom3)
+                @Html.ValidationMessageFor(model => model.assetsCom3)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.assetsCom4, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.assetsCom4)
+                @Html.ValidationMessageFor(model => model.assetsCom4)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.assetsInd1, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.assetsInd1)
+                @Html.ValidationMessageFor(model => model.assetsInd1)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.assetsInd2, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.assetsInd2)
+                @Html.ValidationMessageFor(model => model.assetsInd2)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.assetsInd3, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.assetsInd3)
+                @Html.ValidationMessageFor(model => model.assetsInd3)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.assetsInd4, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.assetsInd4)
+                @Html.ValidationMessageFor(model => model.assetsInd4)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

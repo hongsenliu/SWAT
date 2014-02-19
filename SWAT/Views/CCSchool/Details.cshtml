@@ -1,0 +1,74 @@
+﻿@model SWAT.Models.tblSWATCCschool
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblSWATCCschool</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.schoolAttend)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.schoolAttend)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.schoolInstitution1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.schoolInstitution1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.schoolInstitution2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.schoolInstitution2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.schoolInstitution3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.schoolInstitution3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.schoolInstitution4)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.schoolInstitution4)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.lkpSWAT5rankLU.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

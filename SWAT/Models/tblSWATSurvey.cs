@@ -17,14 +17,19 @@ namespace SWAT.Models
         public tblSWATSurvey()
         {
             this.tblSWATBackgroundinfoes = new HashSet<tblSWATBackgroundinfo>();
-            this.tblSWATWAPrecipitations = new HashSet<tblSWATWAPrecipitation>();
-            this.tblSWATWAMonthlyQuantities = new HashSet<tblSWATWAMonthlyQuantity>();
+            this.tblSWATCCedus = new HashSet<tblSWATCCedu>();
+            this.tblSWATCCindigs = new HashSet<tblSWATCCindig>();
+            this.tblSWATCCschools = new HashSet<tblSWATCCschool>();
+            this.tblSWATCCtrains = new HashSet<tblSWATCCtrain>();
             this.tblSWATWAannualPrecips = new HashSet<tblSWATWAannualPrecip>();
             this.tblSWATWAclimateChanges = new HashSet<tblSWATWAclimateChange>();
             this.tblSWATWAextremeEvents = new HashSet<tblSWATWAextremeEvent>();
+            this.tblSWATWAgroundWaters = new HashSet<tblSWATWAgroundWater>();
+            this.tblSWATWAMonthlyQuantities = new HashSet<tblSWATWAMonthlyQuantity>();
+            this.tblSWATWAPrecipitations = new HashSet<tblSWATWAPrecipitation>();
             this.tblSWATWAriskPreps = new HashSet<tblSWATWAriskPrep>();
             this.tblSWATWAsurfaceWaters = new HashSet<tblSWATWAsurfaceWater>();
-            this.tblSWATWAgroundWaters = new HashSet<tblSWATWAgroundWater>();
+            this.tblSWATCCfinancials = new HashSet<tblSWATCCfinancial>();
         }
     
         public int ID { get; set; }
@@ -35,15 +40,20 @@ namespace SWAT.Models
         public int LocationID { get; set; }
     
         public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes { get; set; }
+        public virtual ICollection<tblSWATCCedu> tblSWATCCedus { get; set; }
+        public virtual ICollection<tblSWATCCindig> tblSWATCCindigs { get; set; }
+        public virtual ICollection<tblSWATCCschool> tblSWATCCschools { get; set; }
+        public virtual ICollection<tblSWATCCtrain> tblSWATCCtrains { get; set; }
         public virtual tblSWATLocation tblSWATLocation { get; set; }
         public virtual Userid Userid1 { get; set; }
-        public virtual ICollection<tblSWATWAPrecipitation> tblSWATWAPrecipitations { get; set; }
-        public virtual ICollection<tblSWATWAMonthlyQuantity> tblSWATWAMonthlyQuantities { get; set; }
         public virtual ICollection<tblSWATWAannualPrecip> tblSWATWAannualPrecips { get; set; }
         public virtual ICollection<tblSWATWAclimateChange> tblSWATWAclimateChanges { get; set; }
         public virtual ICollection<tblSWATWAextremeEvent> tblSWATWAextremeEvents { get; set; }
+        public virtual ICollection<tblSWATWAgroundWater> tblSWATWAgroundWaters { get; set; }
+        public virtual ICollection<tblSWATWAMonthlyQuantity> tblSWATWAMonthlyQuantities { get; set; }
+        public virtual ICollection<tblSWATWAPrecipitation> tblSWATWAPrecipitations { get; set; }
         public virtual ICollection<tblSWATWAriskPrep> tblSWATWAriskPreps { get; set; }
         public virtual ICollection<tblSWATWAsurfaceWater> tblSWATWAsurfaceWaters { get; set; }
-        public virtual ICollection<tblSWATWAgroundWater> tblSWATWAgroundWaters { get; set; }
+        public virtual ICollection<tblSWATCCfinancial> tblSWATCCfinancials { get; set; }
     }
 }

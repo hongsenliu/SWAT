@@ -1,0 +1,93 @@
+﻿@model IEnumerable<SWAT.Models.tblSWATCCfinancial>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.income)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.assetsCom1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.assetsCom2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.assetsCom3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.assetsCom4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.assetsInd1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.assetsInd2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.assetsInd3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.assetsInd4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATroscaLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.income)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.assetsCom1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.assetsCom2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.assetsCom3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.assetsCom4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.assetsInd1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.assetsInd2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.assetsInd3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.assetsInd4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATroscaLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSWATSurvey.ID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
