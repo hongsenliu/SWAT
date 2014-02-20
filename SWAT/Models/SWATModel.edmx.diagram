@@ -148,6 +148,27 @@
         <EntityTypeShape EntityType="SWATModel.tblSWATCCfinancial" Width="1.5" PointX="7.3269471131856312" PointY="23.039624880552118" />
         <AssociationConnector Association="SWATModel.FK_tblSWATCCfinancial_27_lkpSWATroscaLU" />
         <AssociationConnector Association="SWATModel.FK_tblSWATCCfinancial_26_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATgenderLU" Width="1.5" PointX="11.476514165977255" PointY="1.1368877744008263" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATgRoleWomenLU" Width="1.5" PointX="0.55814416546288137" PointY="13.851329213870377" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATgWomenEngagedLU" Width="1.5" PointX="8.13757277100234" PointY="26.668937352797453" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_gRoleWomen" Width="1.5" PointX="11.322603838202825" PointY="20.788748661423451" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_gWomenEngaged" Width="1.5" PointX="1.8534221657800591" PointY="13.731225839690875" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATCCgender" Width="1.5" PointX="1.0390863199900307" PointY="5.91645530141725" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCgender_28_lkpSWATgenderLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCgender_29_lkpSWATgenderLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCgender_30_lkpSWATgenderLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCgender_31_lkpSWATgenderLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCgender_32_lkpSWATgenderLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCgender_33_lkpSWATgenderLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCgender_34_lkpSWATgWomenEngagedLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCgender_27_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_gender" Width="1.5" PointX="8.3145697770242446" PointY="13.417950144697889" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATcomponentLU" Width="1.5" PointX="2.1880401737000978" PointY="28.492258174574122" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATindicatorGroupLU" Width="1.5" PointX="4.4861537686018993" PointY="11.203147580476081" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATindicatorSubComponentLU" Width="1.5" PointX="11.057123623349296" PointY="11.01572415745618" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATsubComponentLU" Width="1.5" PointX="7.103414898320759" PointY="26.521945414376418" />
+        <AssociationConnector Association="SWATModel.FK_lkpSWATcomponentLU_2_lkpSWATindicatorGroupLU" />
+        <AssociationConnector Association="SWATModel.FK_lkpSWATsubComponentLU_2_lkpSWATcomponentLU" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

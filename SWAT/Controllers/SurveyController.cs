@@ -6,7 +6,15 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Drawing;
+using DotNet.Highcharts;
+using DotNet.Highcharts.Helpers;
+using DotNet.Highcharts.Enums;
+using DotNet.Highcharts.Options;
+using DotNet.Highcharts.Attributes;
+using Point = DotNet.Highcharts.Options.Point;
 using SWAT.Models;
+using SWAT.ViewModels;
 
 namespace SWAT.Controllers
 {
@@ -21,6 +29,255 @@ namespace SWAT.Controllers
             return View(tblswatsurveys.ToList());
         }
 
+        // Return subcomponent score by giving a subcomponentID and surveyID
+        private double? getSubcomponentScore(int SurveyID, int SubcomponentID)
+        {
+            double? subcomScore = null;
+           
+            var scoreIDs = db.lkpSWATindicatorSubComponentLUs.Where(e => e.SubComponentID == SubcomponentID).Select(e => e.ScoreVarID);
+            int scoreCounter = 0;
+            foreach (int scoreVarID in scoreIDs)
+            {
+                double? score = db.tblSWATScores.Single(e => e.SurveyID == SurveyID && e.VariableID == scoreVarID).Value;
+                if (score != null)
+                {
+                    subcomScore = subcomScore.GetValueOrDefault(0) + (double)score * 100;
+                    scoreCounter++;
+                }
+            }
+            if (scoreCounter > 0)
+            {
+                return subcomScore / scoreCounter;
+            }
+            return subcomScore;
+        }
+
+        // Return component score by giving a ComponentID and SurveyID
+        private double? getComponentScore(int SurveyID, int ComponentID)
+        {
+            double? comScore = null;
+
+            var subComIDs = db.lkpSWATsubComponentLUs.Where(e => e.ComponentID == ComponentID).Select(e => e.ID);
+            int scoreCounter = 0;
+
+            foreach (int subComID in subComIDs)
+            {
+                double? score = getSubcomponentScore(SurveyID, subComID);
+                if (score != null)
+                {
+                    comScore = comScore.GetValueOrDefault(0) + score;
+                    scoreCounter++;
+                }
+            }
+            if (scoreCounter > 0)
+            {
+                return comScore / scoreCounter;
+            }
+            return comScore;
+
+        }
+
+        // Return Indicator group score by giving a SurveyID and GroupID
+        private double? getGroupScore(int SurveyID, int GroupID)
+        {
+            double? groupScore = null;
+            var comIDs = db.lkpSWATcomponentLUs.Where(e => e.IndicatorGroupID == GroupID).Select(e => e.ID);
+            int scoreCounter = 0;
+
+            foreach (int comID in comIDs)
+            {
+                double? score = getComponentScore(SurveyID, comID);
+                if (score != null)
+                {
+                    groupScore = groupScore.GetValueOrDefault(0) + score;
+                    scoreCounter++;
+                }
+            }
+            if (scoreCounter > 0)
+            {
+                return groupScore / scoreCounter;
+            }
+            return groupScore;  
+        }
+        
+        // Return a chart Point by giving surveyID and indicatorgroupID
+        private Point getGroupScorePoint(int SurveyID, int IndicatorGroupID)
+        {
+            string[] colors = { "#006699", "#FFCC66" };
+            double? score = getGroupScore(SurveyID, IndicatorGroupID);
+            
+            Point column = new Point { Y = score.GetValueOrDefault(0), Color = ColorTranslator.FromHtml(colors[IndicatorGroupID - 1]) };
+            return column;
+        }
+
+        // Return a chart Point by giving surveyID and componentID
+        private Point getComponentScorePoint(int SurveyID, int ComponentID)
+        {
+            string[] colors = { "#006699", "#FFCC66" };
+            double? score = getComponentScore(SurveyID, ComponentID);
+            int colorIndex = (int)db.lkpSWATcomponentLUs.Find(ComponentID).IndicatorGroupID - 1;
+            Point column = new Point { Y = score.GetValueOrDefault(0), Color = ColorTranslator.FromHtml(colors[colorIndex]) };
+            return column;
+        }
+
+        public ActionResult _BarColumn(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            tblSWATSurvey tblswatsurvey = db.tblSWATSurveys.Find(id);
+            if (tblswatsurvey == null)
+            {
+                return HttpNotFound();
+            }
+            
+
+            Data data = new Data(new[]
+                {
+                    getGroupScorePoint((int)id, 1),
+                    getGroupScorePoint((int)id, 2)
+                });
+            
+            
+            Highcharts barColumn = new Highcharts("overallchart")
+                .InitChart(new Chart { DefaultSeriesType = ChartTypes.Column })
+                .SetTitle(new Title { Text = "Overall Result - " + tblswatsurvey.tblSWATLocation.name })
+                .SetXAxis(new XAxis { Categories = new[] { "Water Resources", "Community Capacity" } })
+                .SetYAxis(new YAxis
+                {
+                    Min = 0,
+                    Max = 100,
+                    Title = new YAxisTitle { Text = "Index" }
+                })
+                .SetLegend(new Legend { Enabled = false })
+                .SetCredits(new Credits { Enabled = false })
+                .SetTooltip(new Tooltip { Formatter = @"function() { return ''+ this.y; }" })
+                .SetPlotOptions(new PlotOptions
+                {
+                    Column = new PlotOptionsColumn
+                    {
+                        PointPadding = 0,
+                        BorderWidth = 0
+                    }
+                })
+                .SetSeries(
+                        new Series { Name = tblswatsurvey.tblSWATLocation.name, Data = data  }
+                    );
+
+            // Details result chart
+            List<Point> comPointList = new List<Point> { null };
+            
+            foreach (var item in db.lkpSWATcomponentLUs)
+            {
+                comPointList.Add(getComponentScorePoint((int)id, item.ID));
+            }
+
+            Data detailsData = new Data(comPointList.ToArray());
+
+            Highcharts detailsBarColumn = new Highcharts("detailschart")
+                .InitChart(new Chart { DefaultSeriesType = ChartTypes.Column })
+                .SetTitle(new Title { Text = "Details Result - " + tblswatsurvey.tblSWATLocation.name })
+                .SetXAxis(new XAxis { Categories = new[] { "Quantity", "Variability", "Resiliency", "", "Knowledge", "Financial", "Social", "Equity" } })
+                .SetYAxis(new YAxis
+                {
+                    Min = 0,
+                    Max = 100,
+                    Title = new YAxisTitle { Text = "Index" }
+                })
+                .SetLegend(new Legend { Enabled = false })
+                .SetCredits(new Credits { Enabled = false })
+                .SetTooltip(new Tooltip { Formatter = @"function() { return ''+ this.y; }" })
+                .SetPlotOptions(new PlotOptions
+                {
+                    Column = new PlotOptionsColumn
+                    {
+                        PointPadding = 0,
+                        BorderWidth = 0
+                    }
+                })
+                .SetSeries(
+                        new Series { Name = tblswatsurvey.tblSWATLocation.name, Data = detailsData }
+                    );
+
+            ChartsModel barCharts = new ChartsModel();
+            barCharts.DetailsChart = detailsBarColumn;
+            barCharts.OverallChart = barColumn;
+            return PartialView(barCharts);
+        }
+
+        
+
+        // GET: /Survey/Report/5
+        public ActionResult Report(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            tblSWATSurvey tblswatsurvey = db.tblSWATSurveys.Find(id);
+            if (tblswatsurvey == null)
+            {
+                return HttpNotFound();
+            }
+
+            
+
+            return View(tblswatsurvey);
+        }
+
+        public ActionResult _PieChart(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            tblSWATSurvey tblswatsurvey = db.tblSWATSurveys.Find(id);
+            if (tblswatsurvey == null)
+            {
+                return HttpNotFound();
+            }
+
+            Highcharts chart = new Highcharts("chart")
+                .InitChart(new Chart { PlotShadow = false })
+                .SetTitle(new Title { Text = string.Empty})
+                .SetCredits(new Credits { Enabled = false })
+                .SetTooltip(new Tooltip { Formatter = "function() { return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %'; }" })
+                .SetPlotOptions(new PlotOptions
+                {
+                    Pie = new PlotOptionsPie
+                    {
+                        AllowPointSelect = true,
+                        Cursor = Cursors.Pointer,
+                        DataLabels = new PlotOptionsPieDataLabels
+                        {
+                            Color = ColorTranslator.FromHtml("#000000"),
+                            ConnectorColor = ColorTranslator.FromHtml("#000000"),
+                            Formatter = "function() { return '<b>'+ this.point.name +'</b>: '+ this.percentage +' %'; }"
+                        }
+                    }
+                })
+                .SetSeries(new Series
+                {
+                    Type = ChartTypes.Pie,
+                    Name = "Background Information Progress",
+                    Data = new Data(new object[]
+                            {
+                                new object[] { "Answered", 45.0 },
+                                new Point
+                                    {
+                                        Name = "No Answer",
+                                        Y = 12.8,
+                                        Sliced = true,
+                                        Selected = true
+                                    }
+                            })
+                });
+            ChartsModel piecharts = new ChartsModel();
+            piecharts.BackgroundChart = chart;
+            return PartialView(piecharts);
+        }
+
         // GET: /Survey/Details/5
         public ActionResult Details(int? id)
         {
@@ -33,6 +290,8 @@ namespace SWAT.Controllers
             {
                 return HttpNotFound();
             }
+
+
             return View(tblswatsurvey);
         }
 
@@ -148,6 +407,12 @@ namespace SWAT.Controllers
 
         private void DeleteRelatedRecords(int id)
         {
+            var tblswatccgender = db.tblSWATCCgenders.Where(e => e.SurveyID == id);
+            foreach (tblSWATCCgender item in tblswatccgender)
+            {
+                db.tblSWATCCgenders.Remove(item);
+            }
+
             var tblswatccfinancial = db.tblSWATCCfinancials.Where(e => e.SurveyID == id);
             foreach(tblSWATCCfinancial item in tblswatccfinancial)
             {

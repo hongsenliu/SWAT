@@ -15,12 +15,23 @@
           <EntitySet Name="lkpSWAT5rankLU" EntityType="SWATModel.Store.lkpSWAT5rankLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATareaBMLU" EntityType="SWATModel.Store.lkpSWATareaBMLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATareaProtLU" EntityType="SWATModel.Store.lkpSWATareaProtLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATcomponentLU" EntityType="SWATModel.Store.lkpSWATcomponentLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATeconPrisLU" EntityType="SWATModel.Store.lkpSWATeconPrisLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATeduGradDiffLU" EntityType="SWATModel.Store.lkpSWATeduGradDiffLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATextremeEventsLU" EntityType="SWATModel.Store.lkpSWATextremeEventsLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATextremePrepLU" EntityType="SWATModel.Store.lkpSWATextremePrepLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATextremeRiskLU" EntityType="SWATModel.Store.lkpSWATextremeRiskLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATgenderLU" EntityType="SWATModel.Store.lkpSWATgenderLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATgRoleWomenLU" EntityType="SWATModel.Store.lkpSWATgRoleWomenLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATgwAvailabilityLU" EntityType="SWATModel.Store.lkpSWATgwAvailabilityLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATgWomenEngagedLU" EntityType="SWATModel.Store.lkpSWATgWomenEngagedLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATindicatorGroupLU" EntityType="SWATModel.Store.lkpSWATindicatorGroupLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATindicatorSubComponentLU" EntityType="SWATModel.Store.lkpSWATindicatorSubComponentLU" store:Type="Tables" store:Schema="DBA" store:Name="lkpSWATindicatorSubComponentLU">
+            <DefiningQuery>SELECT 
+      [lkpSWATindicatorSubComponentLU].[ScoreVarID] AS [ScoreVarID], 
+      [lkpSWATindicatorSubComponentLU].[SubComponentID] AS [SubComponentID]
+      FROM [DBA].[lkpSWATindicatorSubComponentLU] AS [lkpSWATindicatorSubComponentLU]</DefiningQuery>
+          </EntitySet>
           <EntitySet Name="lkpSWATindigPopLU" EntityType="SWATModel.Store.lkpSWATindigPopLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATlongtermPopLU" EntityType="SWATModel.Store.lkpSWATlongtermPopLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATmapAridity" EntityType="SWATModel.Store.lkpSWATmapAridity" store:Type="Tables" Schema="DBA" />
@@ -39,7 +50,10 @@
           <EntitySet Name="lkpSWATscores_extremeEvents" EntityType="SWATModel.Store.lkpSWATscores_extremeEvents" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_extremePrep" EntityType="SWATModel.Store.lkpSWATscores_extremePrep" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_extremeRISK" EntityType="SWATModel.Store.lkpSWATscores_extremeRISK" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_gender" EntityType="SWATModel.Store.lkpSWATscores_gender" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_gRoleWomen" EntityType="SWATModel.Store.lkpSWATscores_gRoleWomen" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_gwAvailability" EntityType="SWATModel.Store.lkpSWATscores_gwAvailability" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_gWomenEngaged" EntityType="SWATModel.Store.lkpSWATscores_gWomenEngaged" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_indigPop" EntityType="SWATModel.Store.lkpSWATscores_indigPop" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_longtermPop" EntityType="SWATModel.Store.lkpSWATscores_longtermPop" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_precip" EntityType="SWATModel.Store.lkpSWATscores_precip" store:Type="Tables" Schema="DBA" />
@@ -57,6 +71,7 @@
           </EntitySet>
           <EntitySet Name="lkpSWATScoreVarsLU" EntityType="SWATModel.Store.lkpSWATScoreVarsLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATSectionLU" EntityType="SWATModel.Store.lkpSWATSectionLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATsubComponentLU" EntityType="SWATModel.Store.lkpSWATsubComponentLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATsurfaceVarLU" EntityType="SWATModel.Store.lkpSWATsurfaceVarLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATurbanDistanceLU" EntityType="SWATModel.Store.lkpSWATurbanDistanceLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATwaterMonthLU" EntityType="SWATModel.Store.lkpSWATwaterMonthLU" store:Type="Tables" Schema="DBA" />
@@ -65,6 +80,7 @@
           <EntitySet Name="tblSWATBackgroundinfo" EntityType="SWATModel.Store.tblSWATBackgroundinfo" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATCCedu" EntityType="SWATModel.Store.tblSWATCCedu" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATCCfinancial" EntityType="SWATModel.Store.tblSWATCCfinancial" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATCCgender" EntityType="SWATModel.Store.tblSWATCCgender" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATCCindig" EntityType="SWATModel.Store.tblSWATCCindig" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATCCschool" EntityType="SWATModel.Store.tblSWATCCschool" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATCCtrain" EntityType="SWATModel.Store.tblSWATCCtrain" store:Type="Tables" Schema="DBA" />
@@ -90,6 +106,10 @@
             <End Role="lkpCountry" EntitySet="lkpCountry" />
             <End Role="lkpSubnational" EntitySet="lkpSubnational" />
           </AssociationSet>
+          <AssociationSet Name="FK_lkpSWATcomponentLU_2_lkpSWATindicatorGroupLU" Association="SWATModel.Store.FK_lkpSWATcomponentLU_2_lkpSWATindicatorGroupLU">
+            <End Role="lkpSWATindicatorGroupLU" EntitySet="lkpSWATindicatorGroupLU" />
+            <End Role="lkpSWATcomponentLU" EntitySet="lkpSWATcomponentLU" />
+          </AssociationSet>
           <AssociationSet Name="FK_lkpSWATScoreVarSectionLU_4_lkpSWATScoreVarsLU" Association="SWATModel.Store.FK_lkpSWATScoreVarSectionLU_4_lkpSWATScoreVarsLU">
             <End Role="lkpSWATScoreVarsLU" EntitySet="lkpSWATScoreVarsLU" />
             <End Role="lkpSWATScoreVarSectionLU" EntitySet="lkpSWATScoreVarSectionLU" />
@@ -97,6 +117,10 @@
           <AssociationSet Name="FK_lkpSWATScoreVarSectionLU_5_lkpSWATSectionLU" Association="SWATModel.Store.FK_lkpSWATScoreVarSectionLU_5_lkpSWATSectionLU">
             <End Role="lkpSWATSectionLU" EntitySet="lkpSWATSectionLU" />
             <End Role="lkpSWATScoreVarSectionLU" EntitySet="lkpSWATScoreVarSectionLU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lkpSWATsubComponentLU_2_lkpSWATcomponentLU" Association="SWATModel.Store.FK_lkpSWATsubComponentLU_2_lkpSWATcomponentLU">
+            <End Role="lkpSWATcomponentLU" EntitySet="lkpSWATcomponentLU" />
+            <End Role="lkpSWATsubComponentLU" EntitySet="lkpSWATsubComponentLU" />
           </AssociationSet>
           <AssociationSet Name="FK_tblSWATBackgroundinfo_2_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_2_tblSWATSurvey">
             <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
@@ -193,6 +217,38 @@
           <AssociationSet Name="FK_tblSWATCCfinancial_27_lkpSWATroscaLU" Association="SWATModel.Store.FK_tblSWATCCfinancial_27_lkpSWATroscaLU">
             <End Role="lkpSWATroscaLU" EntitySet="lkpSWATroscaLU" />
             <End Role="tblSWATCCfinancial" EntitySet="tblSWATCCfinancial" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATCCgender_27_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATCCgender_27_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+            <End Role="tblSWATCCgender" EntitySet="tblSWATCCgender" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATCCgender_28_lkpSWATgenderLU" Association="SWATModel.Store.FK_tblSWATCCgender_28_lkpSWATgenderLU">
+            <End Role="lkpSWATgenderLU" EntitySet="lkpSWATgenderLU" />
+            <End Role="tblSWATCCgender" EntitySet="tblSWATCCgender" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATCCgender_29_lkpSWATgenderLU" Association="SWATModel.Store.FK_tblSWATCCgender_29_lkpSWATgenderLU">
+            <End Role="lkpSWATgenderLU" EntitySet="lkpSWATgenderLU" />
+            <End Role="tblSWATCCgender" EntitySet="tblSWATCCgender" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATCCgender_30_lkpSWATgenderLU" Association="SWATModel.Store.FK_tblSWATCCgender_30_lkpSWATgenderLU">
+            <End Role="lkpSWATgenderLU" EntitySet="lkpSWATgenderLU" />
+            <End Role="tblSWATCCgender" EntitySet="tblSWATCCgender" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATCCgender_31_lkpSWATgenderLU" Association="SWATModel.Store.FK_tblSWATCCgender_31_lkpSWATgenderLU">
+            <End Role="lkpSWATgenderLU" EntitySet="lkpSWATgenderLU" />
+            <End Role="tblSWATCCgender" EntitySet="tblSWATCCgender" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATCCgender_32_lkpSWATgenderLU" Association="SWATModel.Store.FK_tblSWATCCgender_32_lkpSWATgenderLU">
+            <End Role="lkpSWATgenderLU" EntitySet="lkpSWATgenderLU" />
+            <End Role="tblSWATCCgender" EntitySet="tblSWATCCgender" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATCCgender_33_lkpSWATgenderLU" Association="SWATModel.Store.FK_tblSWATCCgender_33_lkpSWATgenderLU">
+            <End Role="lkpSWATgenderLU" EntitySet="lkpSWATgenderLU" />
+            <End Role="tblSWATCCgender" EntitySet="tblSWATCCgender" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATCCgender_34_lkpSWATgWomenEngagedLU" Association="SWATModel.Store.FK_tblSWATCCgender_34_lkpSWATgWomenEngagedLU">
+            <End Role="lkpSWATgWomenEngagedLU" EntitySet="lkpSWATgWomenEngagedLU" />
+            <End Role="tblSWATCCgender" EntitySet="tblSWATCCgender" />
           </AssociationSet>
           <AssociationSet Name="FK_tblSWATCCindig_25_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATCCindig_25_tblSWATSurvey">
             <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
@@ -452,6 +508,15 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATcomponentLU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="IndicatorGroupID" Type="int" />
+        </EntityType>
         <EntityType Name="lkpSWATeconPrisLU">
           <Key>
             <PropertyRef Name="id" />
@@ -492,6 +557,22 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATgenderLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATgRoleWomenLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATgwAvailabilityLU">
           <Key>
             <PropertyRef Name="id" />
@@ -499,6 +580,33 @@
           <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATgWomenEngagedLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATindicatorGroupLU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'DBA.lkpSWATindicatorSubComponentLU' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="lkpSWATindicatorSubComponentLU">
+          <Key>
+            <PropertyRef Name="ScoreVarID" />
+            <PropertyRef Name="SubComponentID" />
+          </Key>
+          <Property Name="ScoreVarID" Type="int" Nullable="false" />
+          <Property Name="SubComponentID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="lkpSWATindigPopLU">
           <Key>
@@ -644,7 +752,31 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATscores_gender">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_gRoleWomen">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATscores_gwAvailability">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_gWomenEngaged">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -751,6 +883,15 @@
           <Property Name="SectionName" Type="varchar" MaxLength="50" />
           <Property Name="Description" Type="varchar" Nullable="false" MaxLength="254" />
         </EntityType>
+        <EntityType Name="lkpSWATsubComponentLU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="ComponentID" Type="int" />
+        </EntityType>
         <EntityType Name="lkpSWATsurfaceVarLU">
           <Key>
             <PropertyRef Name="id" />
@@ -856,6 +997,22 @@
           <Property Name="assetsInd2" Type="bit" Nullable="false" />
           <Property Name="assetsInd3" Type="bit" Nullable="false" />
           <Property Name="assetsInd4" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSWATCCgender">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="int" Nullable="false" />
+          <Property Name="gRole1" Type="int" />
+          <Property Name="gRole2" Type="int" />
+          <Property Name="gRole3" Type="int" />
+          <Property Name="gRole4" Type="int" />
+          <Property Name="gRole5" Type="int" />
+          <Property Name="gRole6" Type="int" />
+          <Property Name="gRoleWomen" Type="float" />
+          <Property Name="gWomenEngage" Type="int" />
+          <Property Name="gWomenRep" Type="float" />
         </EntityType>
         <EntityType Name="tblSWATCCindig">
           <Key>
@@ -1107,6 +1264,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_lkpSWATcomponentLU_2_lkpSWATindicatorGroupLU">
+          <End Role="lkpSWATindicatorGroupLU" Type="SWATModel.Store.lkpSWATindicatorGroupLU" Multiplicity="0..1" />
+          <End Role="lkpSWATcomponentLU" Type="SWATModel.Store.lkpSWATcomponentLU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATindicatorGroupLU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="lkpSWATcomponentLU">
+              <PropertyRef Name="IndicatorGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_lkpSWATScoreVarSectionLU_4_lkpSWATScoreVarsLU">
           <End Role="lkpSWATScoreVarsLU" Type="SWATModel.Store.lkpSWATScoreVarsLU" Multiplicity="1" />
           <End Role="lkpSWATScoreVarSectionLU" Type="SWATModel.Store.lkpSWATScoreVarSectionLU" Multiplicity="*" />
@@ -1128,6 +1297,18 @@
             </Principal>
             <Dependent Role="lkpSWATScoreVarSectionLU">
               <PropertyRef Name="SectionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lkpSWATsubComponentLU_2_lkpSWATcomponentLU">
+          <End Role="lkpSWATcomponentLU" Type="SWATModel.Store.lkpSWATcomponentLU" Multiplicity="0..1" />
+          <End Role="lkpSWATsubComponentLU" Type="SWATModel.Store.lkpSWATsubComponentLU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATcomponentLU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="lkpSWATsubComponentLU">
+              <PropertyRef Name="ComponentID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -1416,6 +1597,102 @@
             </Principal>
             <Dependent Role="tblSWATCCfinancial">
               <PropertyRef Name="rosca" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATCCgender_27_tblSWATSurvey">
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="1" />
+          <End Role="tblSWATCCgender" Type="SWATModel.Store.tblSWATCCgender" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATCCgender">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATCCgender_28_lkpSWATgenderLU">
+          <End Role="lkpSWATgenderLU" Type="SWATModel.Store.lkpSWATgenderLU" Multiplicity="0..1" />
+          <End Role="tblSWATCCgender" Type="SWATModel.Store.tblSWATCCgender" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATgenderLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATCCgender">
+              <PropertyRef Name="gRole1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATCCgender_29_lkpSWATgenderLU">
+          <End Role="lkpSWATgenderLU" Type="SWATModel.Store.lkpSWATgenderLU" Multiplicity="0..1" />
+          <End Role="tblSWATCCgender" Type="SWATModel.Store.tblSWATCCgender" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATgenderLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATCCgender">
+              <PropertyRef Name="gRole2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATCCgender_30_lkpSWATgenderLU">
+          <End Role="lkpSWATgenderLU" Type="SWATModel.Store.lkpSWATgenderLU" Multiplicity="0..1" />
+          <End Role="tblSWATCCgender" Type="SWATModel.Store.tblSWATCCgender" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATgenderLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATCCgender">
+              <PropertyRef Name="gRole3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATCCgender_31_lkpSWATgenderLU">
+          <End Role="lkpSWATgenderLU" Type="SWATModel.Store.lkpSWATgenderLU" Multiplicity="0..1" />
+          <End Role="tblSWATCCgender" Type="SWATModel.Store.tblSWATCCgender" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATgenderLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATCCgender">
+              <PropertyRef Name="gRole4" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATCCgender_32_lkpSWATgenderLU">
+          <End Role="lkpSWATgenderLU" Type="SWATModel.Store.lkpSWATgenderLU" Multiplicity="0..1" />
+          <End Role="tblSWATCCgender" Type="SWATModel.Store.tblSWATCCgender" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATgenderLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATCCgender">
+              <PropertyRef Name="gRole5" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATCCgender_33_lkpSWATgenderLU">
+          <End Role="lkpSWATgenderLU" Type="SWATModel.Store.lkpSWATgenderLU" Multiplicity="0..1" />
+          <End Role="tblSWATCCgender" Type="SWATModel.Store.tblSWATCCgender" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATgenderLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATCCgender">
+              <PropertyRef Name="gRole6" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATCCgender_34_lkpSWATgWomenEngagedLU">
+          <End Role="lkpSWATgWomenEngagedLU" Type="SWATModel.Store.lkpSWATgWomenEngagedLU" Multiplicity="0..1" />
+          <End Role="tblSWATCCgender" Type="SWATModel.Store.tblSWATCCgender" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATgWomenEngagedLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATCCgender">
+              <PropertyRef Name="gWomenEngage" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -2337,6 +2614,57 @@
           <AssociationSet Name="FK_tblSWATCCfinancial_26_tblSWATSurvey" Association="SWATModel.FK_tblSWATCCfinancial_26_tblSWATSurvey">
             <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
             <End Role="tblSWATCCfinancial" EntitySet="tblSWATCCfinancials" />
+          </AssociationSet>
+          <EntitySet Name="lkpSWATgenderLUs" EntityType="SWATModel.lkpSWATgenderLU" />
+          <EntitySet Name="lkpSWATgRoleWomenLUs" EntityType="SWATModel.lkpSWATgRoleWomenLU" />
+          <EntitySet Name="lkpSWATgWomenEngagedLUs" EntityType="SWATModel.lkpSWATgWomenEngagedLU" />
+          <EntitySet Name="lkpSWATscores_gRoleWomen" EntityType="SWATModel.lkpSWATscores_gRoleWomen" />
+          <EntitySet Name="lkpSWATscores_gWomenEngaged" EntityType="SWATModel.lkpSWATscores_gWomenEngaged" />
+          <EntitySet Name="tblSWATCCgenders" EntityType="SWATModel.tblSWATCCgender" />
+          <AssociationSet Name="FK_tblSWATCCgender_28_lkpSWATgenderLU" Association="SWATModel.FK_tblSWATCCgender_28_lkpSWATgenderLU">
+            <End Role="lkpSWATgenderLU" EntitySet="lkpSWATgenderLUs" />
+            <End Role="tblSWATCCgender" EntitySet="tblSWATCCgenders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATCCgender_29_lkpSWATgenderLU" Association="SWATModel.FK_tblSWATCCgender_29_lkpSWATgenderLU">
+            <End Role="lkpSWATgenderLU" EntitySet="lkpSWATgenderLUs" />
+            <End Role="tblSWATCCgender" EntitySet="tblSWATCCgenders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATCCgender_30_lkpSWATgenderLU" Association="SWATModel.FK_tblSWATCCgender_30_lkpSWATgenderLU">
+            <End Role="lkpSWATgenderLU" EntitySet="lkpSWATgenderLUs" />
+            <End Role="tblSWATCCgender" EntitySet="tblSWATCCgenders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATCCgender_31_lkpSWATgenderLU" Association="SWATModel.FK_tblSWATCCgender_31_lkpSWATgenderLU">
+            <End Role="lkpSWATgenderLU" EntitySet="lkpSWATgenderLUs" />
+            <End Role="tblSWATCCgender" EntitySet="tblSWATCCgenders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATCCgender_32_lkpSWATgenderLU" Association="SWATModel.FK_tblSWATCCgender_32_lkpSWATgenderLU">
+            <End Role="lkpSWATgenderLU" EntitySet="lkpSWATgenderLUs" />
+            <End Role="tblSWATCCgender" EntitySet="tblSWATCCgenders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATCCgender_33_lkpSWATgenderLU" Association="SWATModel.FK_tblSWATCCgender_33_lkpSWATgenderLU">
+            <End Role="lkpSWATgenderLU" EntitySet="lkpSWATgenderLUs" />
+            <End Role="tblSWATCCgender" EntitySet="tblSWATCCgenders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATCCgender_34_lkpSWATgWomenEngagedLU" Association="SWATModel.FK_tblSWATCCgender_34_lkpSWATgWomenEngagedLU">
+            <End Role="lkpSWATgWomenEngagedLU" EntitySet="lkpSWATgWomenEngagedLUs" />
+            <End Role="tblSWATCCgender" EntitySet="tblSWATCCgenders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATCCgender_27_tblSWATSurvey" Association="SWATModel.FK_tblSWATCCgender_27_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+            <End Role="tblSWATCCgender" EntitySet="tblSWATCCgenders" />
+          </AssociationSet>
+          <EntitySet Name="lkpSWATscores_gender" EntityType="SWATModel.lkpSWATscores_gender" />
+          <EntitySet Name="lkpSWATcomponentLUs" EntityType="SWATModel.lkpSWATcomponentLU" />
+          <EntitySet Name="lkpSWATindicatorGroupLUs" EntityType="SWATModel.lkpSWATindicatorGroupLU" />
+          <EntitySet Name="lkpSWATindicatorSubComponentLUs" EntityType="SWATModel.lkpSWATindicatorSubComponentLU" />
+          <EntitySet Name="lkpSWATsubComponentLUs" EntityType="SWATModel.lkpSWATsubComponentLU" />
+          <AssociationSet Name="FK_lkpSWATcomponentLU_2_lkpSWATindicatorGroupLU" Association="SWATModel.FK_lkpSWATcomponentLU_2_lkpSWATindicatorGroupLU">
+            <End Role="lkpSWATindicatorGroupLU" EntitySet="lkpSWATindicatorGroupLUs" />
+            <End Role="lkpSWATcomponentLU" EntitySet="lkpSWATcomponentLUs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lkpSWATsubComponentLU_2_lkpSWATcomponentLU" Association="SWATModel.FK_lkpSWATsubComponentLU_2_lkpSWATcomponentLU">
+            <End Role="lkpSWATcomponentLU" EntitySet="lkpSWATcomponentLUs" />
+            <End Role="lkpSWATsubComponentLU" EntitySet="lkpSWATsubComponentLUs" />
           </AssociationSet>
           </EntityContainer>
         <EntityType Name="lkpBiome">
@@ -3805,6 +4133,7 @@
           <NavigationProperty Name="tblSWATWAriskPreps" Relationship="SWATModel.FK_tblSWATWAriskPrep_19_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAriskPrep" />
           <NavigationProperty Name="tblSWATWAsurfaceWaters" Relationship="SWATModel.FK_tblSWATWAsurfaceWater_20_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWAsurfaceWater" />
           <NavigationProperty Name="tblSWATCCfinancials" Relationship="SWATModel.FK_tblSWATCCfinancial_26_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATCCfinancial" />
+          <NavigationProperty Name="tblSWATCCgenders" Relationship="SWATModel.FK_tblSWATCCgender_27_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATCCgender" />
         </EntityType>
         <Association Name="FK_tblSWATBackgroundinfo_2_tblSWATSurvey">
           <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
@@ -4043,6 +4372,243 @@
             </Principal>
             <Dependent Role="tblSWATCCfinancial">
               <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="lkpSWATgenderLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATCCgenders" Relationship="SWATModel.FK_tblSWATCCgender_28_lkpSWATgenderLU" FromRole="lkpSWATgenderLU" ToRole="tblSWATCCgender" />
+          <NavigationProperty Name="tblSWATCCgenders1" Relationship="SWATModel.FK_tblSWATCCgender_29_lkpSWATgenderLU" FromRole="lkpSWATgenderLU" ToRole="tblSWATCCgender" />
+          <NavigationProperty Name="tblSWATCCgenders2" Relationship="SWATModel.FK_tblSWATCCgender_30_lkpSWATgenderLU" FromRole="lkpSWATgenderLU" ToRole="tblSWATCCgender" />
+          <NavigationProperty Name="tblSWATCCgenders3" Relationship="SWATModel.FK_tblSWATCCgender_31_lkpSWATgenderLU" FromRole="lkpSWATgenderLU" ToRole="tblSWATCCgender" />
+          <NavigationProperty Name="tblSWATCCgenders4" Relationship="SWATModel.FK_tblSWATCCgender_32_lkpSWATgenderLU" FromRole="lkpSWATgenderLU" ToRole="tblSWATCCgender" />
+          <NavigationProperty Name="tblSWATCCgenders5" Relationship="SWATModel.FK_tblSWATCCgender_33_lkpSWATgenderLU" FromRole="lkpSWATgenderLU" ToRole="tblSWATCCgender" />
+        </EntityType>
+        <EntityType Name="lkpSWATgRoleWomenLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATgWomenEngagedLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATCCgenders" Relationship="SWATModel.FK_tblSWATCCgender_34_lkpSWATgWomenEngagedLU" FromRole="lkpSWATgWomenEngagedLU" ToRole="tblSWATCCgender" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_gRoleWomen">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_gWomenEngaged">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="tblSWATCCgender">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SurveyID" Nullable="false" />
+          <Property Type="Int32" Name="gRole1" />
+          <Property Type="Int32" Name="gRole2" />
+          <Property Type="Int32" Name="gRole3" />
+          <Property Type="Int32" Name="gRole4" />
+          <Property Type="Int32" Name="gRole5" />
+          <Property Type="Int32" Name="gRole6" />
+          <Property Type="Double" Name="gRoleWomen" />
+          <Property Type="Int32" Name="gWomenEngage" />
+          <Property Type="Double" Name="gWomenRep" />
+          <NavigationProperty Name="lkpSWATgenderLU" Relationship="SWATModel.FK_tblSWATCCgender_28_lkpSWATgenderLU" FromRole="tblSWATCCgender" ToRole="lkpSWATgenderLU" />
+          <NavigationProperty Name="lkpSWATgenderLU1" Relationship="SWATModel.FK_tblSWATCCgender_29_lkpSWATgenderLU" FromRole="tblSWATCCgender" ToRole="lkpSWATgenderLU" />
+          <NavigationProperty Name="lkpSWATgenderLU2" Relationship="SWATModel.FK_tblSWATCCgender_30_lkpSWATgenderLU" FromRole="tblSWATCCgender" ToRole="lkpSWATgenderLU" />
+          <NavigationProperty Name="lkpSWATgenderLU3" Relationship="SWATModel.FK_tblSWATCCgender_31_lkpSWATgenderLU" FromRole="tblSWATCCgender" ToRole="lkpSWATgenderLU" />
+          <NavigationProperty Name="lkpSWATgenderLU4" Relationship="SWATModel.FK_tblSWATCCgender_32_lkpSWATgenderLU" FromRole="tblSWATCCgender" ToRole="lkpSWATgenderLU" />
+          <NavigationProperty Name="lkpSWATgenderLU5" Relationship="SWATModel.FK_tblSWATCCgender_33_lkpSWATgenderLU" FromRole="tblSWATCCgender" ToRole="lkpSWATgenderLU" />
+          <NavigationProperty Name="lkpSWATgWomenEngagedLU" Relationship="SWATModel.FK_tblSWATCCgender_34_lkpSWATgWomenEngagedLU" FromRole="tblSWATCCgender" ToRole="lkpSWATgWomenEngagedLU" />
+          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATCCgender_27_tblSWATSurvey" FromRole="tblSWATCCgender" ToRole="tblSWATSurvey" />
+        </EntityType>
+        <Association Name="FK_tblSWATCCgender_28_lkpSWATgenderLU">
+          <End Type="SWATModel.lkpSWATgenderLU" Role="lkpSWATgenderLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATCCgender" Role="tblSWATCCgender" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATgenderLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATCCgender">
+              <PropertyRef Name="gRole1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATCCgender_29_lkpSWATgenderLU">
+          <End Type="SWATModel.lkpSWATgenderLU" Role="lkpSWATgenderLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATCCgender" Role="tblSWATCCgender" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATgenderLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATCCgender">
+              <PropertyRef Name="gRole2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATCCgender_30_lkpSWATgenderLU">
+          <End Type="SWATModel.lkpSWATgenderLU" Role="lkpSWATgenderLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATCCgender" Role="tblSWATCCgender" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATgenderLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATCCgender">
+              <PropertyRef Name="gRole3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATCCgender_31_lkpSWATgenderLU">
+          <End Type="SWATModel.lkpSWATgenderLU" Role="lkpSWATgenderLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATCCgender" Role="tblSWATCCgender" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATgenderLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATCCgender">
+              <PropertyRef Name="gRole4" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATCCgender_32_lkpSWATgenderLU">
+          <End Type="SWATModel.lkpSWATgenderLU" Role="lkpSWATgenderLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATCCgender" Role="tblSWATCCgender" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATgenderLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATCCgender">
+              <PropertyRef Name="gRole5" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATCCgender_33_lkpSWATgenderLU">
+          <End Type="SWATModel.lkpSWATgenderLU" Role="lkpSWATgenderLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATCCgender" Role="tblSWATCCgender" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATgenderLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATCCgender">
+              <PropertyRef Name="gRole6" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATCCgender_34_lkpSWATgWomenEngagedLU">
+          <End Type="SWATModel.lkpSWATgWomenEngagedLU" Role="lkpSWATgWomenEngagedLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATCCgender" Role="tblSWATCCgender" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATgWomenEngagedLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATCCgender">
+              <PropertyRef Name="gWomenEngage" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATCCgender_27_tblSWATSurvey">
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATCCgender" Role="tblSWATCCgender" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATCCgender">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="lkpSWATscores_gender">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATcomponentLU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IndicatorGroupID" />
+          <NavigationProperty Name="lkpSWATindicatorGroupLU" Relationship="SWATModel.FK_lkpSWATcomponentLU_2_lkpSWATindicatorGroupLU" FromRole="lkpSWATcomponentLU" ToRole="lkpSWATindicatorGroupLU" />
+          <NavigationProperty Name="lkpSWATsubComponentLUs" Relationship="SWATModel.FK_lkpSWATsubComponentLU_2_lkpSWATcomponentLU" FromRole="lkpSWATcomponentLU" ToRole="lkpSWATsubComponentLU" />
+        </EntityType>
+        <EntityType Name="lkpSWATindicatorGroupLU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="lkpSWATcomponentLUs" Relationship="SWATModel.FK_lkpSWATcomponentLU_2_lkpSWATindicatorGroupLU" FromRole="lkpSWATindicatorGroupLU" ToRole="lkpSWATcomponentLU" />
+        </EntityType>
+        <EntityType Name="lkpSWATindicatorSubComponentLU">
+          <Key>
+            <PropertyRef Name="ScoreVarID" />
+            <PropertyRef Name="SubComponentID" />
+          </Key>
+          <Property Type="Int32" Name="ScoreVarID" Nullable="false" />
+          <Property Type="Int32" Name="SubComponentID" Nullable="false" />
+        </EntityType>
+        <EntityType Name="lkpSWATsubComponentLU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="ComponentID" />
+          <NavigationProperty Name="lkpSWATcomponentLU" Relationship="SWATModel.FK_lkpSWATsubComponentLU_2_lkpSWATcomponentLU" FromRole="lkpSWATsubComponentLU" ToRole="lkpSWATcomponentLU" />
+        </EntityType>
+        <Association Name="FK_lkpSWATcomponentLU_2_lkpSWATindicatorGroupLU">
+          <End Type="SWATModel.lkpSWATindicatorGroupLU" Role="lkpSWATindicatorGroupLU" Multiplicity="0..1" />
+          <End Type="SWATModel.lkpSWATcomponentLU" Role="lkpSWATcomponentLU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATindicatorGroupLU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="lkpSWATcomponentLU">
+              <PropertyRef Name="IndicatorGroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lkpSWATsubComponentLU_2_lkpSWATcomponentLU">
+          <End Type="SWATModel.lkpSWATcomponentLU" Role="lkpSWATcomponentLU" Multiplicity="0..1" />
+          <End Type="SWATModel.lkpSWATsubComponentLU" Role="lkpSWATsubComponentLU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATcomponentLU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="lkpSWATsubComponentLU">
+              <PropertyRef Name="ComponentID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -4819,6 +5385,114 @@
                 <ScalarProperty Name="rosca" ColumnName="rosca" />
                 <ScalarProperty Name="income" ColumnName="income" />
                 <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATgenderLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATgenderLU">
+              <MappingFragment StoreEntitySet="lkpSWATgenderLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATgRoleWomenLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATgRoleWomenLU">
+              <MappingFragment StoreEntitySet="lkpSWATgRoleWomenLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATgWomenEngagedLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATgWomenEngagedLU">
+              <MappingFragment StoreEntitySet="lkpSWATgWomenEngagedLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_gRoleWomen">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_gRoleWomen">
+              <MappingFragment StoreEntitySet="lkpSWATscores_gRoleWomen">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_gWomenEngaged">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_gWomenEngaged">
+              <MappingFragment StoreEntitySet="lkpSWATscores_gWomenEngaged">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATCCgenders">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATCCgender">
+              <MappingFragment StoreEntitySet="tblSWATCCgender">
+                <ScalarProperty Name="gWomenRep" ColumnName="gWomenRep" />
+                <ScalarProperty Name="gWomenEngage" ColumnName="gWomenEngage" />
+                <ScalarProperty Name="gRoleWomen" ColumnName="gRoleWomen" />
+                <ScalarProperty Name="gRole6" ColumnName="gRole6" />
+                <ScalarProperty Name="gRole5" ColumnName="gRole5" />
+                <ScalarProperty Name="gRole4" ColumnName="gRole4" />
+                <ScalarProperty Name="gRole3" ColumnName="gRole3" />
+                <ScalarProperty Name="gRole2" ColumnName="gRole2" />
+                <ScalarProperty Name="gRole1" ColumnName="gRole1" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_gender">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_gender">
+              <MappingFragment StoreEntitySet="lkpSWATscores_gender">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATcomponentLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATcomponentLU">
+              <MappingFragment StoreEntitySet="lkpSWATcomponentLU">
+                <ScalarProperty Name="IndicatorGroupID" ColumnName="IndicatorGroupID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATindicatorGroupLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATindicatorGroupLU">
+              <MappingFragment StoreEntitySet="lkpSWATindicatorGroupLU">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATindicatorSubComponentLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATindicatorSubComponentLU">
+              <MappingFragment StoreEntitySet="lkpSWATindicatorSubComponentLU">
+                <ScalarProperty Name="SubComponentID" ColumnName="SubComponentID" />
+                <ScalarProperty Name="ScoreVarID" ColumnName="ScoreVarID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATsubComponentLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATsubComponentLU">
+              <MappingFragment StoreEntitySet="lkpSWATsubComponentLU">
+                <ScalarProperty Name="ComponentID" ColumnName="ComponentID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

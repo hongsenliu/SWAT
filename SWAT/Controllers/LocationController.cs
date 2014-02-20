@@ -104,12 +104,12 @@ namespace SWAT.Controllers
                 var BackgrdInfo = db.tblSWATBackgroundinfoes.Where(item => item.SurveyID == SurveyID);
                 if (!BackgrdInfo.Any())
                 {
-                    tblSWATBackgroundinfo tblswatbackgroundinfo = new tblSWATBackgroundinfo();
-                    tblswatbackgroundinfo.SurveyID = SurveyID;
-                    db.tblSWATBackgroundinfoes.Add(tblswatbackgroundinfo);
-                    db.SaveChanges();
-                    var newBackgroundInfoID = tblswatbackgroundinfo.ID;
-                    return RedirectToAction("Edit", "Background", new { id = newBackgroundInfoID, SurveyID = SurveyID });
+                    //tblSWATBackgroundinfo tblswatbackgroundinfo = new tblSWATBackgroundinfo();
+                    //tblswatbackgroundinfo.SurveyID = SurveyID;
+                    //db.tblSWATBackgroundinfoes.Add(tblswatbackgroundinfo);
+                    //db.SaveChanges();
+                    //var newBackgroundInfoID = tblswatbackgroundinfo.ID;
+                    return RedirectToAction("Create", "Background", new {SurveyID = SurveyID });
                 }
                 else
                 {

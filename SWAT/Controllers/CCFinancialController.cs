@@ -124,15 +124,16 @@ namespace SWAT.Controllers
                     db.SaveChanges();
                     updateScores(tblswatccfinancial);
 
-                    return RedirectToAction("Index");
-                    // return RedirectToAction("Create", "CCFinancial", new { SurveyID = tblswatccindig.SurveyID });
+                    // return RedirectToAction("Index");
+                    return RedirectToAction("Create", "CCGender", new { SurveyID = tblswatccfinancial.SurveyID });
                 }
 
                 db.tblSWATCCfinancials.Add(tblswatccfinancial);
                 db.SaveChanges();
                 updateScores(tblswatccfinancial);
 
-                return RedirectToAction("Index");
+                // return RedirectToAction("Index");
+                return RedirectToAction("Create", "CCGender", new { SurveyID = tblswatccfinancial.SurveyID });
             }
 
             ViewBag.rosca = new SelectList(db.lkpSWATroscaLUs, "id", "Description", tblswatccfinancial.rosca);
@@ -177,9 +178,24 @@ namespace SWAT.Controllers
                 db.SaveChanges();
                 updateScores(tblswatccfinancial);
 
-                // TODO add redirection
+                // If there is not any CCGender with the current survey (SurveyID) then create one and redirect to its edit link.
+                var genders = db.tblSWATCCgenders.Where(e => e.SurveyID == tblswatccfinancial.SurveyID);
+                if (!genders.Any())
+                {
+                    tblSWATCCgender tblswatccgender = new tblSWATCCgender();
+                    tblswatccgender.SurveyID = tblswatccfinancial.SurveyID;
+                    db.tblSWATCCgenders.Add(tblswatccgender);
+                    db.SaveChanges();
+                    int newGenderId = tblswatccgender.ID;
 
-                return RedirectToAction("Index");
+                    return RedirectToAction("Edit", "CCGender", new { id = newGenderId, SurveyID = tblswatccgender.SurveyID });
+                }
+                else
+                {
+                    return RedirectToAction("Edit", "CCGender", new { id = genders.Single(e => e.SurveyID == tblswatccfinancial.SurveyID).ID, SurveyID = tblswatccfinancial.SurveyID });
+                }
+
+                // return RedirectToAction("Index");
             }
             ViewBag.rosca = new SelectList(db.lkpSWATroscaLUs, "id", "Description", tblswatccfinancial.rosca);
             ViewBag.Question1 = db.lkpSWATScoreVarsLUs.Single(e => e.VarName == "incomeSCORE").Description;

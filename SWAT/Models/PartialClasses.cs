@@ -3,6 +3,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SWAT.Models
 {
+    [MetadataType(typeof(CCGenderMetadata))]
+    public partial class tblSWATCCgender
+    { 
+    }
+
     [MetadataType(typeof(CCFinancialMetadata))]
     public partial class tblSWATCCfinancial
     { 

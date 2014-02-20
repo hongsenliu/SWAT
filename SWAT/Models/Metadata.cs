@@ -3,6 +3,31 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SWAT.Models
 {
+    public class CCGenderMetadata
+    {
+        [Display(Name = "Water collection")]
+        public Nullable<int> gRole1 { get; set; }
+
+        [Display(Name = "Cooking")]
+        public Nullable<int> gRole2 { get; set; }
+
+        [Display(Name = "Cleaning")]
+        public Nullable<int> gRole3 { get; set; }
+
+        [Display(Name = "Keeping water sources safe")]
+        public Nullable<int> gRole4 { get; set; }
+
+        [Display(Name = "Child rearing")]
+        public Nullable<int> gRole5 { get; set; }
+
+        [Display(Name = "Agriculture")]
+        public Nullable<int> gRole6 { get; set; }
+
+        [Display(Name = "% of community-based organizations")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> gWomenRep { get; set; }
+    }
+
     public class CCFinancialMetadata
     {
         [Display(Name = "% of Households")]

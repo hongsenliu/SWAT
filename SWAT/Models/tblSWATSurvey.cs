@@ -30,6 +30,7 @@ namespace SWAT.Models
             this.tblSWATWAriskPreps = new HashSet<tblSWATWAriskPrep>();
             this.tblSWATWAsurfaceWaters = new HashSet<tblSWATWAsurfaceWater>();
             this.tblSWATCCfinancials = new HashSet<tblSWATCCfinancial>();
+            this.tblSWATCCgenders = new HashSet<tblSWATCCgender>();
         }
     
         public int ID { get; set; }
@@ -55,5 +56,6 @@ namespace SWAT.Models
         public virtual ICollection<tblSWATWAriskPrep> tblSWATWAriskPreps { get; set; }
         public virtual ICollection<tblSWATWAsurfaceWater> tblSWATWAsurfaceWaters { get; set; }
         public virtual ICollection<tblSWATCCfinancial> tblSWATCCfinancials { get; set; }
+        public virtual ICollection<tblSWATCCgender> tblSWATCCgenders { get; set; }
     }
 }

@@ -1,0 +1,110 @@
+﻿@model SWAT.Models.tblSWATCCgender
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit - Community Capacity</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Gender Roles</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+
+        <p>
+            @ViewBag.Question1
+        </p>
+        <div class="form-group">
+            @Html.LabelFor(model => model.gRole1, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("gRole1", String.Empty)
+                @Html.ValidationMessageFor(model => model.gRole1)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.gRole2, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("gRole2", String.Empty)
+                @Html.ValidationMessageFor(model => model.gRole2)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.gRole3, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("gRole3", String.Empty)
+                @Html.ValidationMessageFor(model => model.gRole3)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.gRole4, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("gRole4", String.Empty)
+                @Html.ValidationMessageFor(model => model.gRole4)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.gRole5, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("gRole5", String.Empty)
+                @Html.ValidationMessageFor(model => model.gRole5)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.gRole6, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("gRole6", String.Empty)
+                @Html.ValidationMessageFor(model => model.gRole6)
+            </div>
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question2
+        </p>
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.gWomenEngage, new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.DropDownList("gWomenEngage", String.Empty)
+                @Html.ValidationMessageFor(model => model.gWomenEngage)
+            </div>
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question3
+        </p>
+        <div class="form-group">
+            @*@Html.LabelFor(model => model.gWomenRep, new { @class = "control-label col-md-2" })*@
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.gWomenRep)%
+                @Html.ValidationMessageFor(model => model.gWomenRep)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

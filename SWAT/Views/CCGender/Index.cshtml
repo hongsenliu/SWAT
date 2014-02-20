@@ -1,0 +1,87 @@
+﻿@model IEnumerable<SWAT.Models.tblSWATCCgender>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.gRoleWomen)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.gWomenRep)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATgenderLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATgenderLU1.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATgenderLU2.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATgenderLU3.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATgenderLU4.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATgenderLU5.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATgWomenEngagedLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.gRoleWomen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gWomenRep)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATgenderLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATgenderLU1.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATgenderLU2.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATgenderLU3.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATgenderLU4.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATgenderLU5.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATgWomenEngagedLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSWATSurvey.ID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

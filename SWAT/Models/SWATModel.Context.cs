@@ -95,5 +95,16 @@ namespace SWAT.Models
         public DbSet<lkpSWATroscaLU> lkpSWATroscaLUs { get; set; }
         public DbSet<lkpSWATscores_rosca> lkpSWATscores_rosca { get; set; }
         public DbSet<tblSWATCCfinancial> tblSWATCCfinancials { get; set; }
+        public DbSet<lkpSWATgenderLU> lkpSWATgenderLUs { get; set; }
+        public DbSet<lkpSWATgRoleWomenLU> lkpSWATgRoleWomenLUs { get; set; }
+        public DbSet<lkpSWATgWomenEngagedLU> lkpSWATgWomenEngagedLUs { get; set; }
+        public DbSet<lkpSWATscores_gRoleWomen> lkpSWATscores_gRoleWomen { get; set; }
+        public DbSet<lkpSWATscores_gWomenEngaged> lkpSWATscores_gWomenEngaged { get; set; }
+        public DbSet<tblSWATCCgender> tblSWATCCgenders { get; set; }
+        public DbSet<lkpSWATscores_gender> lkpSWATscores_gender { get; set; }
+        public DbSet<lkpSWATcomponentLU> lkpSWATcomponentLUs { get; set; }
+        public DbSet<lkpSWATindicatorGroupLU> lkpSWATindicatorGroupLUs { get; set; }
+        public DbSet<lkpSWATindicatorSubComponentLU> lkpSWATindicatorSubComponentLUs { get; set; }
+        public DbSet<lkpSWATsubComponentLU> lkpSWATsubComponentLUs { get; set; }
     }
 }

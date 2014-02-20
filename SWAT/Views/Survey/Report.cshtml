@@ -1,0 +1,63 @@
+﻿@model SWAT.Models.tblSWATSurvey
+
+@section Scripts
+{
+  <script src="@Url.Content("~/Scripts/jquery-2.1.0.min.js")" type="text/javascript"></script>
+  <script src="@Url.Content("~/Scripts/Highcharts-3.0.1/js/highcharts.js")" type="text/javascript"></script>
+}
+
+<div>
+    <h4>Report - @Model.tblSWATLocation.name</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tblSWATLocation.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tblSWATLocation.name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Userid1.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Userid1.Username)
+        </dd>
+
+    </dl>
+
+    @{Html.RenderAction("_BarColumn", new { id = Model.ID });}
+    
+
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
