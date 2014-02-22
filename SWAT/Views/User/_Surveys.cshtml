@@ -1,0 +1,22 @@
+﻿@model SWAT.Models.Userid
+
+<div>
+    @{
+        var grid = new  WebGrid(Model.tblSWATSurveys.OrderByDescending(e => e.StartTime), rowsPerPage: 5);
+        @grid.GetHtml(
+        tableStyle: "table",
+        columns: grid.Columns(
+        grid.Column("tblSWATLocation.name", header: "Settlement"),
+        grid.Column("tblSWATLocation.lkpSubnational.Name", header: "Subnation"),
+        grid.Column("tblSWATLocation.lkpCountry.CommonName", header: "Country"),
+        grid.Column("tblSWATLocation.lkpRegion.Name", header: "Region"),
+        grid.Column("StartTime", header: "Start Date"),
+        grid.Column("Status", header: "Status"),
+        grid.Column(header: "", format: (item) => new HtmlString(
+            @Html.ActionLink("Report", "Report", "Survey", new {id = item.id}, null).ToString() + " | " + @Html.ActionLink("Details", "Details", "Survey", new {id = item.id}, null).ToString() + " | " + @Html.ActionLink("Edit", "Edit", "Location", new { uid = Model.Userid1, id = item.LocationID, SurveyID=item.ID}, null).ToString() + " | "+
+            @Html.ActionLink("Delete", "Delete", "Survey", new {id = item.id}, null).ToString()
+                        )
+        )));   
+        }
+</div>
+
