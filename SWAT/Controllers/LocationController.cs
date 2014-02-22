@@ -36,6 +36,37 @@ namespace SWAT.Controllers
             return View(tblswatlocation);
         }
 
+        // GET: /Location/Countries/List
+        public ActionResult CountryList(int regionID)
+        {
+            IQueryable countries = null;
+            if (regionID != -1)
+            {
+                countries = db.lkpCountries.Where(e => e.RegionID == regionID);
+            }
+            else
+            {
+                countries = db.lkpCountries;
+            }
+
+            if (HttpContext.Request.IsAjaxRequest())
+            {
+                return Json(new SelectList(countries, "ID", "CommonName"), JsonRequestBehavior.AllowGet);
+            }
+            return HttpNotFound();
+        }
+
+        // GET: /Location/Subnations/List
+        public ActionResult SubnationList(int countryID)
+        {
+            IQueryable subnations = db.lkpSubnationals.Where(e => e.CountryID == countryID);
+            if (HttpContext.Request.IsAjaxRequest())
+            {
+                return Json(new SelectList(subnations, "ID", "Name"), JsonRequestBehavior.AllowGet);
+            }
+            return HttpNotFound();
+        }
+
         // GET: /Location/Create
         public ActionResult Create(int? uid)
         {

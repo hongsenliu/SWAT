@@ -17,23 +17,31 @@
         @Html.ValidationSummary(true)
         @Html.HiddenFor(model => model.ID)
         @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
-
+        <p>
+            @ViewBag.Question1
+        </p>
         <div class="form-group">
-            @Html.LabelFor(model => model.income, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.EditorFor(model => model.income)%
                 @Html.ValidationMessageFor(model => model.income)
             </div>
         </div>
 
+        <hr />
+        <p>
+            @ViewBag.Question2
+        </p>
         <div class="form-group">
-            @Html.LabelFor(model => model.rosca, "rosca", new { @class = "control-label col-md-2" })
             <div class="col-md-10">
                 @Html.DropDownList("rosca", String.Empty)
                 @Html.ValidationMessageFor(model => model.rosca)
             </div>
         </div>
 
+        <hr />
+        <p>
+            @ViewBag.Question3
+        </p>
         <div class="form-group">
             @Html.LabelFor(model => model.assetsCom1, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -66,6 +74,10 @@
             </div>
         </div>
 
+        <hr />
+        <p>
+            @ViewBag.Question4
+        </p>
         <div class="form-group">
             @Html.LabelFor(model => model.assetsInd1, new { @class = "control-label col-md-2" })
             <div class="col-md-10">

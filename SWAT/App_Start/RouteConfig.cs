@@ -14,6 +14,18 @@ namespace SWAT
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                 "CountriesList",
+                 "Location/Countries/List/{regionID}",
+                 new { controller = "Location", action = "CountryList", regionID = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
+                 "SubnationsList",
+                 "Location/Subnations/List/{countryID}",
+                 new { controller = "Location", action = "SubnationList", countryID = UrlParameter.Optional }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "User", action = "Details", id = 191 }
