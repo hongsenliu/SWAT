@@ -1,4 +1,7 @@
-﻿
+﻿window.onload = function () {
+    greyOutPrecipitation();
+};
+
 function greyOutPrecipitation() {
     var precipVar = document.getElementById('precipVar').value;
     var precipVarAlt = document.getElementById('precipVarALT').value;

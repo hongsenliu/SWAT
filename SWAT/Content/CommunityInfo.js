@@ -1,4 +1,7 @@
-﻿
+﻿window.onload = function () {
+    pplPerHH();
+};
+
 function pplPerHH()
 {
     var population = document.getElementById('Population').value;

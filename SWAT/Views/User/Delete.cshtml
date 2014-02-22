@@ -7,242 +7,216 @@
 <h2>Delete</h2>
 
 <h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Userid</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Username)
-        </dt>
+<fieldset>
+    <legend>Userid</legend>
 
-        <dd>
-            @Html.DisplayFor(model => model.Username)
-        </dd>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Userid1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Userid1)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Password)
-        </dt>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Username)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Username)
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Password)
-        </dd>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Password)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Password)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.eMail)
-        </dt>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.eMail)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.eMail)
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.eMail)
-        </dd>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Notes)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Notes)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Notes)
-        </dt>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SessionVars)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SessionVars)
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Notes)
-        </dd>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.secondaryId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.secondaryId)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.SessionVars)
-        </dt>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.type)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.type)
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.SessionVars)
-        </dd>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.properties)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.properties)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.secondaryId)
-        </dt>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.targetName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.targetName)
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.secondaryId)
-        </dd>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NotifStatus)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NotifStatus)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.type)
-        </dt>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NotifCode)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NotifCode)
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.type)
-        </dd>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NotifReqCodeTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NotifReqCodeTime)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.properties)
-        </dt>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NotifActCodeTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NotifActCodeTime)
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.properties)
-        </dd>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PMEmailNotificationsEnabled)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PMEmailNotificationsEnabled)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.targetName)
-        </dt>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.UseOntarioMaps)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.UseOntarioMaps)
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.targetName)
-        </dd>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.First_Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.First_Name)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NotifStatus)
-        </dt>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Last_Name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Last_Name)
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.NotifStatus)
-        </dd>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Address)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Address)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NotifCode)
-        </dt>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.utmX)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.utmX)
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.NotifCode)
-        </dd>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.utmY)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.utmY)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NotifReqCodeTime)
-        </dt>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Joined)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Joined)
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.NotifReqCodeTime)
-        </dd>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Interests)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Interests)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NotifActCodeTime)
-        </dt>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Workplace)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Workplace)
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.NotifActCodeTime)
-        </dd>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SecretQuestion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SecretQuestion)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.PMEmailNotificationsEnabled)
-        </dt>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SecretAnswer)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SecretAnswer)
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.PMEmailNotificationsEnabled)
-        </dd>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AvatarUserPhotoID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AvatarUserPhotoID)
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.UseOntarioMaps)
-        </dt>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LastSuggestedContentDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LastSuggestedContentDate)
+    </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.UseOntarioMaps)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.First_Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.First_Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Last_Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Last_Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.utmX)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.utmX)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.utmY)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.utmY)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Joined)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Joined)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Interests)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Interests)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Workplace)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Workplace)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SecretQuestion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SecretQuestion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SecretAnswer)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SecretAnswer)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AvatarUserPhotoID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AvatarUserPhotoID)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LastSuggestedContentDate)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LastSuggestedContentDate)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.FullName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.FullName)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
-        </div>
-    }
-</div>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.FullName)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.FullName)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -31,80 +31,81 @@ namespace SWAT.Models
         public DbSet<lkpRegion> lkpRegions { get; set; }
         public DbSet<lkpSoil> lkpSoils { get; set; }
         public DbSet<lkpSubnational> lkpSubnationals { get; set; }
+        public DbSet<lkpSWAT5rankLU> lkpSWAT5rankLU { get; set; }
         public DbSet<lkpSWATareaBMLU> lkpSWATareaBMLUs { get; set; }
         public DbSet<lkpSWATareaProtLU> lkpSWATareaProtLUs { get; set; }
+        public DbSet<lkpSWATcomponentLU> lkpSWATcomponentLUs { get; set; }
         public DbSet<lkpSWATeconPrisLU> lkpSWATeconPrisLUs { get; set; }
+        public DbSet<lkpSWATeduGradDiffLU> lkpSWATeduGradDiffLUs { get; set; }
+        public DbSet<lkpSWATextremeEventsLU> lkpSWATextremeEventsLUs { get; set; }
+        public DbSet<lkpSWATextremePrepLU> lkpSWATextremePrepLUs { get; set; }
+        public DbSet<lkpSWATextremeRiskLU> lkpSWATextremeRiskLUs { get; set; }
+        public DbSet<lkpSWATgenderLU> lkpSWATgenderLUs { get; set; }
+        public DbSet<lkpSWATgRoleWomenLU> lkpSWATgRoleWomenLUs { get; set; }
+        public DbSet<lkpSWATgwAvailabilityLU> lkpSWATgwAvailabilityLUs { get; set; }
+        public DbSet<lkpSWATgWomenEngagedLU> lkpSWATgWomenEngagedLUs { get; set; }
+        public DbSet<lkpSWATindicatorGroupLU> lkpSWATindicatorGroupLUs { get; set; }
+        public DbSet<lkpSWATindicatorSubComponentLU> lkpSWATindicatorSubComponentLUs { get; set; }
+        public DbSet<lkpSWATindigPopLU> lkpSWATindigPopLUs { get; set; }
+        public DbSet<lkpSWATlongtermPopLU> lkpSWATlongtermPopLUs { get; set; }
         public DbSet<lkpSWATmapAridity> lkpSWATmapAridities { get; set; }
+        public DbSet<lkpSWATprecipLU> lkpSWATprecipLUs { get; set; }
+        public DbSet<lkpSWATprecipVarAltLU> lkpSWATprecipVarAltLUs { get; set; }
+        public DbSet<lkpSWATprecipVardivMeanLU> lkpSWATprecipVardivMeanLUs { get; set; }
         public DbSet<lkpSWATpriorLU> lkpSWATpriorLUs { get; set; }
+        public DbSet<lkpSWATroscaLU> lkpSWATroscaLUs { get; set; }
+        public DbSet<lkpSWATrunoffLU> lkpSWATrunoffLUs { get; set; }
+        public DbSet<lkpSWATscores_5rankAlwaysGood> lkpSWATscores_5rankAlwaysGood { get; set; }
         public DbSet<lkpSWATscores_areaBMLU> lkpSWATscores_areaBMLU { get; set; }
         public DbSet<lkpSWATscores_areaProt> lkpSWATscores_areaProt { get; set; }
         public DbSet<lkpSWATscores_Aridity> lkpSWATscores_Aridity { get; set; }
         public DbSet<lkpSWATscores_econPris> lkpSWATscores_econPris { get; set; }
+        public DbSet<lkpSWATscores_eduGradDiff> lkpSWATscores_eduGradDiff { get; set; }
+        public DbSet<lkpSWATscores_extremeEvents> lkpSWATscores_extremeEvents { get; set; }
+        public DbSet<lkpSWATscores_extremePrep> lkpSWATscores_extremePrep { get; set; }
+        public DbSet<lkpSWATscores_extremeRISK> lkpSWATscores_extremeRISK { get; set; }
+        public DbSet<lkpSWATscores_gender> lkpSWATscores_gender { get; set; }
+        public DbSet<lkpSWATscores_gRoleWomen> lkpSWATscores_gRoleWomen { get; set; }
+        public DbSet<lkpSWATscores_gwAvailability> lkpSWATscores_gwAvailability { get; set; }
+        public DbSet<lkpSWATscores_gWomenEngaged> lkpSWATscores_gWomenEngaged { get; set; }
+        public DbSet<lkpSWATscores_indigPop> lkpSWATscores_indigPop { get; set; }
+        public DbSet<lkpSWATscores_longtermPop> lkpSWATscores_longtermPop { get; set; }
+        public DbSet<lkpSWATscores_precip> lkpSWATscores_precip { get; set; }
+        public DbSet<lkpSWATscores_precipVar> lkpSWATscores_precipVar { get; set; }
+        public DbSet<lkpSWATscores_rosca> lkpSWATscores_rosca { get; set; }
+        public DbSet<lkpSWATscores_runoff> lkpSWATscores_runoff { get; set; }
         public DbSet<lkpSWATscores_urbanDistance> lkpSWATscores_urbanDistance { get; set; }
         public DbSet<lkpSWATscores_YesNoLUYesGood> lkpSWATscores_YesNoLUYesGood { get; set; }
         public DbSet<lkpSWATScoreVarsLU> lkpSWATScoreVarsLUs { get; set; }
         public DbSet<lkpSWATSectionLU> lkpSWATSectionLUs { get; set; }
+        public DbSet<lkpSWATsubComponentLU> lkpSWATsubComponentLUs { get; set; }
         public DbSet<lkpSWATurbanDistanceLU> lkpSWATurbanDistanceLUs { get; set; }
+        public DbSet<lkpSWATwaterMonthLU> lkpSWATwaterMonthLUs { get; set; }
         public DbSet<lkpSWATWatershedsLU> lkpSWATWatershedsLUs { get; set; }
         public DbSet<lkpSWATYesNoLU> lkpSWATYesNoLUs { get; set; }
         public DbSet<tblSWATBackgroundinfo> tblSWATBackgroundinfoes { get; set; }
+        public DbSet<tblSWATCCedu> tblSWATCCedus { get; set; }
+        public DbSet<tblSWATCCfinancial> tblSWATCCfinancials { get; set; }
+        public DbSet<tblSWATCCgender> tblSWATCCgenders { get; set; }
+        public DbSet<tblSWATCCindig> tblSWATCCindigs { get; set; }
+        public DbSet<tblSWATCCschool> tblSWATCCschools { get; set; }
+        public DbSet<tblSWATCCsocial> tblSWATCCsocials { get; set; }
+        public DbSet<tblSWATCCtrain> tblSWATCCtrains { get; set; }
         public DbSet<tblSWATLocation> tblSWATLocations { get; set; }
         public DbSet<tblSWATScore> tblSWATScores { get; set; }
+        public DbSet<tblSWATSurvey> tblSWATSurveys { get; set; }
         public DbSet<tblSWATVisualGroup> tblSWATVisualGroups { get; set; }
         public DbSet<tblSWATVisualGrpScoreMap> tblSWATVisualGrpScoreMaps { get; set; }
-        public DbSet<Userid> Userids { get; set; }
-        public DbSet<tblSWATWAPrecipitation> tblSWATWAPrecipitations { get; set; }
-        public DbSet<lkpSWATprecipLU> lkpSWATprecipLUs { get; set; }
-        public DbSet<lkpSWATscores_precip> lkpSWATscores_precip { get; set; }
-        public DbSet<lkpSWATwaterMonthLU> lkpSWATwaterMonthLUs { get; set; }
-        public DbSet<tblSWATWAMonthlyQuantity> tblSWATWAMonthlyQuantities { get; set; }
-        public DbSet<lkpSWATprecipVarAltLU> lkpSWATprecipVarAltLUs { get; set; }
-        public DbSet<lkpSWATprecipVardivMeanLU> lkpSWATprecipVardivMeanLUs { get; set; }
-        public DbSet<lkpSWATscores_precipVar> lkpSWATscores_precipVar { get; set; }
         public DbSet<tblSWATWAannualPrecip> tblSWATWAannualPrecips { get; set; }
         public DbSet<tblSWATWAclimateChange> tblSWATWAclimateChanges { get; set; }
-        public DbSet<lkpSWATextremeEventsLU> lkpSWATextremeEventsLUs { get; set; }
-        public DbSet<lkpSWATscores_extremeEvents> lkpSWATscores_extremeEvents { get; set; }
         public DbSet<tblSWATWAextremeEvent> tblSWATWAextremeEvents { get; set; }
-        public DbSet<lkpSWATextremePrepLU> lkpSWATextremePrepLUs { get; set; }
-        public DbSet<lkpSWATextremeRiskLU> lkpSWATextremeRiskLUs { get; set; }
-        public DbSet<lkpSWATscores_extremePrep> lkpSWATscores_extremePrep { get; set; }
-        public DbSet<lkpSWATscores_extremeRISK> lkpSWATscores_extremeRISK { get; set; }
+        public DbSet<tblSWATWAgroundWater> tblSWATWAgroundWaters { get; set; }
+        public DbSet<tblSWATWAMonthlyQuantity> tblSWATWAMonthlyQuantities { get; set; }
+        public DbSet<tblSWATWAPrecipitation> tblSWATWAPrecipitations { get; set; }
         public DbSet<tblSWATWAriskPrep> tblSWATWAriskPreps { get; set; }
-        public DbSet<lkpSWATrunoffLU> lkpSWATrunoffLUs { get; set; }
-        public DbSet<lkpSWATscores_runoff> lkpSWATscores_runoff { get; set; }
+        public DbSet<tblSWATWAsurfaceWater> tblSWATWAsurfaceWaters { get; set; }
+        public DbSet<Userid> Userids { get; set; }
         public DbSet<lkpSWATscores_surfaceVar> lkpSWATscores_surfaceVar { get; set; }
         public DbSet<lkpSWATsurfaceVarLU> lkpSWATsurfaceVarLUs { get; set; }
-        public DbSet<tblSWATWAsurfaceWater> tblSWATWAsurfaceWaters { get; set; }
-        public DbSet<lkpSWATgwAvailabilityLU> lkpSWATgwAvailabilityLUs { get; set; }
-        public DbSet<lkpSWATscores_gwAvailability> lkpSWATscores_gwAvailability { get; set; }
-        public DbSet<tblSWATWAgroundWater> tblSWATWAgroundWaters { get; set; }
-        public DbSet<lkpSWATeduGradDiffLU> lkpSWATeduGradDiffLUs { get; set; }
-        public DbSet<lkpSWATscores_eduGradDiff> lkpSWATscores_eduGradDiff { get; set; }
-        public DbSet<tblSWATCCedu> tblSWATCCedus { get; set; }
-        public DbSet<tblSWATCCtrain> tblSWATCCtrains { get; set; }
-        public DbSet<lkpSWAT5rankLU> lkpSWAT5rankLU { get; set; }
-        public DbSet<lkpSWATscores_5rankAlwaysGood> lkpSWATscores_5rankAlwaysGood { get; set; }
-        public DbSet<tblSWATCCschool> tblSWATCCschools { get; set; }
-        public DbSet<lkpSWATindigPopLU> lkpSWATindigPopLUs { get; set; }
-        public DbSet<lkpSWATlongtermPopLU> lkpSWATlongtermPopLUs { get; set; }
-        public DbSet<lkpSWATscores_indigPop> lkpSWATscores_indigPop { get; set; }
-        public DbSet<lkpSWATscores_longtermPop> lkpSWATscores_longtermPop { get; set; }
-        public DbSet<tblSWATCCindig> tblSWATCCindigs { get; set; }
-        public DbSet<tblSWATSurvey> tblSWATSurveys { get; set; }
-        public DbSet<lkpSWATroscaLU> lkpSWATroscaLUs { get; set; }
-        public DbSet<lkpSWATscores_rosca> lkpSWATscores_rosca { get; set; }
-        public DbSet<tblSWATCCfinancial> tblSWATCCfinancials { get; set; }
-        public DbSet<lkpSWATgenderLU> lkpSWATgenderLUs { get; set; }
-        public DbSet<lkpSWATgRoleWomenLU> lkpSWATgRoleWomenLUs { get; set; }
-        public DbSet<lkpSWATgWomenEngagedLU> lkpSWATgWomenEngagedLUs { get; set; }
-        public DbSet<lkpSWATscores_gRoleWomen> lkpSWATscores_gRoleWomen { get; set; }
-        public DbSet<lkpSWATscores_gWomenEngaged> lkpSWATscores_gWomenEngaged { get; set; }
-        public DbSet<tblSWATCCgender> tblSWATCCgenders { get; set; }
-        public DbSet<lkpSWATscores_gender> lkpSWATscores_gender { get; set; }
-        public DbSet<lkpSWATcomponentLU> lkpSWATcomponentLUs { get; set; }
-        public DbSet<lkpSWATindicatorGroupLU> lkpSWATindicatorGroupLUs { get; set; }
-        public DbSet<lkpSWATindicatorSubComponentLU> lkpSWATindicatorSubComponentLUs { get; set; }
-        public DbSet<lkpSWATsubComponentLU> lkpSWATsubComponentLUs { get; set; }
     }
 }

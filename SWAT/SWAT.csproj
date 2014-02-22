@@ -7,13 +7,14 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{C0A3FFF2-6FA5-4460-ABDC-030B7846FFD4}</ProjectGuid>
-    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <ProjectGuid>{AD1CFE09-B504-4E4F-98DC-3866F7E49E94}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SWAT</RootNamespace>
     <AssemblyName>SWAT</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
@@ -41,34 +42,21 @@
     <Reference Include="DotNet.Highcharts">
       <HintPath>..\packages\DotNet.Highcharts.2.0\lib\DotNet.Highcharts.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework">
-      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CSharp">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Microsoft.Web.Helpers">
-      <HintPath>..\packages\Microsoft.AspNet.WebHelpers.3.1.1\lib\net45\Microsoft.Web.Helpers.dll</HintPath>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Helpers.Mvc.2.0.20710.0\lib\net40\Microsoft.Web.Helpers.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="PagedList">
-      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
-    </Reference>
-    <Reference Include="PagedList.Mvc">
-      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Data.Entity">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Runtime.Serialization">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Security">
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData">
       <Private>True</Private>
     </Reference>
@@ -78,227 +66,119 @@
     <Reference Include="System.Web.ApplicationServices">
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.ComponentModel.DataAnnotations">
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
-    </Reference>
-    <Reference Include="System">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Data">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Core">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Web.Extensions">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.Helpers.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.Razor.3.1.1\lib\net45\System.Web.Razor.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.1.1\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq">
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.Drawing">
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web">
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml">
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Configuration">
-      <Private>True</Private>
-    </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services">
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.EnterpriseServices">
-      <Private>True</Private>
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="WebMatrix.Data, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.3.1.1\lib\net45\WebMatrix.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="WebMatrix.WebData, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.3.1.1\lib\net45\WebMatrix.WebData.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc">
-      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Net.Http.2.0.20710.0\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20715.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.20505.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.20505.0\lib\net40\WebMatrix.WebData.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\CommunityInfo.js" />
-    <Content Include="Content\PagedList.css" />
-    <Content Include="Content\Site.css" />
-    <Content Include="Content\themes\base\images\animated-overlay.gif" />
-    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
-    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Content\themes\base\jquery-ui.css" />
-    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
-    <Content Include="Content\themes\base\jquery.ui.all.css" />
-    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
-    <Content Include="Content\themes\base\jquery.ui.base.css" />
-    <Content Include="Content\themes\base\jquery.ui.button.css" />
-    <Content Include="Content\themes\base\jquery.ui.core.css" />
-    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
-    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
-    <Content Include="Content\themes\base\jquery.ui.menu.css" />
-    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
-    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
-    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
-    <Content Include="Content\themes\base\jquery.ui.slider.css" />
-    <Content Include="Content\themes\base\jquery.ui.spinner.css" />
-    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
-    <Content Include="Content\themes\base\jquery.ui.theme.css" />
-    <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
-    <Content Include="Content\themes\base\minified\images\animated-overlay.gif" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
-    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
-    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
-    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.menu.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.spinner.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
-    <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
-    <Content Include="Content\WAannualPrecip.js" />
-    <Content Include="Content\WAExtremeEvent.js" />
-    <Content Include="Content\WARiskPrep.js" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Global.asax" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\SWATModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SWATModel1.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\SWATModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SWATModel.edmx</DependentUpon>
-      <LastGenOutput>SWATModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Models\SWATModel.edmx.diagram">
-      <DependentUpon>SWATModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\SWATModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SWATModel.edmx</DependentUpon>
-      <LastGenOutput>SWATModel.cs</LastGenOutput>
-    </Content>
-    <None Include="Properties\PublishProfiles\swat.pubxml" />
-    <None Include="Scripts\jquery-2.1.0.intellisense.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\adapters\mootools-adapter.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\adapters\mootools-adapter.src.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\adapters\prototype-adapter.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\adapters\prototype-adapter.src.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\highcharts-more.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\highcharts.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\highcharts.src.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\modules\canvas-tools.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\modules\canvas-tools.src.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\modules\data.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\modules\data.src.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\modules\exporting.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\modules\exporting.src.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\modules\funnel.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\modules\funnel.src.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\themes\dark-blue.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\themes\dark-green.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\themes\gray.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\themes\grid.js" />
-    <Content Include="Scripts\Highcharts-3.0.1\js\themes\skies.js" />
-    <Content Include="Scripts\jquery-2.1.0.js" />
-    <Content Include="Scripts\jquery-2.1.0.min.js" />
-    <Content Include="Scripts\jquery-2.1.0.min.map" />
-    <None Include="Scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Scripts\jquery-ui-1.10.4.js" />
-    <Content Include="Scripts\jquery-ui-1.10.4.min.js" />
-    <Content Include="Scripts\jquery.validate.js" />
-    <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BackgroundController.cs" />
-    <Compile Include="Controllers\backup_LocationController.cs" />
     <Compile Include="Controllers\CCEducationController.cs" />
     <Compile Include="Controllers\CCFinancialController.cs" />
     <Compile Include="Controllers\CCGenderController.cs" />
     <Compile Include="Controllers\CCIndigController.cs" />
     <Compile Include="Controllers\CCSchoolController.cs" />
     <Compile Include="Controllers\CCTrainController.cs" />
-    <Compile Include="Controllers\CountryController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
-    <Compile Include="Controllers\RegionController.cs" />
-    <Compile Include="Controllers\SubnationController.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Controllers\WAannualPrecipController.cs" />
@@ -509,11 +389,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>SWATModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\SWATModel1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SWATModel.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Models\tblSWATBackgroundinfo.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -530,6 +405,9 @@
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSWATCCschool.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSWATCCsocial.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\tblSWATCCtrain.cs">
@@ -577,62 +455,202 @@
     <Compile Include="Models\Userid.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="ViewModels\ChartsModel.cs" />
-    <Compile Include="ViewModels\CountrySubnationalsGroup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ChartsModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\web.config" />
-    <Content Include="packages.config" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\CommunityInfo.js" />
+    <Content Include="Content\PagedList.css" />
+    <Content Include="Content\themes\base\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.menu.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.spinner.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\jquery.ui.tooltip.css" />
+    <Content Include="Content\themes\base\minified\images\animated-overlay.gif" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.menu.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.spinner.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tooltip.min.css" />
+    <Content Include="Content\WAannualPrecip.js" />
+    <Content Include="Content\WAExtremeEvent.js" />
+    <Content Include="Content\WARiskPrep.js" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <EntityDeploy Include="Models\SWATModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SWATModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\SWATModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SWATModel.edmx</DependentUpon>
+      <LastGenOutput>SWATModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\SWATModel.edmx.diagram">
+      <DependentUpon>SWATModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\SWATModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SWATModel.edmx</DependentUpon>
+      <LastGenOutput>SWATModel.cs</LastGenOutput>
+    </Content>
+    <None Include="Scripts\jquery-2.1.0.intellisense.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\adapters\mootools-adapter.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\adapters\mootools-adapter.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\adapters\prototype-adapter.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\adapters\prototype-adapter.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\highcharts-more.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\highcharts.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\highcharts.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\modules\canvas-tools.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\modules\canvas-tools.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\modules\data.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\modules\data.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\modules\exporting.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\modules\exporting.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\modules\funnel.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\modules\funnel.src.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\themes\dark-blue.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\themes\dark-green.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\themes\gray.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\themes\grid.js" />
+    <Content Include="Scripts\Highcharts-3.0.1\js\themes\skies.js" />
+    <Content Include="Scripts\jquery-2.1.0.js" />
+    <Content Include="Scripts\jquery-2.1.0.min.js" />
+    <Content Include="Scripts\jquery-2.1.0.min.map" />
+    <Content Include="Scripts\jquery-ui-1.10.4.js" />
+    <Content Include="Scripts\jquery-ui-1.10.4.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\webGrid.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\User\Create.cshtml" />
-    <Content Include="Views\User\Delete.cshtml" />
-    <Content Include="Views\User\Details.cshtml" />
-    <Content Include="Views\User\Edit.cshtml" />
     <Content Include="Views\User\Index.cshtml" />
-    <Content Include="Views\Survey\Create.cshtml" />
-    <Content Include="Views\Survey\Delete.cshtml" />
-    <Content Include="Views\Survey\Details.cshtml" />
-    <Content Include="Views\Survey\Edit.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\User\Create.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\User\_Surveys.cshtml" />
     <Content Include="Views\Survey\Index.cshtml" />
-    <Content Include="Views\Region\Create.cshtml" />
-    <Content Include="Views\Region\Delete.cshtml" />
-    <Content Include="Views\Region\Details.cshtml" />
-    <Content Include="Views\Region\Edit.cshtml" />
-    <Content Include="Views\Region\Index.cshtml" />
-    <Content Include="Views\Country\Create.cshtml" />
-    <Content Include="Views\Country\Delete.cshtml" />
-    <Content Include="Views\Country\Details.cshtml" />
-    <Content Include="Views\Country\Edit.cshtml" />
-    <Content Include="Views\Country\Index.cshtml" />
-    <Content Include="Views\Subnation\Create.cshtml" />
-    <Content Include="Views\Subnation\Delete.cshtml" />
-    <Content Include="Views\Subnation\Details.cshtml" />
-    <Content Include="Views\Subnation\Edit.cshtml" />
-    <Content Include="Views\Subnation\Index.cshtml" />
-    <Content Include="Views\Location\Create.cshtml" />
-    <Content Include="Views\Location\Delete.cshtml" />
-    <Content Include="Views\Location\Details.cshtml" />
-    <Content Include="Views\Location\Edit.cshtml" />
+    <Content Include="Views\Survey\Details.cshtml" />
+    <Content Include="Views\Survey\Create.cshtml" />
+    <Content Include="Views\Survey\Edit.cshtml" />
+    <Content Include="Views\Survey\Delete.cshtml" />
     <Content Include="Views\Location\Index.cshtml" />
-    <Content Include="Views\User\About.cshtml" />
+    <Content Include="Views\Location\Details.cshtml" />
+    <Content Include="Views\Location\Create.cshtml" />
+    <Content Include="Views\Location\Edit.cshtml" />
+    <Content Include="Views\Location\Delete.cshtml" />
+    <Content Include="Views\Survey\Report.cshtml" />
+    <Content Include="Views\Survey\_BarColumn.cshtml" />
+    <Content Include="Views\Survey\_PieChart.cshtml" />
     <Content Include="Views\Location\backup_Create.cshtml" />
     <Content Include="Views\Background\Create.cshtml" />
     <Content Include="Views\Background\Delete.cshtml" />
     <Content Include="Views\Background\Details.cshtml" />
     <Content Include="Views\Background\Edit.cshtml" />
     <Content Include="Views\Background\Index.cshtml" />
-    <Content Include="Views\WAPrecipitation\Create.cshtml" />
-    <Content Include="Views\WAPrecipitation\Delete.cshtml" />
-    <Content Include="Views\WAPrecipitation\Details.cshtml" />
-    <Content Include="Views\WAPrecipitation\Edit.cshtml" />
-    <Content Include="Views\WAPrecipitation\Index.cshtml" />
-    <Content Include="Views\WAMonthlyQuantity\Create.cshtml" />
-    <Content Include="Views\WAMonthlyQuantity\Delete.cshtml" />
-    <Content Include="Views\WAMonthlyQuantity\Details.cshtml" />
-    <Content Include="Views\WAMonthlyQuantity\Edit.cshtml" />
-    <Content Include="Views\WAMonthlyQuantity\Index.cshtml" />
+    <Content Include="Views\CCEducation\Create.cshtml" />
+    <Content Include="Views\CCEducation\Delete.cshtml" />
+    <Content Include="Views\CCEducation\Details.cshtml" />
+    <Content Include="Views\CCEducation\Edit.cshtml" />
+    <Content Include="Views\CCEducation\Index.cshtml" />
+    <Content Include="Views\CCFinancial\Create.cshtml" />
+    <Content Include="Views\CCFinancial\Delete.cshtml" />
+    <Content Include="Views\CCFinancial\Details.cshtml" />
+    <Content Include="Views\CCFinancial\Edit.cshtml" />
+    <Content Include="Views\CCFinancial\Index.cshtml" />
+    <Content Include="Views\CCGender\Create.cshtml" />
+    <Content Include="Views\CCGender\Delete.cshtml" />
+    <Content Include="Views\CCGender\Details.cshtml" />
+    <Content Include="Views\CCGender\Edit.cshtml" />
+    <Content Include="Views\CCGender\Index.cshtml" />
+    <Content Include="Views\CCIndig\Create.cshtml" />
+    <Content Include="Views\CCIndig\Delete.cshtml" />
+    <Content Include="Views\CCIndig\Details.cshtml" />
+    <Content Include="Views\CCIndig\Edit.cshtml" />
+    <Content Include="Views\CCIndig\Index.cshtml" />
+    <Content Include="Views\CCSchool\Create.cshtml" />
+    <Content Include="Views\CCSchool\Delete.cshtml" />
+    <Content Include="Views\CCSchool\Details.cshtml" />
+    <Content Include="Views\CCSchool\Edit.cshtml" />
+    <Content Include="Views\CCSchool\Index.cshtml" />
+    <Content Include="Views\CCTrain\Create.cshtml" />
+    <Content Include="Views\CCTrain\Delete.cshtml" />
+    <Content Include="Views\CCTrain\Details.cshtml" />
+    <Content Include="Views\CCTrain\Edit.cshtml" />
+    <Content Include="Views\CCTrain\Index.cshtml" />
     <Content Include="Views\WAannualPrecip\Create.cshtml" />
     <Content Include="Views\WAannualPrecip\Delete.cshtml" />
     <Content Include="Views\WAannualPrecip\Details.cshtml" />
@@ -648,6 +666,21 @@
     <Content Include="Views\WAExtremeEvent\Details.cshtml" />
     <Content Include="Views\WAExtremeEvent\Edit.cshtml" />
     <Content Include="Views\WAExtremeEvent\Index.cshtml" />
+    <Content Include="Views\WAGroundWater\Create.cshtml" />
+    <Content Include="Views\WAGroundWater\Delete.cshtml" />
+    <Content Include="Views\WAGroundWater\Details.cshtml" />
+    <Content Include="Views\WAGroundWater\Edit.cshtml" />
+    <Content Include="Views\WAGroundWater\Index.cshtml" />
+    <Content Include="Views\WAMonthlyQuantity\Create.cshtml" />
+    <Content Include="Views\WAMonthlyQuantity\Delete.cshtml" />
+    <Content Include="Views\WAMonthlyQuantity\Details.cshtml" />
+    <Content Include="Views\WAMonthlyQuantity\Edit.cshtml" />
+    <Content Include="Views\WAMonthlyQuantity\Index.cshtml" />
+    <Content Include="Views\WAPrecipitation\Create.cshtml" />
+    <Content Include="Views\WAPrecipitation\Delete.cshtml" />
+    <Content Include="Views\WAPrecipitation\Details.cshtml" />
+    <Content Include="Views\WAPrecipitation\Edit.cshtml" />
+    <Content Include="Views\WAPrecipitation\Index.cshtml" />
     <Content Include="Views\WARiskPrep\Create.cshtml" />
     <Content Include="Views\WARiskPrep\Delete.cshtml" />
     <Content Include="Views\WARiskPrep\Details.cshtml" />
@@ -658,57 +691,18 @@
     <Content Include="Views\WASurfaceWater\Details.cshtml" />
     <Content Include="Views\WASurfaceWater\Edit.cshtml" />
     <Content Include="Views\WASurfaceWater\Index.cshtml" />
-    <Content Include="Views\WAGroundWater\Create.cshtml" />
-    <Content Include="Views\WAGroundWater\Delete.cshtml" />
-    <Content Include="Views\WAGroundWater\Details.cshtml" />
-    <Content Include="Views\WAGroundWater\Edit.cshtml" />
-    <Content Include="Views\WAGroundWater\Index.cshtml" />
-    <Content Include="Views\CCEducation\Create.cshtml" />
-    <Content Include="Views\CCEducation\Delete.cshtml" />
-    <Content Include="Views\CCEducation\Details.cshtml" />
-    <Content Include="Views\CCEducation\Edit.cshtml" />
-    <Content Include="Views\CCEducation\Index.cshtml" />
-    <Content Include="Views\CCTrain\Create.cshtml" />
-    <Content Include="Views\CCTrain\Delete.cshtml" />
-    <Content Include="Views\CCTrain\Details.cshtml" />
-    <Content Include="Views\CCTrain\Edit.cshtml" />
-    <Content Include="Views\CCTrain\Index.cshtml" />
-    <Content Include="Views\CCSchool\Create.cshtml" />
-    <Content Include="Views\CCSchool\Delete.cshtml" />
-    <Content Include="Views\CCSchool\Details.cshtml" />
-    <Content Include="Views\CCSchool\Edit.cshtml" />
-    <Content Include="Views\CCSchool\Index.cshtml" />
-    <Content Include="Views\CCIndig\Create.cshtml" />
-    <Content Include="Views\CCIndig\Delete.cshtml" />
-    <Content Include="Views\CCIndig\Details.cshtml" />
-    <Content Include="Views\CCIndig\Edit.cshtml" />
-    <Content Include="Views\CCIndig\Index.cshtml" />
-    <Content Include="Views\CCFinancial\Create.cshtml" />
-    <Content Include="Views\CCFinancial\Delete.cshtml" />
-    <Content Include="Views\CCFinancial\Details.cshtml" />
-    <Content Include="Views\CCFinancial\Edit.cshtml" />
-    <Content Include="Views\CCFinancial\Index.cshtml" />
-    <Content Include="Views\CCGender\Create.cshtml" />
-    <Content Include="Views\CCGender\Delete.cshtml" />
-    <Content Include="Views\CCGender\Details.cshtml" />
-    <Content Include="Views\CCGender\Edit.cshtml" />
-    <Content Include="Views\CCGender\Index.cshtml" />
-    <Content Include="Views\Shared\_Surveys.cshtml" />
-    <Content Include="Views\Survey\Report.cshtml" />
-    <Content Include="Views\Survey\_BarColumn.cshtml" />
-    <Content Include="Views\Survey\_PieChart.cshtml" />
-    <None Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
-    <None Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -717,13 +711,16 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
   <ProjectExtensions>
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>3461</DevelopmentServerPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:11521/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
@@ -740,6 +737,5 @@
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">
-  </Target>
-  -->
+  </Target> -->
 </Project>

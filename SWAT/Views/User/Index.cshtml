@@ -1,70 +1,103 @@
-﻿@model PagedList.IPagedList<SWAT.Models.Userid>
-@using PagedList.Mvc;
-<link href="~/Content/PagedList.css" rel="stylesheet" type="text/css" />
+﻿@model IEnumerable<SWAT.Models.Userid>
 
 @{
-    ViewBag.Title = "Users";
+    ViewBag.Title = "Index";
 }
 
-<h2>Users</h2>
+<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-@using (Html.BeginForm("Index", "User", FormMethod.Get))
-{ 
-    <p>
-        Find by name: @Html.TextBox("keywords", ViewBag.CurrentFilter as string)
-        <input type="submit" value="Search" />
-    </p>
-}
-<table class="table">
+@Html.Raw(ViewBag.ConnStr)
+<table>
     <tr>
         <th>
-            @*@Html.DisplayNameFor(model => model.Username)*@
-            @Html.ActionLink("Username", "Index", new { sortOrder = ViewBag.NameSortParm, currentFilter = ViewBag.CurrentFilter})
+            @Html.DisplayNameFor(model => model.Userid1)
         </th>
         <th>
-            @*@Html.DisplayNameFor(model => model.eMail)*@
-            Email
+            @Html.DisplayNameFor(model => model.Username)
         </th>
         <th>
-            Notes
-        </th>
-        
-        <th>
-            Target Name
+            @Html.DisplayNameFor(model => model.Password)
         </th>
         <th>
-            Notification Status
+            @Html.DisplayNameFor(model => model.eMail)
         </th>
         <th>
-            PM Enable
+            @Html.DisplayNameFor(model => model.Notes)
         </th>
         <th>
-            First Name
+            @Html.DisplayNameFor(model => model.SessionVars)
         </th>
         <th>
-            Last Name
+            @Html.DisplayNameFor(model => model.secondaryId)
         </th>
         <th>
-            Address
+            @Html.DisplayNameFor(model => model.type)
         </th>
         <th>
-           @* @Html.DisplayNameFor(model => model.Joined)*@
-            @Html.ActionLink("Joined", "Index", new{sortOrder = ViewBag.JoinedSortParm, CurrentFilter = ViewBag.CurrentFilter})
+            @Html.DisplayNameFor(model => model.properties)
         </th>
         <th>
-            Interests
+            @Html.DisplayNameFor(model => model.targetName)
         </th>
         <th>
-            Workplace
+            @Html.DisplayNameFor(model => model.NotifStatus)
         </th>
         <th>
-            Last Suggested Content Date
+            @Html.DisplayNameFor(model => model.NotifCode)
         </th>
         <th>
-            Full Name
+            @Html.DisplayNameFor(model => model.NotifReqCodeTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NotifActCodeTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PMEmailNotificationsEnabled)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UseOntarioMaps)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Last_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.utmX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.utmY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Joined)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Interests)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Workplace)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecretQuestion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SecretAnswer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AvatarUserPhotoID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastSuggestedContentDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
         </th>
         <th></th>
     </tr>
@@ -72,7 +105,13 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.Userid1)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.eMail)
@@ -81,13 +120,37 @@
             @Html.DisplayFor(modelItem => item.Notes)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.SessionVars)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.secondaryId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.properties)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.targetName)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.NotifStatus)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.NotifCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NotifReqCodeTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NotifActCodeTime)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.PMEmailNotificationsEnabled)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UseOntarioMaps)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.First_Name)
@@ -99,6 +162,12 @@
             @Html.DisplayFor(modelItem => item.Address)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.utmX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.utmY)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Joined)
         </td>
         <td>
@@ -108,24 +177,26 @@
             @Html.DisplayFor(modelItem => item.Workplace)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.SecretQuestion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SecretAnswer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AvatarUserPhotoID)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.LastSuggestedContentDate)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.FullName)
         </td>
-        <td style="min-width:150px;">
-            @Html.ActionLink("Edit", "Edit", new { id=item.Userid1 }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Userid1 }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Userid1 })
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
         </td>
     </tr>
 }
 
 </table>
-<br />
-@if( Model.PageCount > 0) 
-{
-    @:Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) of @Model.PageCount
-}
-
-@Html.PagedListPager(Model, page => Url.Action("Index", new{ page, sortOrder = ViewBag.CurrentSort, currentFilter = ViewBag.CurrentFilter}))

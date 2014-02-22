@@ -20,7 +20,7 @@ namespace SWAT.Models
         public Nullable<int> surfaceVar { get; set; }
     
         public virtual lkpSWATrunoffLU lkpSWATrunoffLU { get; set; }
-        public virtual lkpSWATsurfaceVarLU lkpSWATsurfaceVarLU { get; set; }
         public virtual tblSWATSurvey tblSWATSurvey { get; set; }
+        public virtual lkpSWATsurfaceVarLU lkpSWATsurfaceVarLU { get; set; }
     }
 }

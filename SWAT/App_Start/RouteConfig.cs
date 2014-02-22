@@ -17,7 +17,7 @@ namespace SWAT
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "User", action = "Details", id = 191 }
-                //defaults: new { controller = "User", action = "Index", id = UrlParameter.Optional }
+                //defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
         }
     }

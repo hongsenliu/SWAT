@@ -17,6 +17,8 @@ namespace SWAT.Models
         public lkpSWAT5rankLU()
         {
             this.tblSWATCCschools = new HashSet<tblSWATCCschool>();
+            this.tblSWATCCsocials = new HashSet<tblSWATCCsocial>();
+            this.tblSWATCCsocials1 = new HashSet<tblSWATCCsocial>();
         }
     
         public int id { get; set; }
@@ -24,5 +26,7 @@ namespace SWAT.Models
         public Nullable<int> intorder { get; set; }
     
         public virtual ICollection<tblSWATCCschool> tblSWATCCschools { get; set; }
+        public virtual ICollection<tblSWATCCsocial> tblSWATCCsocials { get; set; }
+        public virtual ICollection<tblSWATCCsocial> tblSWATCCsocials1 { get; set; }
     }
 }

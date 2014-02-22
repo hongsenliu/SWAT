@@ -7,8 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using SWAT.Models;
-using PagedList;
-using SWAT.ViewModels;
+//using SWAT.ViewModels;
 
 namespace SWAT.Controllers
 {
@@ -16,72 +15,27 @@ namespace SWAT.Controllers
     {
         private SWATEntities db = new SWATEntities();
 
+        //
         // GET: /User/
-        public ActionResult Index(string sortOrder, string keywords, string currentFilter, int? page)
+
+        public ActionResult Index()
         {
-            ViewBag.CurrentSort = sortOrder;
-            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "Name_desc" : "";
-            ViewBag.JoinedSortParm = sortOrder == "Joined" ? "Joined_desc" : "Joined";
-            ViewBag.KeywordsParm = keywords;
-
-            if (keywords != null)
-            {
-                page = 1;
-            }
-            else
-            {
-                keywords = currentFilter;
-            }
-            ViewBag.CurrentFilter = keywords;
-
-            var users = db.Userids.Where(user => user.type == 0);
-
-            if (!String.IsNullOrEmpty(keywords))
-            {
-                users = users.Where(user => user.Username.ToUpper().Contains(keywords.ToUpper()) || user.Last_Name.ToUpper().Contains(keywords.ToUpper())
-                                    || user.First_Name.ToUpper().Contains(keywords.ToUpper()) || user.FullName.ToUpper().Contains(keywords.ToUpper()));
-            }
-
-            if (sortOrder == "Name_desc")
-            {
-                users = users.OrderByDescending(user => user.Username);
-            }
-            else if (sortOrder == "Joined")
-            {
-                users = users.OrderBy(user => user.Joined);
-            }
-            else if (sortOrder == "Joined_desc")
-            {
-                users = users.OrderByDescending(user => user.Joined);
-            }
-            else
-            {
-                users = users.OrderBy(user => user.Username);
-            }
-
-            int pageSize = 20;
-            int pageNumber = (page ?? 1);
-
-            return View(users.ToPagedList(pageNumber, pageSize));
+            var users = db.Userids.Where(e => e.type == 0);
+            return View(users.ToList());
         }
 
-        public ActionResult About()
-        {
-            var data = from country in db.lkpSubnationals
-                       group country by country.lkpCountry.Name
-                           into countryGroup
-                           select new CountrySubnationalsGroup()
-                               {
-                                   CountryName = countryGroup.Key,
-                                   SubNationalCount = countryGroup.Count()
-                               };
-            return View(data);
-        }
-
-        //protected override void Dispose(bool disposing)
+        // TODO uncomment after merge
+        //public ActionResult About()
         //{
-        //    db.Dispose();
-        //    base.Dispose(disposing);
+        //    var data = from country in db.lkpSubnationals
+        //               group country by country.lkpCountry.Name
+        //                   into countryGroup
+        //                   select new CountrySubnationalsGroup()
+        //                   {
+        //                       CountryName = countryGroup.Key,
+        //                       SubNationalCount = countryGroup.Count()
+        //                   };
+        //    return View(data);
         //}
 
         // GET: /User/Details/5
@@ -110,7 +64,7 @@ namespace SWAT.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="Userid1,Username,Password,eMail,Notes,SessionVars,secondaryId,type,properties,targetName,NotifStatus,NotifCode,NotifReqCodeTime,NotifActCodeTime,PMEmailNotificationsEnabled,UseOntarioMaps,First_Name,Last_Name,Address,utmX,utmY,Joined,Interests,Workplace,SecretQuestion,SecretAnswer,AvatarUserPhotoID,LastSuggestedContentDate,FullName")] Userid userid)
+        public ActionResult Create([Bind(Include = "Userid1,Username,Password,eMail,Notes,SessionVars,secondaryId,type,properties,targetName,NotifStatus,NotifCode,NotifReqCodeTime,NotifActCodeTime,PMEmailNotificationsEnabled,UseOntarioMaps,First_Name,Last_Name,Address,utmX,utmY,Joined,Interests,Workplace,SecretQuestion,SecretAnswer,AvatarUserPhotoID,LastSuggestedContentDate,FullName")] Userid userid)
         {
             if (ModelState.IsValid)
             {
@@ -142,7 +96,7 @@ namespace SWAT.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="Userid1,Username,Password,eMail,Notes,SessionVars,secondaryId,type,properties,targetName,NotifStatus,NotifCode,NotifReqCodeTime,NotifActCodeTime,PMEmailNotificationsEnabled,UseOntarioMaps,First_Name,Last_Name,Address,utmX,utmY,Joined,Interests,Workplace,SecretQuestion,SecretAnswer,AvatarUserPhotoID,LastSuggestedContentDate,FullName")] Userid userid)
+        public ActionResult Edit([Bind(Include = "Userid1,Username,Password,eMail,Notes,SessionVars,secondaryId,type,properties,targetName,NotifStatus,NotifCode,NotifReqCodeTime,NotifActCodeTime,PMEmailNotificationsEnabled,UseOntarioMaps,First_Name,Last_Name,Address,utmX,utmY,Joined,Interests,Workplace,SecretQuestion,SecretAnswer,AvatarUserPhotoID,LastSuggestedContentDate,FullName")] Userid userid)
         {
             if (ModelState.IsValid)
             {
