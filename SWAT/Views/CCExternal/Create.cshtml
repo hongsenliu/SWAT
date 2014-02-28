@@ -1,0 +1,141 @@
+﻿@model SWAT.Models.tblSWATCCexternalSupport
+
+@{
+    ViewBag.Title = "Create";
+}
+
+
+<h2>Create - Community Capacity</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Governance - External Support</legend>
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+
+        <p>
+            @ViewBag.Question1
+        </p>
+        <div class="editor-field">
+            @Html.DropDownList("fundApp", String.Empty)
+            @Html.ValidationMessageFor(model => model.fundApp)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question2
+        </p>
+        <div class="editor-field">
+            @Html.DropDownList("fundAppSuccess", String.Empty)
+            @Html.ValidationMessageFor(model => model.fundAppSuccess)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question3
+        </p>
+        <div class="editor-field">
+            @Html.DropDownList("govRights", String.Empty)
+            @Html.ValidationMessageFor(model => model.govRights)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question4
+        </p>
+        <div class="editor-field">
+            @Html.DropDownList("govWatPol", String.Empty)
+            @Html.ValidationMessageFor(model => model.govWatPol)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question5
+        </p>
+        <div class="editor-field">
+            @Html.DropDownList("govWatAnal", String.Empty)
+            @Html.ValidationMessageFor(model => model.govWatAnal)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question6
+        </p>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.extVisitTech)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("extVisitTech", String.Empty)
+            @Html.ValidationMessageFor(model => model.extVisitTech)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.extVisitAdmin)
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("extVisitAdmin", String.Empty)
+            @Html.ValidationMessageFor(model => model.extVisitAdmin)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question7
+        </p>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.expertAccess1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.expertAccess1)
+            @Html.ValidationMessageFor(model => model.expertAccess1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.expertAccess2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.expertAccess2)
+            @Html.ValidationMessageFor(model => model.expertAccess2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.expertAccess3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.expertAccess3)
+            @Html.ValidationMessageFor(model => model.expertAccess3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.expertAccess4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.expertAccess4)
+            @Html.ValidationMessageFor(model => model.expertAccess4)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.expertAccess5)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.expertAccess5)
+            @Html.ValidationMessageFor(model => model.expertAccess5)
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Next" class="btn btn-default" />
+            </div>
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Content/CCExternal.js")
+}

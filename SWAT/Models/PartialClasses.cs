@@ -1,8 +1,45 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.Data.Entity;
+using System.Reflection;
 
 namespace SWAT.Models
 {
+    [MetadataType(typeof(SWPDevMetadata))]
+    public partial class tblSWATSWPdev
+    {
+    }
+
+    [MetadataType(typeof(SWPAgMetadata))]
+    public partial class tblSWATSWPag
+    { 
+    }
+
+    [MetadataType(typeof(SWPLivestockMetadata))]
+    public partial class tblSWATSWPl
+    { 
+    }
+
+    [MetadataType(typeof(CCWaterManagementMetadata))]
+    public partial class tblSWATCCwaterManagement
+    { 
+    }
+
+    [MetadataType(typeof(CCExternalMetadata))]
+    public partial class tblSWATCCexternalSupport
+    { 
+    }
+
+    [MetadataType(typeof(CCComMetada))]
+    public partial class tblSWATCCcom
+    { 
+    }
+
+    [MetadataType(typeof(CCSocialMetadata))]
+    public partial class tblSWATCCsocial
+    { 
+    }
+
     [MetadataType(typeof(CCGenderMetadata))]
     public partial class tblSWATCCgender
     { 
@@ -77,4 +114,6 @@ namespace SWAT.Models
     public partial class tblSWATWAextremeEvent
     { 
     }
+
+   
 }

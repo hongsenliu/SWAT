@@ -1,5 +1,4 @@
 ﻿$(document).ready(function () {
-    //$(function () {
     $.getCountryList = function () {
         if ($('#regionID > option:selected').val() == "")
         {
@@ -53,5 +52,4 @@
         $('#countryID').change($.getSubnationList);
         $.getCountryList();
         $.getSubnationList();
-    //});
 });

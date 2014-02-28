@@ -68,6 +68,11 @@ namespace SWAT.Controllers
             return View();
         }
 
+        private void removeSWPrecords(tblSWATBackgroundinfo tblswatbackgroundinfo)
+        {
+            // TODO remove ls, ag and dev if there are some records and isEconls, isEconAg, isEcondev are not 1511
+        }
+
         // Helper method to update the scores that occur in the background infomation section
         private void updateScores(tblSWATBackgroundinfo tblswatbackgroundinfo)
         {
@@ -147,6 +152,8 @@ namespace SWAT.Controllers
                     db.SaveChanges();
                 }
             }
+
+            removeSWPrecords(tblswatbackgroundinfo);
             
         }
 

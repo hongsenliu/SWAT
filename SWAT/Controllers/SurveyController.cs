@@ -103,7 +103,7 @@ namespace SWAT.Controllers
         // Return a chart Point by giving surveyID and indicatorgroupID
         private Point getGroupScorePoint(int SurveyID, int IndicatorGroupID)
         {
-            string[] colors = { "#006699", "#FFCC66" };
+            string[] colors = { "#006699", "#FFCC66", "#A5DF00" };
             double? score = getGroupScore(SurveyID, IndicatorGroupID);
             
             Point column = new Point { Y = score.GetValueOrDefault(0), Color = ColorTranslator.FromHtml(colors[IndicatorGroupID - 1]) };
@@ -113,7 +113,7 @@ namespace SWAT.Controllers
         // Return a chart Point by giving surveyID and componentID
         private Point getComponentScorePoint(int SurveyID, int ComponentID)
         {
-            string[] colors = { "#006699", "#FFCC66" };
+            string[] colors = { "#006699", "#FFCC66", "#A5DF00" };
             double? score = getComponentScore(SurveyID, ComponentID);
             int colorIndex = (int)db.lkpSWATcomponentLUs.Find(ComponentID).IndicatorGroupID - 1;
             Point column = new Point { Y = score.GetValueOrDefault(0), Color = ColorTranslator.FromHtml(colors[colorIndex]) };
@@ -136,14 +136,15 @@ namespace SWAT.Controllers
             Data data = new Data(new[]
                 {
                     getGroupScorePoint((int)id, 1),
-                    getGroupScorePoint((int)id, 2)
+                    getGroupScorePoint((int)id, 2),
+                    getGroupScorePoint((int)id, 3)
                 });
             
             
             Highcharts barColumn = new Highcharts("overallchart")
                 .InitChart(new Chart { DefaultSeriesType = ChartTypes.Column })
                 .SetTitle(new Title { Text = "Overall Result - " + tblswatsurvey.tblSWATLocation.name })
-                .SetXAxis(new XAxis { Categories = new[] { "Water Resources", "Community Capacity" } })
+                .SetXAxis(new XAxis { Categories = new[] { "Water Resources", "Community Capacity", "Governance" } })
                 .SetYAxis(new YAxis
                 {
                     Min = 0,
@@ -166,19 +167,26 @@ namespace SWAT.Controllers
                     );
 
             // Details result chart
-            List<Point> comPointList = new List<Point> { null };
+            List<Point> comPointList = new List<Point> {};
             
             foreach (var item in db.lkpSWATcomponentLUs)
             {
                 comPointList.Add(getComponentScorePoint((int)id, item.ID));
             }
-
             Data detailsData = new Data(comPointList.ToArray());
-
+            
             Highcharts detailsBarColumn = new Highcharts("detailschart")
-                .InitChart(new Chart { DefaultSeriesType = ChartTypes.Column })
+                .InitChart(new Chart { DefaultSeriesType = ChartTypes.Column})
                 .SetTitle(new Title { Text = "Details Result - " + tblswatsurvey.tblSWATLocation.name })
-                .SetXAxis(new XAxis { Categories = new[] { "Quantity", "Variability", "Resiliency", "", "Knowledge", "Financial", "Social", "Equity" } })
+                .SetXAxis(new XAxis
+                {
+                    Categories = new[] { "Quantity", "Variability", "Resiliency", "Knowledge", "Financial", "Social", "Equity", "Community", "External", "Water" },
+                    Labels = new XAxisLabels
+                    {
+                        Rotation = -90,
+                        Align = HorizontalAligns.Right
+                    }
+                })
                 .SetYAxis(new YAxis
                 {
                     Min = 0,
@@ -407,6 +415,48 @@ namespace SWAT.Controllers
 
         private void DeleteRelatedRecords(int id)
         {
+            var tblswatswpdev = db.tblSWATSWPdevs.Where(e => e.SurveyID == id);
+            foreach (tblSWATSWPdev item in tblswatswpdev)
+            {
+                db.tblSWATSWPdevs.Remove(item);
+            }
+
+            var tblswatswpag = db.tblSWATSWPags.Where(e => e.SurveyID == id);
+            foreach (tblSWATSWPag item in tblswatswpag)
+            {
+                db.tblSWATSWPags.Remove(item);
+            }
+
+            var tblswatswpls = db.tblSWATSWPls.Where(e => e.SurveyID == id);
+            foreach (tblSWATSWPl item in tblswatswpls)
+            {
+                db.tblSWATSWPls.Remove(item);
+            }
+
+            var tblswatccwatermanagement = db.tblSWATCCwaterManagements.Where(e => e.SurveyID == id);
+            foreach (tblSWATCCwaterManagement item in tblswatccwatermanagement)
+            {
+                db.tblSWATCCwaterManagements.Remove(item);
+            }
+
+            var tblswatccexternal = db.tblSWATCCexternalSupports.Where(e => e.SurveyID == id);
+            foreach (tblSWATCCexternalSupport item in tblswatccexternal)
+            {
+                db.tblSWATCCexternalSupports.Remove(item);
+            }
+
+            var tblswatcccom = db.tblSWATCCcoms.Where(e => e.SurveyID == id);
+            foreach (tblSWATCCcom item in tblswatcccom)
+            {
+                db.tblSWATCCcoms.Remove(item);
+            }
+
+            var tblswatccsocial = db.tblSWATCCsocials.Where(e => e.SurveyID == id);
+            foreach (tblSWATCCsocial item in tblswatccsocial)
+            {
+                db.tblSWATCCsocials.Remove(item);
+            }
+
             var tblswatccgender = db.tblSWATCCgenders.Where(e => e.SurveyID == id);
             foreach (tblSWATCCgender item in tblswatccgender)
             {

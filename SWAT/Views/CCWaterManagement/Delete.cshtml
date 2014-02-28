@@ -1,0 +1,145 @@
+﻿@model SWAT.Models.tblSWATCCwaterManagement
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>tblSWATCCwaterManagement</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwatComLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwatComLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.watAdminOther)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.watAdminOther)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwatActionPlanLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwatActionPlanLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU1.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU1.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU2.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU2.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU3.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU3.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU4.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU4.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATcomSatisfactionLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATcomSatisfactionLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwatClassRepLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwatClassRepLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwatComConcernsLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwatComConcernsLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwatTechStaffLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwatTechStaffLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwatTechTrainingLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwatTechTrainingLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwatBudgetLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwatBudgetLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.watFinPlan1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.watFinPlan1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.watFinPlan2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.watFinPlan2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATproPoorLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATproPoorLU.Description)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

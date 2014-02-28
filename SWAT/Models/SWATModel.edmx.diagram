@@ -173,6 +173,104 @@
         <EntityTypeShape EntityType="SWATModel.lkpSWATscores_surfaceVar" Width="1.5" PointX="10.218099932287867" PointY="21.802226270456902" />
         <EntityTypeShape EntityType="SWATModel.lkpSWATsurfaceVarLU" Width="1.5" PointX="0.18632034779820608" PointY="30.294641151230149" />
         <AssociationConnector Association="SWATModel.FK_tblSWATWAsurfaceWater_22_lkpSWATsurfaceVarLU" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_socCBO" Width="1.5" PointX="7.2823390379931494" PointY="24.550988298166072" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATsocCBOLU" Width="1.5" PointX="1.8179036666722521" PointY="26.746543181476437" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCsocial_31_lkpSWATsocCBOLU" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_5rankAlwaysBad" Width="1.5" PointX="0.95754266202335359" PointY="12.158889850675543" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATCCcom" Width="1.5" PointX="8.0302237756691053" PointY="8.1405985095261588" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCcom_29_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATextVisitLU" Width="1.5" PointX="4.0582452789220236" PointY="3.0118182315546171" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATfundAppLU" Width="1.5" PointX="10.432117686808164" PointY="23.945781405989909" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATfundAppSuccessLU" Width="1.5" PointX="11.146832199369944" PointY="21.247654149889787" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATgovRightsLU" Width="1.5" PointX="10.629379631313206" PointY="15.813788168045594" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATgovWatAnalLU" Width="1.5" PointX="8.8513309084118017" PointY="6.0737076877028251" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATgovWatPolLU" Width="1.5" PointX="10.00587387103861" PointY="29.783576681177866" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_extVisit" Width="1.5" PointX="7.6940112056648413" PointY="9.5431433513495811" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_fundAppFUND" Width="1.5" PointX="6.3049532036785756" PointY="19.035064765734163" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_fundAppLINK" Width="1.5" PointX="7.3133006483844021" PointY="23.903607036873517" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_fundAppSuccess" Width="1.5" PointX="11.556292002814027" PointY="31.047180622372395" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_govRights" Width="1.5" PointX="3.1979191597541421" PointY="16.100794099318232" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_govWatAnal" Width="1.5" PointX="4.8228023596214138" PointY="9.5296003713876019" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_govWatPol" Width="1.5" PointX="10.576486883022117" PointY="24.596191015372142" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATCCexternalSupport" Width="1.5" PointX="10.389854175220176" PointY="30.440821289290124" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCexternalSupport_36_lkpSWATextVisitLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCexternalSupport_37_lkpSWATextVisitLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCexternalSupport_31_lkpSWATfundAppLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCexternalSupport_32_lkpSWATfundAppSuccessLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCexternalSupport_33_lkpSWATgovRightsLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCexternalSupport_35_lkpSWATgovWatAnalLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCexternalSupport_34_lkpSWATgovWatPolLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCexternalSupport_30_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATcomSatisfactionLU" Width="1.5" PointX="6.9849713197839307" PointY="23.547625418541777" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATproPoorLU" Width="1.5" PointX="1.5806181903838263" PointY="10.215864752519813" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_comSatisfaction" Width="1.5" PointX="4.3191637994345111" PointY="27.47854316024042" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_proPoor" Width="1.5" PointX="10.897617821999649" PointY="18.342367493706927" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_watActionPlan" Width="1.5" PointX="0.66467258923904626" PointY="0.912733734079047" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_watBudget" Width="1.5" PointX="5.0261742924461945" PointY="16.687640361808072" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_watClassRep" Width="1.5" PointX="4.4459156880369015" PointY="11.350006824056621" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_watCom" Width="1.5" PointX="5.6410754423779785" PointY="29.732527180450283" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_watComConcerns" Width="1.5" PointX="9.64853313269491" PointY="6.3997138172386743" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_watTechStaff" Width="1.5" PointX="9.0068925661066981" PointY="10.017269019976849" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_watTechTraining" Width="1.5" PointX="1.7231649987973108" PointY="24.879714917801188" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATwatActionPlanLU" Width="1.5" PointX="8.2166671083386369" PointY="13.771353430008215" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATwatBudgetLU" Width="1.5" PointX="2.5294517923749291" PointY="10.591249247356899" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATwatClassRepLU" Width="1.5" PointX="11.532629336944144" PointY="28.3618585897432" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATwatComConcernsLU" Width="1.5" PointX="11.416944700953058" PointY="13.478530681449236" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATwatComLU" Width="1.5" PointX="10.529565877527727" PointY="21.539998630778864" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATwatTechStaffLU" Width="1.5" PointX="4.8240440547578238" PointY="10.605825369528413" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATwatTechTrainingLU" Width="1.5" PointX="11.600270787067839" PointY="18.367047839968954" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATCCwaterManagement" Width="1.5" PointX="0.55732015173757454" PointY="3.2677329495864607" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCwaterManagement_34_lkpSWAT5rankLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCwaterManagement_35_lkpSWAT5rankLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCwaterManagement_36_lkpSWAT5rankLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCwaterManagement_37_lkpSWAT5rankLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCwaterManagement_38_lkpSWAT5rankLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCwaterManagement_39_lkpSWATcomSatisfactionLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCwaterManagement_45_lkpSWATproPoorLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCwaterManagement_33_lkpSWATwatActionPlanLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCwaterManagement_44_lkpSWATwatBudgetLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCwaterManagement_40_lkpSWATwatClassRepLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCwaterManagement_41_lkpSWATwatComConcernsLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCwaterManagement_32_lkpSWATwatComLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCwaterManagement_42_lkpSWATwatTechStaffLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCwaterManagement_43_lkpSWATwatTechTrainingLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATCCwaterManagement_31_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATbestManagementLU" Width="1.5" PointX="1.5596238475104904" PointY="15.167242027431373" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATbestManIndLU" Width="1.5" PointX="3.6492943017041752" PointY="20.534910002972424" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATcropLossLU" Width="1.5" PointX="5.4768979314141433" PointY="1.1482496564966858" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATerosionLU" Width="1.5" PointX="7.9688617847714855" PointY="14.342505327585389" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_bestManagement" Width="1.5" PointX="5.3263843196101419" PointY="21.543985943097614" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_bestManInd" Width="1.5" PointX="5.1533989371514872" PointY="30.109283416582869" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_cropLoss" Width="1.5" PointX="1.6837055523338287" PointY="31.074049472377659" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_erosion" Width="1.5" PointX="3.7371706775097042" PointY="9.6910671636886274" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_YesNoLU_YesBad" Width="1.5" PointX="0.723117113450131" PointY="9.5739762380598" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATSWPag" Width="1.5" PointX="4.8084170132914634" PointY="19.333367356720085" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATSWPdev" Width="1.5" PointX="8.875" PointY="7.875" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSWPag_40_lkpSWAT5rankLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSWPag_41_lkpSWAT5rankLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSWPdev_42_lkpSWAT5rankLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSWPag_43_lkpSWATbestManagementLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSWPdev_35_lkpSWATbestManIndLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSWPag_44_lkpSWATcropLossLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSWPag_42_lkpSWATerosionLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSWPag_33_tblSWATSurvey" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSWPdev_34_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATmedicalCostLU" Width="1.5" PointX="6.1499050101963366" PointY="10.136879508447311" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATmedicalTimeLU" Width="1.5" PointX="5.7411463808925571" PointY="24.789599668602271" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_medicalCost" Width="1.5" PointX="0.21289139437158192" PointY="23.635933410206778" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_medicalTime" Width="1.5" PointX="0.84026497269061617" PointY="9.3809490992598938" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_survivorship" Width="1.5" PointX="5.0143202026441323" PointY="16.802514844016411" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATsurvivorshipLU" Width="1.5" PointX="2.5587688286596766" PointY="17.386838950862568" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATHPPcom" Width="1.5" PointX="9.59291468448607" PointY="24.298676934232319" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATHPPcom_43_lkpSWAT5rankLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATHPPcom_46_lkpSWATmedicalCostLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATHPPcom_45_lkpSWATmedicalTimeLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATHPPcom_44_lkpSWATsurvivorshipLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATHPPcom_35_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATSWPl" Width="1.5" PointX="4.4369727393784437" PointY="4.4861370793013542" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSWPls_39_lkpSWAT5rankLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSWPls_32_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATdevSiteLU" Width="1.5" PointX="3.8578302300804435" PointY="24.601097580325369" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

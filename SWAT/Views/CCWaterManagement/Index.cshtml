@@ -1,0 +1,135 @@
+﻿@model IEnumerable<SWAT.Models.tblSWATCCwaterManagement>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwatComLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.watAdminOther)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwatActionPlanLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU1.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU2.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU3.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU4.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATcomSatisfactionLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwatClassRepLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwatComConcernsLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwatTechStaffLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwatTechTrainingLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwatBudgetLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.watFinPlan1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.watFinPlan2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATproPoorLU.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSWATSurvey.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwatComLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.watAdminOther)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwatActionPlanLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU1.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU2.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU3.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU4.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATcomSatisfactionLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwatClassRepLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwatComConcernsLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwatTechStaffLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwatTechTrainingLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwatBudgetLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.watFinPlan1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.watFinPlan2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATproPoorLU.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

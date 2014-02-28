@@ -1,0 +1,75 @@
+﻿@model IEnumerable<SWAT.Models.tblSWATSWPdev>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.devSite1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.devSite2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.devSite3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.devSite4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.devSiteTOTAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATbestManIndLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSWATSurvey.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.devSite1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.devSite2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.devSite3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.devSite4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.devSiteTOTAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATbestManIndLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

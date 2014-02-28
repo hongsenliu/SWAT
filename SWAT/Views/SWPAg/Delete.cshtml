@@ -1,0 +1,75 @@
+﻿@model SWAT.Models.tblSWATSWPag
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>tblSWATSWPag</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.agType1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.agType1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.agType2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.agType2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU1.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU1.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATerosionLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATerosionLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATbestManagementLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATbestManagementLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATcropLossLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATcropLossLU.Description)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

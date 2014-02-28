@@ -107,5 +107,62 @@ namespace SWAT.Models
         public DbSet<Userid> Userids { get; set; }
         public DbSet<lkpSWATscores_surfaceVar> lkpSWATscores_surfaceVar { get; set; }
         public DbSet<lkpSWATsurfaceVarLU> lkpSWATsurfaceVarLUs { get; set; }
+        public DbSet<lkpSWATscores_socCBO> lkpSWATscores_socCBO { get; set; }
+        public DbSet<lkpSWATsocCBOLU> lkpSWATsocCBOLUs { get; set; }
+        public DbSet<lkpSWATscores_5rankAlwaysBad> lkpSWATscores_5rankAlwaysBad { get; set; }
+        public DbSet<tblSWATCCcom> tblSWATCCcoms { get; set; }
+        public DbSet<lkpSWATextVisitLU> lkpSWATextVisitLUs { get; set; }
+        public DbSet<lkpSWATfundAppLU> lkpSWATfundAppLUs { get; set; }
+        public DbSet<lkpSWATfundAppSuccessLU> lkpSWATfundAppSuccessLUs { get; set; }
+        public DbSet<lkpSWATgovRightsLU> lkpSWATgovRightsLUs { get; set; }
+        public DbSet<lkpSWATgovWatAnalLU> lkpSWATgovWatAnalLUs { get; set; }
+        public DbSet<lkpSWATgovWatPolLU> lkpSWATgovWatPolLUs { get; set; }
+        public DbSet<lkpSWATscores_extVisit> lkpSWATscores_extVisit { get; set; }
+        public DbSet<lkpSWATscores_fundAppFUND> lkpSWATscores_fundAppFUND { get; set; }
+        public DbSet<lkpSWATscores_fundAppLINK> lkpSWATscores_fundAppLINK { get; set; }
+        public DbSet<lkpSWATscores_fundAppSuccess> lkpSWATscores_fundAppSuccess { get; set; }
+        public DbSet<lkpSWATscores_govRights> lkpSWATscores_govRights { get; set; }
+        public DbSet<lkpSWATscores_govWatAnal> lkpSWATscores_govWatAnal { get; set; }
+        public DbSet<lkpSWATscores_govWatPol> lkpSWATscores_govWatPol { get; set; }
+        public DbSet<tblSWATCCexternalSupport> tblSWATCCexternalSupports { get; set; }
+        public DbSet<lkpSWATcomSatisfactionLU> lkpSWATcomSatisfactionLUs { get; set; }
+        public DbSet<lkpSWATproPoorLU> lkpSWATproPoorLUs { get; set; }
+        public DbSet<lkpSWATscores_comSatisfaction> lkpSWATscores_comSatisfaction { get; set; }
+        public DbSet<lkpSWATscores_proPoor> lkpSWATscores_proPoor { get; set; }
+        public DbSet<lkpSWATscores_watActionPlan> lkpSWATscores_watActionPlan { get; set; }
+        public DbSet<lkpSWATscores_watBudget> lkpSWATscores_watBudget { get; set; }
+        public DbSet<lkpSWATscores_watClassRep> lkpSWATscores_watClassRep { get; set; }
+        public DbSet<lkpSWATscores_watCom> lkpSWATscores_watCom { get; set; }
+        public DbSet<lkpSWATscores_watComConcerns> lkpSWATscores_watComConcerns { get; set; }
+        public DbSet<lkpSWATscores_watTechStaff> lkpSWATscores_watTechStaff { get; set; }
+        public DbSet<lkpSWATscores_watTechTraining> lkpSWATscores_watTechTraining { get; set; }
+        public DbSet<lkpSWATwatActionPlanLU> lkpSWATwatActionPlanLUs { get; set; }
+        public DbSet<lkpSWATwatBudgetLU> lkpSWATwatBudgetLUs { get; set; }
+        public DbSet<lkpSWATwatClassRepLU> lkpSWATwatClassRepLUs { get; set; }
+        public DbSet<lkpSWATwatComConcernsLU> lkpSWATwatComConcernsLUs { get; set; }
+        public DbSet<lkpSWATwatComLU> lkpSWATwatComLUs { get; set; }
+        public DbSet<lkpSWATwatTechStaffLU> lkpSWATwatTechStaffLUs { get; set; }
+        public DbSet<lkpSWATwatTechTrainingLU> lkpSWATwatTechTrainingLUs { get; set; }
+        public DbSet<tblSWATCCwaterManagement> tblSWATCCwaterManagements { get; set; }
+        public DbSet<lkpSWATbestManagementLU> lkpSWATbestManagementLUs { get; set; }
+        public DbSet<lkpSWATbestManIndLU> lkpSWATbestManIndLUs { get; set; }
+        public DbSet<lkpSWATcropLossLU> lkpSWATcropLossLUs { get; set; }
+        public DbSet<lkpSWATerosionLU> lkpSWATerosionLUs { get; set; }
+        public DbSet<lkpSWATscores_bestManagement> lkpSWATscores_bestManagement { get; set; }
+        public DbSet<lkpSWATscores_bestManInd> lkpSWATscores_bestManInd { get; set; }
+        public DbSet<lkpSWATscores_cropLoss> lkpSWATscores_cropLoss { get; set; }
+        public DbSet<lkpSWATscores_erosion> lkpSWATscores_erosion { get; set; }
+        public DbSet<lkpSWATscores_YesNoLU_YesBad> lkpSWATscores_YesNoLU_YesBad { get; set; }
+        public DbSet<tblSWATSWPag> tblSWATSWPags { get; set; }
+        public DbSet<tblSWATSWPdev> tblSWATSWPdevs { get; set; }
+        public DbSet<lkpSWATmedicalCostLU> lkpSWATmedicalCostLUs { get; set; }
+        public DbSet<lkpSWATmedicalTimeLU> lkpSWATmedicalTimeLUs { get; set; }
+        public DbSet<lkpSWATscores_medicalCost> lkpSWATscores_medicalCost { get; set; }
+        public DbSet<lkpSWATscores_medicalTime> lkpSWATscores_medicalTime { get; set; }
+        public DbSet<lkpSWATscores_survivorship> lkpSWATscores_survivorship { get; set; }
+        public DbSet<lkpSWATsurvivorshipLU> lkpSWATsurvivorshipLUs { get; set; }
+        public DbSet<tblSWATHPPcom> tblSWATHPPcoms { get; set; }
+        public DbSet<tblSWATSWPl> tblSWATSWPls { get; set; }
+        public DbSet<lkpSWATdevSiteLU> lkpSWATdevSiteLUs { get; set; }
     }
 }

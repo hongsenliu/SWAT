@@ -1,0 +1,72 @@
+﻿@model SWAT.Models.tblSWATSWPl
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create - Source Water Risks and Protection</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+
+    <fieldset>
+        <legend>Livestock</legend>
+
+        <p>
+            @ViewBag.Question1
+        </p>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.livestock1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.livestock1)
+            @Html.ValidationMessageFor(model => model.livestock1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.livestock2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.livestock2)
+            @Html.ValidationMessageFor(model => model.livestock2)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question2
+        </p>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.waterFenced)%
+            @Html.ValidationMessageFor(model => model.waterFenced)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question3
+        </p>
+        <div class="editor-field">
+            @Html.DropDownList("livestockEffluent", String.Empty)
+            @Html.ValidationMessageFor(model => model.livestockEffluent)
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <p>
+                    <br />
+                    <input type="submit" value="Next" class="btn btn-default" />
+                </p>
+            </div>
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Content/SWPLivestock.js")
+}

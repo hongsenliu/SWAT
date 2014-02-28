@@ -32,6 +32,13 @@ namespace SWAT.Models
             this.tblSWATWAPrecipitations = new HashSet<tblSWATWAPrecipitation>();
             this.tblSWATWAriskPreps = new HashSet<tblSWATWAriskPrep>();
             this.tblSWATWAsurfaceWaters = new HashSet<tblSWATWAsurfaceWater>();
+            this.tblSWATCCcoms = new HashSet<tblSWATCCcom>();
+            this.tblSWATCCexternalSupports = new HashSet<tblSWATCCexternalSupport>();
+            this.tblSWATCCwaterManagements = new HashSet<tblSWATCCwaterManagement>();
+            this.tblSWATSWPags = new HashSet<tblSWATSWPag>();
+            this.tblSWATSWPdevs = new HashSet<tblSWATSWPdev>();
+            this.tblSWATHPPcoms = new HashSet<tblSWATHPPcom>();
+            this.tblSWATSWPls = new HashSet<tblSWATSWPl>();
         }
     
         public int ID { get; set; }
@@ -59,5 +66,12 @@ namespace SWAT.Models
         public virtual ICollection<tblSWATWAriskPrep> tblSWATWAriskPreps { get; set; }
         public virtual ICollection<tblSWATWAsurfaceWater> tblSWATWAsurfaceWaters { get; set; }
         public virtual Userid Userid1 { get; set; }
+        public virtual ICollection<tblSWATCCcom> tblSWATCCcoms { get; set; }
+        public virtual ICollection<tblSWATCCexternalSupport> tblSWATCCexternalSupports { get; set; }
+        public virtual ICollection<tblSWATCCwaterManagement> tblSWATCCwaterManagements { get; set; }
+        public virtual ICollection<tblSWATSWPag> tblSWATSWPags { get; set; }
+        public virtual ICollection<tblSWATSWPdev> tblSWATSWPdevs { get; set; }
+        public virtual ICollection<tblSWATHPPcom> tblSWATHPPcoms { get; set; }
+        public virtual ICollection<tblSWATSWPl> tblSWATSWPls { get; set; }
     }
 }

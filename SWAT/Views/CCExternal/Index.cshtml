@@ -1,0 +1,105 @@
+﻿@model IEnumerable<SWAT.Models.tblSWATCCexternalSupport>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATfundAppLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATfundAppSuccessLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATgovRightsLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATgovWatPolLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATgovWatAnalLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATextVisitLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATextVisitLU1.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.expertAccess1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.expertAccess2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.expertAccess3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.expertAccess4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.expertAccess5)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSWATSurvey.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATfundAppLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATfundAppSuccessLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATgovRightsLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATgovWatPolLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATgovWatAnalLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATextVisitLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATextVisitLU1.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.expertAccess1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.expertAccess2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.expertAccess3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.expertAccess4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.expertAccess5)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

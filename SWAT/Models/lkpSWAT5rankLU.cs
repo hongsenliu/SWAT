@@ -19,6 +19,16 @@ namespace SWAT.Models
             this.tblSWATCCschools = new HashSet<tblSWATCCschool>();
             this.tblSWATCCsocials = new HashSet<tblSWATCCsocial>();
             this.tblSWATCCsocials1 = new HashSet<tblSWATCCsocial>();
+            this.tblSWATCCwaterManagements = new HashSet<tblSWATCCwaterManagement>();
+            this.tblSWATCCwaterManagements1 = new HashSet<tblSWATCCwaterManagement>();
+            this.tblSWATCCwaterManagements2 = new HashSet<tblSWATCCwaterManagement>();
+            this.tblSWATCCwaterManagements3 = new HashSet<tblSWATCCwaterManagement>();
+            this.tblSWATCCwaterManagements4 = new HashSet<tblSWATCCwaterManagement>();
+            this.tblSWATSWPags = new HashSet<tblSWATSWPag>();
+            this.tblSWATSWPags1 = new HashSet<tblSWATSWPag>();
+            this.tblSWATSWPdevs = new HashSet<tblSWATSWPdev>();
+            this.tblSWATHPPcoms = new HashSet<tblSWATHPPcom>();
+            this.tblSWATSWPls = new HashSet<tblSWATSWPl>();
         }
     
         public int id { get; set; }
@@ -28,5 +38,15 @@ namespace SWAT.Models
         public virtual ICollection<tblSWATCCschool> tblSWATCCschools { get; set; }
         public virtual ICollection<tblSWATCCsocial> tblSWATCCsocials { get; set; }
         public virtual ICollection<tblSWATCCsocial> tblSWATCCsocials1 { get; set; }
+        public virtual ICollection<tblSWATCCwaterManagement> tblSWATCCwaterManagements { get; set; }
+        public virtual ICollection<tblSWATCCwaterManagement> tblSWATCCwaterManagements1 { get; set; }
+        public virtual ICollection<tblSWATCCwaterManagement> tblSWATCCwaterManagements2 { get; set; }
+        public virtual ICollection<tblSWATCCwaterManagement> tblSWATCCwaterManagements3 { get; set; }
+        public virtual ICollection<tblSWATCCwaterManagement> tblSWATCCwaterManagements4 { get; set; }
+        public virtual ICollection<tblSWATSWPag> tblSWATSWPags { get; set; }
+        public virtual ICollection<tblSWATSWPag> tblSWATSWPags1 { get; set; }
+        public virtual ICollection<tblSWATSWPdev> tblSWATSWPdevs { get; set; }
+        public virtual ICollection<tblSWATHPPcom> tblSWATHPPcoms { get; set; }
+        public virtual ICollection<tblSWATSWPl> tblSWATSWPls { get; set; }
     }
 }

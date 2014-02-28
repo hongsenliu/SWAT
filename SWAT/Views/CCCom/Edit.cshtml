@@ -1,0 +1,77 @@
+﻿@model SWAT.Models.tblSWATCCcom
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit - Community Capacity</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Governance - Community Management</legend>
+
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+
+        <p>
+            @ViewBag.Question
+        </p>
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.comResource1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.comResource1)
+            @Html.ValidationMessageFor(model => model.comResource1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.comResource2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.comResource2)
+            @Html.ValidationMessageFor(model => model.comResource2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.comResource3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.comResource3)
+            @Html.ValidationMessageFor(model => model.comResource3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.comResource4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.comResource4)
+            @Html.ValidationMessageFor(model => model.comResource4)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.comResource5)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.comResource5)
+            @Html.ValidationMessageFor(model => model.comResource5)
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

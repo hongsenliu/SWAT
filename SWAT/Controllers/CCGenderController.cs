@@ -150,8 +150,8 @@ namespace SWAT.Controllers
                     updateScores(tblswatccgender);
 
                     // return RedirectToAction("Index");
-                    // return RedirectToAction("Create", "CCGender", new { SurveyID = tblswatccfinancial.SurveyID });
-                    return RedirectToAction("Report", "Survey", new { id = tblswatccgender.SurveyID });
+                    // return RedirectToAction("Report", "Survey", new { id = tblswatccgender.SurveyID });
+                    return RedirectToAction("Create", "CCSocial", new { SurveyID = tblswatccgender.SurveyID });
                 }
 
                 db.tblSWATCCgenders.Add(tblswatccgender);
@@ -159,7 +159,8 @@ namespace SWAT.Controllers
                 updateScores(tblswatccgender);
 
                 // return RedirectToAction("Index");
-                return RedirectToAction("Report", "Survey", new { id = tblswatccgender.SurveyID });
+                // return RedirectToAction("Report", "Survey", new { id = tblswatccgender.SurveyID });
+                return RedirectToAction("Create", "CCSocial", new { SurveyID = tblswatccgender.SurveyID });
             }
 
             ViewBag.gRole1 = new SelectList(db.lkpSWATgenderLUs, "id", "Description", tblswatccgender.gRole1);
@@ -213,9 +214,22 @@ namespace SWAT.Controllers
                 db.SaveChanges();
                 updateScores(tblswatccgender);
 
-                // TODO add redirection
+                // If there is not any CCSocial with the current survey (SurveyID) then create one and redirect to its edit link.
+                var socials = db.tblSWATCCsocials.Where(e => e.SurveyID == tblswatccgender.SurveyID);
+                if (!socials.Any())
+                {
+                    tblSWATCCsocial tblswatccsocial = new tblSWATCCsocial();
+                    tblswatccsocial.SurveyID = tblswatccgender.SurveyID;
+                    db.tblSWATCCsocials.Add(tblswatccsocial);
+                    db.SaveChanges();
 
-                return RedirectToAction("Index");
+                    int newSocialID = tblswatccsocial.ID;
+
+                    return RedirectToAction("Edit", "CCSocial", new { id = newSocialID, SurveyID = tblswatccsocial.SurveyID });
+                }
+
+                return RedirectToAction("Edit", "CCSocial", new { id = socials.Single(e => e.SurveyID == tblswatccgender.SurveyID).ID, SurveyID = tblswatccgender.SurveyID });
+                // return RedirectToAction("Index");
             }
             ViewBag.gRole1 = new SelectList(db.lkpSWATgenderLUs, "id", "Description", tblswatccgender.gRole1);
             ViewBag.gRole2 = new SelectList(db.lkpSWATgenderLUs, "id", "Description", tblswatccgender.gRole2);

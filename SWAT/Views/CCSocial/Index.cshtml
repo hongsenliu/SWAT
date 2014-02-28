@@ -1,0 +1,57 @@
+﻿@model IEnumerable<SWAT.Models.tblSWATCCsocial>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU1.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.socCBO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.socAttend)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSWATSurvey.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU1.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.socCBO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.socAttend)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

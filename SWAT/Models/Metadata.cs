@@ -3,6 +3,110 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SWAT.Models
 {
+    public class SWPDevMetadata
+    {
+        [Display(Name = "Mines")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range")]
+        public Nullable<int> devSite1 { get; set; }
+
+        [Display(Name = "Landfills")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range")]
+        public Nullable<int> devSite2 { get; set; }
+
+        [Display(Name = "Industrial sites")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range")]
+        public Nullable<int> devSite3 { get; set; }
+
+        [Display(Name = "Other")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range")]
+        public Nullable<int> devSite4 { get; set; }
+    }
+
+    public class SWPAgMetadata
+    {
+        [Display(Name = "Intensive (commercial large-scale farming)")]
+        public bool agType1 { get; set; }
+
+        [Display(Name = "Non-intensive (subsistence)")]
+        public bool agType2 { get; set; }
+    }
+
+    public class CCWaterManagementMetadata
+    {
+        [DataType(DataType.MultilineText)]
+        public string watAdminOther { get; set; }
+
+        [Display(Name = "Administrative")]
+        public Nullable<int> watRecords1 { get; set; }
+
+        [Display(Name = "Financial")]
+        public Nullable<int> watRecords2 { get; set; }
+
+        [Display(Name = "Water quality")]
+        public Nullable<int> watRecords3 { get; set; }
+
+        [Display(Name = "Water quantity")]
+        public Nullable<int> watRecords4 { get; set; }
+
+        [Display(Name = "Maintenance")]
+        public Nullable<int> watRecords5 { get; set; }
+
+        [Display(Name = "Infrastructure maintenance and operation")]
+        public bool watFinPlan1 { get; set; }
+
+        [Display(Name = "Infrastructure expansion")]
+        public bool watFinPlan2 { get; set; }
+    }
+
+    public class CCExternalMetadata
+    {
+        [Display(Name = "Technical support")]
+        public Nullable<int> extVisitTech { get; set; }
+
+        [Display(Name = "Administrative support")]
+        public Nullable<int> extVisitAdmin { get; set; }
+
+        [Display(Name = "Internet resources")]
+        public bool expertAccess1 { get; set; }
+
+        [Display(Name = "Consultants")]
+        public bool expertAccess2 { get; set; }
+
+        [Display(Name = "Technical documents")]
+        public bool expertAccess3 { get; set; }
+
+        [Display(Name = "Local watershed reports")]
+        public bool expertAccess4 { get; set; }
+
+        [Display(Name = "Scientific research")]
+        public bool expertAccess5 { get; set; }
+    }
+
+    public class CCComMetada
+    {
+        [Display(Name = "Documented policies")]
+        public bool comResource1 { get; set; }
+
+        [Display(Name = "Documented future plans and goals")]
+        public bool comResource2 { get; set; }
+
+        [Display(Name = "Office space")]
+        public bool comResource3 { get; set; }
+
+        [Display(Name = "Elected council")]
+        public bool comResource4 { get; set; }
+
+        [Display(Name = "Paid staff")]
+        public bool comResource5 { get; set; }
+    }
+
+    public class CCSocialMetadata
+    {
+        [Display(Name = "% of Households")]
+        [Range(0, 100, ErrorMessage = "The value is out of range")]
+        public Nullable<double> socAttend { get; set; }
+    }
+
     public class CCGenderMetadata
     {
         [Display(Name = "Water collection")]
@@ -338,5 +442,18 @@ namespace SWAT.Models
 
         [Display(Name = "Other? (Please specify)")]
         public string extremeOtherComment { get; set; }
+    }
+
+    public class SWPLivestockMetadata
+    {
+        [Display(Name = "Intensive (commercial livestock)")]
+        public bool livestock1 { get; set; }
+
+        [Display(Name = "Non-intensive (household-owned)")]
+        public bool livestock2 { get; set; }
+
+        [Display(Name = "Proportion of water sources")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> waterFenced { get; set; }
     }
 }

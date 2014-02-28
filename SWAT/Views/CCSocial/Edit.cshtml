@@ -1,0 +1,71 @@
+﻿@model SWAT.Models.tblSWATCCsocial
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit - Community Capacity</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Social Capital</legend>
+
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+
+        <p>
+            @ViewBag.Question1
+        </p>
+        <div class="editor-field">
+            @Html.DropDownList("socHelp", String.Empty)
+            @Html.ValidationMessageFor(model => model.socHelp)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question2
+        </p>
+        <div class="editor-field">
+            @Html.DropDownList("socClique", String.Empty)
+            @Html.ValidationMessageFor(model => model.socClique)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question3
+        </p>
+        <div class="editor-field">
+            @Html.DropDownList("socCBO", String.Empty)
+            @Html.ValidationMessageFor(model => model.socCBO)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question4
+        </p>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.socAttend)%
+            @Html.ValidationMessageFor(model => model.socAttend)
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <p>
+                    <br />
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </p>
+            </div>
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

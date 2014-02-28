@@ -3,7 +3,11 @@
 @{
    ViewBag.Title = "Results";
 }
+<div id="container1" style="width: auto;">
+    @(Model.OverallChart)
+</div>
 
-@(Model.OverallChart)
 <hr />
-@(Model.DetailsChart)
+<div id="container2" style="width: auto;">
+    @(Model.DetailsChart)
+</div>

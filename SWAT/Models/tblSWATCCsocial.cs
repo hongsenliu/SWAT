@@ -24,5 +24,6 @@ namespace SWAT.Models
         public virtual lkpSWAT5rankLU lkpSWAT5rankLU { get; set; }
         public virtual lkpSWAT5rankLU lkpSWAT5rankLU1 { get; set; }
         public virtual tblSWATSurvey tblSWATSurvey { get; set; }
+        public virtual lkpSWATsocCBOLU lkpSWATsocCBOLU { get; set; }
     }
 }
