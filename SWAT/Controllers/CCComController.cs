@@ -132,8 +132,8 @@ namespace SWAT.Controllers
                 db.SaveChanges();
                 updateScores(tblswatcccom);
 
-                var ccexternal = db.tblSWATCCexternalSupports.First(e => e.SurveyID == tblswatcccom.SurveyID);
-                if (ccexternal == null)
+                var ccexternal = db.tblSWATCCexternalSupports.Where(e => e.SurveyID == tblswatcccom.SurveyID);
+                if (!ccexternal.Any())
                 {
                     tblSWATCCexternalSupport tblswatccexternal = new tblSWATCCexternalSupport();
                     tblswatccexternal.SurveyID = tblswatcccom.SurveyID;
@@ -145,7 +145,7 @@ namespace SWAT.Controllers
                     return RedirectToAction("Edit", "CCExternal", new { id = newExternalID, SurveyID = tblswatccexternal.SurveyID });
                 }
 
-                return RedirectToAction("Edit", "CCExternal", new { id = db.tblSWATCCexternalSupports.Single(e => e.SurveyID == tblswatcccom.SurveyID).ID, SurveyID = tblswatcccom.SurveyID });
+                return RedirectToAction("Edit", "CCExternal", new { id = ccexternal.Single(e => e.SurveyID == tblswatcccom.SurveyID).ID, SurveyID = tblswatcccom.SurveyID });
             }
 
             ViewBag.Question = db.lkpSWATScoreVarsLUs.Single(e => e.VarName == "comResourcesSCORE").Description;

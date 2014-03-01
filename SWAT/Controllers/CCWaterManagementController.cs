@@ -392,8 +392,8 @@ namespace SWAT.Controllers
                     if (background.isEconLs == 1511)
                     {
                         // TODO redirect to livestock form
-                        var swpls = db.tblSWATSWPls.First(e => e.SurveyID == tblswatccwatermanagement.SurveyID);
-                        if (swpls == null)
+                        var swpls = db.tblSWATSWPls.Where(e => e.SurveyID == tblswatccwatermanagement.SurveyID);
+                        if (!swpls.Any())
                         {
                             tblSWATSWPl tblswatswpls = new tblSWATSWPl();
                             tblswatswpls.SurveyID = tblswatccwatermanagement.SurveyID;
@@ -403,13 +403,13 @@ namespace SWAT.Controllers
                             int newSWPlsID = tblswatswpls.ID;
                             return RedirectToAction("Edit", "SWPLivestock", new{ id = newSWPlsID, SurveyID = tblswatswpls.SurveyID});
                         }
-                        return RedirectToAction("Edit", "SWPLivestock", new { id = db.tblSWATSWPls.First(e => e.SurveyID == tblswatccwatermanagement.SurveyID).ID, SurveyID = tblswatccwatermanagement.SurveyID });
+                        return RedirectToAction("Edit", "SWPLivestock", new { id = swpls.First(e => e.SurveyID == tblswatccwatermanagement.SurveyID).ID, SurveyID = tblswatccwatermanagement.SurveyID });
                     }
                     else if (background.isEconAg == 1511)
                     { 
                         // TODO redirect to ag form
-                        var swpag = db.tblSWATSWPags.First(e => e.SurveyID == tblswatccwatermanagement.SurveyID);
-                        if (swpag == null)
+                        var swpag = db.tblSWATSWPags.Where(e => e.SurveyID == tblswatccwatermanagement.SurveyID);
+                        if (!swpag.Any())
                         {
                             tblSWATSWPag tblswatswpag = new tblSWATSWPag();
                             tblswatswpag.SurveyID = tblswatccwatermanagement.SurveyID;
@@ -419,13 +419,13 @@ namespace SWAT.Controllers
                             int newSWPagID = tblswatswpag.ID;
                             return RedirectToAction("Edit", "SWPAg", new { id = newSWPagID, SurveyID = tblswatswpag.SurveyID});
                         }
-                        return RedirectToAction("Edit", "SWPAg", new { id = db.tblSWATSWPags.First(e => e.SurveyID == tblswatccwatermanagement.SurveyID).ID, SurveyID = tblswatccwatermanagement.SurveyID});
+                        return RedirectToAction("Edit", "SWPAg", new { id = swpag.First(e => e.SurveyID == tblswatccwatermanagement.SurveyID).ID, SurveyID = tblswatccwatermanagement.SurveyID });
                     }
                     else if (background.isEconDev == 1511)
                     { 
                         // TODO redirect to dev form
-                        var swpdev = db.tblSWATSWPdevs.First(e => e.SurveyID == tblswatccwatermanagement.SurveyID);
-                        if (swpdev == null)
+                        var swpdev = db.tblSWATSWPdevs.Where(e => e.SurveyID == tblswatccwatermanagement.SurveyID);
+                        if (!swpdev.Any())
                         {
                             tblSWATSWPdev tblswatswpdev = new tblSWATSWPdev();
                             tblswatswpdev.SurveyID = tblswatccwatermanagement.SurveyID;
@@ -435,12 +435,12 @@ namespace SWAT.Controllers
                             int newSWPdevID = tblswatswpdev.ID;
                             return RedirectToAction("Edit", "SWPDev", new { id = newSWPdevID, SurveyID = tblswatswpdev.SurveyID});
                         }
-                        return RedirectToAction("Edit", "SWPDev", new { id = db.tblSWATSWPdevs.First(e => e.SurveyID == tblswatccwatermanagement.SurveyID).ID, SurveyID = tblswatccwatermanagement.SurveyID});
+                        return RedirectToAction("Edit", "SWPDev", new { id = swpdev.First(e => e.SurveyID == tblswatccwatermanagement.SurveyID).ID, SurveyID = tblswatccwatermanagement.SurveyID });
                     }
                 }
                 // TODO redirect to health form
-                var hppcom = db.tblSWATHPPcoms.First(e => e.SurveyID == tblswatccwatermanagement.SurveyID);
-                if (hppcom == null)
+                var hppcom = db.tblSWATHPPcoms.Where(e => e.SurveyID == tblswatccwatermanagement.SurveyID);
+                if (!hppcom.Any())
                 {
                     tblSWATHPPcom tblswathppcom = new tblSWATHPPcom();
                     tblswathppcom.SurveyID = tblswatccwatermanagement.SurveyID;
@@ -450,7 +450,7 @@ namespace SWAT.Controllers
                     int newHPPcomID = tblswathppcom.ID;
                     return RedirectToAction("Edit", "HPPCom", new { id = newHPPcomID, SurveyID = tblswathppcom.SurveyID });
                 }
-                return RedirectToAction("Edit", "HPPCom", new { id = db.tblSWATHPPcoms.First(e => e.SurveyID == tblswatccwatermanagement.SurveyID).ID, SurveyID = tblswatccwatermanagement.SurveyID});
+                return RedirectToAction("Edit", "HPPCom", new { id = hppcom.First(e => e.SurveyID == tblswatccwatermanagement.SurveyID).ID, SurveyID = tblswatccwatermanagement.SurveyID });
             }
             ViewBag.watRecords1 = new SelectList(db.lkpSWAT5rankLU, "id", "Description", tblswatccwatermanagement.watRecords1);
             ViewBag.watRecords2 = new SelectList(db.lkpSWAT5rankLU, "id", "Description", tblswatccwatermanagement.watRecords2);

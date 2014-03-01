@@ -262,8 +262,8 @@ namespace SWAT.Controllers
                 db.SaveChanges();
                 updateScores(tblswatccexternalsupport);
 
-                var ccwatermanagement = db.tblSWATCCwaterManagements.First(e => e.SurveyID == tblswatccexternalsupport.SurveyID);
-                if (ccwatermanagement == null)
+                var ccwatermanagement = db.tblSWATCCwaterManagements.Where(e => e.SurveyID == tblswatccexternalsupport.SurveyID);
+                if (!ccwatermanagement.Any())
                 {
                     tblSWATCCwaterManagement tblswatccwatermanagement = new tblSWATCCwaterManagement();
                     tblswatccwatermanagement.SurveyID = tblswatccexternalsupport.SurveyID;
@@ -275,7 +275,7 @@ namespace SWAT.Controllers
                     return RedirectToAction("Edit", "CCWaterManagement", new { id = newExternalID, SurveyID = tblswatccwatermanagement.SurveyID });
                 }
 
-                return RedirectToAction("Edit", "CCWaterManagement", new { id = db.tblSWATCCwaterManagements.First(e => e.SurveyID == tblswatccexternalsupport.SurveyID).ID, SurveyID = tblswatccexternalsupport.SurveyID});
+                return RedirectToAction("Edit", "CCWaterManagement", new { id = ccwatermanagement.First(e => e.SurveyID == tblswatccexternalsupport.SurveyID).ID, SurveyID = tblswatccexternalsupport.SurveyID });
             }
             ViewBag.extVisitTech = new SelectList(db.lkpSWATextVisitLUs, "id", "Description", tblswatccexternalsupport.extVisitTech);
             ViewBag.extVisitAdmin = new SelectList(db.lkpSWATextVisitLUs, "id", "Description", tblswatccexternalsupport.extVisitAdmin);

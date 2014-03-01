@@ -179,6 +179,7 @@
     <Compile Include="Controllers\CCSchoolController.cs" />
     <Compile Include="Controllers\CCTrainController.cs" />
     <Compile Include="Controllers\CCWaterManagementController.cs" />
+    <Compile Include="Controllers\HPPComController.cs" />
     <Compile Include="Controllers\LocationController.cs" />
     <Compile Include="Controllers\CCSocialController.cs" />
     <Compile Include="Controllers\ScoreVarController.cs" />
@@ -918,6 +919,11 @@
     <Content Include="Views\ScoreVar\Create.cshtml" />
     <Content Include="Views\ScoreVar\Edit.cshtml" />
     <Content Include="Views\ScoreVar\Delete.cshtml" />
+    <Content Include="Views\HPPCom\Index.cshtml" />
+    <Content Include="Views\HPPCom\Details.cshtml" />
+    <Content Include="Views\HPPCom\Create.cshtml" />
+    <Content Include="Views\HPPCom\Edit.cshtml" />
+    <Content Include="Views\HPPCom\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

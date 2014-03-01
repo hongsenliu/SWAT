@@ -1,0 +1,69 @@
+﻿@model SWAT.Models.tblSWATHPPcom
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create - Health Protection and Promotion</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+
+    <fieldset>
+        <legend>Community Health</legend>
+
+        <p>
+            @ViewBag.Question1
+        </p>
+        <div class="editor-field">
+            @Html.DropDownList("diarrhea", String.Empty)
+            @Html.ValidationMessageFor(model => model.diarrhea)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question2
+        </p>
+        <div class="editor-field">
+            @Html.DropDownList("survivorship", String.Empty)
+            @Html.ValidationMessageFor(model => model.survivorship)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question3
+        </p>
+        <div class="editor-field">
+            @Html.DropDownList("medicalTime", String.Empty)
+            @Html.ValidationMessageFor(model => model.medicalTime)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question4
+        </p>
+        <div class="editor-field">
+            @Html.DropDownList("medicalCost", String.Empty)
+            @Html.ValidationMessageFor(model => model.medicalCost)
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <p>
+                    <br />
+                    <input type="submit" value="Next" class="btn btn-default" />
+                </p>
+            </div>
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

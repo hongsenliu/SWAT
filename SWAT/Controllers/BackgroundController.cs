@@ -71,6 +71,34 @@ namespace SWAT.Controllers
         private void removeSWPrecords(tblSWATBackgroundinfo tblswatbackgroundinfo)
         {
             // TODO remove ls, ag and dev if there are some records and isEconls, isEconAg, isEcondev are not 1511
+            if (tblswatbackgroundinfo.isEconLs != 1511)
+            {
+                var livestocks = db.tblSWATSWPls.Where(e => e.SurveyID == tblswatbackgroundinfo.SurveyID);
+                foreach (tblSWATSWPl item in livestocks)
+                {
+                    db.tblSWATSWPls.Remove(item);
+                }
+            }
+
+            if (tblswatbackgroundinfo.isEconAg != 1511)
+            {
+                var records = db.tblSWATSWPags.Where(e => e.SurveyID == tblswatbackgroundinfo.SurveyID);
+                foreach (tblSWATSWPag item in records)
+                {
+                    db.tblSWATSWPags.Remove(item);
+                }
+            }
+
+            if (tblswatbackgroundinfo.isEconDev != 1511)
+            {
+                var records = db.tblSWATSWPdevs.Where(e => e.SurveyID == tblswatbackgroundinfo.SurveyID);
+                foreach (tblSWATSWPdev item in records)
+                {
+                    db.tblSWATSWPdevs.Remove(item);
+                }
+            }
+
+            db.SaveChanges();
         }
 
         // Helper method to update the scores that occur in the background infomation section

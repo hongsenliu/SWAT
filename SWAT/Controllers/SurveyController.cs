@@ -415,6 +415,12 @@ namespace SWAT.Controllers
 
         private void DeleteRelatedRecords(int id)
         {
+            var tblswathppcom = db.tblSWATHPPcoms.Where(e => e.SurveyID == id);
+            foreach (tblSWATHPPcom item in tblswathppcom)
+            {
+                db.tblSWATHPPcoms.Remove(item);
+            }
+
             var tblswatswpdev = db.tblSWATSWPdevs.Where(e => e.SurveyID == id);
             foreach (tblSWATSWPdev item in tblswatswpdev)
             {

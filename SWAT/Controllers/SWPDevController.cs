@@ -48,8 +48,8 @@ namespace SWAT.Controllers
             int? devId = db.tblSWATBackgroundinfoes.First(e => e.SurveyID == SurveyID).isEconDev;
             if (devId != 1511)
             {
-                return RedirectToAction("Index");
-                // return RedirectToAction("Create", "HPPCom", new { SurveyID = SurveyID });
+                // return RedirectToAction("Index");
+                return RedirectToAction("Create", "HPPCom", new { SurveyID = SurveyID });
             }
 
             ViewBag.wwTreatInd = new SelectList(db.lkpSWAT5rankLU, "id", "Description");
@@ -145,16 +145,16 @@ namespace SWAT.Controllers
                     db.SaveChanges();
                     updateScores(tblswatswpdev);
 
-                    return RedirectToAction("Index");
-                    // return RedirectToAction("Create", "HPPCom", new { SurveyID = tblswatswpdev.SurveyID });
+                    // return RedirectToAction("Index");
+                    return RedirectToAction("Create", "HPPCom", new { SurveyID = tblswatswpdev.SurveyID });
                 }
 
                 db.tblSWATSWPdevs.Add(tblswatswpdev);
                 db.SaveChanges();
                 updateScores(tblswatswpdev);
 
-                return RedirectToAction("Index");
-                // return RedirectToAction("Create", "HPPCom", new { SurveyID = tblswatswpdev.SurveyID });
+                // return RedirectToAction("Index");
+                return RedirectToAction("Create", "HPPCom", new { SurveyID = tblswatswpdev.SurveyID });
             }
 
             ViewBag.wwTreatInd = new SelectList(db.lkpSWAT5rankLU, "id", "Description", tblswatswpdev.wwTreatInd);
@@ -204,7 +204,20 @@ namespace SWAT.Controllers
                 db.SaveChanges();
                 updateScores(tblswatswpdev);
 
-                return RedirectToAction("Index");
+                var hppcom = db.tblSWATHPPcoms.First(e => e.SurveyID == tblswatswpdev.SurveyID);
+                if (hppcom == null)
+                {
+                    tblSWATHPPcom tblswathppcom = new tblSWATHPPcom();
+                    tblswathppcom.SurveyID = tblswatswpdev.SurveyID;
+                    db.tblSWATHPPcoms.Add(tblswathppcom);
+                    db.SaveChanges();
+
+                    int newHPPcomID = tblswathppcom.ID;
+                    return RedirectToAction("Edit", "HPPCom", new { id = newHPPcomID, SurveyID = tblswathppcom.SurveyID });
+                }
+                return RedirectToAction("Edit", "HPPCom", new { id = db.tblSWATHPPcoms.First(e => e.SurveyID == tblswatswpdev.SurveyID).ID, SurveyID = tblswatswpdev.SurveyID });
+
+                // return RedirectToAction("Index");
             }
             ViewBag.wwTreatInd = new SelectList(db.lkpSWAT5rankLU, "id", "Description", tblswatswpdev.wwTreatInd);
             ViewBag.bestManInd = new SelectList(db.lkpSWATbestManIndLUs, "id", "Description", tblswatswpdev.bestManInd);
