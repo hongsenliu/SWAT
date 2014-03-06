@@ -233,8 +233,8 @@ namespace SWAT.Controllers
                     if (background.isEconDev == 1511)
                     {
                         // TODO redirect to dev form
-                        var swpdev = db.tblSWATSWPdevs.First(e => e.SurveyID == tblswatswpag.SurveyID);
-                        if (swpdev == null)
+                        var swpdev = db.tblSWATSWPdevs.Where(e => e.SurveyID == tblswatswpag.SurveyID);
+                        if (!swpdev.Any())
                         {
                             tblSWATSWPdev tblswatswpdev = new tblSWATSWPdev();
                             tblswatswpdev.SurveyID = tblswatswpag.SurveyID;
@@ -244,12 +244,12 @@ namespace SWAT.Controllers
                             int newSWPdevID = tblswatswpdev.ID;
                             return RedirectToAction("Edit", "SWPDev", new { id = newSWPdevID, SurveyID = tblswatswpdev.SurveyID });
                         }
-                        return RedirectToAction("Edit", "SWPDev", new { id = db.tblSWATSWPdevs.First(e => e.SurveyID == tblswatswpag.SurveyID).ID, SurveyID = tblswatswpag.SurveyID });
+                        return RedirectToAction("Edit", "SWPDev", new { id = swpdev.First(e => e.SurveyID == tblswatswpag.SurveyID).ID, SurveyID = tblswatswpag.SurveyID });
                     }
                 }
                 // TODO redirect to health form
-                var hppcom = db.tblSWATHPPcoms.First(e => e.SurveyID == tblswatswpag.SurveyID);
-                if (hppcom == null)
+                var hppcom = db.tblSWATHPPcoms.Where(e => e.SurveyID == tblswatswpag.SurveyID);
+                if (!hppcom.Any())
                 {
                     tblSWATHPPcom tblswathppcom = new tblSWATHPPcom();
                     tblswathppcom.SurveyID = tblswatswpag.SurveyID;
@@ -259,7 +259,7 @@ namespace SWAT.Controllers
                     int newHPPcomID = tblswathppcom.ID;
                     return RedirectToAction("Edit", "HPPCom", new { id = newHPPcomID, SurveyID = tblswathppcom.SurveyID });
                 }
-                return RedirectToAction("Edit", "HPPCom", new { id = db.tblSWATHPPcoms.First(e => e.SurveyID == tblswatswpag.SurveyID).ID, SurveyID = tblswatswpag.SurveyID });
+                return RedirectToAction("Edit", "HPPCom", new { id = hppcom.First(e => e.SurveyID == tblswatswpag.SurveyID).ID, SurveyID = tblswatswpag.SurveyID });
             
             }
             ViewBag.fertilizer = new SelectList(db.lkpSWAT5rankLU, "id", "Description", tblswatswpag.fertilizer);

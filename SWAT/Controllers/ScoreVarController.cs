@@ -18,7 +18,8 @@ namespace SWAT.Controllers
 
         public ActionResult Index()
         {
-            return View(db.lkpSWATScoreVarsLUs.ToList());
+            var lkpswatscorevarslus = db.lkpSWATScoreVarsLUs.Include(l => l.lkpSWATSectionLU);
+            return View(lkpswatscorevarslus.ToList());
         }
 
         //
@@ -39,6 +40,7 @@ namespace SWAT.Controllers
 
         public ActionResult Create()
         {
+            ViewBag.SectionID = new SelectList(db.lkpSWATSectionLUs, "ID", "SectionName");
             return View();
         }
 
@@ -56,6 +58,7 @@ namespace SWAT.Controllers
                 return RedirectToAction("Index");
             }
 
+            ViewBag.SectionID = new SelectList(db.lkpSWATSectionLUs, "ID", "SectionName", lkpswatscorevarslu.SectionID);
             return View(lkpswatscorevarslu);
         }
 
@@ -69,6 +72,7 @@ namespace SWAT.Controllers
             {
                 return HttpNotFound();
             }
+            ViewBag.SectionID = new SelectList(db.lkpSWATSectionLUs, "ID", "SectionName", lkpswatscorevarslu.SectionID);
             return View(lkpswatscorevarslu);
         }
 
@@ -85,6 +89,7 @@ namespace SWAT.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
+            ViewBag.SectionID = new SelectList(db.lkpSWATSectionLUs, "ID", "SectionName", lkpswatscorevarslu.SectionID);
             return View(lkpswatscorevarslu);
         }
 

@@ -1,0 +1,64 @@
+﻿@model SWAT.Models.tblSWATSFsanitation
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>tblSWATSFsanitation</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATtoiletsAllLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATtoiletsAllLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.toiletHome)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.toiletHome)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.toiletYard)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.toiletYard)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.toilet100)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.toilet100)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.toilet500)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.toilet500)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.toiletFar)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.toiletFar)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

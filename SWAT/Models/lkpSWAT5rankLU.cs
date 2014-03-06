@@ -29,6 +29,10 @@ namespace SWAT.Models
             this.tblSWATSWPdevs = new HashSet<tblSWATSWPdev>();
             this.tblSWATHPPcoms = new HashSet<tblSWATHPPcom>();
             this.tblSWATSWPls = new HashSet<tblSWATSWPl>();
+            this.tblSWATHPPkhps = new HashSet<tblSWATHPPkhp>();
+            this.tblSWATSFcentrals = new HashSet<tblSWATSFcentral>();
+            this.tblSWATSFseptics = new HashSet<tblSWATSFseptic>();
+            this.tblSWATSFseptics1 = new HashSet<tblSWATSFseptic>();
         }
     
         public int id { get; set; }
@@ -48,5 +52,9 @@ namespace SWAT.Models
         public virtual ICollection<tblSWATSWPdev> tblSWATSWPdevs { get; set; }
         public virtual ICollection<tblSWATHPPcom> tblSWATHPPcoms { get; set; }
         public virtual ICollection<tblSWATSWPl> tblSWATSWPls { get; set; }
+        public virtual ICollection<tblSWATHPPkhp> tblSWATHPPkhps { get; set; }
+        public virtual ICollection<tblSWATSFcentral> tblSWATSFcentrals { get; set; }
+        public virtual ICollection<tblSWATSFseptic> tblSWATSFseptics { get; set; }
+        public virtual ICollection<tblSWATSFseptic> tblSWATSFseptics1 { get; set; }
     }
 }

@@ -1,0 +1,134 @@
+﻿@model SWAT.Models.tblSWATSFlat
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>tblSWATSFlat</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LatrineType1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LatrineType1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LatrineType2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LatrineType2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LatrineType3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LatrineType3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LatrineType4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LatrineType4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.latrineProb1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.latrineProb1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.latrineProb2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.latrineProb2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.latrineProb3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.latrineProb3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATlatrineConditionLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATlatrineConditionLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATpubCleanLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATpubCleanLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.latrineAccessGroup1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.latrineAccessGroup1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.latrineAccessGroup2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.latrineAccessGroup2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.latrineAccessGroup3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.latrineAccessGroup3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATYesNoLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATYesNoLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATYesNoLU1.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATYesNoLU1.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATYesNoLU2.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATYesNoLU2.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAThhCleanLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAThhCleanLU.Description)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

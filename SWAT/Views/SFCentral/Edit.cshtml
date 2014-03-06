@@ -1,0 +1,166 @@
+﻿@model SWAT.Models.tblSWATSFcentral
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit - Sanitation Facilities</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Centralized Wastewater Treatment</legend>
+
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+
+        <div id="General">
+            <h4>General</h4>
+            
+            <p>
+                @ViewBag.Question1
+            </p>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.centralToilets)
+                @Html.ValidationMessageFor(model => model.centralToilets)
+            </div>
+
+            <hr />
+            <p>
+                @ViewBag.Question2
+            </p>
+            <div class="editor-field">
+                @Html.DropDownList("centralTreatmentType", String.Empty)
+                @Html.ValidationMessageFor(model => model.centralTreatmentType)
+            </div>
+
+            <hr />
+            <p>
+                @ViewBag.Question3
+            </p>
+            <div class="editor-field">
+                @Html.DropDownList("centralSludge", String.Empty)
+                @Html.ValidationMessageFor(model => model.centralSludge)
+            </div>
+
+            <hr />
+            <p>
+                @ViewBag.Question4
+            </p>
+            <div class="editor-field">
+                @Html.DropDownList("centralCondition", String.Empty)
+                @Html.ValidationMessageFor(model => model.centralCondition)
+            </div>
+
+        </div>
+        
+        @{
+            if (ViewBag.pub)
+            { 
+                <div id="pubCom">
+                    <hr />
+                    <h4>Public/Community Centralized</h4>
+                    <p>
+                        @ViewBag.Question5
+                    </p>
+                    <div class="editor-field">
+                        @Html.DropDownList("centralPubClean", String.Empty)
+                        @Html.ValidationMessageFor(model => model.centralPubClean)
+                    </div>
+
+                    <hr />
+                    <p>
+                        @ViewBag.Question6
+                    </p>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.centralAccessGroup1)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.centralAccessGroup1)
+                        @Html.ValidationMessageFor(model => model.centralAccessGroup1)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.centralAccessGroup2)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.centralAccessGroup2)
+                        @Html.ValidationMessageFor(model => model.centralAccessGroup2)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.centralAccessGroup3)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.centralAccessGroup3)
+                        @Html.ValidationMessageFor(model => model.centralAccessGroup3)
+                    </div>
+
+                    <hr />
+                    <p>
+                        @ViewBag.Question7
+                    </p>
+                    <div class="editor-field">
+                        @Html.DropDownList("centralfeesCharged", String.Empty)
+                        @Html.ValidationMessageFor(model => model.centralfeesCharged)
+                    </div>
+
+                    <hr />
+                    <p>
+                        @ViewBag.Question8
+                    </p>
+                    <div class="editor-field">
+                        @Html.DropDownList("centralFeesLimitAccess", String.Empty)
+                        @Html.ValidationMessageFor(model => model.centralFeesLimitAccess)
+                    </div>
+
+                    <hr />
+                    <p>
+                        @ViewBag.Question9
+                    </p>
+                    <div class="editor-field">
+                        @Html.DropDownList("centralFeesEnsureClean", String.Empty)
+                        @Html.ValidationMessageFor(model => model.centralFeesEnsureClean)
+                    </div>
+                </div>
+            }
+         
+            if (ViewBag.ind)
+            { 
+                <div id="household"> 
+                    <hr />
+                    <h4>Household Centralized</h4>
+                    <p>
+                        @ViewBag.Question10
+                    </p>
+                    <div class="editor-field">
+                        @Html.DropDownList("hhCentralClean", String.Empty)
+                        @Html.ValidationMessageFor(model => model.hhCentralClean)
+                    </div>
+                </div>
+                
+            }
+         }
+        
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <p>
+                    <br />
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </p>
+            </div>
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Content/SFCentral.js")
+}

@@ -39,6 +39,14 @@ namespace SWAT.Models
             this.tblSWATSWPdevs = new HashSet<tblSWATSWPdev>();
             this.tblSWATHPPcoms = new HashSet<tblSWATHPPcom>();
             this.tblSWATSWPls = new HashSet<tblSWATSWPl>();
+            this.tblSWATHPPkhps = new HashSet<tblSWATHPPkhp>();
+            this.tblSWATSFsanitations = new HashSet<tblSWATSFsanitation>();
+            this.tblSWATSFods = new HashSet<tblSWATSFod>();
+            this.tblSWATSFpoints = new HashSet<tblSWATSFpoint>();
+            this.tblSWATSFcentrals = new HashSet<tblSWATSFcentral>();
+            this.tblSWATSFlats = new HashSet<tblSWATSFlat>();
+            this.tblSWATSFseptics = new HashSet<tblSWATSFseptic>();
+            this.tblSWATWPoverviews = new HashSet<tblSWATWPoverview>();
         }
     
         public int ID { get; set; }
@@ -73,5 +81,13 @@ namespace SWAT.Models
         public virtual ICollection<tblSWATSWPdev> tblSWATSWPdevs { get; set; }
         public virtual ICollection<tblSWATHPPcom> tblSWATHPPcoms { get; set; }
         public virtual ICollection<tblSWATSWPl> tblSWATSWPls { get; set; }
+        public virtual ICollection<tblSWATHPPkhp> tblSWATHPPkhps { get; set; }
+        public virtual ICollection<tblSWATSFsanitation> tblSWATSFsanitations { get; set; }
+        public virtual ICollection<tblSWATSFod> tblSWATSFods { get; set; }
+        public virtual ICollection<tblSWATSFpoint> tblSWATSFpoints { get; set; }
+        public virtual ICollection<tblSWATSFcentral> tblSWATSFcentrals { get; set; }
+        public virtual ICollection<tblSWATSFlat> tblSWATSFlats { get; set; }
+        public virtual ICollection<tblSWATSFseptic> tblSWATSFseptics { get; set; }
+        public virtual ICollection<tblSWATWPoverview> tblSWATWPoverviews { get; set; }
     }
 }

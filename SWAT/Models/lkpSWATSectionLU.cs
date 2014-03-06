@@ -17,6 +17,7 @@ namespace SWAT.Models
         public lkpSWATSectionLU()
         {
             this.lkpSWATScoreVarsLUs = new HashSet<lkpSWATScoreVarsLU>();
+            this.lkpSWATScoreVarsLUs1 = new HashSet<lkpSWATScoreVarsLU>();
         }
     
         public int ID { get; set; }
@@ -24,5 +25,6 @@ namespace SWAT.Models
         public string Description { get; set; }
     
         public virtual ICollection<lkpSWATScoreVarsLU> lkpSWATScoreVarsLUs { get; set; }
+        public virtual ICollection<lkpSWATScoreVarsLU> lkpSWATScoreVarsLUs1 { get; set; }
     }
 }

@@ -23,8 +23,10 @@ namespace SWAT.Models
         public int ID { get; set; }
         public string VarName { get; set; }
         public string Description { get; set; }
+        public Nullable<int> SectionID { get; set; }
     
         public virtual ICollection<tblSWATScore> tblSWATScores { get; set; }
         public virtual ICollection<lkpSWATSectionLU> lkpSWATSectionLUs { get; set; }
+        public virtual lkpSWATSectionLU lkpSWATSectionLU { get; set; }
     }
 }

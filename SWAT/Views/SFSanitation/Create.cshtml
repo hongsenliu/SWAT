@@ -1,0 +1,87 @@
+﻿@model SWAT.Models.tblSWATSFsanitation
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create - Sanitation Facilities</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+
+    <fieldset>
+        <legend>Sanitation Facilities Overview</legend>
+
+        <p>
+            @ViewBag.Question1
+        </p>
+        <div class="editor-field">
+            @Html.DropDownList("toiletsAll", String.Empty)
+            @Html.ValidationMessageFor(model => model.toiletsAll)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question2
+        </p>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.toiletHome)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.toiletHome)%
+            @Html.ValidationMessageFor(model => model.toiletHome)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.toiletYard)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.toiletYard)%
+            @Html.ValidationMessageFor(model => model.toiletYard)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.toilet100)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.toilet100)%
+            @Html.ValidationMessageFor(model => model.toilet100)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.toilet500)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.toilet500)%
+            @Html.ValidationMessageFor(model => model.toilet500)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.toiletFar)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.toiletFar)%
+            @Html.ValidationMessageFor(model => model.toiletFar)
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <p>
+                    <br />
+                    <input type="submit" value="Next" class="btn btn-default" />
+                </p>
+            </div>
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Content/SFSanitation.js")
+}

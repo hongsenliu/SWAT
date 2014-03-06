@@ -1,0 +1,245 @@
+﻿@model SWAT.Models.tblSWATSFod
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit - Sanitation Facilities</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Open Defecation</legend>
+
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+
+        <p>
+            @ViewBag.Question1
+        </p>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODdemographic1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODdemographic1)
+            @Html.ValidationMessageFor(model => model.ODdemographic1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODdemographic2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODdemographic2)
+            @Html.ValidationMessageFor(model => model.ODdemographic2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODdemographic3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODdemographic3)
+            @Html.ValidationMessageFor(model => model.ODdemographic3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODdemographic4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODdemographic4)
+            @Html.ValidationMessageFor(model => model.ODdemographic4)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODdemographicNONE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODdemographicNONE)
+            @Html.ValidationMessageFor(model => model.ODdemographicNONE)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question2
+        </p>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.hhNoToilet)
+            @Html.ValidationMessageFor(model => model.hhNoToilet)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question3
+        </p>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.sharedFacPercent)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sharedFacPercent)%
+            @Html.ValidationMessageFor(model => model.sharedFacPercent)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODPercent)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODPercent)%
+            @Html.ValidationMessageFor(model => model.ODPercent)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question4
+        </p>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODdemoGender1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODdemoGender1)
+            @Html.ValidationMessageFor(model => model.ODdemoGender1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODdemoGender2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODdemoGender2)
+            @Html.ValidationMessageFor(model => model.ODdemoGender2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODdemoGender3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODdemoGender3)
+            @Html.ValidationMessageFor(model => model.ODdemoGender3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODdemoGender4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODdemoGender4)
+            @Html.ValidationMessageFor(model => model.ODdemoGender4)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODdemoGenderNONE)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODdemoGenderNONE)
+            @Html.ValidationMessageFor(model => model.ODdemoGenderNONE)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question5
+        </p>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODfacilitator1)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODfacilitator1)
+            @Html.ValidationMessageFor(model => model.ODfacilitator1)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODfacilitator2)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODfacilitator2)
+            @Html.ValidationMessageFor(model => model.ODfacilitator2)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODfacilitator3)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODfacilitator3)
+            @Html.ValidationMessageFor(model => model.ODfacilitator3)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODfacilitator4)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODfacilitator4)
+            @Html.ValidationMessageFor(model => model.ODfacilitator4)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODfacilitator5)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODfacilitator5)
+            @Html.ValidationMessageFor(model => model.ODfacilitator5)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODfacilitator6)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODfacilitator6)
+            @Html.ValidationMessageFor(model => model.ODfacilitator6)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODfacilitator7)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODfacilitator7)
+            @Html.ValidationMessageFor(model => model.ODfacilitator7)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODfacilitator8)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODfacilitator8)
+            @Html.ValidationMessageFor(model => model.ODfacilitator8)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODfacilitator9)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODfacilitator9)
+            @Html.ValidationMessageFor(model => model.ODfacilitator9)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODfacilitator10)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODfacilitator10)
+            @Html.ValidationMessageFor(model => model.ODfacilitator10)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ODfacilitator11)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ODfacilitator11)
+            @Html.ValidationMessageFor(model => model.ODfacilitator11)
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <p>
+                    <br />
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </p>
+            </div>
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Content/SFOd.js")
+}

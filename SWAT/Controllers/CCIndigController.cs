@@ -117,6 +117,20 @@ namespace SWAT.Controllers
             db.SaveChanges();
         }
 
+        private void checkPopulation(tblSWATCCindig tblswatccindig)
+        {
+            int comPop = (int)db.tblSWATBackgroundinfoes.First(e => e.SurveyID == tblswatccindig.SurveyID).Population;
+
+            if (tblswatccindig.indigPop > comPop)
+            {
+                ModelState.AddModelError("indigPop", "The popluation of community is " + comPop);
+            }
+            if (tblswatccindig.longtermPop > comPop)
+            {
+                ModelState.AddModelError("longtermPop", "The popluation of community is " + comPop);
+            }
+        }
+
         // POST: /CCIndig/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -124,6 +138,7 @@ namespace SWAT.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include="ID,SurveyID,indigPop,longtermPop")] tblSWATCCindig tblswatccindig)
         {
+            checkPopulation(tblswatccindig);
             if (ModelState.IsValid)
             {
                 var indigIDs = db.tblSWATCCindigs.Where(e => e.SurveyID == tblswatccindig.SurveyID).Select(e => e.ID);
@@ -177,6 +192,7 @@ namespace SWAT.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include="ID,SurveyID,indigPop,indigPopPerCapita,longtermPop,longtermPopPerCapita")] tblSWATCCindig tblswatccindig)
         {
+            checkPopulation(tblswatccindig);
             if (ModelState.IsValid)
             {
                 db.Entry(tblswatccindig).State = EntityState.Modified;

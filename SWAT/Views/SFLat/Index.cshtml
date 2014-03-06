@@ -1,0 +1,129 @@
+﻿@model IEnumerable<SWAT.Models.tblSWATSFlat>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LatrineType1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LatrineType2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LatrineType3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LatrineType4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.latrineProb1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.latrineProb2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.latrineProb3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATlatrineConditionLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATpubCleanLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.latrineAccessGroup1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.latrineAccessGroup2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.latrineAccessGroup3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATYesNoLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATYesNoLU1.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATYesNoLU2.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAThhCleanLU.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSWATSurvey.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LatrineType1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LatrineType2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LatrineType3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LatrineType4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.latrineProb1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.latrineProb2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.latrineProb3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATlatrineConditionLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATpubCleanLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.latrineAccessGroup1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.latrineAccessGroup2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.latrineAccessGroup3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATYesNoLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATYesNoLU1.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATYesNoLU2.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAThhCleanLU.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,207 @@
+﻿@model SWAT.Models.tblSWATSFseptic
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit - Sanitation Facilities</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Septic Systems</legend>
+
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID=ViewBag.SurveyID})
+
+        <div id="General">
+            <h4>General</h4>
+
+            <p>
+                @ViewBag.Question1
+            </p>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.septicToilets)
+                @Html.ValidationMessageFor(model => model.septicToilets)
+            </div>
+
+            <hr />
+            <p>
+                @ViewBag.Question2
+            </p>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.septicUnderstand)%
+                @Html.ValidationMessageFor(model => model.septicUnderstand)
+            </div>
+
+            <hr />
+            <p>
+                @ViewBag.Question3
+            </p>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.septicDistance)%
+                @Html.ValidationMessageFor(model => model.septicDistance)
+            </div>
+
+            <hr />
+            <p>
+                @ViewBag.Question4
+            </p>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.septicPlug)%
+                @Html.ValidationMessageFor(model => model.septicPlug)
+            </div>
+
+            <hr />
+            <p>
+                @ViewBag.Question5
+            </p>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.septicPumped)%
+                @Html.ValidationMessageFor(model => model.septicPumped)
+            </div>
+
+            <hr />
+            <p>
+                @ViewBag.Question6
+            </p>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.septicTrash)%
+                @Html.ValidationMessageFor(model => model.septicTrash)
+            </div>
+
+            <hr />
+            <p>
+                @ViewBag.Question7
+            </p>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.septicChemicals)%
+                @Html.ValidationMessageFor(model => model.septicChemicals)
+            </div>
+
+            <hr />
+            <p>
+                @ViewBag.Question8
+            </p>
+            <div class="editor-field">
+                @Html.DropDownList("septicChemAvail", String.Empty)
+                @Html.ValidationMessageFor(model => model.septicChemAvail)
+            </div>
+
+            <hr />
+            <p>
+                @ViewBag.Question9
+            </p>
+            <div class="editor-field">
+                @Html.DropDownList("septicPumpAvail", String.Empty)
+                @Html.ValidationMessageFor(model => model.septicPumpAvail)
+            </div>
+        </div>
+        
+        @{
+            if(ViewBag.pub)
+            {
+                <div id="pubCom">
+                    <hr />
+                    <h4>Public/Community Septic</h4>
+                    <p>
+                        @ViewBag.Question10
+                    </p>
+                    <div class="editor-field">
+                        @Html.DropDownList("septicPubClean", String.Empty)
+                        @Html.ValidationMessageFor(model => model.septicPubClean)
+                    </div>
+
+                    <hr />
+                    <p>
+                        @ViewBag.Question11
+                    </p>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.septicPubAccessGroup1)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.septicPubAccessGroup1)
+                        @Html.ValidationMessageFor(model => model.septicPubAccessGroup1)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.septicPubAccessGroup2)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.septicPubAccessGroup2)
+                        @Html.ValidationMessageFor(model => model.septicPubAccessGroup2)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.septicPubAccessGroup3)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.septicPubAccessGroup3)
+                        @Html.ValidationMessageFor(model => model.septicPubAccessGroup3)
+                    </div>
+
+                    <hr />
+                    <p>
+                        @ViewBag.Question12
+                    </p>
+                    <div class="editor-field">
+                        @Html.DropDownList("septicfeesCharged", String.Empty)
+                        @Html.ValidationMessageFor(model => model.septicfeesCharged)
+                    </div>
+
+                    <hr />
+                    <p>
+                        @ViewBag.Question13
+                    </p>
+                    <div class="editor-field">
+                        @Html.DropDownList("septicFeesLimitAccess", String.Empty)
+                        @Html.ValidationMessageFor(model => model.septicFeesLimitAccess)
+                    </div>
+
+                    <hr />
+                    <p>
+                        @ViewBag.Question14
+                    </p>
+                    <div class="editor-field">
+                        @Html.DropDownList("septicFeesEnsureClean", String.Empty)
+                        @Html.ValidationMessageFor(model => model.septicFeesEnsureClean)
+                    </div>
+                </div>
+            }
+
+            if(ViewBag.ind)
+            {
+                <div id="household">
+                    <hr />
+                    <h4>Household Septic</h4>
+                    <p>
+                        @ViewBag.Question15
+                    </p>
+                    <div class="editor-field">
+                        @Html.DropDownList("hhSepticClean", String.Empty)
+                        @Html.ValidationMessageFor(model => model.hhSepticClean)
+                    </div>
+                </div>
+            }
+        }
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <p>
+                    <br />
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </p>
+            </div>
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Content/SFSeptic.js")
+}

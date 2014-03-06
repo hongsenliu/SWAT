@@ -1,0 +1,216 @@
+﻿@model SWAT.Models.tblSWATSFlat
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit - Sanitation Facilities</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Latrines</legend>
+
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID = ViewBag.SurveyID })
+
+        <div id="General">
+            <p>
+                @ViewBag.Question1
+            </p>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.LatrineType1)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.LatrineType1)
+                @Html.ValidationMessageFor(model => model.LatrineType1)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.ltype1)
+                @Html.ValidationMessageFor(model => model.ltype1)
+            </div>
+            <br />
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.LatrineType2)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.LatrineType2)
+                @Html.ValidationMessageFor(model => model.LatrineType2)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.ltype2)
+                @Html.ValidationMessageFor(model => model.ltype2)
+            </div>
+            <br />
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.LatrineType3)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.LatrineType3)
+                @Html.ValidationMessageFor(model => model.LatrineType3)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.ltype3)
+                @Html.ValidationMessageFor(model => model.ltype3)
+            </div>
+            <br />
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.LatrineType4)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.LatrineType4)
+                @Html.ValidationMessageFor(model => model.LatrineType4)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.ltype4)
+                @Html.ValidationMessageFor(model => model.ltype4)
+            </div>
+
+            <hr />
+            <p>
+                @ViewBag.Question2
+            </p>
+            <div class="editor-label">
+                @Html.LabelFor(model => model.latrineProb1)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.latrineProb1)%
+                @Html.ValidationMessageFor(model => model.latrineProb1)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.latrineProb2)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.latrineProb2)%
+                @Html.ValidationMessageFor(model => model.latrineProb2)
+            </div>
+
+            <div class="editor-label">
+                @Html.LabelFor(model => model.latrineProb3)
+            </div>
+            <div class="editor-field">
+                @Html.EditorFor(model => model.latrineProb3)%
+                @Html.ValidationMessageFor(model => model.latrineProb3)
+            </div>
+
+            <hr />
+            <p>
+                @ViewBag.Question3
+            </p>
+            <div class="editor-field">
+                @Html.DropDownList("latrineCondition", String.Empty)
+                @Html.ValidationMessageFor(model => model.latrineCondition)
+            </div>
+        </div>
+        @{
+            if (ViewBag.pub)
+            {
+                <div id="pubCom">
+                    <hr />
+                    <h4>Public/Community Latrines</h4>
+                    <p>
+                        @ViewBag.Question4
+                    </p>
+                    <div class="editor-field">
+                        @Html.DropDownList("latrinecentralPubClean", String.Empty)
+                        @Html.ValidationMessageFor(model => model.latrinecentralPubClean)
+                    </div>
+
+                    <hr />
+                    <p>
+                        @ViewBag.Question5
+                    </p>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.latrineAccessGroup1)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.latrineAccessGroup1)
+                        @Html.ValidationMessageFor(model => model.latrineAccessGroup1)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.latrineAccessGroup2)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.latrineAccessGroup2)
+                        @Html.ValidationMessageFor(model => model.latrineAccessGroup2)
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.latrineAccessGroup3)
+                    </div>
+                    <div class="editor-field">
+                        @Html.EditorFor(model => model.latrineAccessGroup3)
+                        @Html.ValidationMessageFor(model => model.latrineAccessGroup3)
+                    </div>
+
+                    <hr />
+                    <p>
+                        @ViewBag.Question6
+                    </p>
+                    <div class="editor-field">
+                        @Html.DropDownList("latrinefeesCharged", String.Empty)
+                        @Html.ValidationMessageFor(model => model.latrinefeesCharged)
+                    </div>
+
+                    <hr />
+                    <p>
+                        @ViewBag.Question7
+                    </p>
+                    <div class="editor-field">
+                        @Html.DropDownList("latrineFeesLimitAccess", String.Empty)
+                        @Html.ValidationMessageFor(model => model.latrineFeesLimitAccess)
+                    </div>
+
+                    <hr />
+                    <p>
+                        @ViewBag.Question8
+                    </p>
+                    <div class="editor-field">
+                        @Html.DropDownList("latrineFeesEnsureClean", String.Empty)
+                        @Html.ValidationMessageFor(model => model.latrineFeesEnsureClean)
+                    </div>
+                </div>
+            }
+            if (ViewBag.ind)
+            {
+                <div id="household">
+                    <hr />
+                    <h4>Household Latrines</h4>
+                    <p>
+                        @ViewBag.Question9
+                    </p>
+                    <div class="editor-field">
+                        @Html.DropDownList("hhLatrineClean", String.Empty)
+                        @Html.ValidationMessageFor(model => model.hhLatrineClean)
+                    </div>
+                </div>
+            }
+        }
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <p>
+                    <br />
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </p>
+            </div>
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/Content/SFLat.js")
+}

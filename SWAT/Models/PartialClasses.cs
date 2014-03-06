@@ -1,10 +1,46 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Reflection;
 
 namespace SWAT.Models
 {
+    [MetadataType(typeof(SFLatMetadata))]
+    public partial class tblSWATSFlat
+    {
+    }
+
+    [MetadataType(typeof(SFSepticMetadata))]
+    public partial class tblSWATSFseptic
+    {
+    }
+
+    [MetadataType(typeof(SFCentralMetadata))]
+    public partial class tblSWATSFcentral
+    {
+    }
+
+    [MetadataType(typeof(SFPointMetadata))]
+    public partial class tblSWATSFpoint
+    {
+    }
+
+    [MetadataType(typeof(SFOdMetadata))]
+    public partial class tblSWATSFod
+    {
+    }
+
+    [MetadataType(typeof(SFSanitationMetadata))]
+    public partial class tblSWATSFsanitation
+    { 
+    }
+
+    [MetadataType(typeof(HPPKhpMetadata))]
+    public partial class tblSWATHPPkhp
+    { 
+    }
+
     [MetadataType(typeof(SWPDevMetadata))]
     public partial class tblSWATSWPdev
     {
@@ -115,5 +151,6 @@ namespace SWAT.Models
     { 
     }
 
+    
     
 }

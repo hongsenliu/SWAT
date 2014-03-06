@@ -204,8 +204,8 @@ namespace SWAT.Controllers
                 db.SaveChanges();
                 updateScores(tblswatswpdev);
 
-                var hppcom = db.tblSWATHPPcoms.First(e => e.SurveyID == tblswatswpdev.SurveyID);
-                if (hppcom == null)
+                var hppcom = db.tblSWATHPPcoms.Where(e => e.SurveyID == tblswatswpdev.SurveyID);
+                if (!hppcom.Any())
                 {
                     tblSWATHPPcom tblswathppcom = new tblSWATHPPcom();
                     tblswathppcom.SurveyID = tblswatswpdev.SurveyID;
@@ -215,7 +215,7 @@ namespace SWAT.Controllers
                     int newHPPcomID = tblswathppcom.ID;
                     return RedirectToAction("Edit", "HPPCom", new { id = newHPPcomID, SurveyID = tblswathppcom.SurveyID });
                 }
-                return RedirectToAction("Edit", "HPPCom", new { id = db.tblSWATHPPcoms.First(e => e.SurveyID == tblswatswpdev.SurveyID).ID, SurveyID = tblswatswpdev.SurveyID });
+                return RedirectToAction("Edit", "HPPCom", new { id = hppcom.First(e => e.SurveyID == tblswatswpdev.SurveyID).ID, SurveyID = tblswatswpdev.SurveyID });
 
                 // return RedirectToAction("Index");
             }

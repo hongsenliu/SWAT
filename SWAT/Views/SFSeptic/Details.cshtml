@@ -1,0 +1,141 @@
+﻿@model SWAT.Models.tblSWATSFseptic
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>tblSWATSFseptic</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.septicToilets)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.septicToilets)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.septicUnderstand)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.septicUnderstand)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.septicDistance)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.septicDistance)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.septicPlug)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.septicPlug)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.septicPumped)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.septicPumped)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.septicTrash)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.septicTrash)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.septicChemicals)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.septicChemicals)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU1.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU1.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATpubCleanLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATpubCleanLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.septicPubAccessGroup1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.septicPubAccessGroup1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.septicPubAccessGroup2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.septicPubAccessGroup2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.septicPubAccessGroup3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.septicPubAccessGroup3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATYesNoLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATYesNoLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATYesNoLU1.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATYesNoLU1.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATYesNoLU2.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATYesNoLU2.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAThhCleanLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAThhCleanLU.Description)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

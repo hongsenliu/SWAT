@@ -1,0 +1,54 @@
+﻿@model SWAT.Models.tblSWATSFpoint
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>tblSWATSFpoint</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATsanTypeLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATsanTypeLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.sanUseInd)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.sanUseInd)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.sanUsePub)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.sanUsePub)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SanUseCom)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SanUseCom)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -164,5 +164,29 @@ namespace SWAT.Models
         public DbSet<tblSWATHPPcom> tblSWATHPPcoms { get; set; }
         public DbSet<tblSWATSWPl> tblSWATSWPls { get; set; }
         public DbSet<lkpSWATdevSiteLU> lkpSWATdevSiteLUs { get; set; }
+        public DbSet<tblSWATHPPkhp> tblSWATHPPkhps { get; set; }
+        public DbSet<lkpSWATscores_toiletsAll> lkpSWATscores_toiletsAll { get; set; }
+        public DbSet<lkpSWATtoiletsAllLU> lkpSWATtoiletsAllLUs { get; set; }
+        public DbSet<tblSWATSFsanitation> tblSWATSFsanitations { get; set; }
+        public DbSet<tblSWATSFod> tblSWATSFods { get; set; }
+        public DbSet<lkpSWATsanTypeLU> lkpSWATsanTypeLUs { get; set; }
+        public DbSet<lkpSWATscores_sanType> lkpSWATscores_sanType { get; set; }
+        public DbSet<tblSWATSFpoint> tblSWATSFpoints { get; set; }
+        public DbSet<lkpSWATcentralConditionLU> lkpSWATcentralConditionLUs { get; set; }
+        public DbSet<lkpSWATcentralTreatmentTypeLU> lkpSWATcentralTreatmentTypeLUs { get; set; }
+        public DbSet<lkpSWAThhCleanLU> lkpSWAThhCleanLUs { get; set; }
+        public DbSet<lkpSWATlatrineConditionLU> lkpSWATlatrineConditionLUs { get; set; }
+        public DbSet<lkpSWATpubCleanLU> lkpSWATpubCleanLUs { get; set; }
+        public DbSet<lkpSWATscores_centralCondition> lkpSWATscores_centralCondition { get; set; }
+        public DbSet<lkpSWATscores_centralTreatment> lkpSWATscores_centralTreatment { get; set; }
+        public DbSet<lkpSWATscores_hhClean> lkpSWATscores_hhClean { get; set; }
+        public DbSet<lkpSWATscores_latrineCondition> lkpSWATscores_latrineCondition { get; set; }
+        public DbSet<lkpSWATscores_pubClean> lkpSWATscores_pubClean { get; set; }
+        public DbSet<tblSWATSFcentral> tblSWATSFcentrals { get; set; }
+        public DbSet<tblSWATSFlat> tblSWATSFlats { get; set; }
+        public DbSet<tblSWATSFseptic> tblSWATSFseptics { get; set; }
+        public DbSet<lkpSWATwpaLoc> lkpSWATwpaLocs { get; set; }
+        public DbSet<lkpSWATwpaTypeDesc> lkpSWATwpaTypeDescs { get; set; }
+        public DbSet<tblSWATWPoverview> tblSWATWPoverviews { get; set; }
     }
 }

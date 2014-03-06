@@ -1,0 +1,50 @@
+﻿@model SWAT.Models.tblSWATSFpoint
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>tblSWATSFpoint</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATsanTypeLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATsanTypeLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.sanUseInd)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.sanUseInd)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.sanUsePub)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.sanUsePub)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.SanUseCom)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.SanUseCom)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

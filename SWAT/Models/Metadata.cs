@@ -3,6 +3,288 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SWAT.Models
 {
+    public class SFLatMetadata
+    {
+        [Display(Name = "Ventilated improved pit latrine (VIP)")]
+        public bool LatrineType1 { get; set; }
+
+        [Display(Name = "Pit latrine with a covering")]
+        public bool LatrineType2 { get; set; }
+
+        [Display(Name = "Open pit")]
+        public bool LatrineType3 { get; set; }
+
+        [Display(Name = "Composting toilet")]
+        public bool LatrineType4 { get; set; }
+
+        [Display(Name = "High numbers of flies or rodents")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> latrineProb1 { get; set; }
+
+        [Display(Name = "Cracked or broken facilities")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> latrineProb2 { get; set; }
+
+        [Display(Name = "Latrine is full or otherwise unuseable")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> latrineProb3 { get; set; }
+
+        [Display(Name = "People with disabilities")]
+        public bool latrineAccessGroup1 { get; set; }
+
+        [Display(Name = "Menstruating Women")]
+        public bool latrineAccessGroup2 { get; set; }
+
+        [Display(Name = "Children")]
+        public bool latrineAccessGroup3 { get; set; }
+
+        [Display(Name = "Ventilated improved pit latrine (VIP)")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<int> ltype1 { get; set; }
+
+        [Display(Name = "Pit latrine with a covering")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<int> ltype2 { get; set; }
+
+        [Display(Name = "Open pit")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<int> ltype3 { get; set; }
+
+        [Display(Name = "Composting toilet")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<int> ltype4 { get; set; }
+    }
+
+    public class SFSepticMetadata
+    {
+        [Display(Name = "Number of Toilets")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<int> septicToilets { get; set; }
+
+        [Display(Name = "% of users")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> septicUnderstand { get; set; }
+
+        [Display(Name = "% of septic systems")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> septicDistance { get; set; }
+
+        [Display(Name = "% of septic systems")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> septicPlug { get; set; }
+
+        [Display(Name = "% of septic systems")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> septicPumped { get; set; }
+
+        [Display(Name = "% of septic systems")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> septicTrash { get; set; }
+
+        [Display(Name = "% of septic systems")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> septicChemicals { get; set; }
+
+        [Display(Name = "People with disabilities")]
+        public bool septicPubAccessGroup1 { get; set; }
+
+        [Display(Name = "Menstruating Women")]
+        public bool septicPubAccessGroup2 { get; set; }
+
+        [Display(Name = "Children")]
+        public bool septicPubAccessGroup3 { get; set; }
+
+    }
+
+    public class SFCentralMetadata
+    {
+        [Display(Name = "Number of Toilets")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<int> centralToilets { get; set; }
+
+        [Display(Name = "People with disabilities")]
+        public bool centralAccessGroup1 { get; set; }
+
+        [Display(Name = "Menstruating Women")]
+        public bool centralAccessGroup2 { get; set; }
+
+        [Display(Name = "Children")]
+        public bool centralAccessGroup3 { get; set; }
+
+    }
+
+    public class SFPointMetadata
+    {
+        [Display(Name = "Individual households")]
+        public bool sanUseInd { get; set; }
+
+        [Display(Name = "Public/shared toilets")]
+        public bool sanUsePub { get; set; }
+
+        [Display(Name = "Community institutions (government, school, religious, etc.)")]
+        public bool SanUseCom { get; set; }
+    }
+
+    public class SFOdMetadata
+    {
+        [Display(Name = "Families that are very poor are less likely to have toilets")]
+        public bool ODdemographic1 { get; set; }
+
+        [Display(Name = "Certain demographic groups are less likely to have toilets")]
+        public bool ODdemographic2 { get; set; }
+
+        [Display(Name = "People with disabilities are less likely to have toilets")]
+        public bool ODdemographic3 { get; set; }
+
+        [Display(Name = "People of certain ethnic groups, castes, or cliques are less likely to have toilets")]
+        public bool ODdemographic4 { get; set; }
+
+        [Display(Name = "None of the above; everybody has a toilet")]
+        public bool ODdemographicNONE { get; set; }
+
+        [Display(Name = "# of Households")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<int> hhNoToilet { get; set; }
+
+        [Display(Name = "Use shared or public facilities?")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> sharedFacPercent { get; set; }
+
+        [Display(Name = "Practice open defecation?")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> ODPercent { get; set; }
+
+        [Display(Name = "Women")]
+        public bool ODdemoGender1 { get; set; }
+
+        [Display(Name = "Men")]
+        public bool ODdemoGender2 { get; set; }
+
+        [Display(Name = "Girls")]
+        public bool ODdemoGender3 { get; set; }
+
+        [Display(Name = "Boys")]
+        public bool ODdemoGender4 { get; set; }
+
+        [Display(Name = "None of these groups practices open defecation more often than the others")]
+        public bool ODdemoGenderNONE { get; set; }
+
+        [Display(Name = "No access to facilities")]
+        public bool ODfacilitator1 { get; set; }
+
+        [Display(Name = "Facilities are unclean")]
+        public bool ODfacilitator2 { get; set; }
+
+        [Display(Name = "Facilities are dangerous")]
+        public bool ODfacilitator3 { get; set; }
+
+        [Display(Name = "Facilities are too far away")]
+        public bool ODfacilitator4 { get; set; }
+
+        [Display(Name = "Certain groups are not allowed access")]
+        public bool ODfacilitator5 { get; set; }
+
+        [Display(Name = "Cannot afford fees")]
+        public bool ODfacilitator6 { get; set; }
+
+        [Display(Name = "Convenience")]
+        public bool ODfacilitator7 { get; set; }
+
+        [Display(Name = "Tradition")]
+        public bool ODfacilitator8 { get; set; }
+
+        [Display(Name = "Accessibility")]
+        public bool ODfacilitator9 { get; set; }
+
+        [Display(Name = "Perception that feces are not dangerous")]
+        public bool ODfacilitator10 { get; set; }
+
+        [Display(Name = "Other")]
+        public bool ODfacilitator11 { get; set; }
+    }
+
+    public class SFSanitationMetadata
+    {
+        [Display(Name = "In the home")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> toiletHome { get; set; }
+
+        [Display(Name = "In the yard")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> toiletYard { get; set; }
+
+        [Display(Name = "Within 100 m")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> toilet100 { get; set; }
+
+        [Display(Name = "100-500m")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> toilet500 { get; set; }
+
+        [Display(Name = "Over 500m")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> toiletFar { get; set; }
+    }
+
+    public class HPPKhpMetadata
+    {
+        [Display(Name = "% of community members")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> knowledgeQual { get; set; }
+
+        [Display(Name = "Household water treatment")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> trainingAccess1 { get; set; }
+
+        [Display(Name = "Safe water storage and handling")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> trainingAccess2 { get; set; }
+
+        [Display(Name = "Health")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> trainingAccess3 { get; set; }
+
+        [Display(Name = "Hygiene")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> trainingAccess4 { get; set; }
+
+        [Display(Name = "Sanitation")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> trainingAccess5 { get; set; }
+
+        [Display(Name = "% of households")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> handWash { get; set; }
+
+        [Display(Name = "In latrine/toilet")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> childFaeces1 { get; set; }
+
+        [Display(Name = "In garbage")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> childFaeces2 { get; set; }
+
+        [Display(Name = "Buried")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> childFaeces3 { get; set; }
+
+        [Display(Name = "In drain or ditch")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> childFaeces4 { get; set; }
+
+        [Display(Name = "Left in open")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> childFaeces5 { get; set; }
+
+        [Display(Name = "Compost")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> childFaeces6 { get; set; }
+
+        [Display(Name = "Other")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> childFaeces7 { get; set; }
+    }
+
     public class SWPDevMetadata
     {
         [Display(Name = "Mines")]

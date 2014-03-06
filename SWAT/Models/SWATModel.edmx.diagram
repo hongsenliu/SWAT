@@ -271,6 +271,64 @@
         <AssociationConnector Association="SWATModel.FK_tblSWATSWPls_39_lkpSWAT5rankLU" />
         <AssociationConnector Association="SWATModel.FK_tblSWATSWPls_32_tblSWATSurvey" />
         <EntityTypeShape EntityType="SWATModel.lkpSWATdevSiteLU" Width="1.5" PointX="3.8578302300804435" PointY="24.601097580325369" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATHPPkhp" Width="1.5" PointX="8.8456620820079284" PointY="23.803452219722537" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATHPPkhp_44_lkpSWAT5rankLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATHPPkhp_36_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_toiletsAll" Width="1.5" PointX="5.1305880570460989" PointY="6.3817213207398176" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATtoiletsAllLU" Width="1.5" PointX="8.5281355625615145" PointY="11.948029613098143" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATSFsanitation" Width="1.5" PointX="4.2683960703520087" PointY="12.285365631936754" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFsanitation_38_lkpSWATtoiletsAllLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFsanitation_37_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATSFod" Width="1.5" PointX="7.9283611550593562" PointY="2.7267079217018129" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFod_38_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATsanTypeLU" Width="1.5" PointX="7.9611202254710349" PointY="11.33356383970639" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_sanType" Width="1.5" PointX="4.9978564404872508" PointY="23.637503575364828" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATSFpoint" Width="1.5" PointX="1.1867678711129202" PointY="10.009449769747187" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFpoint_40_lkpSWATsanTypeLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFpoint_39_tblSWATSurvey" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATcentralConditionLU" Width="1.5" PointX="2.4783205345637724" PointY="19.643843764273377" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATcentralTreatmentTypeLU" Width="1.5" PointX="1.4448077163867688" PointY="20.756382743248896" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWAThhCleanLU" Width="1.5" PointX="5.9525031493755538" PointY="11.449436461296601" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATlatrineConditionLU" Width="1.5" PointX="8.0841547679547947" PointY="7.0348702552890732" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATpubCleanLU" Width="1.5" PointX="3.0331000588057098" PointY="18.89212601766555" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_centralCondition" Width="1.5" PointX="3.1104087993085425" PointY="12.539246669290236" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_centralTreatment" Width="1.5" PointX="8.23246786195434" PointY="14.479888490624674" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_hhClean" Width="1.5" PointX="9.50341829355034" PointY="26.926121053717157" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_latrineCondition" Width="1.5" PointX="11.651235379116255" PointY="9.8851741449372721" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATscores_pubClean" Width="1.5" PointX="11.502749327338648" PointY="3.6875297891383663" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATSFcentral" Width="1.5" PointX="2.7066031539377771" PointY="0.31580001130504531" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATSFlat" Width="1.5" PointX="5.6331895187651693" PointY="19.045784124660205" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATSFseptic" Width="1.5" PointX="11.122350085118017" PointY="12.537067061540236" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFcentral_45_lkpSWAT5rankLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFseptic_46_lkpSWAT5rankLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFseptic_47_lkpSWAT5rankLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFcentral_46_lkpSWATcentralConditionLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFcentral_41_lkpSWATcentralTreatmentTypeLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFcentral_51_lkpSWAThhCleanLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFlat_57_lkpSWAThhCleanLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFseptic_54_lkpSWAThhCleanLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFlat_43_lkpSWATlatrineConditionLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFcentral_47_lkpSWATpubCleanLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFlat_49_lkpSWATpubCleanLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFseptic_48_lkpSWATpubCleanLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFcentral_48_lkpSWATYesNoLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFcentral_49_lkpSWATYesNoLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFcentral_50_lkpSWATYesNoLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFlat_54_lkpSWATYesNoLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFlat_55_lkpSWATYesNoLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFlat_56_lkpSWATYesNoLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFseptic_51_lkpSWATYesNoLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFseptic_52_lkpSWATYesNoLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFseptic_53_lkpSWATYesNoLU" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFcentral_40_tblSWATSurvey" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFlat_42_tblSWATSurvey" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATSFseptic_41_tblSWATSurvey" />
+        <AssociationConnector Association="SWATModel.FK_lkpSWATScoreVarsLU_3_lkpSWATSectionLU" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATwpaLoc" Width="1.5" PointX="8.6376193839300512" PointY="12.603992468027395" />
+        <EntityTypeShape EntityType="SWATModel.lkpSWATwpaTypeDesc" Width="1.5" PointX="9.7714276582800927" PointY="4.0421365518319128" />
+        <EntityTypeShape EntityType="SWATModel.tblSWATWPoverview" Width="1.5" PointX="1.5112817182723815" PointY="31.758326783663744" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWPoverview_44_lkpSWATwpaLoc" />
+        <AssociationConnector Association="SWATModel.FK_tblSWATWPoverview_43_tblSWATSurvey" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

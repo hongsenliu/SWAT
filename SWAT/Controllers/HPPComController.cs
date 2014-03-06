@@ -126,15 +126,15 @@ namespace SWAT.Controllers
                     db.SaveChanges();
                     updateScores(tblswathppcom);
 
-                    return RedirectToAction("Index");
-                    // return RedirectToAction("Create", "HPPCom", new { SurveyID = tblswatswpdev.SurveyID });
+                    // return RedirectToAction("Index");
+                    return RedirectToAction("Create", "HPPKhp", new { SurveyID = tblswathppcom.SurveyID });
                 }
 
                 db.tblSWATHPPcoms.Add(tblswathppcom);
                 db.SaveChanges();
                 updateScores(tblswathppcom);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Create", "HPPKhp", new { SurveyID = tblswathppcom.SurveyID });
             }
 
             ViewBag.diarrhea = new SelectList(db.lkpSWAT5rankLU, "id", "Description", tblswathppcom.diarrhea);
@@ -190,7 +190,19 @@ namespace SWAT.Controllers
                 db.SaveChanges();
                 updateScores(tblswathppcom);
 
-                return RedirectToAction("Index");
+                var records = db.tblSWATHPPkhps.Where(e => e.SurveyID == tblswathppcom.SurveyID);
+                if (!records.Any())
+                {
+                    tblSWATHPPkhp newEntry = new tblSWATHPPkhp();
+                    newEntry.SurveyID = tblswathppcom.SurveyID;
+                    db.tblSWATHPPkhps.Add(newEntry);
+                    db.SaveChanges();
+
+                    int newId = newEntry.ID;
+                    return RedirectToAction("Edit", "HPPKhp", new { id = newId, SurveyID = newEntry.SurveyID });
+                }
+
+                return RedirectToAction("Edit", "HPPKhp", new { id = records.First(e => e.SurveyID == tblswathppcom.SurveyID).ID, SurveyID = tblswathppcom.SurveyID});
             }
             ViewBag.diarrhea = new SelectList(db.lkpSWAT5rankLU, "id", "Description", tblswathppcom.diarrhea);
             ViewBag.medicalCost = new SelectList(db.lkpSWATmedicalCostLUs, "id", "Description", tblswathppcom.medicalCost);

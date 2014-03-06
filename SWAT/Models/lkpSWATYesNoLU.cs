@@ -20,6 +20,15 @@ namespace SWAT.Models
             this.tblSWATBackgroundinfoes1 = new HashSet<tblSWATBackgroundinfo>();
             this.tblSWATBackgroundinfoes2 = new HashSet<tblSWATBackgroundinfo>();
             this.tblSWATWAgroundWaters = new HashSet<tblSWATWAgroundWater>();
+            this.tblSWATSFcentrals = new HashSet<tblSWATSFcentral>();
+            this.tblSWATSFcentrals1 = new HashSet<tblSWATSFcentral>();
+            this.tblSWATSFcentrals2 = new HashSet<tblSWATSFcentral>();
+            this.tblSWATSFlats = new HashSet<tblSWATSFlat>();
+            this.tblSWATSFlats1 = new HashSet<tblSWATSFlat>();
+            this.tblSWATSFlats2 = new HashSet<tblSWATSFlat>();
+            this.tblSWATSFseptics = new HashSet<tblSWATSFseptic>();
+            this.tblSWATSFseptics1 = new HashSet<tblSWATSFseptic>();
+            this.tblSWATSFseptics2 = new HashSet<tblSWATSFseptic>();
         }
     
         public int id { get; set; }
@@ -30,5 +39,14 @@ namespace SWAT.Models
         public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes1 { get; set; }
         public virtual ICollection<tblSWATBackgroundinfo> tblSWATBackgroundinfoes2 { get; set; }
         public virtual ICollection<tblSWATWAgroundWater> tblSWATWAgroundWaters { get; set; }
+        public virtual ICollection<tblSWATSFcentral> tblSWATSFcentrals { get; set; }
+        public virtual ICollection<tblSWATSFcentral> tblSWATSFcentrals1 { get; set; }
+        public virtual ICollection<tblSWATSFcentral> tblSWATSFcentrals2 { get; set; }
+        public virtual ICollection<tblSWATSFlat> tblSWATSFlats { get; set; }
+        public virtual ICollection<tblSWATSFlat> tblSWATSFlats1 { get; set; }
+        public virtual ICollection<tblSWATSFlat> tblSWATSFlats2 { get; set; }
+        public virtual ICollection<tblSWATSFseptic> tblSWATSFseptics { get; set; }
+        public virtual ICollection<tblSWATSFseptic> tblSWATSFseptics1 { get; set; }
+        public virtual ICollection<tblSWATSFseptic> tblSWATSFseptics2 { get; set; }
     }
 }

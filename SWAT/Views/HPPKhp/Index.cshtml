@@ -1,0 +1,123 @@
+﻿@model IEnumerable<SWAT.Models.tblSWATHPPkhp>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.knowledgeQual)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainingAccess1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainingAccess2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainingAccess3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainingAccess4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.trainingAccess5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.handWash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.childFaeces1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.childFaeces2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.childFaeces3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.childFaeces4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.childFaeces5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.childFaeces6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.childFaeces7)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSWATSurvey.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.knowledgeQual)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainingAccess1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainingAccess2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainingAccess3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainingAccess4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.trainingAccess5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.handWash)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.childFaeces1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.childFaeces2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.childFaeces3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.childFaeces4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.childFaeces5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.childFaeces6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.childFaeces7)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

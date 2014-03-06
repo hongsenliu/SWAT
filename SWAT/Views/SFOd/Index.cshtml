@@ -1,0 +1,177 @@
+﻿@model IEnumerable<SWAT.Models.tblSWATSFod>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODdemographic1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODdemographic2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODdemographic3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODdemographic4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODdemographicNONE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hhNoToilet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sharedFacPercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODPercent)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODdemoGender1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODdemoGender2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODdemoGender3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODdemoGender4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODdemoGenderNONE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODfacilitator1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODfacilitator2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODfacilitator3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODfacilitator4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODfacilitator5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODfacilitator6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODfacilitator7)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODfacilitator8)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODfacilitator9)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODfacilitator10)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODfacilitator11)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSWATSurvey.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODdemographic1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODdemographic2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODdemographic3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODdemographic4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODdemographicNONE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hhNoToilet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sharedFacPercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODPercent)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODdemoGender1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODdemoGender2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODdemoGender3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODdemoGender4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODdemoGenderNONE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODfacilitator1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODfacilitator2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODfacilitator3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODfacilitator4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODfacilitator5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODfacilitator6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODfacilitator7)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODfacilitator8)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODfacilitator9)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODfacilitator10)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODfacilitator11)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

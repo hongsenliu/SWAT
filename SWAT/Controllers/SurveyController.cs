@@ -286,6 +286,23 @@ namespace SWAT.Controllers
             return PartialView(piecharts);
         }
 
+        // GET: /Survey/WaterPoints/5
+        public ActionResult WaterPoints(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            tblSWATSurvey tblswatsurvey = db.tblSWATSurveys.Find(id);
+            if (tblswatsurvey == null)
+            {
+                return HttpNotFound();
+            }
+
+
+            return View(tblswatsurvey);
+        }
+
         // GET: /Survey/Details/5
         public ActionResult Details(int? id)
         {
@@ -415,6 +432,48 @@ namespace SWAT.Controllers
 
         private void DeleteRelatedRecords(int id)
         {
+            var centrals = db.tblSWATSFcentrals.Where(e => e.SurveyID == id);
+            foreach (tblSWATSFcentral c in centrals)
+            {
+                db.tblSWATSFcentrals.Remove(c);
+            }
+
+            var septics = db.tblSWATSFseptics.Where(e => e.SurveyID == id);
+            foreach (tblSWATSFseptic s in septics)
+            {
+                db.tblSWATSFseptics.Remove(s);
+            }
+
+            var lats = db.tblSWATSFlats.Where(e => e.SurveyID == id);
+            foreach (tblSWATSFlat l in lats)
+            {
+                db.tblSWATSFlats.Remove(l);
+            }
+
+            var tblswatsfpoint = db.tblSWATSFpoints.Where(e => e.SurveyID == id);
+            foreach (tblSWATSFpoint item in tblswatsfpoint)
+            {
+                db.tblSWATSFpoints.Remove(item);
+            }
+
+            var tblswatsfod = db.tblSWATSFods.Where(e => e.SurveyID == id);
+            foreach (tblSWATSFod item in tblswatsfod)
+            {
+                db.tblSWATSFods.Remove(item);
+            }
+
+            var tblswatsfsanitation = db.tblSWATSFsanitations.Where(e => e.SurveyID == id);
+            foreach (tblSWATSFsanitation item in tblswatsfsanitation)
+            {
+                db.tblSWATSFsanitations.Remove(item);
+            }
+
+            var tblswathppkhp = db.tblSWATHPPkhps.Where(e => e.SurveyID == id);
+            foreach (tblSWATHPPkhp item in tblswathppkhp)
+            {
+                db.tblSWATHPPkhps.Remove(item);
+            }
+
             var tblswathppcom = db.tblSWATHPPcoms.Where(e => e.SurveyID == id);
             foreach (tblSWATHPPcom item in tblswathppcom)
             {

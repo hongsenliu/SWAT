@@ -1,0 +1,135 @@
+﻿@model IEnumerable<SWAT.Models.tblSWATSFseptic>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.septicToilets)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.septicUnderstand)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.septicDistance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.septicPlug)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.septicPumped)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.septicTrash)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.septicChemicals)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU1.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATpubCleanLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.septicPubAccessGroup1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.septicPubAccessGroup2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.septicPubAccessGroup3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATYesNoLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATYesNoLU1.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATYesNoLU2.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAThhCleanLU.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSWATSurvey.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.septicToilets)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.septicUnderstand)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.septicDistance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.septicPlug)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.septicPumped)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.septicTrash)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.septicChemicals)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU1.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATpubCleanLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.septicPubAccessGroup1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.septicPubAccessGroup2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.septicPubAccessGroup3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATYesNoLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATYesNoLU1.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATYesNoLU2.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAThhCleanLU.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

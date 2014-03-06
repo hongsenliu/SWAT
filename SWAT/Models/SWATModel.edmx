@@ -17,6 +17,8 @@
           <EntitySet Name="lkpSWATareaProtLU" EntityType="SWATModel.Store.lkpSWATareaProtLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATbestManagementLU" EntityType="SWATModel.Store.lkpSWATbestManagementLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATbestManIndLU" EntityType="SWATModel.Store.lkpSWATbestManIndLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATcentralConditionLU" EntityType="SWATModel.Store.lkpSWATcentralConditionLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATcentralTreatmentTypeLU" EntityType="SWATModel.Store.lkpSWATcentralTreatmentTypeLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATcomponentLU" EntityType="SWATModel.Store.lkpSWATcomponentLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATcomSatisfactionLU" EntityType="SWATModel.Store.lkpSWATcomSatisfactionLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATcropLossLU" EntityType="SWATModel.Store.lkpSWATcropLossLU" store:Type="Tables" Schema="DBA" />
@@ -37,6 +39,7 @@
           <EntitySet Name="lkpSWATgRoleWomenLU" EntityType="SWATModel.Store.lkpSWATgRoleWomenLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATgwAvailabilityLU" EntityType="SWATModel.Store.lkpSWATgwAvailabilityLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATgWomenEngagedLU" EntityType="SWATModel.Store.lkpSWATgWomenEngagedLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWAThhCleanLU" EntityType="SWATModel.Store.lkpSWAThhCleanLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATindicatorGroupLU" EntityType="SWATModel.Store.lkpSWATindicatorGroupLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATindicatorSubComponentLU" EntityType="SWATModel.Store.lkpSWATindicatorSubComponentLU" store:Type="Tables" store:Schema="DBA" store:Name="lkpSWATindicatorSubComponentLU">
             <DefiningQuery>SELECT 
@@ -45,6 +48,7 @@
       FROM [DBA].[lkpSWATindicatorSubComponentLU] AS [lkpSWATindicatorSubComponentLU]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="lkpSWATindigPopLU" EntityType="SWATModel.Store.lkpSWATindigPopLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATlatrineConditionLU" EntityType="SWATModel.Store.lkpSWATlatrineConditionLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATlongtermPopLU" EntityType="SWATModel.Store.lkpSWATlongtermPopLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATmapAridity" EntityType="SWATModel.Store.lkpSWATmapAridity" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATmedicalCostLU" EntityType="SWATModel.Store.lkpSWATmedicalCostLU" store:Type="Tables" Schema="DBA" />
@@ -54,8 +58,10 @@
           <EntitySet Name="lkpSWATprecipVardivMeanLU" EntityType="SWATModel.Store.lkpSWATprecipVardivMeanLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATpriorLU" EntityType="SWATModel.Store.lkpSWATpriorLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATproPoorLU" EntityType="SWATModel.Store.lkpSWATproPoorLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATpubCleanLU" EntityType="SWATModel.Store.lkpSWATpubCleanLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATroscaLU" EntityType="SWATModel.Store.lkpSWATroscaLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATrunoffLU" EntityType="SWATModel.Store.lkpSWATrunoffLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATsanTypeLU" EntityType="SWATModel.Store.lkpSWATsanTypeLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_5rankAlwaysBad" EntityType="SWATModel.Store.lkpSWATscores_5rankAlwaysBad" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_5rankAlwaysGood" EntityType="SWATModel.Store.lkpSWATscores_5rankAlwaysGood" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_areaBMLU" EntityType="SWATModel.Store.lkpSWATscores_areaBMLU" store:Type="Tables" Schema="DBA" />
@@ -63,6 +69,8 @@
           <EntitySet Name="lkpSWATscores_Aridity" EntityType="SWATModel.Store.lkpSWATscores_Aridity" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_bestManagement" EntityType="SWATModel.Store.lkpSWATscores_bestManagement" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_bestManInd" EntityType="SWATModel.Store.lkpSWATscores_bestManInd" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_centralCondition" EntityType="SWATModel.Store.lkpSWATscores_centralCondition" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_centralTreatment" EntityType="SWATModel.Store.lkpSWATscores_centralTreatment" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_comSatisfaction" EntityType="SWATModel.Store.lkpSWATscores_comSatisfaction" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_cropLoss" EntityType="SWATModel.Store.lkpSWATscores_cropLoss" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_econPris" EntityType="SWATModel.Store.lkpSWATscores_econPris" store:Type="Tables" Schema="DBA" />
@@ -82,18 +90,23 @@
           <EntitySet Name="lkpSWATscores_gRoleWomen" EntityType="SWATModel.Store.lkpSWATscores_gRoleWomen" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_gwAvailability" EntityType="SWATModel.Store.lkpSWATscores_gwAvailability" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_gWomenEngaged" EntityType="SWATModel.Store.lkpSWATscores_gWomenEngaged" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_hhClean" EntityType="SWATModel.Store.lkpSWATscores_hhClean" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_indigPop" EntityType="SWATModel.Store.lkpSWATscores_indigPop" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_latrineCondition" EntityType="SWATModel.Store.lkpSWATscores_latrineCondition" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_longtermPop" EntityType="SWATModel.Store.lkpSWATscores_longtermPop" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_medicalCost" EntityType="SWATModel.Store.lkpSWATscores_medicalCost" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_medicalTime" EntityType="SWATModel.Store.lkpSWATscores_medicalTime" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_precip" EntityType="SWATModel.Store.lkpSWATscores_precip" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_precipVar" EntityType="SWATModel.Store.lkpSWATscores_precipVar" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_proPoor" EntityType="SWATModel.Store.lkpSWATscores_proPoor" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_pubClean" EntityType="SWATModel.Store.lkpSWATscores_pubClean" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_rosca" EntityType="SWATModel.Store.lkpSWATscores_rosca" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_runoff" EntityType="SWATModel.Store.lkpSWATscores_runoff" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_sanType" EntityType="SWATModel.Store.lkpSWATscores_sanType" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_socCBO" EntityType="SWATModel.Store.lkpSWATscores_socCBO" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_surfaceVar" EntityType="SWATModel.Store.lkpSWATscores_surfaceVar" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_survivorship" EntityType="SWATModel.Store.lkpSWATscores_survivorship" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_toiletsAll" EntityType="SWATModel.Store.lkpSWATscores_toiletsAll" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_urbanDistance" EntityType="SWATModel.Store.lkpSWATscores_urbanDistance" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_watActionPlan" EntityType="SWATModel.Store.lkpSWATscores_watActionPlan" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_watBudget" EntityType="SWATModel.Store.lkpSWATscores_watBudget" store:Type="Tables" Schema="DBA" />
@@ -116,6 +129,7 @@
           <EntitySet Name="lkpSWATsubComponentLU" EntityType="SWATModel.Store.lkpSWATsubComponentLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATsurfaceVarLU" EntityType="SWATModel.Store.lkpSWATsurfaceVarLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATsurvivorshipLU" EntityType="SWATModel.Store.lkpSWATsurvivorshipLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATtoiletsAllLU" EntityType="SWATModel.Store.lkpSWATtoiletsAllLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATurbanDistanceLU" EntityType="SWATModel.Store.lkpSWATurbanDistanceLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATwatActionPlanLU" EntityType="SWATModel.Store.lkpSWATwatActionPlanLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATwatBudgetLU" EntityType="SWATModel.Store.lkpSWATwatBudgetLU" store:Type="Tables" Schema="DBA" />
@@ -126,6 +140,8 @@
           <EntitySet Name="lkpSWATWatershedsLU" EntityType="SWATModel.Store.lkpSWATWatershedsLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATwatTechStaffLU" EntityType="SWATModel.Store.lkpSWATwatTechStaffLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATwatTechTrainingLU" EntityType="SWATModel.Store.lkpSWATwatTechTrainingLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATwpaLoc" EntityType="SWATModel.Store.lkpSWATwpaLoc" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATwpaTypeDesc" EntityType="SWATModel.Store.lkpSWATwpaTypeDesc" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATYesNoLU" EntityType="SWATModel.Store.lkpSWATYesNoLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATBackgroundinfo" EntityType="SWATModel.Store.tblSWATBackgroundinfo" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATCCcom" EntityType="SWATModel.Store.tblSWATCCcom" store:Type="Tables" Schema="DBA" />
@@ -139,8 +155,15 @@
           <EntitySet Name="tblSWATCCtrain" EntityType="SWATModel.Store.tblSWATCCtrain" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATCCwaterManagement" EntityType="SWATModel.Store.tblSWATCCwaterManagement" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATHPPcom" EntityType="SWATModel.Store.tblSWATHPPcom" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATHPPkhp" EntityType="SWATModel.Store.tblSWATHPPkhp" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATLocation" EntityType="SWATModel.Store.tblSWATLocation" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATScore" EntityType="SWATModel.Store.tblSWATScore" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATSFcentral" EntityType="SWATModel.Store.tblSWATSFcentral" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATSFlat" EntityType="SWATModel.Store.tblSWATSFlat" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATSFod" EntityType="SWATModel.Store.tblSWATSFod" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATSFpoint" EntityType="SWATModel.Store.tblSWATSFpoint" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATSFsanitation" EntityType="SWATModel.Store.tblSWATSFsanitation" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATSFseptic" EntityType="SWATModel.Store.tblSWATSFseptic" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATSurvey" EntityType="SWATModel.Store.tblSWATSurvey" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATSWPag" EntityType="SWATModel.Store.tblSWATSWPag" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATSWPdev" EntityType="SWATModel.Store.tblSWATSWPdev" store:Type="Tables" Schema="DBA" />
@@ -155,6 +178,7 @@
           <EntitySet Name="tblSWATWAPrecipitation" EntityType="SWATModel.Store.tblSWATWAPrecipitation" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAriskPrep" EntityType="SWATModel.Store.tblSWATWAriskPrep" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAsurfaceWater" EntityType="SWATModel.Store.tblSWATWAsurfaceWater" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATWPoverview" EntityType="SWATModel.Store.tblSWATWPoverview" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="Userids" EntityType="SWATModel.Store.Userids" store:Type="Tables" Schema="DBA" />
           <AssociationSet Name="FK_lkpCountry_3_lkpRegion" Association="SWATModel.Store.FK_lkpCountry_3_lkpRegion">
             <End Role="lkpRegion" EntitySet="lkpRegion" />
@@ -168,13 +192,9 @@
             <End Role="lkpSWATindicatorGroupLU" EntitySet="lkpSWATindicatorGroupLU" />
             <End Role="lkpSWATcomponentLU" EntitySet="lkpSWATcomponentLU" />
           </AssociationSet>
-          <AssociationSet Name="FK_lkpSWATScoreVarSectionLU_4_lkpSWATScoreVarsLU" Association="SWATModel.Store.FK_lkpSWATScoreVarSectionLU_4_lkpSWATScoreVarsLU">
-            <End Role="lkpSWATScoreVarsLU" EntitySet="lkpSWATScoreVarsLU" />
-            <End Role="lkpSWATScoreVarSectionLU" EntitySet="lkpSWATScoreVarSectionLU" />
-          </AssociationSet>
-          <AssociationSet Name="FK_lkpSWATScoreVarSectionLU_5_lkpSWATSectionLU" Association="SWATModel.Store.FK_lkpSWATScoreVarSectionLU_5_lkpSWATSectionLU">
+          <AssociationSet Name="FK_lkpSWATScoreVarsLU_3_lkpSWATSectionLU" Association="SWATModel.Store.FK_lkpSWATScoreVarsLU_3_lkpSWATSectionLU">
             <End Role="lkpSWATSectionLU" EntitySet="lkpSWATSectionLU" />
-            <End Role="lkpSWATScoreVarSectionLU" EntitySet="lkpSWATScoreVarSectionLU" />
+            <End Role="lkpSWATScoreVarsLU" EntitySet="lkpSWATScoreVarsLU" />
           </AssociationSet>
           <AssociationSet Name="FK_lkpSWATsubComponentLU_2_lkpSWATcomponentLU" Association="SWATModel.Store.FK_lkpSWATsubComponentLU_2_lkpSWATcomponentLU">
             <End Role="lkpSWATcomponentLU" EntitySet="lkpSWATcomponentLU" />
@@ -456,6 +476,14 @@
             <End Role="lkpSWATmedicalCostLU" EntitySet="lkpSWATmedicalCostLU" />
             <End Role="tblSWATHPPcom" EntitySet="tblSWATHPPcom" />
           </AssociationSet>
+          <AssociationSet Name="FK_tblSWATHPPkhp_36_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATHPPkhp_36_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+            <End Role="tblSWATHPPkhp" EntitySet="tblSWATHPPkhp" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATHPPkhp_44_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATHPPkhp_44_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATHPPkhp" EntitySet="tblSWATHPPkhp" />
+          </AssociationSet>
           <AssociationSet Name="FK_tblSWATLocation_18_lkpCountry" Association="SWATModel.Store.FK_tblSWATLocation_18_lkpCountry">
             <End Role="lkpCountry" EntitySet="lkpCountry" />
             <End Role="tblSWATLocation" EntitySet="tblSWATLocation" />
@@ -471,6 +499,122 @@
           <AssociationSet Name="FK_tblSWATScore_3_lkpSWATScoreVarsLU" Association="SWATModel.Store.FK_tblSWATScore_3_lkpSWATScoreVarsLU">
             <End Role="lkpSWATScoreVarsLU" EntitySet="lkpSWATScoreVarsLU" />
             <End Role="tblSWATScore" EntitySet="tblSWATScore" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_40_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATSFcentral_40_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentral" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_41_lkpSWATcentralTreatmentTypeLU" Association="SWATModel.Store.FK_tblSWATSFcentral_41_lkpSWATcentralTreatmentTypeLU">
+            <End Role="lkpSWATcentralTreatmentTypeLU" EntitySet="lkpSWATcentralTreatmentTypeLU" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentral" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_45_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATSFcentral_45_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentral" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_46_lkpSWATcentralConditionLU" Association="SWATModel.Store.FK_tblSWATSFcentral_46_lkpSWATcentralConditionLU">
+            <End Role="lkpSWATcentralConditionLU" EntitySet="lkpSWATcentralConditionLU" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentral" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_47_lkpSWATpubCleanLU" Association="SWATModel.Store.FK_tblSWATSFcentral_47_lkpSWATpubCleanLU">
+            <End Role="lkpSWATpubCleanLU" EntitySet="lkpSWATpubCleanLU" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentral" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_48_lkpSWATYesNoLU" Association="SWATModel.Store.FK_tblSWATSFcentral_48_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLU" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentral" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_49_lkpSWATYesNoLU" Association="SWATModel.Store.FK_tblSWATSFcentral_49_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLU" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentral" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_50_lkpSWATYesNoLU" Association="SWATModel.Store.FK_tblSWATSFcentral_50_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLU" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentral" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_51_lkpSWAThhCleanLU" Association="SWATModel.Store.FK_tblSWATSFcentral_51_lkpSWAThhCleanLU">
+            <End Role="lkpSWAThhCleanLU" EntitySet="lkpSWAThhCleanLU" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentral" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFlat_42_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATSFlat_42_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+            <End Role="tblSWATSFlat" EntitySet="tblSWATSFlat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFlat_43_lkpSWATlatrineConditionLU" Association="SWATModel.Store.FK_tblSWATSFlat_43_lkpSWATlatrineConditionLU">
+            <End Role="lkpSWATlatrineConditionLU" EntitySet="lkpSWATlatrineConditionLU" />
+            <End Role="tblSWATSFlat" EntitySet="tblSWATSFlat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFlat_49_lkpSWATpubCleanLU" Association="SWATModel.Store.FK_tblSWATSFlat_49_lkpSWATpubCleanLU">
+            <End Role="lkpSWATpubCleanLU" EntitySet="lkpSWATpubCleanLU" />
+            <End Role="tblSWATSFlat" EntitySet="tblSWATSFlat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFlat_54_lkpSWATYesNoLU" Association="SWATModel.Store.FK_tblSWATSFlat_54_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLU" />
+            <End Role="tblSWATSFlat" EntitySet="tblSWATSFlat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFlat_55_lkpSWATYesNoLU" Association="SWATModel.Store.FK_tblSWATSFlat_55_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLU" />
+            <End Role="tblSWATSFlat" EntitySet="tblSWATSFlat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFlat_56_lkpSWATYesNoLU" Association="SWATModel.Store.FK_tblSWATSFlat_56_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLU" />
+            <End Role="tblSWATSFlat" EntitySet="tblSWATSFlat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFlat_57_lkpSWAThhCleanLU" Association="SWATModel.Store.FK_tblSWATSFlat_57_lkpSWAThhCleanLU">
+            <End Role="lkpSWAThhCleanLU" EntitySet="lkpSWAThhCleanLU" />
+            <End Role="tblSWATSFlat" EntitySet="tblSWATSFlat" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFod_38_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATSFod_38_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+            <End Role="tblSWATSFod" EntitySet="tblSWATSFod" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFpoint_39_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATSFpoint_39_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+            <End Role="tblSWATSFpoint" EntitySet="tblSWATSFpoint" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFpoint_40_lkpSWATsanTypeLU" Association="SWATModel.Store.FK_tblSWATSFpoint_40_lkpSWATsanTypeLU">
+            <End Role="lkpSWATsanTypeLU" EntitySet="lkpSWATsanTypeLU" />
+            <End Role="tblSWATSFpoint" EntitySet="tblSWATSFpoint" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFsanitation_37_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATSFsanitation_37_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+            <End Role="tblSWATSFsanitation" EntitySet="tblSWATSFsanitation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFsanitation_38_lkpSWATtoiletsAllLU" Association="SWATModel.Store.FK_tblSWATSFsanitation_38_lkpSWATtoiletsAllLU">
+            <End Role="lkpSWATtoiletsAllLU" EntitySet="lkpSWATtoiletsAllLU" />
+            <End Role="tblSWATSFsanitation" EntitySet="tblSWATSFsanitation" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFseptic_41_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATSFseptic_41_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+            <End Role="tblSWATSFseptic" EntitySet="tblSWATSFseptic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFseptic_46_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATSFseptic_46_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATSFseptic" EntitySet="tblSWATSFseptic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFseptic_47_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATSFseptic_47_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATSFseptic" EntitySet="tblSWATSFseptic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFseptic_48_lkpSWATpubCleanLU" Association="SWATModel.Store.FK_tblSWATSFseptic_48_lkpSWATpubCleanLU">
+            <End Role="lkpSWATpubCleanLU" EntitySet="lkpSWATpubCleanLU" />
+            <End Role="tblSWATSFseptic" EntitySet="tblSWATSFseptic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFseptic_51_lkpSWATYesNoLU" Association="SWATModel.Store.FK_tblSWATSFseptic_51_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLU" />
+            <End Role="tblSWATSFseptic" EntitySet="tblSWATSFseptic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFseptic_52_lkpSWATYesNoLU" Association="SWATModel.Store.FK_tblSWATSFseptic_52_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLU" />
+            <End Role="tblSWATSFseptic" EntitySet="tblSWATSFseptic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFseptic_53_lkpSWATYesNoLU" Association="SWATModel.Store.FK_tblSWATSFseptic_53_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLU" />
+            <End Role="tblSWATSFseptic" EntitySet="tblSWATSFseptic" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFseptic_54_lkpSWAThhCleanLU" Association="SWATModel.Store.FK_tblSWATSFseptic_54_lkpSWAThhCleanLU">
+            <End Role="lkpSWAThhCleanLU" EntitySet="lkpSWAThhCleanLU" />
+            <End Role="tblSWATSFseptic" EntitySet="tblSWATSFseptic" />
           </AssociationSet>
           <AssociationSet Name="FK_tblSWATSurvey_37_Userids" Association="SWATModel.Store.FK_tblSWATSurvey_37_Userids">
             <End Role="Userids" EntitySet="Userids" />
@@ -668,6 +812,14 @@
             <End Role="lkpSWATsurfaceVarLU" EntitySet="lkpSWATsurfaceVarLU" />
             <End Role="tblSWATWAsurfaceWater" EntitySet="tblSWATWAsurfaceWater" />
           </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPoverview_43_tblSWATSurvey" Association="SWATModel.Store.FK_tblSWATWPoverview_43_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurvey" />
+            <End Role="tblSWATWPoverview" EntitySet="tblSWATWPoverview" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPoverview_44_lkpSWATwpaLoc" Association="SWATModel.Store.FK_tblSWATWPoverview_44_lkpSWATwpaLoc">
+            <End Role="lkpSWATwpaLoc" EntitySet="lkpSWATwpaLoc" />
+            <End Role="tblSWATWPoverview" EntitySet="tblSWATWPoverview" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="lkpBiome">
           <Key>
@@ -751,6 +903,22 @@
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATbestManIndLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATcentralConditionLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATcentralTreatmentTypeLU">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -919,6 +1087,14 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWAThhCleanLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATindicatorGroupLU">
           <Key>
             <PropertyRef Name="ID" />
@@ -939,6 +1115,14 @@
           <Property Name="SubComponentID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="lkpSWATindigPopLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATlatrineConditionLU">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -1018,6 +1202,14 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATpubCleanLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATroscaLU">
           <Key>
             <PropertyRef Name="id" />
@@ -1033,6 +1225,14 @@
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="varchar" Nullable="false" MaxLength="254" />
           <Property Name="intorder" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATsanTypeLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATscores_5rankAlwaysBad">
           <Key>
@@ -1083,6 +1283,22 @@
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATscores_bestManInd">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_centralCondition">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_centralTreatment">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -1242,7 +1458,23 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATscores_hhClean">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATscores_indigPop">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_latrineCondition">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -1298,6 +1530,14 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATscores_pubClean">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATscores_rosca">
           <Key>
             <PropertyRef Name="id" />
@@ -1313,6 +1553,14 @@
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="float" Nullable="false" />
           <Property Name="intorder" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_sanType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATscores_socCBO">
           <Key>
@@ -1331,6 +1579,14 @@
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATscores_survivorship">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_toiletsAll">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -1436,6 +1692,7 @@
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="VarName" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="SectionID" Type="int" />
         </EntityType>
         <EntityType Name="lkpSWATSectionLU">
           <Key>
@@ -1471,6 +1728,14 @@
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATsurvivorshipLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATtoiletsAllLU">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -1551,6 +1816,22 @@
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATwatTechTrainingLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATwpaLoc">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATwpaTypeDesc">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -1766,6 +2047,28 @@
           <Property Name="medicalTime" Type="int" />
           <Property Name="medicalCost" Type="int" />
         </EntityType>
+        <EntityType Name="tblSWATHPPkhp">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="int" Nullable="false" />
+          <Property Name="knowledgeQual" Type="float" />
+          <Property Name="trainingAccess1" Type="float" />
+          <Property Name="trainingAccess2" Type="float" />
+          <Property Name="trainingAccess3" Type="float" />
+          <Property Name="trainingAccess4" Type="float" />
+          <Property Name="trainingAccess5" Type="float" />
+          <Property Name="promotion" Type="int" />
+          <Property Name="handWash" Type="float" />
+          <Property Name="childFaeces1" Type="float" />
+          <Property Name="childFaeces2" Type="float" />
+          <Property Name="childFaeces3" Type="float" />
+          <Property Name="childFaeces4" Type="float" />
+          <Property Name="childFaeces5" Type="float" />
+          <Property Name="childFaeces6" Type="float" />
+          <Property Name="childFaeces7" Type="float" />
+        </EntityType>
         <EntityType Name="tblSWATLocation">
           <Key>
             <PropertyRef Name="ID" />
@@ -1788,6 +2091,131 @@
           <Property Name="Value" Type="float" />
           <Property Name="VarName" Type="varchar" Nullable="false" MaxLength="254" />
           <Property Name="Description" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="tblSWATSFcentral">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="int" Nullable="false" />
+          <Property Name="centralToilets" Type="int" />
+          <Property Name="centralTreatmentType" Type="int" />
+          <Property Name="centralSludge" Type="int" />
+          <Property Name="centralCondition" Type="int" />
+          <Property Name="centralPubClean" Type="int" />
+          <Property Name="centralAccessGroup1" Type="bit" Nullable="false" />
+          <Property Name="centralAccessGroup2" Type="bit" Nullable="false" />
+          <Property Name="centralAccessGroup3" Type="bit" Nullable="false" />
+          <Property Name="centralfeesCharged" Type="int" />
+          <Property Name="centralFeesLimitAccess" Type="int" />
+          <Property Name="centralFeesEnsureClean" Type="int" />
+          <Property Name="hhCentralClean" Type="int" />
+        </EntityType>
+        <EntityType Name="tblSWATSFlat">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="int" Nullable="false" />
+          <Property Name="LatrineType1" Type="bit" Nullable="false" />
+          <Property Name="LatrineType2" Type="bit" Nullable="false" />
+          <Property Name="LatrineType3" Type="bit" Nullable="false" />
+          <Property Name="LatrineType4" Type="bit" Nullable="false" />
+          <Property Name="latrineProb1" Type="float" />
+          <Property Name="latrineProb2" Type="float" />
+          <Property Name="latrineProb3" Type="float" />
+          <Property Name="latrineCondition" Type="int" />
+          <Property Name="latrinecentralPubClean" Type="int" />
+          <Property Name="latrineAccessGroup1" Type="bit" Nullable="false" />
+          <Property Name="latrineAccessGroup2" Type="bit" Nullable="false" />
+          <Property Name="latrineAccessGroup3" Type="bit" Nullable="false" />
+          <Property Name="latrinefeesCharged" Type="int" />
+          <Property Name="latrineFeesLimitAccess" Type="int" />
+          <Property Name="latrineFeesEnsureClean" Type="int" />
+          <Property Name="hhLatrineClean" Type="int" />
+          <Property Name="ltype1" Type="int" />
+          <Property Name="ltype2" Type="int" />
+          <Property Name="ltype3" Type="int" />
+          <Property Name="ltype4" Type="int" />
+        </EntityType>
+        <EntityType Name="tblSWATSFod">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="int" Nullable="false" />
+          <Property Name="ODdemographic1" Type="bit" Nullable="false" />
+          <Property Name="ODdemographic2" Type="bit" Nullable="false" />
+          <Property Name="ODdemographic3" Type="bit" Nullable="false" />
+          <Property Name="ODdemographic4" Type="bit" Nullable="false" />
+          <Property Name="ODdemographicNONE" Type="bit" Nullable="false" />
+          <Property Name="hhNoToilet" Type="int" />
+          <Property Name="sharedFacPercent" Type="float" />
+          <Property Name="ODPercent" Type="float" />
+          <Property Name="ODdemoGender1" Type="bit" Nullable="false" />
+          <Property Name="ODdemoGender2" Type="bit" Nullable="false" />
+          <Property Name="ODdemoGender3" Type="bit" Nullable="false" />
+          <Property Name="ODdemoGender4" Type="bit" Nullable="false" />
+          <Property Name="ODdemoGenderNONE" Type="bit" Nullable="false" />
+          <Property Name="ODfacilitator1" Type="bit" Nullable="false" />
+          <Property Name="ODfacilitator2" Type="bit" Nullable="false" />
+          <Property Name="ODfacilitator3" Type="bit" Nullable="false" />
+          <Property Name="ODfacilitator4" Type="bit" Nullable="false" />
+          <Property Name="ODfacilitator5" Type="bit" Nullable="false" />
+          <Property Name="ODfacilitator6" Type="bit" Nullable="false" />
+          <Property Name="ODfacilitator7" Type="bit" Nullable="false" />
+          <Property Name="ODfacilitator8" Type="bit" Nullable="false" />
+          <Property Name="ODfacilitator9" Type="bit" Nullable="false" />
+          <Property Name="ODfacilitator10" Type="bit" Nullable="false" />
+          <Property Name="ODfacilitator11" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSWATSFpoint">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="int" Nullable="false" />
+          <Property Name="sanType" Type="int" />
+          <Property Name="sanUseInd" Type="bit" Nullable="false" />
+          <Property Name="sanUsePub" Type="bit" Nullable="false" />
+          <Property Name="SanUseCom" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="tblSWATSFsanitation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="int" Nullable="false" />
+          <Property Name="toiletsAll" Type="int" />
+          <Property Name="toiletHome" Type="float" />
+          <Property Name="toiletYard" Type="float" />
+          <Property Name="toilet100" Type="float" />
+          <Property Name="toilet500" Type="float" />
+          <Property Name="toiletFar" Type="float" />
+        </EntityType>
+        <EntityType Name="tblSWATSFseptic">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="int" Nullable="false" />
+          <Property Name="septicToilets" Type="int" />
+          <Property Name="septicUnderstand" Type="float" />
+          <Property Name="septicDistance" Type="float" />
+          <Property Name="septicPlug" Type="float" />
+          <Property Name="septicPumped" Type="float" />
+          <Property Name="septicTrash" Type="float" />
+          <Property Name="septicChemicals" Type="float" />
+          <Property Name="septicChemAvail" Type="int" />
+          <Property Name="septicPumpAvail" Type="int" />
+          <Property Name="septicPubClean" Type="int" />
+          <Property Name="septicPubAccessGroup1" Type="bit" Nullable="false" />
+          <Property Name="septicPubAccessGroup2" Type="bit" Nullable="false" />
+          <Property Name="septicPubAccessGroup3" Type="bit" Nullable="false" />
+          <Property Name="septicfeesCharged" Type="int" />
+          <Property Name="septicFeesLimitAccess" Type="int" />
+          <Property Name="septicFeesEnsureClean" Type="int" />
+          <Property Name="hhSepticClean" Type="int" />
         </EntityType>
         <EntityType Name="tblSWATSurvey">
           <Key>
@@ -1956,6 +2384,18 @@
           <Property Name="runoff" Type="int" />
           <Property Name="surfaceVar" Type="int" />
         </EntityType>
+        <EntityType Name="tblSWATWPoverview">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SurveyID" Type="int" Nullable="false" />
+          <Property Name="wpname" Type="varchar" MaxLength="80" />
+          <Property Name="wpaLoc" Type="int" />
+          <Property Name="wpaUseDom" Type="bit" Nullable="false" />
+          <Property Name="wpaUseInst" Type="bit" Nullable="false" />
+          <Property Name="wpaUseEc" Type="bit" Nullable="false" />
+        </EntityType>
         <EntityType Name="Userids">
           <Key>
             <PropertyRef Name="Userid" />
@@ -2026,26 +2466,14 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_lkpSWATScoreVarSectionLU_4_lkpSWATScoreVarsLU">
-          <End Role="lkpSWATScoreVarsLU" Type="SWATModel.Store.lkpSWATScoreVarsLU" Multiplicity="1" />
-          <End Role="lkpSWATScoreVarSectionLU" Type="SWATModel.Store.lkpSWATScoreVarSectionLU" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="lkpSWATScoreVarsLU">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="lkpSWATScoreVarSectionLU">
-              <PropertyRef Name="ScoreVarID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_lkpSWATScoreVarSectionLU_5_lkpSWATSectionLU">
-          <End Role="lkpSWATSectionLU" Type="SWATModel.Store.lkpSWATSectionLU" Multiplicity="1" />
-          <End Role="lkpSWATScoreVarSectionLU" Type="SWATModel.Store.lkpSWATScoreVarSectionLU" Multiplicity="*" />
+        <Association Name="FK_lkpSWATScoreVarsLU_3_lkpSWATSectionLU">
+          <End Role="lkpSWATSectionLU" Type="SWATModel.Store.lkpSWATSectionLU" Multiplicity="0..1" />
+          <End Role="lkpSWATScoreVarsLU" Type="SWATModel.Store.lkpSWATScoreVarsLU" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="lkpSWATSectionLU">
               <PropertyRef Name="ID" />
             </Principal>
-            <Dependent Role="lkpSWATScoreVarSectionLU">
+            <Dependent Role="lkpSWATScoreVarsLU">
               <PropertyRef Name="SectionID" />
             </Dependent>
           </ReferentialConstraint>
@@ -2890,6 +3318,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_tblSWATHPPkhp_36_tblSWATSurvey">
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="1" />
+          <End Role="tblSWATHPPkhp" Type="SWATModel.Store.tblSWATHPPkhp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATHPPkhp">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATHPPkhp_44_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATHPPkhp" Type="SWATModel.Store.tblSWATHPPkhp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATHPPkhp">
+              <PropertyRef Name="promotion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_tblSWATLocation_18_lkpCountry">
           <End Role="lkpCountry" Type="SWATModel.Store.lkpCountry" Multiplicity="1" />
           <End Role="tblSWATLocation" Type="SWATModel.Store.tblSWATLocation" Multiplicity="*" />
@@ -2935,6 +3387,354 @@
             </Principal>
             <Dependent Role="tblSWATScore">
               <PropertyRef Name="VariableID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_40_tblSWATSurvey">
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="1" />
+          <End Role="tblSWATSFcentral" Type="SWATModel.Store.tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_41_lkpSWATcentralTreatmentTypeLU">
+          <End Role="lkpSWATcentralTreatmentTypeLU" Type="SWATModel.Store.lkpSWATcentralTreatmentTypeLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFcentral" Type="SWATModel.Store.tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATcentralTreatmentTypeLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="centralTreatmentType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_45_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFcentral" Type="SWATModel.Store.tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="centralSludge" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_46_lkpSWATcentralConditionLU">
+          <End Role="lkpSWATcentralConditionLU" Type="SWATModel.Store.lkpSWATcentralConditionLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFcentral" Type="SWATModel.Store.tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATcentralConditionLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="centralCondition" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_47_lkpSWATpubCleanLU">
+          <End Role="lkpSWATpubCleanLU" Type="SWATModel.Store.lkpSWATpubCleanLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFcentral" Type="SWATModel.Store.tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpubCleanLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="centralPubClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_48_lkpSWATYesNoLU">
+          <End Role="lkpSWATYesNoLU" Type="SWATModel.Store.lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFcentral" Type="SWATModel.Store.tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="centralfeesCharged" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_49_lkpSWATYesNoLU">
+          <End Role="lkpSWATYesNoLU" Type="SWATModel.Store.lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFcentral" Type="SWATModel.Store.tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="centralFeesLimitAccess" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_50_lkpSWATYesNoLU">
+          <End Role="lkpSWATYesNoLU" Type="SWATModel.Store.lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFcentral" Type="SWATModel.Store.tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="centralFeesEnsureClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_51_lkpSWAThhCleanLU">
+          <End Role="lkpSWAThhCleanLU" Type="SWATModel.Store.lkpSWAThhCleanLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFcentral" Type="SWATModel.Store.tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAThhCleanLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="hhCentralClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFlat_42_tblSWATSurvey">
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="1" />
+          <End Role="tblSWATSFlat" Type="SWATModel.Store.tblSWATSFlat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATSFlat">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFlat_43_lkpSWATlatrineConditionLU">
+          <End Role="lkpSWATlatrineConditionLU" Type="SWATModel.Store.lkpSWATlatrineConditionLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFlat" Type="SWATModel.Store.tblSWATSFlat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATlatrineConditionLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFlat">
+              <PropertyRef Name="latrineCondition" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFlat_49_lkpSWATpubCleanLU">
+          <End Role="lkpSWATpubCleanLU" Type="SWATModel.Store.lkpSWATpubCleanLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFlat" Type="SWATModel.Store.tblSWATSFlat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpubCleanLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFlat">
+              <PropertyRef Name="latrinecentralPubClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFlat_54_lkpSWATYesNoLU">
+          <End Role="lkpSWATYesNoLU" Type="SWATModel.Store.lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFlat" Type="SWATModel.Store.tblSWATSFlat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFlat">
+              <PropertyRef Name="latrinefeesCharged" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFlat_55_lkpSWATYesNoLU">
+          <End Role="lkpSWATYesNoLU" Type="SWATModel.Store.lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFlat" Type="SWATModel.Store.tblSWATSFlat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFlat">
+              <PropertyRef Name="latrineFeesLimitAccess" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFlat_56_lkpSWATYesNoLU">
+          <End Role="lkpSWATYesNoLU" Type="SWATModel.Store.lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFlat" Type="SWATModel.Store.tblSWATSFlat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFlat">
+              <PropertyRef Name="latrineFeesEnsureClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFlat_57_lkpSWAThhCleanLU">
+          <End Role="lkpSWAThhCleanLU" Type="SWATModel.Store.lkpSWAThhCleanLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFlat" Type="SWATModel.Store.tblSWATSFlat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAThhCleanLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFlat">
+              <PropertyRef Name="hhLatrineClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFod_38_tblSWATSurvey">
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="1" />
+          <End Role="tblSWATSFod" Type="SWATModel.Store.tblSWATSFod" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATSFod">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFpoint_39_tblSWATSurvey">
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="1" />
+          <End Role="tblSWATSFpoint" Type="SWATModel.Store.tblSWATSFpoint" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATSFpoint">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFpoint_40_lkpSWATsanTypeLU">
+          <End Role="lkpSWATsanTypeLU" Type="SWATModel.Store.lkpSWATsanTypeLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFpoint" Type="SWATModel.Store.tblSWATSFpoint" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATsanTypeLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFpoint">
+              <PropertyRef Name="sanType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFsanitation_37_tblSWATSurvey">
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="1" />
+          <End Role="tblSWATSFsanitation" Type="SWATModel.Store.tblSWATSFsanitation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATSFsanitation">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFsanitation_38_lkpSWATtoiletsAllLU">
+          <End Role="lkpSWATtoiletsAllLU" Type="SWATModel.Store.lkpSWATtoiletsAllLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFsanitation" Type="SWATModel.Store.tblSWATSFsanitation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATtoiletsAllLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFsanitation">
+              <PropertyRef Name="toiletsAll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFseptic_41_tblSWATSurvey">
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="1" />
+          <End Role="tblSWATSFseptic" Type="SWATModel.Store.tblSWATSFseptic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATSFseptic">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFseptic_46_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFseptic" Type="SWATModel.Store.tblSWATSFseptic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFseptic">
+              <PropertyRef Name="septicChemAvail" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFseptic_47_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFseptic" Type="SWATModel.Store.tblSWATSFseptic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFseptic">
+              <PropertyRef Name="septicPumpAvail" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFseptic_48_lkpSWATpubCleanLU">
+          <End Role="lkpSWATpubCleanLU" Type="SWATModel.Store.lkpSWATpubCleanLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFseptic" Type="SWATModel.Store.tblSWATSFseptic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpubCleanLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFseptic">
+              <PropertyRef Name="septicPubClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFseptic_51_lkpSWATYesNoLU">
+          <End Role="lkpSWATYesNoLU" Type="SWATModel.Store.lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFseptic" Type="SWATModel.Store.tblSWATSFseptic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFseptic">
+              <PropertyRef Name="septicfeesCharged" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFseptic_52_lkpSWATYesNoLU">
+          <End Role="lkpSWATYesNoLU" Type="SWATModel.Store.lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFseptic" Type="SWATModel.Store.tblSWATSFseptic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFseptic">
+              <PropertyRef Name="septicFeesLimitAccess" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFseptic_53_lkpSWATYesNoLU">
+          <End Role="lkpSWATYesNoLU" Type="SWATModel.Store.lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFseptic" Type="SWATModel.Store.tblSWATSFseptic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFseptic">
+              <PropertyRef Name="septicFeesEnsureClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFseptic_54_lkpSWAThhCleanLU">
+          <End Role="lkpSWAThhCleanLU" Type="SWATModel.Store.lkpSWAThhCleanLU" Multiplicity="0..1" />
+          <End Role="tblSWATSFseptic" Type="SWATModel.Store.tblSWATSFseptic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAThhCleanLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFseptic">
+              <PropertyRef Name="hhSepticClean" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -3523,6 +4323,30 @@
             </Principal>
             <Dependent Role="tblSWATWAsurfaceWater">
               <PropertyRef Name="surfaceVar" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPoverview_43_tblSWATSurvey">
+          <End Role="tblSWATSurvey" Type="SWATModel.Store.tblSWATSurvey" Multiplicity="1" />
+          <End Role="tblSWATWPoverview" Type="SWATModel.Store.tblSWATWPoverview" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWPoverview">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPoverview_44_lkpSWATwpaLoc">
+          <End Role="lkpSWATwpaLoc" Type="SWATModel.Store.lkpSWATwpaLoc" Multiplicity="0..1" />
+          <End Role="tblSWATWPoverview" Type="SWATModel.Store.tblSWATWPoverview" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaLoc">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPoverview">
+              <PropertyRef Name="wpaLoc" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -4178,6 +5002,166 @@
             <End Role="tblSWATSWPl" EntitySet="tblSWATSWPls" />
           </AssociationSet>
           <EntitySet Name="lkpSWATdevSiteLUs" EntityType="SWATModel.lkpSWATdevSiteLU" />
+          <EntitySet Name="tblSWATHPPkhps" EntityType="SWATModel.tblSWATHPPkhp" />
+          <AssociationSet Name="FK_tblSWATHPPkhp_44_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATHPPkhp_44_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATHPPkhp" EntitySet="tblSWATHPPkhps" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATHPPkhp_36_tblSWATSurvey" Association="SWATModel.FK_tblSWATHPPkhp_36_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+            <End Role="tblSWATHPPkhp" EntitySet="tblSWATHPPkhps" />
+          </AssociationSet>
+          <EntitySet Name="lkpSWATscores_toiletsAll" EntityType="SWATModel.lkpSWATscores_toiletsAll" />
+          <EntitySet Name="lkpSWATtoiletsAllLUs" EntityType="SWATModel.lkpSWATtoiletsAllLU" />
+          <EntitySet Name="tblSWATSFsanitations" EntityType="SWATModel.tblSWATSFsanitation" />
+          <AssociationSet Name="FK_tblSWATSFsanitation_38_lkpSWATtoiletsAllLU" Association="SWATModel.FK_tblSWATSFsanitation_38_lkpSWATtoiletsAllLU">
+            <End Role="lkpSWATtoiletsAllLU" EntitySet="lkpSWATtoiletsAllLUs" />
+            <End Role="tblSWATSFsanitation" EntitySet="tblSWATSFsanitations" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFsanitation_37_tblSWATSurvey" Association="SWATModel.FK_tblSWATSFsanitation_37_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+            <End Role="tblSWATSFsanitation" EntitySet="tblSWATSFsanitations" />
+          </AssociationSet>
+          <EntitySet Name="tblSWATSFods" EntityType="SWATModel.tblSWATSFod" />
+          <AssociationSet Name="FK_tblSWATSFod_38_tblSWATSurvey" Association="SWATModel.FK_tblSWATSFod_38_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+            <End Role="tblSWATSFod" EntitySet="tblSWATSFods" />
+          </AssociationSet>
+          <EntitySet Name="lkpSWATsanTypeLUs" EntityType="SWATModel.lkpSWATsanTypeLU" />
+          <EntitySet Name="lkpSWATscores_sanType" EntityType="SWATModel.lkpSWATscores_sanType" />
+          <EntitySet Name="tblSWATSFpoints" EntityType="SWATModel.tblSWATSFpoint" />
+          <AssociationSet Name="FK_tblSWATSFpoint_40_lkpSWATsanTypeLU" Association="SWATModel.FK_tblSWATSFpoint_40_lkpSWATsanTypeLU">
+            <End Role="lkpSWATsanTypeLU" EntitySet="lkpSWATsanTypeLUs" />
+            <End Role="tblSWATSFpoint" EntitySet="tblSWATSFpoints" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFpoint_39_tblSWATSurvey" Association="SWATModel.FK_tblSWATSFpoint_39_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+            <End Role="tblSWATSFpoint" EntitySet="tblSWATSFpoints" />
+          </AssociationSet>
+          <EntitySet Name="lkpSWATcentralConditionLUs" EntityType="SWATModel.lkpSWATcentralConditionLU" />
+          <EntitySet Name="lkpSWATcentralTreatmentTypeLUs" EntityType="SWATModel.lkpSWATcentralTreatmentTypeLU" />
+          <EntitySet Name="lkpSWAThhCleanLUs" EntityType="SWATModel.lkpSWAThhCleanLU" />
+          <EntitySet Name="lkpSWATlatrineConditionLUs" EntityType="SWATModel.lkpSWATlatrineConditionLU" />
+          <EntitySet Name="lkpSWATpubCleanLUs" EntityType="SWATModel.lkpSWATpubCleanLU" />
+          <EntitySet Name="lkpSWATscores_centralCondition" EntityType="SWATModel.lkpSWATscores_centralCondition" />
+          <EntitySet Name="lkpSWATscores_centralTreatment" EntityType="SWATModel.lkpSWATscores_centralTreatment" />
+          <EntitySet Name="lkpSWATscores_hhClean" EntityType="SWATModel.lkpSWATscores_hhClean" />
+          <EntitySet Name="lkpSWATscores_latrineCondition" EntityType="SWATModel.lkpSWATscores_latrineCondition" />
+          <EntitySet Name="lkpSWATscores_pubClean" EntityType="SWATModel.lkpSWATscores_pubClean" />
+          <EntitySet Name="tblSWATSFcentrals" EntityType="SWATModel.tblSWATSFcentral" />
+          <EntitySet Name="tblSWATSFlats" EntityType="SWATModel.tblSWATSFlat" />
+          <EntitySet Name="tblSWATSFseptics" EntityType="SWATModel.tblSWATSFseptic" />
+          <AssociationSet Name="FK_tblSWATSFcentral_45_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATSFcentral_45_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentrals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFseptic_46_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATSFseptic_46_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATSFseptic" EntitySet="tblSWATSFseptics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFseptic_47_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATSFseptic_47_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATSFseptic" EntitySet="tblSWATSFseptics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_46_lkpSWATcentralConditionLU" Association="SWATModel.FK_tblSWATSFcentral_46_lkpSWATcentralConditionLU">
+            <End Role="lkpSWATcentralConditionLU" EntitySet="lkpSWATcentralConditionLUs" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentrals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_41_lkpSWATcentralTreatmentTypeLU" Association="SWATModel.FK_tblSWATSFcentral_41_lkpSWATcentralTreatmentTypeLU">
+            <End Role="lkpSWATcentralTreatmentTypeLU" EntitySet="lkpSWATcentralTreatmentTypeLUs" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentrals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_51_lkpSWAThhCleanLU" Association="SWATModel.FK_tblSWATSFcentral_51_lkpSWAThhCleanLU">
+            <End Role="lkpSWAThhCleanLU" EntitySet="lkpSWAThhCleanLUs" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentrals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFlat_57_lkpSWAThhCleanLU" Association="SWATModel.FK_tblSWATSFlat_57_lkpSWAThhCleanLU">
+            <End Role="lkpSWAThhCleanLU" EntitySet="lkpSWAThhCleanLUs" />
+            <End Role="tblSWATSFlat" EntitySet="tblSWATSFlats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFseptic_54_lkpSWAThhCleanLU" Association="SWATModel.FK_tblSWATSFseptic_54_lkpSWAThhCleanLU">
+            <End Role="lkpSWAThhCleanLU" EntitySet="lkpSWAThhCleanLUs" />
+            <End Role="tblSWATSFseptic" EntitySet="tblSWATSFseptics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFlat_43_lkpSWATlatrineConditionLU" Association="SWATModel.FK_tblSWATSFlat_43_lkpSWATlatrineConditionLU">
+            <End Role="lkpSWATlatrineConditionLU" EntitySet="lkpSWATlatrineConditionLUs" />
+            <End Role="tblSWATSFlat" EntitySet="tblSWATSFlats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_47_lkpSWATpubCleanLU" Association="SWATModel.FK_tblSWATSFcentral_47_lkpSWATpubCleanLU">
+            <End Role="lkpSWATpubCleanLU" EntitySet="lkpSWATpubCleanLUs" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentrals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFlat_49_lkpSWATpubCleanLU" Association="SWATModel.FK_tblSWATSFlat_49_lkpSWATpubCleanLU">
+            <End Role="lkpSWATpubCleanLU" EntitySet="lkpSWATpubCleanLUs" />
+            <End Role="tblSWATSFlat" EntitySet="tblSWATSFlats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFseptic_48_lkpSWATpubCleanLU" Association="SWATModel.FK_tblSWATSFseptic_48_lkpSWATpubCleanLU">
+            <End Role="lkpSWATpubCleanLU" EntitySet="lkpSWATpubCleanLUs" />
+            <End Role="tblSWATSFseptic" EntitySet="tblSWATSFseptics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_48_lkpSWATYesNoLU" Association="SWATModel.FK_tblSWATSFcentral_48_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLUs" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentrals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_49_lkpSWATYesNoLU" Association="SWATModel.FK_tblSWATSFcentral_49_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLUs" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentrals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_50_lkpSWATYesNoLU" Association="SWATModel.FK_tblSWATSFcentral_50_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLUs" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentrals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFlat_54_lkpSWATYesNoLU" Association="SWATModel.FK_tblSWATSFlat_54_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLUs" />
+            <End Role="tblSWATSFlat" EntitySet="tblSWATSFlats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFlat_55_lkpSWATYesNoLU" Association="SWATModel.FK_tblSWATSFlat_55_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLUs" />
+            <End Role="tblSWATSFlat" EntitySet="tblSWATSFlats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFlat_56_lkpSWATYesNoLU" Association="SWATModel.FK_tblSWATSFlat_56_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLUs" />
+            <End Role="tblSWATSFlat" EntitySet="tblSWATSFlats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFseptic_51_lkpSWATYesNoLU" Association="SWATModel.FK_tblSWATSFseptic_51_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLUs" />
+            <End Role="tblSWATSFseptic" EntitySet="tblSWATSFseptics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFseptic_52_lkpSWATYesNoLU" Association="SWATModel.FK_tblSWATSFseptic_52_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLUs" />
+            <End Role="tblSWATSFseptic" EntitySet="tblSWATSFseptics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFseptic_53_lkpSWATYesNoLU" Association="SWATModel.FK_tblSWATSFseptic_53_lkpSWATYesNoLU">
+            <End Role="lkpSWATYesNoLU" EntitySet="lkpSWATYesNoLUs" />
+            <End Role="tblSWATSFseptic" EntitySet="tblSWATSFseptics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFcentral_40_tblSWATSurvey" Association="SWATModel.FK_tblSWATSFcentral_40_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+            <End Role="tblSWATSFcentral" EntitySet="tblSWATSFcentrals" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFlat_42_tblSWATSurvey" Association="SWATModel.FK_tblSWATSFlat_42_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+            <End Role="tblSWATSFlat" EntitySet="tblSWATSFlats" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATSFseptic_41_tblSWATSurvey" Association="SWATModel.FK_tblSWATSFseptic_41_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+            <End Role="tblSWATSFseptic" EntitySet="tblSWATSFseptics" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lkpSWATScoreVarsLU_3_lkpSWATSectionLU" Association="SWATModel.FK_lkpSWATScoreVarsLU_3_lkpSWATSectionLU">
+            <End Role="lkpSWATSectionLU" EntitySet="lkpSWATSectionLUs" />
+            <End Role="lkpSWATScoreVarsLU" EntitySet="lkpSWATScoreVarsLUs" />
+          </AssociationSet>
+          <EntitySet Name="lkpSWATwpaLocs" EntityType="SWATModel.lkpSWATwpaLoc" />
+          <EntitySet Name="lkpSWATwpaTypeDescs" EntityType="SWATModel.lkpSWATwpaTypeDesc" />
+          <EntitySet Name="tblSWATWPoverviews" EntityType="SWATModel.tblSWATWPoverview" />
+          <AssociationSet Name="FK_tblSWATWPoverview_44_lkpSWATwpaLoc" Association="SWATModel.FK_tblSWATWPoverview_44_lkpSWATwpaLoc">
+            <End Role="lkpSWATwpaLoc" EntitySet="lkpSWATwpaLocs" />
+            <End Role="tblSWATWPoverview" EntitySet="tblSWATWPoverviews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPoverview_43_tblSWATSurvey" Association="SWATModel.FK_tblSWATWPoverview_43_tblSWATSurvey">
+            <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
+            <End Role="tblSWATWPoverview" EntitySet="tblSWATWPoverviews" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="lkpBiome">
           <Key>
@@ -4258,6 +5242,10 @@
           <NavigationProperty Name="tblSWATSWPdevs" Relationship="SWATModel.FK_tblSWATSWPdev_42_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATSWPdev" />
           <NavigationProperty Name="tblSWATHPPcoms" Relationship="SWATModel.FK_tblSWATHPPcom_43_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATHPPcom" />
           <NavigationProperty Name="tblSWATSWPls" Relationship="SWATModel.FK_tblSWATSWPls_39_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATSWPl" />
+          <NavigationProperty Name="tblSWATHPPkhps" Relationship="SWATModel.FK_tblSWATHPPkhp_44_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATHPPkhp" />
+          <NavigationProperty Name="tblSWATSFcentrals" Relationship="SWATModel.FK_tblSWATSFcentral_45_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATSFcentral" />
+          <NavigationProperty Name="tblSWATSFseptics" Relationship="SWATModel.FK_tblSWATSFseptic_46_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATSFseptic" />
+          <NavigationProperty Name="tblSWATSFseptics1" Relationship="SWATModel.FK_tblSWATSFseptic_47_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATSFseptic" />
         </EntityType>
         <EntityType Name="lkpSWATareaBMLU">
           <Key>
@@ -4656,6 +5644,8 @@
           <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="tblSWATScores" Relationship="SWATModel.FK_tblSWATScore_3_lkpSWATScoreVarsLU" FromRole="lkpSWATScoreVarsLU" ToRole="tblSWATScore" />
           <NavigationProperty Name="lkpSWATSectionLUs" Relationship="SWATModel.lkpSWATScoreVarSectionLU" FromRole="lkpSWATScoreVarsLU" ToRole="lkpSWATSectionLU" />
+          <Property Type="Int32" Name="SectionID" />
+          <NavigationProperty Name="lkpSWATSectionLU" Relationship="SWATModel.FK_lkpSWATScoreVarsLU_3_lkpSWATSectionLU" FromRole="lkpSWATScoreVarsLU" ToRole="lkpSWATSectionLU" />
         </EntityType>
         <EntityType Name="lkpSWATSectionLU">
           <Key>
@@ -4665,6 +5655,7 @@
           <Property Type="String" Name="SectionName" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Type="String" Name="Description" Nullable="false" MaxLength="254" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="lkpSWATScoreVarsLUs" Relationship="SWATModel.lkpSWATScoreVarSectionLU" FromRole="lkpSWATSectionLU" ToRole="lkpSWATScoreVarsLU" />
+          <NavigationProperty Name="lkpSWATScoreVarsLUs1" Relationship="SWATModel.FK_lkpSWATScoreVarsLU_3_lkpSWATSectionLU" FromRole="lkpSWATSectionLU" ToRole="lkpSWATScoreVarsLU" />
         </EntityType>
         <EntityType Name="lkpSWATsubComponentLU">
           <Key>
@@ -4725,6 +5716,15 @@
           <NavigationProperty Name="tblSWATBackgroundinfoes1" Relationship="SWATModel.FK_tblSWATBackgroundinfo_35_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATBackgroundinfo" />
           <NavigationProperty Name="tblSWATBackgroundinfoes2" Relationship="SWATModel.FK_tblSWATBackgroundinfo_36_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATBackgroundinfo" />
           <NavigationProperty Name="tblSWATWAgroundWaters" Relationship="SWATModel.FK_tblSWATWAgroundWater_37_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATWAgroundWater" />
+          <NavigationProperty Name="tblSWATSFcentrals" Relationship="SWATModel.FK_tblSWATSFcentral_48_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATSFcentral" />
+          <NavigationProperty Name="tblSWATSFcentrals1" Relationship="SWATModel.FK_tblSWATSFcentral_49_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATSFcentral" />
+          <NavigationProperty Name="tblSWATSFcentrals2" Relationship="SWATModel.FK_tblSWATSFcentral_50_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATSFcentral" />
+          <NavigationProperty Name="tblSWATSFlats" Relationship="SWATModel.FK_tblSWATSFlat_54_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATSFlat" />
+          <NavigationProperty Name="tblSWATSFlats1" Relationship="SWATModel.FK_tblSWATSFlat_55_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATSFlat" />
+          <NavigationProperty Name="tblSWATSFlats2" Relationship="SWATModel.FK_tblSWATSFlat_56_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATSFlat" />
+          <NavigationProperty Name="tblSWATSFseptics" Relationship="SWATModel.FK_tblSWATSFseptic_51_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATSFseptic" />
+          <NavigationProperty Name="tblSWATSFseptics1" Relationship="SWATModel.FK_tblSWATSFseptic_52_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATSFseptic" />
+          <NavigationProperty Name="tblSWATSFseptics2" Relationship="SWATModel.FK_tblSWATSFseptic_53_lkpSWATYesNoLU" FromRole="lkpSWATYesNoLU" ToRole="tblSWATSFseptic" />
         </EntityType>
         <EntityType Name="tblSWATBackgroundinfo">
           <Key>
@@ -4964,6 +5964,14 @@
           <NavigationProperty Name="tblSWATSWPdevs" Relationship="SWATModel.FK_tblSWATSWPdev_34_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATSWPdev" />
           <NavigationProperty Name="tblSWATHPPcoms" Relationship="SWATModel.FK_tblSWATHPPcom_35_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATHPPcom" />
           <NavigationProperty Name="tblSWATSWPls" Relationship="SWATModel.FK_tblSWATSWPls_32_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATSWPl" />
+          <NavigationProperty Name="tblSWATHPPkhps" Relationship="SWATModel.FK_tblSWATHPPkhp_36_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATHPPkhp" />
+          <NavigationProperty Name="tblSWATSFsanitations" Relationship="SWATModel.FK_tblSWATSFsanitation_37_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATSFsanitation" />
+          <NavigationProperty Name="tblSWATSFods" Relationship="SWATModel.FK_tblSWATSFod_38_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATSFod" />
+          <NavigationProperty Name="tblSWATSFpoints" Relationship="SWATModel.FK_tblSWATSFpoint_39_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATSFpoint" />
+          <NavigationProperty Name="tblSWATSFcentrals" Relationship="SWATModel.FK_tblSWATSFcentral_40_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATSFcentral" />
+          <NavigationProperty Name="tblSWATSFlats" Relationship="SWATModel.FK_tblSWATSFlat_42_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATSFlat" />
+          <NavigationProperty Name="tblSWATSFseptics" Relationship="SWATModel.FK_tblSWATSFseptic_41_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATSFseptic" />
+          <NavigationProperty Name="tblSWATWPoverviews" Relationship="SWATModel.FK_tblSWATWPoverview_43_tblSWATSurvey" FromRole="tblSWATSurvey" ToRole="tblSWATWPoverview" />
         </EntityType>
         <EntityType Name="tblSWATVisualGroup">
           <Key>
@@ -7256,6 +8264,746 @@
           <Property Type="Int32" Name="Description" Nullable="false" />
           <Property Type="Int32" Name="intorder" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="tblSWATHPPkhp">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SurveyID" Nullable="false" />
+          <Property Type="Double" Name="knowledgeQual" />
+          <Property Type="Double" Name="trainingAccess1" />
+          <Property Type="Double" Name="trainingAccess2" />
+          <Property Type="Double" Name="trainingAccess3" />
+          <Property Type="Double" Name="trainingAccess4" />
+          <Property Type="Double" Name="trainingAccess5" />
+          <Property Type="Int32" Name="promotion" />
+          <Property Type="Double" Name="handWash" />
+          <Property Type="Double" Name="childFaeces1" />
+          <Property Type="Double" Name="childFaeces2" />
+          <Property Type="Double" Name="childFaeces3" />
+          <Property Type="Double" Name="childFaeces4" />
+          <Property Type="Double" Name="childFaeces5" />
+          <Property Type="Double" Name="childFaeces6" />
+          <Property Type="Double" Name="childFaeces7" />
+          <NavigationProperty Name="lkpSWAT5rankLU" Relationship="SWATModel.FK_tblSWATHPPkhp_44_lkpSWAT5rankLU" FromRole="tblSWATHPPkhp" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATHPPkhp_36_tblSWATSurvey" FromRole="tblSWATHPPkhp" ToRole="tblSWATSurvey" />
+        </EntityType>
+        <Association Name="FK_tblSWATHPPkhp_44_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATHPPkhp" Role="tblSWATHPPkhp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATHPPkhp">
+              <PropertyRef Name="promotion" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATHPPkhp_36_tblSWATSurvey">
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATHPPkhp" Role="tblSWATHPPkhp" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATHPPkhp">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="lkpSWATscores_toiletsAll">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATtoiletsAllLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATSFsanitations" Relationship="SWATModel.FK_tblSWATSFsanitation_38_lkpSWATtoiletsAllLU" FromRole="lkpSWATtoiletsAllLU" ToRole="tblSWATSFsanitation" />
+        </EntityType>
+        <EntityType Name="tblSWATSFsanitation">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SurveyID" Nullable="false" />
+          <Property Type="Int32" Name="toiletsAll" />
+          <Property Type="Double" Name="toiletHome" />
+          <Property Type="Double" Name="toiletYard" />
+          <Property Type="Double" Name="toilet100" />
+          <Property Type="Double" Name="toilet500" />
+          <Property Type="Double" Name="toiletFar" />
+          <NavigationProperty Name="lkpSWATtoiletsAllLU" Relationship="SWATModel.FK_tblSWATSFsanitation_38_lkpSWATtoiletsAllLU" FromRole="tblSWATSFsanitation" ToRole="lkpSWATtoiletsAllLU" />
+          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATSFsanitation_37_tblSWATSurvey" FromRole="tblSWATSFsanitation" ToRole="tblSWATSurvey" />
+        </EntityType>
+        <Association Name="FK_tblSWATSFsanitation_38_lkpSWATtoiletsAllLU">
+          <End Type="SWATModel.lkpSWATtoiletsAllLU" Role="lkpSWATtoiletsAllLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFsanitation" Role="tblSWATSFsanitation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATtoiletsAllLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFsanitation">
+              <PropertyRef Name="toiletsAll" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFsanitation_37_tblSWATSurvey">
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATSFsanitation" Role="tblSWATSFsanitation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATSFsanitation">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tblSWATSFod">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SurveyID" Nullable="false" />
+          <Property Type="Boolean" Name="ODdemographic1" Nullable="false" />
+          <Property Type="Boolean" Name="ODdemographic2" Nullable="false" />
+          <Property Type="Boolean" Name="ODdemographic3" Nullable="false" />
+          <Property Type="Boolean" Name="ODdemographic4" Nullable="false" />
+          <Property Type="Boolean" Name="ODdemographicNONE" Nullable="false" />
+          <Property Type="Int32" Name="hhNoToilet" />
+          <Property Type="Double" Name="sharedFacPercent" />
+          <Property Type="Double" Name="ODPercent" />
+          <Property Type="Boolean" Name="ODdemoGender1" Nullable="false" />
+          <Property Type="Boolean" Name="ODdemoGender2" Nullable="false" />
+          <Property Type="Boolean" Name="ODdemoGender3" Nullable="false" />
+          <Property Type="Boolean" Name="ODdemoGender4" Nullable="false" />
+          <Property Type="Boolean" Name="ODdemoGenderNONE" Nullable="false" />
+          <Property Type="Boolean" Name="ODfacilitator1" Nullable="false" />
+          <Property Type="Boolean" Name="ODfacilitator2" Nullable="false" />
+          <Property Type="Boolean" Name="ODfacilitator3" Nullable="false" />
+          <Property Type="Boolean" Name="ODfacilitator4" Nullable="false" />
+          <Property Type="Boolean" Name="ODfacilitator5" Nullable="false" />
+          <Property Type="Boolean" Name="ODfacilitator6" Nullable="false" />
+          <Property Type="Boolean" Name="ODfacilitator7" Nullable="false" />
+          <Property Type="Boolean" Name="ODfacilitator8" Nullable="false" />
+          <Property Type="Boolean" Name="ODfacilitator9" Nullable="false" />
+          <Property Type="Boolean" Name="ODfacilitator10" Nullable="false" />
+          <Property Type="Boolean" Name="ODfacilitator11" Nullable="false" />
+          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATSFod_38_tblSWATSurvey" FromRole="tblSWATSFod" ToRole="tblSWATSurvey" />
+        </EntityType>
+        <Association Name="FK_tblSWATSFod_38_tblSWATSurvey">
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATSFod" Role="tblSWATSFod" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATSFod">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="lkpSWATsanTypeLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATSFpoints" Relationship="SWATModel.FK_tblSWATSFpoint_40_lkpSWATsanTypeLU" FromRole="lkpSWATsanTypeLU" ToRole="tblSWATSFpoint" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_sanType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="tblSWATSFpoint">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SurveyID" Nullable="false" />
+          <Property Type="Int32" Name="sanType" />
+          <Property Type="Boolean" Name="sanUseInd" Nullable="false" />
+          <Property Type="Boolean" Name="sanUsePub" Nullable="false" />
+          <Property Type="Boolean" Name="SanUseCom" Nullable="false" />
+          <NavigationProperty Name="lkpSWATsanTypeLU" Relationship="SWATModel.FK_tblSWATSFpoint_40_lkpSWATsanTypeLU" FromRole="tblSWATSFpoint" ToRole="lkpSWATsanTypeLU" />
+          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATSFpoint_39_tblSWATSurvey" FromRole="tblSWATSFpoint" ToRole="tblSWATSurvey" />
+        </EntityType>
+        <Association Name="FK_tblSWATSFpoint_40_lkpSWATsanTypeLU">
+          <End Type="SWATModel.lkpSWATsanTypeLU" Role="lkpSWATsanTypeLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFpoint" Role="tblSWATSFpoint" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATsanTypeLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFpoint">
+              <PropertyRef Name="sanType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFpoint_39_tblSWATSurvey">
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATSFpoint" Role="tblSWATSFpoint" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATSFpoint">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="lkpSWATcentralConditionLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATSFcentrals" Relationship="SWATModel.FK_tblSWATSFcentral_46_lkpSWATcentralConditionLU" FromRole="lkpSWATcentralConditionLU" ToRole="tblSWATSFcentral" />
+        </EntityType>
+        <EntityType Name="lkpSWATcentralTreatmentTypeLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATSFcentrals" Relationship="SWATModel.FK_tblSWATSFcentral_41_lkpSWATcentralTreatmentTypeLU" FromRole="lkpSWATcentralTreatmentTypeLU" ToRole="tblSWATSFcentral" />
+        </EntityType>
+        <EntityType Name="lkpSWAThhCleanLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATSFcentrals" Relationship="SWATModel.FK_tblSWATSFcentral_51_lkpSWAThhCleanLU" FromRole="lkpSWAThhCleanLU" ToRole="tblSWATSFcentral" />
+          <NavigationProperty Name="tblSWATSFlats" Relationship="SWATModel.FK_tblSWATSFlat_57_lkpSWAThhCleanLU" FromRole="lkpSWAThhCleanLU" ToRole="tblSWATSFlat" />
+          <NavigationProperty Name="tblSWATSFseptics" Relationship="SWATModel.FK_tblSWATSFseptic_54_lkpSWAThhCleanLU" FromRole="lkpSWAThhCleanLU" ToRole="tblSWATSFseptic" />
+        </EntityType>
+        <EntityType Name="lkpSWATlatrineConditionLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATSFlats" Relationship="SWATModel.FK_tblSWATSFlat_43_lkpSWATlatrineConditionLU" FromRole="lkpSWATlatrineConditionLU" ToRole="tblSWATSFlat" />
+        </EntityType>
+        <EntityType Name="lkpSWATpubCleanLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATSFcentrals" Relationship="SWATModel.FK_tblSWATSFcentral_47_lkpSWATpubCleanLU" FromRole="lkpSWATpubCleanLU" ToRole="tblSWATSFcentral" />
+          <NavigationProperty Name="tblSWATSFlats" Relationship="SWATModel.FK_tblSWATSFlat_49_lkpSWATpubCleanLU" FromRole="lkpSWATpubCleanLU" ToRole="tblSWATSFlat" />
+          <NavigationProperty Name="tblSWATSFseptics" Relationship="SWATModel.FK_tblSWATSFseptic_48_lkpSWATpubCleanLU" FromRole="lkpSWATpubCleanLU" ToRole="tblSWATSFseptic" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_centralCondition">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_centralTreatment">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_hhClean">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_latrineCondition">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_pubClean">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="tblSWATSFcentral">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SurveyID" Nullable="false" />
+          <Property Type="Int32" Name="centralToilets" />
+          <Property Type="Int32" Name="centralTreatmentType" />
+          <Property Type="Int32" Name="centralSludge" />
+          <Property Type="Int32" Name="centralCondition" />
+          <Property Type="Int32" Name="centralPubClean" />
+          <Property Type="Boolean" Name="centralAccessGroup1" Nullable="false" />
+          <Property Type="Boolean" Name="centralAccessGroup2" Nullable="false" />
+          <Property Type="Boolean" Name="centralAccessGroup3" Nullable="false" />
+          <Property Type="Int32" Name="centralfeesCharged" />
+          <Property Type="Int32" Name="centralFeesLimitAccess" />
+          <Property Type="Int32" Name="centralFeesEnsureClean" />
+          <Property Type="Int32" Name="hhCentralClean" />
+          <NavigationProperty Name="lkpSWAT5rankLU" Relationship="SWATModel.FK_tblSWATSFcentral_45_lkpSWAT5rankLU" FromRole="tblSWATSFcentral" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWATcentralConditionLU" Relationship="SWATModel.FK_tblSWATSFcentral_46_lkpSWATcentralConditionLU" FromRole="tblSWATSFcentral" ToRole="lkpSWATcentralConditionLU" />
+          <NavigationProperty Name="lkpSWATcentralTreatmentTypeLU" Relationship="SWATModel.FK_tblSWATSFcentral_41_lkpSWATcentralTreatmentTypeLU" FromRole="tblSWATSFcentral" ToRole="lkpSWATcentralTreatmentTypeLU" />
+          <NavigationProperty Name="lkpSWAThhCleanLU" Relationship="SWATModel.FK_tblSWATSFcentral_51_lkpSWAThhCleanLU" FromRole="tblSWATSFcentral" ToRole="lkpSWAThhCleanLU" />
+          <NavigationProperty Name="lkpSWATpubCleanLU" Relationship="SWATModel.FK_tblSWATSFcentral_47_lkpSWATpubCleanLU" FromRole="tblSWATSFcentral" ToRole="lkpSWATpubCleanLU" />
+          <NavigationProperty Name="lkpSWATYesNoLU" Relationship="SWATModel.FK_tblSWATSFcentral_48_lkpSWATYesNoLU" FromRole="tblSWATSFcentral" ToRole="lkpSWATYesNoLU" />
+          <NavigationProperty Name="lkpSWATYesNoLU1" Relationship="SWATModel.FK_tblSWATSFcentral_49_lkpSWATYesNoLU" FromRole="tblSWATSFcentral" ToRole="lkpSWATYesNoLU" />
+          <NavigationProperty Name="lkpSWATYesNoLU2" Relationship="SWATModel.FK_tblSWATSFcentral_50_lkpSWATYesNoLU" FromRole="tblSWATSFcentral" ToRole="lkpSWATYesNoLU" />
+          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATSFcentral_40_tblSWATSurvey" FromRole="tblSWATSFcentral" ToRole="tblSWATSurvey" />
+        </EntityType>
+        <EntityType Name="tblSWATSFlat">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SurveyID" Nullable="false" />
+          <Property Type="Boolean" Name="LatrineType1" Nullable="false" />
+          <Property Type="Boolean" Name="LatrineType2" Nullable="false" />
+          <Property Type="Boolean" Name="LatrineType3" Nullable="false" />
+          <Property Type="Boolean" Name="LatrineType4" Nullable="false" />
+          <Property Type="Double" Name="latrineProb1" />
+          <Property Type="Double" Name="latrineProb2" />
+          <Property Type="Double" Name="latrineProb3" />
+          <Property Type="Int32" Name="latrineCondition" />
+          <Property Type="Int32" Name="latrinecentralPubClean" />
+          <Property Type="Boolean" Name="latrineAccessGroup1" Nullable="false" />
+          <Property Type="Boolean" Name="latrineAccessGroup2" Nullable="false" />
+          <Property Type="Boolean" Name="latrineAccessGroup3" Nullable="false" />
+          <Property Type="Int32" Name="latrinefeesCharged" />
+          <Property Type="Int32" Name="latrineFeesLimitAccess" />
+          <Property Type="Int32" Name="latrineFeesEnsureClean" />
+          <Property Type="Int32" Name="hhLatrineClean" />
+          <NavigationProperty Name="lkpSWAThhCleanLU" Relationship="SWATModel.FK_tblSWATSFlat_57_lkpSWAThhCleanLU" FromRole="tblSWATSFlat" ToRole="lkpSWAThhCleanLU" />
+          <NavigationProperty Name="lkpSWATlatrineConditionLU" Relationship="SWATModel.FK_tblSWATSFlat_43_lkpSWATlatrineConditionLU" FromRole="tblSWATSFlat" ToRole="lkpSWATlatrineConditionLU" />
+          <NavigationProperty Name="lkpSWATpubCleanLU" Relationship="SWATModel.FK_tblSWATSFlat_49_lkpSWATpubCleanLU" FromRole="tblSWATSFlat" ToRole="lkpSWATpubCleanLU" />
+          <NavigationProperty Name="lkpSWATYesNoLU" Relationship="SWATModel.FK_tblSWATSFlat_54_lkpSWATYesNoLU" FromRole="tblSWATSFlat" ToRole="lkpSWATYesNoLU" />
+          <NavigationProperty Name="lkpSWATYesNoLU1" Relationship="SWATModel.FK_tblSWATSFlat_55_lkpSWATYesNoLU" FromRole="tblSWATSFlat" ToRole="lkpSWATYesNoLU" />
+          <NavigationProperty Name="lkpSWATYesNoLU2" Relationship="SWATModel.FK_tblSWATSFlat_56_lkpSWATYesNoLU" FromRole="tblSWATSFlat" ToRole="lkpSWATYesNoLU" />
+          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATSFlat_42_tblSWATSurvey" FromRole="tblSWATSFlat" ToRole="tblSWATSurvey" />
+          <Property Type="Int32" Name="ltype1" />
+          <Property Type="Int32" Name="ltype2" />
+          <Property Type="Int32" Name="ltype3" />
+          <Property Type="Int32" Name="ltype4" />
+        </EntityType>
+        <EntityType Name="tblSWATSFseptic">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SurveyID" Nullable="false" />
+          <Property Type="Int32" Name="septicToilets" />
+          <Property Type="Double" Name="septicUnderstand" />
+          <Property Type="Double" Name="septicDistance" />
+          <Property Type="Double" Name="septicPlug" />
+          <Property Type="Double" Name="septicPumped" />
+          <Property Type="Double" Name="septicTrash" />
+          <Property Type="Double" Name="septicChemicals" />
+          <Property Type="Int32" Name="septicChemAvail" />
+          <Property Type="Int32" Name="septicPumpAvail" />
+          <Property Type="Int32" Name="septicPubClean" />
+          <Property Type="Boolean" Name="septicPubAccessGroup1" Nullable="false" />
+          <Property Type="Boolean" Name="septicPubAccessGroup2" Nullable="false" />
+          <Property Type="Boolean" Name="septicPubAccessGroup3" Nullable="false" />
+          <Property Type="Int32" Name="septicfeesCharged" />
+          <Property Type="Int32" Name="septicFeesLimitAccess" />
+          <Property Type="Int32" Name="septicFeesEnsureClean" />
+          <Property Type="Int32" Name="hhSepticClean" />
+          <NavigationProperty Name="lkpSWAT5rankLU" Relationship="SWATModel.FK_tblSWATSFseptic_46_lkpSWAT5rankLU" FromRole="tblSWATSFseptic" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWAT5rankLU1" Relationship="SWATModel.FK_tblSWATSFseptic_47_lkpSWAT5rankLU" FromRole="tblSWATSFseptic" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWAThhCleanLU" Relationship="SWATModel.FK_tblSWATSFseptic_54_lkpSWAThhCleanLU" FromRole="tblSWATSFseptic" ToRole="lkpSWAThhCleanLU" />
+          <NavigationProperty Name="lkpSWATpubCleanLU" Relationship="SWATModel.FK_tblSWATSFseptic_48_lkpSWATpubCleanLU" FromRole="tblSWATSFseptic" ToRole="lkpSWATpubCleanLU" />
+          <NavigationProperty Name="lkpSWATYesNoLU" Relationship="SWATModel.FK_tblSWATSFseptic_51_lkpSWATYesNoLU" FromRole="tblSWATSFseptic" ToRole="lkpSWATYesNoLU" />
+          <NavigationProperty Name="lkpSWATYesNoLU1" Relationship="SWATModel.FK_tblSWATSFseptic_52_lkpSWATYesNoLU" FromRole="tblSWATSFseptic" ToRole="lkpSWATYesNoLU" />
+          <NavigationProperty Name="lkpSWATYesNoLU2" Relationship="SWATModel.FK_tblSWATSFseptic_53_lkpSWATYesNoLU" FromRole="tblSWATSFseptic" ToRole="lkpSWATYesNoLU" />
+          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATSFseptic_41_tblSWATSurvey" FromRole="tblSWATSFseptic" ToRole="tblSWATSurvey" />
+        </EntityType>
+        <Association Name="FK_tblSWATSFcentral_45_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFcentral" Role="tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="centralSludge" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFseptic_46_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFseptic" Role="tblSWATSFseptic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFseptic">
+              <PropertyRef Name="septicChemAvail" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFseptic_47_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFseptic" Role="tblSWATSFseptic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFseptic">
+              <PropertyRef Name="septicPumpAvail" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_46_lkpSWATcentralConditionLU">
+          <End Type="SWATModel.lkpSWATcentralConditionLU" Role="lkpSWATcentralConditionLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFcentral" Role="tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATcentralConditionLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="centralCondition" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_41_lkpSWATcentralTreatmentTypeLU">
+          <End Type="SWATModel.lkpSWATcentralTreatmentTypeLU" Role="lkpSWATcentralTreatmentTypeLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFcentral" Role="tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATcentralTreatmentTypeLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="centralTreatmentType" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_51_lkpSWAThhCleanLU">
+          <End Type="SWATModel.lkpSWAThhCleanLU" Role="lkpSWAThhCleanLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFcentral" Role="tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAThhCleanLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="hhCentralClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFlat_57_lkpSWAThhCleanLU">
+          <End Type="SWATModel.lkpSWAThhCleanLU" Role="lkpSWAThhCleanLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFlat" Role="tblSWATSFlat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAThhCleanLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFlat">
+              <PropertyRef Name="hhLatrineClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFseptic_54_lkpSWAThhCleanLU">
+          <End Type="SWATModel.lkpSWAThhCleanLU" Role="lkpSWAThhCleanLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFseptic" Role="tblSWATSFseptic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAThhCleanLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFseptic">
+              <PropertyRef Name="hhSepticClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFlat_43_lkpSWATlatrineConditionLU">
+          <End Type="SWATModel.lkpSWATlatrineConditionLU" Role="lkpSWATlatrineConditionLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFlat" Role="tblSWATSFlat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATlatrineConditionLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFlat">
+              <PropertyRef Name="latrineCondition" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_47_lkpSWATpubCleanLU">
+          <End Type="SWATModel.lkpSWATpubCleanLU" Role="lkpSWATpubCleanLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFcentral" Role="tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpubCleanLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="centralPubClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFlat_49_lkpSWATpubCleanLU">
+          <End Type="SWATModel.lkpSWATpubCleanLU" Role="lkpSWATpubCleanLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFlat" Role="tblSWATSFlat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpubCleanLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFlat">
+              <PropertyRef Name="latrinecentralPubClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFseptic_48_lkpSWATpubCleanLU">
+          <End Type="SWATModel.lkpSWATpubCleanLU" Role="lkpSWATpubCleanLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFseptic" Role="tblSWATSFseptic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATpubCleanLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFseptic">
+              <PropertyRef Name="septicPubClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_48_lkpSWATYesNoLU">
+          <End Type="SWATModel.lkpSWATYesNoLU" Role="lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFcentral" Role="tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="centralfeesCharged" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_49_lkpSWATYesNoLU">
+          <End Type="SWATModel.lkpSWATYesNoLU" Role="lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFcentral" Role="tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="centralFeesLimitAccess" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_50_lkpSWATYesNoLU">
+          <End Type="SWATModel.lkpSWATYesNoLU" Role="lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFcentral" Role="tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="centralFeesEnsureClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFlat_54_lkpSWATYesNoLU">
+          <End Type="SWATModel.lkpSWATYesNoLU" Role="lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFlat" Role="tblSWATSFlat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFlat">
+              <PropertyRef Name="latrinefeesCharged" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFlat_55_lkpSWATYesNoLU">
+          <End Type="SWATModel.lkpSWATYesNoLU" Role="lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFlat" Role="tblSWATSFlat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFlat">
+              <PropertyRef Name="latrineFeesLimitAccess" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFlat_56_lkpSWATYesNoLU">
+          <End Type="SWATModel.lkpSWATYesNoLU" Role="lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFlat" Role="tblSWATSFlat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFlat">
+              <PropertyRef Name="latrineFeesEnsureClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFseptic_51_lkpSWATYesNoLU">
+          <End Type="SWATModel.lkpSWATYesNoLU" Role="lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFseptic" Role="tblSWATSFseptic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFseptic">
+              <PropertyRef Name="septicfeesCharged" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFseptic_52_lkpSWATYesNoLU">
+          <End Type="SWATModel.lkpSWATYesNoLU" Role="lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFseptic" Role="tblSWATSFseptic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFseptic">
+              <PropertyRef Name="septicFeesLimitAccess" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFseptic_53_lkpSWATYesNoLU">
+          <End Type="SWATModel.lkpSWATYesNoLU" Role="lkpSWATYesNoLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATSFseptic" Role="tblSWATSFseptic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATYesNoLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATSFseptic">
+              <PropertyRef Name="septicFeesEnsureClean" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFcentral_40_tblSWATSurvey">
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATSFcentral" Role="tblSWATSFcentral" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATSFcentral">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFlat_42_tblSWATSurvey">
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATSFlat" Role="tblSWATSFlat" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATSFlat">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATSFseptic_41_tblSWATSurvey">
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATSFseptic" Role="tblSWATSFseptic" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATSFseptic">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lkpSWATScoreVarsLU_3_lkpSWATSectionLU">
+          <End Type="SWATModel.lkpSWATSectionLU" Role="lkpSWATSectionLU" Multiplicity="0..1" />
+          <End Type="SWATModel.lkpSWATScoreVarsLU" Role="lkpSWATScoreVarsLU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATSectionLU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="lkpSWATScoreVarsLU">
+              <PropertyRef Name="SectionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="lkpSWATwpaLoc">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWPoverviews" Relationship="SWATModel.FK_tblSWATWPoverview_44_lkpSWATwpaLoc" FromRole="lkpSWATwpaLoc" ToRole="tblSWATWPoverview" />
+        </EntityType>
+        <EntityType Name="lkpSWATwpaTypeDesc">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="tblSWATWPoverview">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SurveyID" Nullable="false" />
+          <Property Type="String" Name="wpname" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="wpaLoc" />
+          <Property Type="Boolean" Name="wpaUseDom" Nullable="false" />
+          <Property Type="Boolean" Name="wpaUseInst" Nullable="false" />
+          <Property Type="Boolean" Name="wpaUseEc" Nullable="false" />
+          <NavigationProperty Name="lkpSWATwpaLoc" Relationship="SWATModel.FK_tblSWATWPoverview_44_lkpSWATwpaLoc" FromRole="tblSWATWPoverview" ToRole="lkpSWATwpaLoc" />
+          <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATWPoverview_43_tblSWATSurvey" FromRole="tblSWATWPoverview" ToRole="tblSWATSurvey" />
+        </EntityType>
+        <Association Name="FK_tblSWATWPoverview_44_lkpSWATwpaLoc">
+          <End Type="SWATModel.lkpSWATwpaLoc" Role="lkpSWATwpaLoc" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPoverview" Role="tblSWATWPoverview" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaLoc">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPoverview">
+              <PropertyRef Name="wpaLoc" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPoverview_43_tblSWATSurvey">
+          <End Type="SWATModel.tblSWATSurvey" Role="tblSWATSurvey" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATWPoverview" Role="tblSWATWPoverview" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATSurvey">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWPoverview">
+              <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -7725,6 +9473,7 @@
           <EntitySetMapping Name="lkpSWATScoreVarsLUs">
             <EntityTypeMapping TypeName="SWATModel.lkpSWATScoreVarsLU">
               <MappingFragment StoreEntitySet="lkpSWATScoreVarsLU">
+                <ScalarProperty Name="SectionID" ColumnName="SectionID" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
                 <ScalarProperty Name="VarName" ColumnName="VarName" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
@@ -8711,6 +10460,317 @@
               <MappingFragment StoreEntitySet="lkpSWATdevSiteLU">
                 <ScalarProperty Name="intorder" ColumnName="intorder" />
                 <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATHPPkhps">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATHPPkhp">
+              <MappingFragment StoreEntitySet="tblSWATHPPkhp">
+                <ScalarProperty Name="childFaeces7" ColumnName="childFaeces7" />
+                <ScalarProperty Name="childFaeces6" ColumnName="childFaeces6" />
+                <ScalarProperty Name="childFaeces5" ColumnName="childFaeces5" />
+                <ScalarProperty Name="childFaeces4" ColumnName="childFaeces4" />
+                <ScalarProperty Name="childFaeces3" ColumnName="childFaeces3" />
+                <ScalarProperty Name="childFaeces2" ColumnName="childFaeces2" />
+                <ScalarProperty Name="childFaeces1" ColumnName="childFaeces1" />
+                <ScalarProperty Name="handWash" ColumnName="handWash" />
+                <ScalarProperty Name="promotion" ColumnName="promotion" />
+                <ScalarProperty Name="trainingAccess5" ColumnName="trainingAccess5" />
+                <ScalarProperty Name="trainingAccess4" ColumnName="trainingAccess4" />
+                <ScalarProperty Name="trainingAccess3" ColumnName="trainingAccess3" />
+                <ScalarProperty Name="trainingAccess2" ColumnName="trainingAccess2" />
+                <ScalarProperty Name="trainingAccess1" ColumnName="trainingAccess1" />
+                <ScalarProperty Name="knowledgeQual" ColumnName="knowledgeQual" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_toiletsAll">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_toiletsAll">
+              <MappingFragment StoreEntitySet="lkpSWATscores_toiletsAll">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATtoiletsAllLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATtoiletsAllLU">
+              <MappingFragment StoreEntitySet="lkpSWATtoiletsAllLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATSFsanitations">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATSFsanitation">
+              <MappingFragment StoreEntitySet="tblSWATSFsanitation">
+                <ScalarProperty Name="toiletFar" ColumnName="toiletFar" />
+                <ScalarProperty Name="toilet500" ColumnName="toilet500" />
+                <ScalarProperty Name="toilet100" ColumnName="toilet100" />
+                <ScalarProperty Name="toiletYard" ColumnName="toiletYard" />
+                <ScalarProperty Name="toiletHome" ColumnName="toiletHome" />
+                <ScalarProperty Name="toiletsAll" ColumnName="toiletsAll" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATSFods">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATSFod">
+              <MappingFragment StoreEntitySet="tblSWATSFod">
+                <ScalarProperty Name="ODfacilitator11" ColumnName="ODfacilitator11" />
+                <ScalarProperty Name="ODfacilitator10" ColumnName="ODfacilitator10" />
+                <ScalarProperty Name="ODfacilitator9" ColumnName="ODfacilitator9" />
+                <ScalarProperty Name="ODfacilitator8" ColumnName="ODfacilitator8" />
+                <ScalarProperty Name="ODfacilitator7" ColumnName="ODfacilitator7" />
+                <ScalarProperty Name="ODfacilitator6" ColumnName="ODfacilitator6" />
+                <ScalarProperty Name="ODfacilitator5" ColumnName="ODfacilitator5" />
+                <ScalarProperty Name="ODfacilitator4" ColumnName="ODfacilitator4" />
+                <ScalarProperty Name="ODfacilitator3" ColumnName="ODfacilitator3" />
+                <ScalarProperty Name="ODfacilitator2" ColumnName="ODfacilitator2" />
+                <ScalarProperty Name="ODfacilitator1" ColumnName="ODfacilitator1" />
+                <ScalarProperty Name="ODdemoGenderNONE" ColumnName="ODdemoGenderNONE" />
+                <ScalarProperty Name="ODdemoGender4" ColumnName="ODdemoGender4" />
+                <ScalarProperty Name="ODdemoGender3" ColumnName="ODdemoGender3" />
+                <ScalarProperty Name="ODdemoGender2" ColumnName="ODdemoGender2" />
+                <ScalarProperty Name="ODdemoGender1" ColumnName="ODdemoGender1" />
+                <ScalarProperty Name="ODPercent" ColumnName="ODPercent" />
+                <ScalarProperty Name="sharedFacPercent" ColumnName="sharedFacPercent" />
+                <ScalarProperty Name="hhNoToilet" ColumnName="hhNoToilet" />
+                <ScalarProperty Name="ODdemographicNONE" ColumnName="ODdemographicNONE" />
+                <ScalarProperty Name="ODdemographic4" ColumnName="ODdemographic4" />
+                <ScalarProperty Name="ODdemographic3" ColumnName="ODdemographic3" />
+                <ScalarProperty Name="ODdemographic2" ColumnName="ODdemographic2" />
+                <ScalarProperty Name="ODdemographic1" ColumnName="ODdemographic1" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATsanTypeLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATsanTypeLU">
+              <MappingFragment StoreEntitySet="lkpSWATsanTypeLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_sanType">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_sanType">
+              <MappingFragment StoreEntitySet="lkpSWATscores_sanType">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATSFpoints">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATSFpoint">
+              <MappingFragment StoreEntitySet="tblSWATSFpoint">
+                <ScalarProperty Name="SanUseCom" ColumnName="SanUseCom" />
+                <ScalarProperty Name="sanUsePub" ColumnName="sanUsePub" />
+                <ScalarProperty Name="sanUseInd" ColumnName="sanUseInd" />
+                <ScalarProperty Name="sanType" ColumnName="sanType" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATcentralConditionLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATcentralConditionLU">
+              <MappingFragment StoreEntitySet="lkpSWATcentralConditionLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATcentralTreatmentTypeLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATcentralTreatmentTypeLU">
+              <MappingFragment StoreEntitySet="lkpSWATcentralTreatmentTypeLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWAThhCleanLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWAThhCleanLU">
+              <MappingFragment StoreEntitySet="lkpSWAThhCleanLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATlatrineConditionLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATlatrineConditionLU">
+              <MappingFragment StoreEntitySet="lkpSWATlatrineConditionLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATpubCleanLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATpubCleanLU">
+              <MappingFragment StoreEntitySet="lkpSWATpubCleanLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_centralCondition">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_centralCondition">
+              <MappingFragment StoreEntitySet="lkpSWATscores_centralCondition">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_centralTreatment">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_centralTreatment">
+              <MappingFragment StoreEntitySet="lkpSWATscores_centralTreatment">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_hhClean">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_hhClean">
+              <MappingFragment StoreEntitySet="lkpSWATscores_hhClean">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_latrineCondition">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_latrineCondition">
+              <MappingFragment StoreEntitySet="lkpSWATscores_latrineCondition">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_pubClean">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_pubClean">
+              <MappingFragment StoreEntitySet="lkpSWATscores_pubClean">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATSFcentrals">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATSFcentral">
+              <MappingFragment StoreEntitySet="tblSWATSFcentral">
+                <ScalarProperty Name="hhCentralClean" ColumnName="hhCentralClean" />
+                <ScalarProperty Name="centralFeesEnsureClean" ColumnName="centralFeesEnsureClean" />
+                <ScalarProperty Name="centralFeesLimitAccess" ColumnName="centralFeesLimitAccess" />
+                <ScalarProperty Name="centralfeesCharged" ColumnName="centralfeesCharged" />
+                <ScalarProperty Name="centralAccessGroup3" ColumnName="centralAccessGroup3" />
+                <ScalarProperty Name="centralAccessGroup2" ColumnName="centralAccessGroup2" />
+                <ScalarProperty Name="centralAccessGroup1" ColumnName="centralAccessGroup1" />
+                <ScalarProperty Name="centralPubClean" ColumnName="centralPubClean" />
+                <ScalarProperty Name="centralCondition" ColumnName="centralCondition" />
+                <ScalarProperty Name="centralSludge" ColumnName="centralSludge" />
+                <ScalarProperty Name="centralTreatmentType" ColumnName="centralTreatmentType" />
+                <ScalarProperty Name="centralToilets" ColumnName="centralToilets" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATSFlats">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATSFlat">
+              <MappingFragment StoreEntitySet="tblSWATSFlat">
+                <ScalarProperty Name="ltype4" ColumnName="ltype4" />
+                <ScalarProperty Name="ltype3" ColumnName="ltype3" />
+                <ScalarProperty Name="ltype2" ColumnName="ltype2" />
+                <ScalarProperty Name="ltype1" ColumnName="ltype1" />
+                <ScalarProperty Name="hhLatrineClean" ColumnName="hhLatrineClean" />
+                <ScalarProperty Name="latrineFeesEnsureClean" ColumnName="latrineFeesEnsureClean" />
+                <ScalarProperty Name="latrineFeesLimitAccess" ColumnName="latrineFeesLimitAccess" />
+                <ScalarProperty Name="latrinefeesCharged" ColumnName="latrinefeesCharged" />
+                <ScalarProperty Name="latrineAccessGroup3" ColumnName="latrineAccessGroup3" />
+                <ScalarProperty Name="latrineAccessGroup2" ColumnName="latrineAccessGroup2" />
+                <ScalarProperty Name="latrineAccessGroup1" ColumnName="latrineAccessGroup1" />
+                <ScalarProperty Name="latrinecentralPubClean" ColumnName="latrinecentralPubClean" />
+                <ScalarProperty Name="latrineCondition" ColumnName="latrineCondition" />
+                <ScalarProperty Name="latrineProb3" ColumnName="latrineProb3" />
+                <ScalarProperty Name="latrineProb2" ColumnName="latrineProb2" />
+                <ScalarProperty Name="latrineProb1" ColumnName="latrineProb1" />
+                <ScalarProperty Name="LatrineType4" ColumnName="LatrineType4" />
+                <ScalarProperty Name="LatrineType3" ColumnName="LatrineType3" />
+                <ScalarProperty Name="LatrineType2" ColumnName="LatrineType2" />
+                <ScalarProperty Name="LatrineType1" ColumnName="LatrineType1" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATSFseptics">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATSFseptic">
+              <MappingFragment StoreEntitySet="tblSWATSFseptic">
+                <ScalarProperty Name="hhSepticClean" ColumnName="hhSepticClean" />
+                <ScalarProperty Name="septicFeesEnsureClean" ColumnName="septicFeesEnsureClean" />
+                <ScalarProperty Name="septicFeesLimitAccess" ColumnName="septicFeesLimitAccess" />
+                <ScalarProperty Name="septicfeesCharged" ColumnName="septicfeesCharged" />
+                <ScalarProperty Name="septicPubAccessGroup3" ColumnName="septicPubAccessGroup3" />
+                <ScalarProperty Name="septicPubAccessGroup2" ColumnName="septicPubAccessGroup2" />
+                <ScalarProperty Name="septicPubAccessGroup1" ColumnName="septicPubAccessGroup1" />
+                <ScalarProperty Name="septicPubClean" ColumnName="septicPubClean" />
+                <ScalarProperty Name="septicPumpAvail" ColumnName="septicPumpAvail" />
+                <ScalarProperty Name="septicChemAvail" ColumnName="septicChemAvail" />
+                <ScalarProperty Name="septicChemicals" ColumnName="septicChemicals" />
+                <ScalarProperty Name="septicTrash" ColumnName="septicTrash" />
+                <ScalarProperty Name="septicPumped" ColumnName="septicPumped" />
+                <ScalarProperty Name="septicPlug" ColumnName="septicPlug" />
+                <ScalarProperty Name="septicDistance" ColumnName="septicDistance" />
+                <ScalarProperty Name="septicUnderstand" ColumnName="septicUnderstand" />
+                <ScalarProperty Name="septicToilets" ColumnName="septicToilets" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATwpaLocs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATwpaLoc">
+              <MappingFragment StoreEntitySet="lkpSWATwpaLoc">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATwpaTypeDescs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATwpaTypeDesc">
+              <MappingFragment StoreEntitySet="lkpSWATwpaTypeDesc">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATWPoverviews">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATWPoverview">
+              <MappingFragment StoreEntitySet="tblSWATWPoverview">
+                <ScalarProperty Name="wpaUseEc" ColumnName="wpaUseEc" />
+                <ScalarProperty Name="wpaUseInst" ColumnName="wpaUseInst" />
+                <ScalarProperty Name="wpaUseDom" ColumnName="wpaUseDom" />
+                <ScalarProperty Name="wpaLoc" ColumnName="wpaLoc" />
+                <ScalarProperty Name="wpname" ColumnName="wpname" />
+                <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
