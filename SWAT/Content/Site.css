@@ -12,6 +12,8 @@
     background-size:cover;
     background-repeat: no-repeat;
     background-position:center;
+    opacity: 0.4;
+    filter: alpha(opacity = 40);
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
