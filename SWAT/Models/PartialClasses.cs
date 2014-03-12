@@ -162,19 +162,5 @@ namespace SWAT.Models
     }
 
     
-    //public partial class SWATEntities
-    //{
-    //    // TODO uncomment this part to deploy
-    //    //private void setDBpw(string password)
-    //    //{
-    //    //    var settings = System.Configuration.ConfigurationManager.ConnectionStrings[2];
-    //    //    var fi = typeof(System.Configuration.ConfigurationElement).GetField("_bReadOnly", BindingFlags.Instance | BindingFlags.NonPublic);
-    //    //    fi.SetValue(settings, false);
-    //    //    string connStr = settings.ConnectionString;
-    //    //    int insertIndex = connStr.IndexOf("databasename");
-    //    //    connStr = connStr.Insert(insertIndex, "password=" + password + ";");
-    //    //    settings.ConnectionString = connStr;
-    //    //    fi.SetValue(settings, true);
-    //    //}
-    //}
+    
 }
