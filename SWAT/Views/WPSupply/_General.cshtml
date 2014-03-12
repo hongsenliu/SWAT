@@ -1,0 +1,12 @@
+﻿@model SWAT.Models.tblSWATWPsupply
+
+<div id="General">
+    <h4>General</h4>
+    <p>
+        @ViewBag.Question1
+    </p>
+    <div class="editor-field">
+        @Html.DropDownList("conflictWater", String.Empty)
+        @Html.ValidationMessageFor(model => model.conflictWater)
+    </div>
+</div>

@@ -1,0 +1,68 @@
+﻿@model SWAT.Models.tblSWATWPoverview
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>tblSWATWPoverview</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwpaLoc.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwpaLoc.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaUseDom)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaUseDom)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaUseInst)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaUseInst)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaUseEc)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaUseEc)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                
+                    <br />
+                    <input type="submit" value="Next" class="btn btn-default" /> | @Html.ActionLink("Back to List", "Index")
+               
+            </div>
+        </div> 
+        
+    </p>
+}

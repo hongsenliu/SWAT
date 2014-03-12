@@ -44,6 +44,24 @@
         @Html.DisplayFor(model => model.LocationID)
     </div>
 </fieldset>
+<hr />
+@if(Model.tblSWATWPoverviews.Where(e => e.SurveyID == Model.ID).Count() < 23)
+{
+    @Html.ActionLink("Create New Water Point", "Create", "WaterPoint", new { SurveyID = Model.ID }, null)
+}
+else
+{
+    <p><b>You can have upto 23 Water points for each community.</b></p>
+}
+@if (Model.tblSWATWPoverviews.Any())
+{
+    Html.RenderPartial("_wpList", Model);
+}
+else
+{ 
+    <p>The commnuity does not have any water point.</p>
+}
+<br />
 <p>
     @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
     @Html.ActionLink("Back to List", "Index")

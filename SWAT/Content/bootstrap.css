@@ -3819,6 +3819,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   position: relative;
   display: block;
   padding: 10px 15px;
+  font-size: 36px;
 }
 
 .nav > li > a:hover,
@@ -4194,7 +4195,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-brand {
   float: left;
   padding: 15px 15px;
-  font-size: 18px;
+  font-size: 36px;
   line-height: 20px;
 }
 
@@ -4501,7 +4502,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-color: #222222;
+  background-color: #56BAEC;
   border-color: #080808;
 }
 

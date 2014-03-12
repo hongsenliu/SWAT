@@ -1,0 +1,216 @@
+﻿@model SWAT.Models.tblSWATWPsupply
+
+<div id="All">
+    <hr />
+    <p>
+        @ViewBag.Question21
+    </p>
+    <div class="editor-field">
+        @Html.DropDownList("wpaInterruptionFreq", String.Empty)
+        @Html.ValidationMessageFor(model => model.wpaInterruptionFreq)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question22
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaInterruption1)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaInterruption1)
+        @Html.ValidationMessageFor(model => model.wpaInterruption1)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaInterruption2)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaInterruption2)
+        @Html.ValidationMessageFor(model => model.wpaInterruption2)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaInterruption3)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaInterruption3)
+        @Html.ValidationMessageFor(model => model.wpaInterruption3)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaInterruption4)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaInterruption4)
+        @Html.ValidationMessageFor(model => model.wpaInterruption4)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaInterruption5)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaInterruption5)
+        @Html.ValidationMessageFor(model => model.wpaInterruption5)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaInterruption6)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaInterruption6)
+        @Html.ValidationMessageFor(model => model.wpaInterruption6)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question23
+    </p>
+    <div class="editor-label">
+        <b>@ViewBag.Month1</b>
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("wpaReliabilityMonth1", String.Empty)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityMonth1)
+    </div>
+
+    <div class="editor-label">
+        <b>@ViewBag.Month2</b>
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("wpaReliabilityMonth2", String.Empty)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityMonth2)
+    </div>
+
+    <div class="editor-label">
+        <b>@ViewBag.Month3</b>
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("wpaReliabilityMonth3", String.Empty)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityMonth3)
+    </div>
+
+    <div class="editor-label">
+        <b>@ViewBag.Month4</b>
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("wpaReliabilityMonth4", String.Empty)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityMonth4)
+    </div>
+
+    <div class="editor-label">
+        <b>@ViewBag.Month5</b>
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("wpaReliabilityMonth5", String.Empty)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityMonth5)
+    </div>
+
+    <div class="editor-label">
+        <b>@ViewBag.Month6</b>
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("wpaReliabilityMonth6", String.Empty)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityMonth6)
+    </div>
+
+    <div class="editor-label">
+        <b>@ViewBag.Month7</b>
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("wpaReliabilityMonth7", String.Empty)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityMonth7)
+    </div>
+
+    <div class="editor-label">
+        <b>@ViewBag.Month8</b>
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("wpaReliabilityMonth8", String.Empty)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityMonth8)
+    </div>
+
+    <div class="editor-label">
+        <b>@ViewBag.Month9</b>
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("wpaReliabilityMonth9", String.Empty)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityMonth9)
+    </div>
+
+    <div class="editor-label">
+        <b>@ViewBag.Month10</b>
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("wpaReliabilityMonth10", String.Empty)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityMonth10)
+    </div>
+
+    <div class="editor-label">
+        <b>@ViewBag.Month11</b>
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("wpaReliabilityMonth11", String.Empty)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityMonth11)
+    </div>
+
+    <div class="editor-label">
+        <b>@ViewBag.Month12</b>
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("wpaReliabilityMonth12", String.Empty)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityMonth12)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question22
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaReliabilityProblem1)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaReliabilityProblem1)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityProblem1)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaReliabilityProblem2)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaReliabilityProblem2)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityProblem2)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaReliabilityProblem3)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaReliabilityProblem3)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityProblem3)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaReliabilityProblem4)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaReliabilityProblem4)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityProblem4)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaReliabilityProblem5)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaReliabilityProblem5)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityProblem5)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaReliabilityProblem6)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaReliabilityProblem6)
+        @Html.ValidationMessageFor(model => model.wpaReliabilityProblem6)
+    </div>
+</div>

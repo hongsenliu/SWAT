@@ -1,0 +1,115 @@
+﻿@model SWAT.Models.tblSWATWPsupply
+
+<div id="Inst">
+    <hr />
+    <h4>Institutional Use</h4>
+    <p>
+        What type of public/shared facility uses this source (check all that apply)
+    </p>
+    <p>
+        High risk populations
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaInstitutionHigh1)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaInstitutionHigh1)
+        @Html.ValidationMessageFor(model => model.wpaInstitutionHigh1)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaInstitutionHigh2)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaInstitutionHigh2)
+        @Html.ValidationMessageFor(model => model.wpaInstitutionHigh2)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaInstitutionHigh3)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaInstitutionHigh3)
+        @Html.ValidationMessageFor(model => model.wpaInstitutionHigh3)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaInstitutionHigh4)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaInstitutionHigh4)
+        @Html.ValidationMessageFor(model => model.wpaInstitutionHigh4)
+    </div>
+
+    <hr />
+    <p>
+        Low risk populations
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaInstitutionLow1)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaInstitutionLow1)
+        @Html.ValidationMessageFor(model => model.wpaInstitutionLow1)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaInstitutionLow2)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaInstitutionLow2)
+        @Html.ValidationMessageFor(model => model.wpaInstitutionLow2)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaInstitutionLow3)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaInstitutionLow3)
+        @Html.ValidationMessageFor(model => model.wpaInstitutionLow3)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.wpaInstitutionLow4)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaInstitutionLow4)
+        @Html.ValidationMessageFor(model => model.wpaInstitutionLow4)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question12
+    </p>
+    <p>
+        @ViewBag.Question11
+    </p>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaInstitutionPeopleServedWet)
+        @Html.ValidationMessageFor(model => model.wpaInstitutionPeopleServedWet)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question10
+    </p>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.wpaInstitutionPeopleServedDry)
+        @Html.ValidationMessageFor(model => model.wpaInstitutionPeopleServedDry)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question13
+    </p>
+    <div class="editor-field">
+        @Html.DropDownList("wpaInstitutionSupply", String.Empty)
+        @Html.ValidationMessageFor(model => model.wpaInstitutionSupply)
+    </div>
+    @{
+        if(ViewBag.notPB)
+        {
+            Html.RenderPartial("_InstNPB", Model);
+        }
+     }
+</div>

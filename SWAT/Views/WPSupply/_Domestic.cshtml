@@ -1,0 +1,23 @@
+﻿@model SWAT.Models.tblSWATWPsupply
+
+<div id="Domestic">
+    <hr />
+    <h4>Domestic Use</h4>
+    <p>
+        @ViewBag.Question2
+    </p>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domPercentUse)%
+        @Html.ValidationMessageFor(model => model.domPercentUse)
+    </div>
+    @{
+        if(ViewBag.notPB)
+        {
+            Html.RenderPartial("_DomNPB", Model);
+        }  
+        else
+        {
+            Html.RenderPartial("_DomPB", Model);
+        } 
+     }
+</div>

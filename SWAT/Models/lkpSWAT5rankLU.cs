@@ -33,6 +33,20 @@ namespace SWAT.Models
             this.tblSWATSFcentrals = new HashSet<tblSWATSFcentral>();
             this.tblSWATSFseptics = new HashSet<tblSWATSFseptic>();
             this.tblSWATSFseptics1 = new HashSet<tblSWATSFseptic>();
+            this.tblSWATWPsupplies = new HashSet<tblSWATWPsupply>();
+            this.tblSWATWPsupplies1 = new HashSet<tblSWATWPsupply>();
+            this.tblSWATWPsupplies2 = new HashSet<tblSWATWPsupply>();
+            this.tblSWATWPsupplies3 = new HashSet<tblSWATWPsupply>();
+            this.tblSWATWPsupplies4 = new HashSet<tblSWATWPsupply>();
+            this.tblSWATWPsupplies5 = new HashSet<tblSWATWPsupply>();
+            this.tblSWATWPsupplies6 = new HashSet<tblSWATWPsupply>();
+            this.tblSWATWPsupplies7 = new HashSet<tblSWATWPsupply>();
+            this.tblSWATWPsupplies8 = new HashSet<tblSWATWPsupply>();
+            this.tblSWATWPsupplies9 = new HashSet<tblSWATWPsupply>();
+            this.tblSWATWPsupplies10 = new HashSet<tblSWATWPsupply>();
+            this.tblSWATWPsupplies11 = new HashSet<tblSWATWPsupply>();
+            this.tblSWATWPsupplies12 = new HashSet<tblSWATWPsupply>();
+            this.tblSWATWPsupplies13 = new HashSet<tblSWATWPsupply>();
         }
     
         public int id { get; set; }
@@ -56,5 +70,19 @@ namespace SWAT.Models
         public virtual ICollection<tblSWATSFcentral> tblSWATSFcentrals { get; set; }
         public virtual ICollection<tblSWATSFseptic> tblSWATSFseptics { get; set; }
         public virtual ICollection<tblSWATSFseptic> tblSWATSFseptics1 { get; set; }
+        public virtual ICollection<tblSWATWPsupply> tblSWATWPsupplies { get; set; }
+        public virtual ICollection<tblSWATWPsupply> tblSWATWPsupplies1 { get; set; }
+        public virtual ICollection<tblSWATWPsupply> tblSWATWPsupplies2 { get; set; }
+        public virtual ICollection<tblSWATWPsupply> tblSWATWPsupplies3 { get; set; }
+        public virtual ICollection<tblSWATWPsupply> tblSWATWPsupplies4 { get; set; }
+        public virtual ICollection<tblSWATWPsupply> tblSWATWPsupplies5 { get; set; }
+        public virtual ICollection<tblSWATWPsupply> tblSWATWPsupplies6 { get; set; }
+        public virtual ICollection<tblSWATWPsupply> tblSWATWPsupplies7 { get; set; }
+        public virtual ICollection<tblSWATWPsupply> tblSWATWPsupplies8 { get; set; }
+        public virtual ICollection<tblSWATWPsupply> tblSWATWPsupplies9 { get; set; }
+        public virtual ICollection<tblSWATWPsupply> tblSWATWPsupplies10 { get; set; }
+        public virtual ICollection<tblSWATWPsupply> tblSWATWPsupplies11 { get; set; }
+        public virtual ICollection<tblSWATWPsupply> tblSWATWPsupplies12 { get; set; }
+        public virtual ICollection<tblSWATWPsupply> tblSWATWPsupplies13 { get; set; }
     }
 }

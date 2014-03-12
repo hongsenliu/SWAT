@@ -1,0 +1,531 @@
+﻿@model IEnumerable<SWAT.Models.tblSWATWPsupply>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.tblSWATWPoverview.wpname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domPercentUse)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domCollectDry1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domCollectDryAmount1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domCollectWet1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domCollectWetAmount1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domCollectDry2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domCollectDryAmount2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domCollectWet2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domCollectWetAmount2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domCollectDry3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domCollectDryAmount3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domCollectWet3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domCollectWetAmount3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domPipedNumHHDry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domPipedNumHHWet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATdomWaterUsesLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwaterCollectTimeLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwaterEffortLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATcollectDangerLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domdangerType1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domdangerType2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.domdangerType3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU1.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU2.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU3.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU4.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU5.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaInstitutionHigh1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaInstitutionHigh2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaInstitutionHigh3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaInstitutionHigh4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaInstitutionLow1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaInstitutionLow2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaInstitutionLow3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaInstitutionLow4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaInstitutionPeopleServedWet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaInstitutionPeopleServedDry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU6.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwaterCollectTimeLU1.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwaterEffortLU1.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATcollectDangerLU1.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.indangerType1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.indangerType2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.indangerType3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU7.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU8.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU9.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU10.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU11.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ecWaterUse1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ecWaterUse2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ecWaterUse3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ecWaterUse4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ecWaterUse5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ecWaterDemandDry)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ecWaterDemandWet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU12.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWAT5rankLU13.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaInterruption1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaInterruption2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaInterruption3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaInterruption4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaInterruption5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaInterruption6)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU1.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU2.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU3.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU4.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU5.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU6.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU7.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU8.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU9.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU10.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU11.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaReliabilityProblem1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaReliabilityProblem2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaReliabilityProblem3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaReliabilityProblem4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaReliabilityProblem5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wpaReliabilityProblem6)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.tblSWATWPoverview.wpname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domPercentUse)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domCollectDry1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domCollectDryAmount1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domCollectWet1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domCollectWetAmount1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domCollectDry2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domCollectDryAmount2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domCollectWet2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domCollectWetAmount2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domCollectDry3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domCollectDryAmount3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domCollectWet3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domCollectWetAmount3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domPipedNumHHDry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domPipedNumHHWet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATdomWaterUsesLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwaterCollectTimeLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwaterEffortLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATcollectDangerLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domdangerType1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domdangerType2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.domdangerType3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU1.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU2.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU3.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU4.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU5.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaInstitutionHigh1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaInstitutionHigh2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaInstitutionHigh3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaInstitutionHigh4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaInstitutionLow1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaInstitutionLow2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaInstitutionLow3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaInstitutionLow4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaInstitutionPeopleServedWet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaInstitutionPeopleServedDry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU6.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwaterCollectTimeLU1.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwaterEffortLU1.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATcollectDangerLU1.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.indangerType1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.indangerType2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.indangerType3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU7.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU8.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU9.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU10.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU11.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ecWaterUse1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ecWaterUse2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ecWaterUse3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ecWaterUse4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ecWaterUse5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ecWaterDemandDry)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ecWaterDemandWet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU12.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWAT5rankLU13.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaInterruption1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaInterruption2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaInterruption3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaInterruption4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaInterruption5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaInterruption6)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwpaReliabilityMonthLU.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwpaReliabilityMonthLU1.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwpaReliabilityMonthLU2.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwpaReliabilityMonthLU3.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwpaReliabilityMonthLU4.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwpaReliabilityMonthLU5.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwpaReliabilityMonthLU6.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwpaReliabilityMonthLU7.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwpaReliabilityMonthLU8.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwpaReliabilityMonthLU9.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwpaReliabilityMonthLU10.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.lkpSWATwpaReliabilityMonthLU11.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaReliabilityProblem1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaReliabilityProblem2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaReliabilityProblem3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaReliabilityProblem4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaReliabilityProblem5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.wpaReliabilityProblem6)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

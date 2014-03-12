@@ -14,6 +14,13 @@ namespace SWAT.Models
     
     public partial class tblSWATWPoverview
     {
+        public tblSWATWPoverview()
+        {
+            this.tblSWATWPscores = new HashSet<tblSWATWPscore>();
+            this.tblSWATWPsupplies = new HashSet<tblSWATWPsupply>();
+            this.tblSWATWPqualities = new HashSet<tblSWATWPquality>();
+        }
+    
         public long ID { get; set; }
         public int SurveyID { get; set; }
         public string wpname { get; set; }
@@ -21,8 +28,12 @@ namespace SWAT.Models
         public bool wpaUseDom { get; set; }
         public bool wpaUseInst { get; set; }
         public bool wpaUseEc { get; set; }
+        public string wpaType { get; set; }
     
         public virtual lkpSWATwpaLoc lkpSWATwpaLoc { get; set; }
         public virtual tblSWATSurvey tblSWATSurvey { get; set; }
+        public virtual ICollection<tblSWATWPscore> tblSWATWPscores { get; set; }
+        public virtual ICollection<tblSWATWPsupply> tblSWATWPsupplies { get; set; }
+        public virtual ICollection<tblSWATWPquality> tblSWATWPqualities { get; set; }
     }
 }

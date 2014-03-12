@@ -1,0 +1,225 @@
+﻿@model SWAT.Models.tblSWATWPsupply
+
+<div id="DomNPB">
+    <hr />
+    <p>
+        @ViewBag.Question3
+    </p>
+    <p>
+        Households within 100m (dry season)
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domCollectDry1)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domCollectDry1)
+        @Html.ValidationMessageFor(model => model.domCollectDry1)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domCollectDryAmount1)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domCollectDryAmount1)
+        @Html.ValidationMessageFor(model => model.domCollectDryAmount1)
+    </div>
+
+    <hr />
+    <p>
+        Households within 100m (wet season)
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domCollectWet1)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domCollectWet1)
+        @Html.ValidationMessageFor(model => model.domCollectWet1)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domCollectWetAmount1)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domCollectWetAmount1)
+        @Html.ValidationMessageFor(model => model.domCollectWetAmount1)
+    </div>
+
+    <hr />
+    <p>
+        Households 100-1000m (dry season)
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domCollectDry2)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domCollectDry2)
+        @Html.ValidationMessageFor(model => model.domCollectDry2)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domCollectDryAmount2)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domCollectDryAmount2)
+        @Html.ValidationMessageFor(model => model.domCollectDryAmount2)
+    </div>
+
+    <hr />
+    <p>
+        Households 100-1000m (wet season)
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domCollectWet2)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domCollectWet2)
+        @Html.ValidationMessageFor(model => model.domCollectWet2)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domCollectWetAmount2)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domCollectWetAmount2)
+        @Html.ValidationMessageFor(model => model.domCollectWetAmount2)
+    </div>
+
+    <hr />
+    <p>
+        Households over 1 km away (dry season)
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domCollectDry3)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domCollectDry3)
+        @Html.ValidationMessageFor(model => model.domCollectDry3)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domCollectDryAmount3)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domCollectDryAmount3)
+        @Html.ValidationMessageFor(model => model.domCollectDryAmount3)
+    </div>
+
+    <hr />
+    <p>
+        Households over 1 km away (wet season)
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domCollectWet3)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domCollectWet3)
+        @Html.ValidationMessageFor(model => model.domCollectWet3)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domCollectWetAmount3)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domCollectWetAmount3)
+        @Html.ValidationMessageFor(model => model.domCollectWetAmount3)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question5
+    </p>
+    <div class="editor-field">
+        @Html.DropDownList("domwaterCollectTime", String.Empty)
+        @Html.ValidationMessageFor(model => model.domwaterCollectTime)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question6
+    </p>
+    <div class="editor-field">
+        @Html.DropDownList("domwaterEffort", String.Empty)
+        @Html.ValidationMessageFor(model => model.domwaterEffort)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question7
+    </p>
+    <div class="editor-field">
+        @Html.DropDownList("domcollectDanger", String.Empty)
+        @Html.ValidationMessageFor(model => model.domcollectDanger)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question8
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domdangerType1)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domdangerType1)
+        @Html.ValidationMessageFor(model => model.domdangerType1)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domdangerType2)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domdangerType2)
+        @Html.ValidationMessageFor(model => model.domdangerType2)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domdangerType3)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domdangerType3)
+        @Html.ValidationMessageFor(model => model.domdangerType3)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question9
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domdemoWaterFetch1)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("domdemoWaterFetch1", String.Empty)
+        @Html.ValidationMessageFor(model => model.domdemoWaterFetch1)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domdemoWaterFetch2)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("domdemoWaterFetch2", String.Empty)
+        @Html.ValidationMessageFor(model => model.domdemoWaterFetch2)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domdemoWaterFetch3)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("domdemoWaterFetch3", String.Empty)
+        @Html.ValidationMessageFor(model => model.domdemoWaterFetch3)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domdemoWaterFetch4)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("domdemoWaterFetch4", String.Empty)
+        @Html.ValidationMessageFor(model => model.domdemoWaterFetch4)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domdemoWaterFetch5)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("domdemoWaterFetch5", String.Empty)
+        @Html.ValidationMessageFor(model => model.domdemoWaterFetch5)
+    </div>
+</div>

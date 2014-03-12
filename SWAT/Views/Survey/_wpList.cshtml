@@ -1,0 +1,20 @@
+﻿@model SWAT.Models.tblSWATSurvey
+
+<div>
+        @{
+            var grid = new  WebGrid(Model.tblSWATWPoverviews.OrderByDescending(e => e.ID), rowsPerPage: 8);
+            @grid.GetHtml(
+            tableStyle: "table",
+            columns: grid.Columns(
+            grid.Column("wpname", header: "Water Point"),
+            grid.Column("wpaType", header: "Accessing"),
+            grid.Column("wpaUseDom", header: "Domestic/household use"),
+            grid.Column("wpaUseInst", header: "Institutional use (hospitals, schools, community centres, etc.)"),
+            grid.Column("wpaUseEc", header: "Economic Activities (agriculture, industry, etc.)"),
+            grid.Column(header: "", format: (item) => new HtmlString(
+                @Html.ActionLink("Report", "Report", "WaterPoint", new {id = item.id}, null).ToString() + " | " + @Html.ActionLink("Details", "Details", "WaterPoint", new {id = item.id}, null).ToString() + " | " + @Html.ActionLink("Edit", "Edit", "WaterPoint", new {id = item.ID, SurveyID=item.SurveyID}, null).ToString() + " | "+
+                @Html.ActionLink("Delete", "Delete", "WaterPoint", new {id = item.id}, null).ToString()
+                            )
+            )));   
+            }
+    </div>

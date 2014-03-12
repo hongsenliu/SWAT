@@ -3,6 +3,218 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SWAT.Models
 {
+    public class WPSupplyMetadata
+    {
+        [Display(Name = "% of annual water")]
+        [Range(0, 100, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> domPercentUse { get; set; }
+
+        [Display(Name = "Number of households")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<int> domCollectDry1 { get; set; }
+
+        [Display(Name = "Average withdrawal")]
+        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> domCollectDryAmount1 { get; set; }
+
+        [Display(Name = "Number of households")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<int> domCollectWet1 { get; set; }
+
+        [Display(Name = "Average withdrawal")]
+        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> domCollectWetAmount1 { get; set; }
+
+        [Display(Name = "Number of households")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<int> domCollectDry2 { get; set; }
+
+        [Display(Name = "Average withdrawal")]
+        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> domCollectDryAmount2 { get; set; }
+
+        [Display(Name = "Number of households")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<int> domCollectWet2 { get; set; }
+
+        [Display(Name = "Average withdrawal")]
+        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> domCollectWetAmount2 { get; set; }
+
+        [Display(Name = "Number of households")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<int> domCollectDry3 { get; set; }
+
+        [Display(Name = "Average withdrawal")]
+        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> domCollectDryAmount3 { get; set; }
+
+        [Display(Name = "Number of households")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<int> domCollectWet3 { get; set; }
+
+        [Display(Name = "Average withdrawal")]
+        [Range(0, double.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<double> domCollectWetAmount3 { get; set; }
+
+        [Display(Name = "In dry season")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<int> domPipedNumHHDry { get; set; }
+
+        [Display(Name = "In wet season")]
+        [Range(0, int.MaxValue, ErrorMessage = "The value is out of range.")]
+        public Nullable<int> domPipedNumHHWet { get; set; }
+
+        [Display(Name = "Wildlife")]
+        public bool domdangerType1 { get; set; }
+
+        [Display(Name = "Assault or rape")]
+        public bool domdangerType2 { get; set; }
+
+        [Display(Name = "Terrain")]
+        public bool domdangerType3 { get; set; }
+
+        [Display(Name = "Adult Woman")]
+        public Nullable<int> domdemoWaterFetch1 { get; set; }
+
+        [Display(Name = "Adult Men")]
+        public Nullable<int> domdemoWaterFetch2 { get; set; }
+
+        [Display(Name = "Teenage girls")]
+        public Nullable<int> domdemoWaterFetch3 { get; set; }
+
+        [Display(Name = "Teenage boys")]
+        public Nullable<int> domdemoWaterFetch4 { get; set; }
+
+        [Display(Name = "Children")]
+        public Nullable<int> domdemoWaterFetch5 { get; set; }
+
+        [Display(Name = "Childhood development centres (daycares, elementary schools)")]
+        public bool wpaInstitutionHigh1 { get; set; }
+
+        [Display(Name = "Health centre")]
+        public bool wpaInstitutionHigh2 { get; set; }
+
+        [Display(Name = "Senior centre")]
+        public bool wpaInstitutionHigh3 { get; set; }
+
+        [Display(Name = "Other high risk population")]
+        public bool wpaInstitutionHigh4 { get; set; }
+
+        [Display(Name = "Community centre or government building")]
+        public bool wpaInstitutionLow1 { get; set; }
+
+        [Display(Name = "Older education centres (secondary school, university, training centre)")]
+        public bool wpaInstitutionLow2 { get; set; }
+
+        [Display(Name = "Religious centres (church, mosque, temple)")]
+        public bool wpaInstitutionLow3 { get; set; }
+
+        [Display(Name = "Other lower risk population")]
+        public bool wpaInstitutionLow4 { get; set; }
+
+        [Display(Name = "Wildlife")]
+        public bool indangerType1 { get; set; }
+
+        [Display(Name = "Assault or rape")]
+        public bool indangerType2 { get; set; }
+
+        [Display(Name = "Terrain")]
+        public bool indangerType3 { get; set; }
+
+        [Display(Name = "Adult Woman")]
+        public Nullable<int> indemoWaterFetch1 { get; set; }
+
+        [Display(Name = "Adult Men")]
+        public Nullable<int> indemoWaterFetch2 { get; set; }
+
+        [Display(Name = "Teenage girls")]
+        public Nullable<int> indemoWaterFetch3 { get; set; }
+
+        [Display(Name = "Teenage boys")]
+        public Nullable<int> indemoWaterFetch4 { get; set; }
+
+        [Display(Name = "Children")]
+        public Nullable<int> indemoWaterFetch5 { get; set; }
+
+        [Display(Name = "Irrigation")]
+        public bool ecWaterUse1 { get; set; }
+
+        [Display(Name = "Livestock watering")]
+        public bool ecWaterUse2 { get; set; }
+
+        [Display(Name = "Industry")]
+        public bool ecWaterUse3 { get; set; }
+
+        [Display(Name = "Heating/cooling")]
+        public bool ecWaterUse4 { get; set; }
+
+        [Display(Name = "Other")]
+        public bool ecWaterUse5 { get; set; }
+
+        [Display(Name = "Dry Season")]
+        public Nullable<double> ecWaterDemandDry { get; set; }
+
+        [Display(Name = "Wet Season")]
+        public Nullable<double> ecWaterDemandWet { get; set; }
+
+        [Display(Name = "Supply restrictions")]
+        public bool wpaInterruption1 { get; set; }
+
+        [Display(Name = "Leaks")]
+        public bool wpaInterruption2 { get; set; }
+
+        [Display(Name = "High demand")]
+        public bool wpaInterruption3 { get; set; }
+
+        [Display(Name = "Breakdowns")]
+        public bool wpaInterruption4 { get; set; }
+
+        [Display(Name = "Finances")]
+        public bool wpaInterruption5 { get; set; }
+
+        [Display(Name = "Do not know/other")]
+        public bool wpaInterruption6 { get; set; }
+
+        [Display(Name = "Natural variation")]
+        public bool wpaReliabilityProblem1 { get; set; }
+
+        [Display(Name = "Other competing demands (e.g. agriculture)")]
+        public bool wpaReliabilityProblem2 { get; set; }
+
+        [Display(Name = "Periods of high contamination")]
+        public bool wpaReliabilityProblem3 { get; set; }
+
+        [Display(Name = "Breakdowns")]
+        public bool wpaReliabilityProblem4 { get; set; }
+
+        [Display(Name = "Finances")]
+        public bool wpaReliabilityProblem5 { get; set; }
+
+        [Display(Name = "Do not know/other")]
+        public bool wpaReliabilityProblem6 { get; set; }
+    }
+
+    public class WaterPointMetadata
+    {
+        [Display(Name = "Water Point Accessing")]
+        [Required(ErrorMessage = "This field cannot be empty.")]
+        public Nullable<int> wpaLoc { get; set; }
+
+        [Display(Name = "Water Point")]
+        [StringLength(80, ErrorMessage="Water Point name can be upto 80 characters.")]
+        public string wpname { get; set; }
+
+        [Display(Name = "Domestic/household use")]
+        public bool wpaUseDom { get; set; }
+
+        [Display(Name = "Institutional use (hospitals, schools, community centres, etc.)")]
+        public bool wpaUseInst { get; set; }
+
+        [Display(Name = "Economic Activities (agriculture, industry, etc.)")]
+        public bool wpaUseEc { get; set; }
+    }
+
     public class SFLatMetadata
     {
         [Display(Name = "Ventilated improved pit latrine (VIP)")]

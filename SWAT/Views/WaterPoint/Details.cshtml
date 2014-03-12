@@ -1,0 +1,57 @@
+﻿@model SWAT.Models.tblSWATWPoverview
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>tblSWATWPoverview</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tblSWATSurvey.ID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tblSWATSurvey.ID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwpaLoc.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwpaLoc.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaUseDom)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaUseDom)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaUseInst)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaUseInst)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaUseEc)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaUseEc)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

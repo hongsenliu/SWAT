@@ -1,0 +1,32 @@
+﻿@model SWAT.Models.tblSWATWPsupply
+
+<div id="DomPB">
+    <hr />
+    <p>
+        How many households use water from this source?
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domPipedNumHHDry)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domPipedNumHHDry)
+        @Html.ValidationMessageFor(model => model.domPipedNumHHDry)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.domPipedNumHHWet)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.domPipedNumHHWet)
+        @Html.ValidationMessageFor(model => model.domPipedNumHHWet)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question4
+    </p>
+    <div class="editor-field">
+        @Html.DropDownList("domWaterUses", String.Empty)
+        @Html.ValidationMessageFor(model => model.domWaterUses)
+    </div>
+</div>

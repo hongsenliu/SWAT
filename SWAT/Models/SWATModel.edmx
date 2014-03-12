@@ -19,10 +19,13 @@
           <EntitySet Name="lkpSWATbestManIndLU" EntityType="SWATModel.Store.lkpSWATbestManIndLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATcentralConditionLU" EntityType="SWATModel.Store.lkpSWATcentralConditionLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATcentralTreatmentTypeLU" EntityType="SWATModel.Store.lkpSWATcentralTreatmentTypeLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATcollectDangerLU" EntityType="SWATModel.Store.lkpSWATcollectDangerLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATcomponentLU" EntityType="SWATModel.Store.lkpSWATcomponentLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATcomSatisfactionLU" EntityType="SWATModel.Store.lkpSWATcomSatisfactionLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATcropLossLU" EntityType="SWATModel.Store.lkpSWATcropLossLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATdevSiteLU" EntityType="SWATModel.Store.lkpSWATdevSiteLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATdomWaterUsesLU" EntityType="SWATModel.Store.lkpSWATdomWaterUsesLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATeaseUseLU" EntityType="SWATModel.Store.lkpSWATeaseUseLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATeconPrisLU" EntityType="SWATModel.Store.lkpSWATeconPrisLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATeduGradDiffLU" EntityType="SWATModel.Store.lkpSWATeduGradDiffLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATerosionLU" EntityType="SWATModel.Store.lkpSWATerosionLU" store:Type="Tables" Schema="DBA" />
@@ -30,6 +33,7 @@
           <EntitySet Name="lkpSWATextremePrepLU" EntityType="SWATModel.Store.lkpSWATextremePrepLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATextremeRiskLU" EntityType="SWATModel.Store.lkpSWATextremeRiskLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATextVisitLU" EntityType="SWATModel.Store.lkpSWATextVisitLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATfaecalPathogensLU" EntityType="SWATModel.Store.lkpSWATfaecalPathogensLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATfundAppLU" EntityType="SWATModel.Store.lkpSWATfundAppLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATfundAppSuccessLU" EntityType="SWATModel.Store.lkpSWATfundAppSuccessLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATgenderLU" EntityType="SWATModel.Store.lkpSWATgenderLU" store:Type="Tables" Schema="DBA" />
@@ -59,6 +63,7 @@
           <EntitySet Name="lkpSWATpriorLU" EntityType="SWATModel.Store.lkpSWATpriorLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATproPoorLU" EntityType="SWATModel.Store.lkpSWATproPoorLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATpubCleanLU" EntityType="SWATModel.Store.lkpSWATpubCleanLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATqualTreatedLU" EntityType="SWATModel.Store.lkpSWATqualTreatedLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATroscaLU" EntityType="SWATModel.Store.lkpSWATroscaLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATrunoffLU" EntityType="SWATModel.Store.lkpSWATrunoffLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATsanTypeLU" EntityType="SWATModel.Store.lkpSWATsanTypeLU" store:Type="Tables" Schema="DBA" />
@@ -71,8 +76,11 @@
           <EntitySet Name="lkpSWATscores_bestManInd" EntityType="SWATModel.Store.lkpSWATscores_bestManInd" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_centralCondition" EntityType="SWATModel.Store.lkpSWATscores_centralCondition" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_centralTreatment" EntityType="SWATModel.Store.lkpSWATscores_centralTreatment" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_collectDanger" EntityType="SWATModel.Store.lkpSWATscores_collectDanger" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_comSatisfaction" EntityType="SWATModel.Store.lkpSWATscores_comSatisfaction" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_cropLoss" EntityType="SWATModel.Store.lkpSWATscores_cropLoss" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_domWaterUses" EntityType="SWATModel.Store.lkpSWATscores_domWaterUses" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_easeUse" EntityType="SWATModel.Store.lkpSWATscores_easeUse" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_econPris" EntityType="SWATModel.Store.lkpSWATscores_econPris" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_eduGradDiff" EntityType="SWATModel.Store.lkpSWATscores_eduGradDiff" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_erosion" EntityType="SWATModel.Store.lkpSWATscores_erosion" store:Type="Tables" Schema="DBA" />
@@ -80,6 +88,7 @@
           <EntitySet Name="lkpSWATscores_extremePrep" EntityType="SWATModel.Store.lkpSWATscores_extremePrep" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_extremeRISK" EntityType="SWATModel.Store.lkpSWATscores_extremeRISK" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_extVisit" EntityType="SWATModel.Store.lkpSWATscores_extVisit" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_faecalPathogens" EntityType="SWATModel.Store.lkpSWATscores_faecalPathogens" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_fundAppFUND" EntityType="SWATModel.Store.lkpSWATscores_fundAppFUND" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_fundAppLINK" EntityType="SWATModel.Store.lkpSWATscores_fundAppLINK" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_fundAppSuccess" EntityType="SWATModel.Store.lkpSWATscores_fundAppSuccess" store:Type="Tables" Schema="DBA" />
@@ -100,6 +109,7 @@
           <EntitySet Name="lkpSWATscores_precipVar" EntityType="SWATModel.Store.lkpSWATscores_precipVar" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_proPoor" EntityType="SWATModel.Store.lkpSWATscores_proPoor" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_pubClean" EntityType="SWATModel.Store.lkpSWATscores_pubClean" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_qualTreated" EntityType="SWATModel.Store.lkpSWATscores_qualTreated" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_rosca" EntityType="SWATModel.Store.lkpSWATscores_rosca" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_runoff" EntityType="SWATModel.Store.lkpSWATscores_runoff" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_sanType" EntityType="SWATModel.Store.lkpSWATscores_sanType" store:Type="Tables" Schema="DBA" />
@@ -108,13 +118,21 @@
           <EntitySet Name="lkpSWATscores_survivorship" EntityType="SWATModel.Store.lkpSWATscores_survivorship" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_toiletsAll" EntityType="SWATModel.Store.lkpSWATscores_toiletsAll" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_urbanDistance" EntityType="SWATModel.Store.lkpSWATscores_urbanDistance" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_userTreatedifTreatedbefore" EntityType="SWATModel.Store.lkpSWATscores_userTreatedifTreatedbefore" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_userTreatedifUntreatedBefore" EntityType="SWATModel.Store.lkpSWATscores_userTreatedifUntreatedBefore" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_userTreatmentMethod" EntityType="SWATModel.Store.lkpSWATscores_userTreatmentMethod" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_watActionPlan" EntityType="SWATModel.Store.lkpSWATscores_watActionPlan" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_watBudget" EntityType="SWATModel.Store.lkpSWATscores_watBudget" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_watClassRep" EntityType="SWATModel.Store.lkpSWATscores_watClassRep" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_watCom" EntityType="SWATModel.Store.lkpSWATscores_watCom" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_watComConcerns" EntityType="SWATModel.Store.lkpSWATscores_watComConcerns" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_waterCollectTime" EntityType="SWATModel.Store.lkpSWATscores_waterCollectTime" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_waterEffort" EntityType="SWATModel.Store.lkpSWATscores_waterEffort" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_waterTasteOdour" EntityType="SWATModel.Store.lkpSWATscores_waterTasteOdour" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_waterTurbidity" EntityType="SWATModel.Store.lkpSWATscores_waterTurbidity" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_watTechStaff" EntityType="SWATModel.Store.lkpSWATscores_watTechStaff" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_watTechTraining" EntityType="SWATModel.Store.lkpSWATscores_watTechTraining" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATscores_wpaReliabilityMonth" EntityType="SWATModel.Store.lkpSWATscores_wpaReliabilityMonth" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_YesNoLU_YesBad" EntityType="SWATModel.Store.lkpSWATscores_YesNoLU_YesBad" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATscores_YesNoLUYesGood" EntityType="SWATModel.Store.lkpSWATscores_YesNoLUYesGood" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATScoreVarSectionLU" EntityType="SWATModel.Store.lkpSWATScoreVarSectionLU" store:Type="Tables" store:Schema="DBA" store:Name="lkpSWATScoreVarSectionLU">
@@ -131,17 +149,26 @@
           <EntitySet Name="lkpSWATsurvivorshipLU" EntityType="SWATModel.Store.lkpSWATsurvivorshipLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATtoiletsAllLU" EntityType="SWATModel.Store.lkpSWATtoiletsAllLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATurbanDistanceLU" EntityType="SWATModel.Store.lkpSWATurbanDistanceLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATuserTreatedLU" EntityType="SWATModel.Store.lkpSWATuserTreatedLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATuserTreatmentMethodLU" EntityType="SWATModel.Store.lkpSWATuserTreatmentMethodLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATwatActionPlanLU" EntityType="SWATModel.Store.lkpSWATwatActionPlanLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATwatBudgetLU" EntityType="SWATModel.Store.lkpSWATwatBudgetLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATwatClassRepLU" EntityType="SWATModel.Store.lkpSWATwatClassRepLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATwatComConcernsLU" EntityType="SWATModel.Store.lkpSWATwatComConcernsLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATwatComLU" EntityType="SWATModel.Store.lkpSWATwatComLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATwaterCollectTimeLU" EntityType="SWATModel.Store.lkpSWATwaterCollectTimeLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATwaterEffortLU" EntityType="SWATModel.Store.lkpSWATwaterEffortLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATwaterMonthLU" EntityType="SWATModel.Store.lkpSWATwaterMonthLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATWatershedsLU" EntityType="SWATModel.Store.lkpSWATWatershedsLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATwaterTasteOdourLU" EntityType="SWATModel.Store.lkpSWATwaterTasteOdourLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATwaterTurbidityLU" EntityType="SWATModel.Store.lkpSWATwaterTurbidityLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATwatTechStaffLU" EntityType="SWATModel.Store.lkpSWATwatTechStaffLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATwatTechTrainingLU" EntityType="SWATModel.Store.lkpSWATwatTechTrainingLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATwpaLoc" EntityType="SWATModel.Store.lkpSWATwpaLoc" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATwpaReliabilityMonthLU" EntityType="SWATModel.Store.lkpSWATwpaReliabilityMonthLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATwpaTypeDesc" EntityType="SWATModel.Store.lkpSWATwpaTypeDesc" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATWPscoreLU" EntityType="SWATModel.Store.lkpSWATWPscoreLU" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="lkpSWATWPsectionLU" EntityType="SWATModel.Store.lkpSWATWPsectionLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="lkpSWATYesNoLU" EntityType="SWATModel.Store.lkpSWATYesNoLU" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATBackgroundinfo" EntityType="SWATModel.Store.tblSWATBackgroundinfo" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATCCcom" EntityType="SWATModel.Store.tblSWATCCcom" store:Type="Tables" Schema="DBA" />
@@ -179,6 +206,9 @@
           <EntitySet Name="tblSWATWAriskPrep" EntityType="SWATModel.Store.tblSWATWAriskPrep" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWAsurfaceWater" EntityType="SWATModel.Store.tblSWATWAsurfaceWater" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="tblSWATWPoverview" EntityType="SWATModel.Store.tblSWATWPoverview" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATWPquality" EntityType="SWATModel.Store.tblSWATWPquality" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATWPscore" EntityType="SWATModel.Store.tblSWATWPscore" store:Type="Tables" Schema="DBA" />
+          <EntitySet Name="tblSWATWPsupply" EntityType="SWATModel.Store.tblSWATWPsupply" store:Type="Tables" Schema="DBA" />
           <EntitySet Name="Userids" EntityType="SWATModel.Store.Userids" store:Type="Tables" Schema="DBA" />
           <AssociationSet Name="FK_lkpCountry_3_lkpRegion" Association="SWATModel.Store.FK_lkpCountry_3_lkpRegion">
             <End Role="lkpRegion" EntitySet="lkpRegion" />
@@ -199,6 +229,10 @@
           <AssociationSet Name="FK_lkpSWATsubComponentLU_2_lkpSWATcomponentLU" Association="SWATModel.Store.FK_lkpSWATsubComponentLU_2_lkpSWATcomponentLU">
             <End Role="lkpSWATcomponentLU" EntitySet="lkpSWATcomponentLU" />
             <End Role="lkpSWATsubComponentLU" EntitySet="lkpSWATsubComponentLU" />
+          </AssociationSet>
+          <AssociationSet Name="FK_lkpSWATWPscoreLU_3_lkpSWATWPsectionLU" Association="SWATModel.Store.FK_lkpSWATWPscoreLU_3_lkpSWATWPsectionLU">
+            <End Role="lkpSWATWPsectionLU" EntitySet="lkpSWATWPsectionLU" />
+            <End Role="lkpSWATWPscoreLU" EntitySet="lkpSWATWPscoreLU" />
           </AssociationSet>
           <AssociationSet Name="FK_tblSWATBackgroundinfo_22_lkpSoil" Association="SWATModel.Store.FK_tblSWATBackgroundinfo_22_lkpSoil">
             <End Role="lkpSoil" EntitySet="lkpSoil" />
@@ -820,6 +854,182 @@
             <End Role="lkpSWATwpaLoc" EntitySet="lkpSWATwpaLoc" />
             <End Role="tblSWATWPoverview" EntitySet="tblSWATWPoverview" />
           </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPquality_10_lkpSWATwaterTasteOdourLU" Association="SWATModel.Store.FK_tblSWATWPquality_10_lkpSWATwaterTasteOdourLU">
+            <End Role="lkpSWATwaterTasteOdourLU" EntitySet="lkpSWATwaterTasteOdourLU" />
+            <End Role="tblSWATWPquality" EntitySet="tblSWATWPquality" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPquality_11_lkpSWATwaterTurbidityLU" Association="SWATModel.Store.FK_tblSWATWPquality_11_lkpSWATwaterTurbidityLU">
+            <End Role="lkpSWATwaterTurbidityLU" EntitySet="lkpSWATwaterTurbidityLU" />
+            <End Role="tblSWATWPquality" EntitySet="tblSWATWPquality" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPquality_4_tblSWATWPoverview" Association="SWATModel.Store.FK_tblSWATWPquality_4_tblSWATWPoverview">
+            <End Role="tblSWATWPoverview" EntitySet="tblSWATWPoverview" />
+            <End Role="tblSWATWPquality" EntitySet="tblSWATWPquality" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPquality_5_lkpSWATqualTreatedLU" Association="SWATModel.Store.FK_tblSWATWPquality_5_lkpSWATqualTreatedLU">
+            <End Role="lkpSWATqualTreatedLU" EntitySet="lkpSWATqualTreatedLU" />
+            <End Role="tblSWATWPquality" EntitySet="tblSWATWPquality" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPquality_6_lkpSWATuserTreatedLU" Association="SWATModel.Store.FK_tblSWATWPquality_6_lkpSWATuserTreatedLU">
+            <End Role="lkpSWATuserTreatedLU" EntitySet="lkpSWATuserTreatedLU" />
+            <End Role="tblSWATWPquality" EntitySet="tblSWATWPquality" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPquality_7_lkpSWATuserTreatmentMethodLU" Association="SWATModel.Store.FK_tblSWATWPquality_7_lkpSWATuserTreatmentMethodLU">
+            <End Role="lkpSWATuserTreatmentMethodLU" EntitySet="lkpSWATuserTreatmentMethodLU" />
+            <End Role="tblSWATWPquality" EntitySet="tblSWATWPquality" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPquality_8_lkpSWATfaecalPathogensLU" Association="SWATModel.Store.FK_tblSWATWPquality_8_lkpSWATfaecalPathogensLU">
+            <End Role="lkpSWATfaecalPathogensLU" EntitySet="lkpSWATfaecalPathogensLU" />
+            <End Role="tblSWATWPquality" EntitySet="tblSWATWPquality" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPquality_9_lkpSWATwaterTasteOdourLU" Association="SWATModel.Store.FK_tblSWATWPquality_9_lkpSWATwaterTasteOdourLU">
+            <End Role="lkpSWATwaterTasteOdourLU" EntitySet="lkpSWATwaterTasteOdourLU" />
+            <End Role="tblSWATWPquality" EntitySet="tblSWATWPquality" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPscore_2_tblSWATWPoverview" Association="SWATModel.Store.FK_tblSWATWPscore_2_tblSWATWPoverview">
+            <End Role="tblSWATWPoverview" EntitySet="tblSWATWPoverview" />
+            <End Role="tblSWATWPscore" EntitySet="tblSWATWPscore" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPscore_3_lkpSWATWPscoreLU" Association="SWATModel.Store.FK_tblSWATWPscore_3_lkpSWATWPscoreLU">
+            <End Role="lkpSWATWPscoreLU" EntitySet="lkpSWATWPscoreLU" />
+            <End Role="tblSWATWPscore" EntitySet="tblSWATWPscore" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_3_tblSWATWPoverview" Association="SWATModel.Store.FK_tblSWATWPsupply_3_tblSWATWPoverview">
+            <End Role="tblSWATWPoverview" EntitySet="tblSWATWPoverview" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_48_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATWPsupply_48_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_49_lkpSWATdomWaterUsesLU" Association="SWATModel.Store.FK_tblSWATWPsupply_49_lkpSWATdomWaterUsesLU">
+            <End Role="lkpSWATdomWaterUsesLU" EntitySet="lkpSWATdomWaterUsesLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_50_lkpSWATwaterCollectTimeLU" Association="SWATModel.Store.FK_tblSWATWPsupply_50_lkpSWATwaterCollectTimeLU">
+            <End Role="lkpSWATwaterCollectTimeLU" EntitySet="lkpSWATwaterCollectTimeLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_51_lkpSWATwaterEffortLU" Association="SWATModel.Store.FK_tblSWATWPsupply_51_lkpSWATwaterEffortLU">
+            <End Role="lkpSWATwaterEffortLU" EntitySet="lkpSWATwaterEffortLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_52_lkpSWATcollectDangerLU" Association="SWATModel.Store.FK_tblSWATWPsupply_52_lkpSWATcollectDangerLU">
+            <End Role="lkpSWATcollectDangerLU" EntitySet="lkpSWATcollectDangerLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_53_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATWPsupply_53_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_54_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATWPsupply_54_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_55_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATWPsupply_55_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_56_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATWPsupply_56_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_57_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATWPsupply_57_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_58_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATWPsupply_58_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_59_lkpSWATwaterCollectTimeLU" Association="SWATModel.Store.FK_tblSWATWPsupply_59_lkpSWATwaterCollectTimeLU">
+            <End Role="lkpSWATwaterCollectTimeLU" EntitySet="lkpSWATwaterCollectTimeLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_60_lkpSWATwaterEffortLU" Association="SWATModel.Store.FK_tblSWATWPsupply_60_lkpSWATwaterEffortLU">
+            <End Role="lkpSWATwaterEffortLU" EntitySet="lkpSWATwaterEffortLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_61_lkpSWATcollectDangerLU" Association="SWATModel.Store.FK_tblSWATWPsupply_61_lkpSWATcollectDangerLU">
+            <End Role="lkpSWATcollectDangerLU" EntitySet="lkpSWATcollectDangerLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_62_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATWPsupply_62_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_63_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATWPsupply_63_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_64_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATWPsupply_64_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_65_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATWPsupply_65_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_66_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATWPsupply_66_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_67_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATWPsupply_67_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_68_lkpSWAT5rankLU" Association="SWATModel.Store.FK_tblSWATWPsupply_68_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_69_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.Store.FK_tblSWATWPsupply_69_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_70_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.Store.FK_tblSWATWPsupply_70_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_71_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.Store.FK_tblSWATWPsupply_71_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_72_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.Store.FK_tblSWATWPsupply_72_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_73_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.Store.FK_tblSWATWPsupply_73_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_74_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.Store.FK_tblSWATWPsupply_74_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_75_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.Store.FK_tblSWATWPsupply_75_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_76_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.Store.FK_tblSWATWPsupply_76_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_77_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.Store.FK_tblSWATWPsupply_77_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_78_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.Store.FK_tblSWATWPsupply_78_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_79_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.Store.FK_tblSWATWPsupply_79_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_80_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.Store.FK_tblSWATWPsupply_80_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupply" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="lkpBiome">
           <Key>
@@ -926,6 +1136,14 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATcollectDangerLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATcomponentLU">
           <Key>
             <PropertyRef Name="ID" />
@@ -958,6 +1176,22 @@
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="int" Nullable="false" />
           <Property Name="intorder" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATdomWaterUsesLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATeaseUseLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATeconPrisLU">
           <Key>
@@ -1008,6 +1242,14 @@
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATextVisitLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATfaecalPathogensLU">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -1210,6 +1452,14 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATqualTreatedLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATroscaLU">
           <Key>
             <PropertyRef Name="id" />
@@ -1306,6 +1556,14 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATscores_collectDanger">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATscores_comSatisfaction">
           <Key>
             <PropertyRef Name="id" />
@@ -1315,6 +1573,22 @@
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATscores_cropLoss">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_domWaterUses">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_easeUse">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -1371,6 +1645,14 @@
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATscores_extVisit">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_faecalPathogens">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -1538,6 +1820,14 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATscores_qualTreated">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATscores_rosca">
           <Key>
             <PropertyRef Name="id" />
@@ -1602,6 +1892,30 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATscores_userTreatedifTreatedbefore">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_userTreatedifUntreatedBefore">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_userTreatmentMethod">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATscores_watActionPlan">
           <Key>
             <PropertyRef Name="id" />
@@ -1642,6 +1956,38 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATscores_waterCollectTime">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_waterEffort">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_waterTasteOdour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_waterTurbidity">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATscores_watTechStaff">
           <Key>
             <PropertyRef Name="id" />
@@ -1651,6 +1997,14 @@
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATscores_watTechTraining">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_wpaReliabilityMonth">
           <Key>
             <PropertyRef Name="id" />
           </Key>
@@ -1751,6 +2105,22 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATuserTreatedLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATuserTreatmentMethodLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATwatActionPlanLU">
           <Key>
             <PropertyRef Name="id" />
@@ -1791,6 +2161,22 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATwaterCollectTimeLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATwaterEffortLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATwaterMonthLU">
           <Key>
             <PropertyRef Name="id" />
@@ -1806,6 +2192,22 @@
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="varchar" Nullable="false" MaxLength="254" />
           <Property Name="intorder" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATwaterTasteOdourLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATwaterTurbidityLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
         <EntityType Name="lkpSWATwatTechStaffLU">
           <Key>
@@ -1831,6 +2233,14 @@
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
         </EntityType>
+        <EntityType Name="lkpSWATwpaReliabilityMonthLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
         <EntityType Name="lkpSWATwpaTypeDesc">
           <Key>
             <PropertyRef Name="id" />
@@ -1838,6 +2248,23 @@
           <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Description" Type="varchar" MaxLength="254" />
           <Property Name="intorder" Type="int" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATWPscoreLU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ScoreName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+          <Property Name="SectionID" Type="int" />
+        </EntityType>
+        <EntityType Name="lkpSWATWPsectionLU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SectionName" Type="varchar" MaxLength="100" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
         </EntityType>
         <EntityType Name="lkpSWATYesNoLU">
           <Key>
@@ -2395,6 +2822,122 @@
           <Property Name="wpaUseDom" Type="bit" Nullable="false" />
           <Property Name="wpaUseInst" Type="bit" Nullable="false" />
           <Property Name="wpaUseEc" Type="bit" Nullable="false" />
+          <Property Name="wpaType" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tblSWATWPquality">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wpID" Type="bigint" Nullable="false" />
+          <Property Name="qualTreated" Type="int" />
+          <Property Name="userTreated" Type="int" />
+          <Property Name="userTreatmentMethod" Type="int" />
+          <Property Name="faecalPathogens" Type="int" />
+          <Property Name="waterTaste" Type="int" />
+          <Property Name="waterOdour" Type="int" />
+          <Property Name="waterTurbidity" Type="int" />
+        </EntityType>
+        <EntityType Name="tblSWATWPscore">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wpID" Type="bigint" Nullable="false" />
+          <Property Name="ScoreID" Type="int" Nullable="false" />
+          <Property Name="ScoreName" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Value" Type="float" />
+          <Property Name="Description" Type="varchar" MaxLength="254" />
+        </EntityType>
+        <EntityType Name="tblSWATWPsupply">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="wpID" Type="bigint" Nullable="false" />
+          <Property Name="conflictWater" Type="int" />
+          <Property Name="domPercentUse" Type="float" />
+          <Property Name="domCollectDry1" Type="int" />
+          <Property Name="domCollectDryAmount1" Type="float" />
+          <Property Name="domCollectWet1" Type="int" />
+          <Property Name="domCollectWetAmount1" Type="float" />
+          <Property Name="domCollectDry2" Type="int" />
+          <Property Name="domCollectDryAmount2" Type="float" />
+          <Property Name="domCollectWet2" Type="int" />
+          <Property Name="domCollectWetAmount2" Type="float" />
+          <Property Name="domCollectDry3" Type="int" />
+          <Property Name="domCollectDryAmount3" Type="float" />
+          <Property Name="domCollectWet3" Type="int" />
+          <Property Name="domCollectWetAmount3" Type="float" />
+          <Property Name="domPipedNumHHDry" Type="int" />
+          <Property Name="domPipedNumHHWet" Type="int" />
+          <Property Name="domWaterUses" Type="int" />
+          <Property Name="domwaterCollectTime" Type="int" />
+          <Property Name="domwaterEffort" Type="int" />
+          <Property Name="domcollectDanger" Type="int" />
+          <Property Name="domdangerType1" Type="bit" Nullable="false" />
+          <Property Name="domdangerType2" Type="bit" Nullable="false" />
+          <Property Name="domdangerType3" Type="bit" Nullable="false" />
+          <Property Name="domdemoWaterFetch1" Type="int" />
+          <Property Name="domdemoWaterFetch2" Type="int" />
+          <Property Name="domdemoWaterFetch3" Type="int" />
+          <Property Name="domdemoWaterFetch4" Type="int" />
+          <Property Name="domdemoWaterFetch5" Type="int" />
+          <Property Name="wpaInstitutionHigh1" Type="bit" Nullable="false" />
+          <Property Name="wpaInstitutionHigh2" Type="bit" Nullable="false" />
+          <Property Name="wpaInstitutionHigh3" Type="bit" Nullable="false" />
+          <Property Name="wpaInstitutionHigh4" Type="bit" Nullable="false" />
+          <Property Name="wpaInstitutionLow1" Type="bit" Nullable="false" />
+          <Property Name="wpaInstitutionLow2" Type="bit" Nullable="false" />
+          <Property Name="wpaInstitutionLow3" Type="bit" Nullable="false" />
+          <Property Name="wpaInstitutionLow4" Type="bit" Nullable="false" />
+          <Property Name="wpaInstitutionPeopleServedWet" Type="int" />
+          <Property Name="wpaInstitutionPeopleServedDry" Type="int" />
+          <Property Name="wpaInstitutionSupply" Type="int" />
+          <Property Name="inwaterCollectTime" Type="int" />
+          <Property Name="inwaterEffort" Type="int" />
+          <Property Name="incollectDanger" Type="int" />
+          <Property Name="indangerType1" Type="bit" Nullable="false" />
+          <Property Name="indangerType2" Type="bit" Nullable="false" />
+          <Property Name="indangerType3" Type="bit" Nullable="false" />
+          <Property Name="indemoWaterFetch1" Type="int" />
+          <Property Name="indemoWaterFetch2" Type="int" />
+          <Property Name="indemoWaterFetch3" Type="int" />
+          <Property Name="indemoWaterFetch4" Type="int" />
+          <Property Name="indemoWaterFetch5" Type="int" />
+          <Property Name="ecWaterUse1" Type="bit" Nullable="false" />
+          <Property Name="ecWaterUse2" Type="bit" Nullable="false" />
+          <Property Name="ecWaterUse3" Type="bit" Nullable="false" />
+          <Property Name="ecWaterUse4" Type="bit" Nullable="false" />
+          <Property Name="ecWaterUse5" Type="bit" Nullable="false" />
+          <Property Name="ecWaterDemandDry" Type="float" />
+          <Property Name="ecWaterDemandWet" Type="float" />
+          <Property Name="ecSupply" Type="int" />
+          <Property Name="wpaInterruptionFreq" Type="int" />
+          <Property Name="wpaInterruption1" Type="bit" Nullable="false" />
+          <Property Name="wpaInterruption2" Type="bit" Nullable="false" />
+          <Property Name="wpaInterruption3" Type="bit" Nullable="false" />
+          <Property Name="wpaInterruption4" Type="bit" Nullable="false" />
+          <Property Name="wpaInterruption5" Type="bit" Nullable="false" />
+          <Property Name="wpaInterruption6" Type="bit" Nullable="false" />
+          <Property Name="wpaReliabilityMonth1" Type="int" />
+          <Property Name="wpaReliabilityMonth2" Type="int" />
+          <Property Name="wpaReliabilityMonth3" Type="int" />
+          <Property Name="wpaReliabilityMonth4" Type="int" />
+          <Property Name="wpaReliabilityMonth5" Type="int" />
+          <Property Name="wpaReliabilityMonth6" Type="int" />
+          <Property Name="wpaReliabilityMonth7" Type="int" />
+          <Property Name="wpaReliabilityMonth8" Type="int" />
+          <Property Name="wpaReliabilityMonth9" Type="int" />
+          <Property Name="wpaReliabilityMonth10" Type="int" />
+          <Property Name="wpaReliabilityMonth11" Type="int" />
+          <Property Name="wpaReliabilityMonth12" Type="int" />
+          <Property Name="wpaReliabilityProblem1" Type="bit" Nullable="false" />
+          <Property Name="wpaReliabilityProblem2" Type="bit" Nullable="false" />
+          <Property Name="wpaReliabilityProblem3" Type="bit" Nullable="false" />
+          <Property Name="wpaReliabilityProblem4" Type="bit" Nullable="false" />
+          <Property Name="wpaReliabilityProblem5" Type="bit" Nullable="false" />
+          <Property Name="wpaReliabilityProblem6" Type="bit" Nullable="false" />
         </EntityType>
         <EntityType Name="Userids">
           <Key>
@@ -2487,6 +3030,18 @@
             </Principal>
             <Dependent Role="lkpSWATsubComponentLU">
               <PropertyRef Name="ComponentID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_lkpSWATWPscoreLU_3_lkpSWATWPsectionLU">
+          <End Role="lkpSWATWPsectionLU" Type="SWATModel.Store.lkpSWATWPsectionLU" Multiplicity="0..1" />
+          <End Role="lkpSWATWPscoreLU" Type="SWATModel.Store.lkpSWATWPscoreLU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATWPsectionLU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="lkpSWATWPscoreLU">
+              <PropertyRef Name="SectionID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -4350,6 +4905,534 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_tblSWATWPquality_10_lkpSWATwaterTasteOdourLU">
+          <End Role="lkpSWATwaterTasteOdourLU" Type="SWATModel.Store.lkpSWATwaterTasteOdourLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPquality" Type="SWATModel.Store.tblSWATWPquality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwaterTasteOdourLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPquality">
+              <PropertyRef Name="waterOdour" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPquality_11_lkpSWATwaterTurbidityLU">
+          <End Role="lkpSWATwaterTurbidityLU" Type="SWATModel.Store.lkpSWATwaterTurbidityLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPquality" Type="SWATModel.Store.tblSWATWPquality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwaterTurbidityLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPquality">
+              <PropertyRef Name="waterTurbidity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPquality_4_tblSWATWPoverview">
+          <End Role="tblSWATWPoverview" Type="SWATModel.Store.tblSWATWPoverview" Multiplicity="1" />
+          <End Role="tblSWATWPquality" Type="SWATModel.Store.tblSWATWPquality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATWPoverview">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWPquality">
+              <PropertyRef Name="wpID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPquality_5_lkpSWATqualTreatedLU">
+          <End Role="lkpSWATqualTreatedLU" Type="SWATModel.Store.lkpSWATqualTreatedLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPquality" Type="SWATModel.Store.tblSWATWPquality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATqualTreatedLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPquality">
+              <PropertyRef Name="qualTreated" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPquality_6_lkpSWATuserTreatedLU">
+          <End Role="lkpSWATuserTreatedLU" Type="SWATModel.Store.lkpSWATuserTreatedLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPquality" Type="SWATModel.Store.tblSWATWPquality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATuserTreatedLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPquality">
+              <PropertyRef Name="userTreated" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPquality_7_lkpSWATuserTreatmentMethodLU">
+          <End Role="lkpSWATuserTreatmentMethodLU" Type="SWATModel.Store.lkpSWATuserTreatmentMethodLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPquality" Type="SWATModel.Store.tblSWATWPquality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATuserTreatmentMethodLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPquality">
+              <PropertyRef Name="userTreatmentMethod" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPquality_8_lkpSWATfaecalPathogensLU">
+          <End Role="lkpSWATfaecalPathogensLU" Type="SWATModel.Store.lkpSWATfaecalPathogensLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPquality" Type="SWATModel.Store.tblSWATWPquality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATfaecalPathogensLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPquality">
+              <PropertyRef Name="faecalPathogens" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPquality_9_lkpSWATwaterTasteOdourLU">
+          <End Role="lkpSWATwaterTasteOdourLU" Type="SWATModel.Store.lkpSWATwaterTasteOdourLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPquality" Type="SWATModel.Store.tblSWATWPquality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwaterTasteOdourLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPquality">
+              <PropertyRef Name="waterTaste" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPscore_2_tblSWATWPoverview">
+          <End Role="tblSWATWPoverview" Type="SWATModel.Store.tblSWATWPoverview" Multiplicity="1" />
+          <End Role="tblSWATWPscore" Type="SWATModel.Store.tblSWATWPscore" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATWPoverview">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWPscore">
+              <PropertyRef Name="wpID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPscore_3_lkpSWATWPscoreLU">
+          <End Role="lkpSWATWPscoreLU" Type="SWATModel.Store.lkpSWATWPscoreLU" Multiplicity="1" />
+          <End Role="tblSWATWPscore" Type="SWATModel.Store.tblSWATWPscore" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATWPscoreLU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWPscore">
+              <PropertyRef Name="ScoreID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_3_tblSWATWPoverview">
+          <End Role="tblSWATWPoverview" Type="SWATModel.Store.tblSWATWPoverview" Multiplicity="1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATWPoverview">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_48_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="conflictWater" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_49_lkpSWATdomWaterUsesLU">
+          <End Role="lkpSWATdomWaterUsesLU" Type="SWATModel.Store.lkpSWATdomWaterUsesLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATdomWaterUsesLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domWaterUses" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_50_lkpSWATwaterCollectTimeLU">
+          <End Role="lkpSWATwaterCollectTimeLU" Type="SWATModel.Store.lkpSWATwaterCollectTimeLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwaterCollectTimeLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domwaterCollectTime" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_51_lkpSWATwaterEffortLU">
+          <End Role="lkpSWATwaterEffortLU" Type="SWATModel.Store.lkpSWATwaterEffortLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwaterEffortLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domwaterEffort" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_52_lkpSWATcollectDangerLU">
+          <End Role="lkpSWATcollectDangerLU" Type="SWATModel.Store.lkpSWATcollectDangerLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATcollectDangerLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domcollectDanger" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_53_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domdemoWaterFetch1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_54_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domdemoWaterFetch2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_55_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domdemoWaterFetch3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_56_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domdemoWaterFetch4" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_57_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domdemoWaterFetch5" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_58_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaInstitutionSupply" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_59_lkpSWATwaterCollectTimeLU">
+          <End Role="lkpSWATwaterCollectTimeLU" Type="SWATModel.Store.lkpSWATwaterCollectTimeLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwaterCollectTimeLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="inwaterCollectTime" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_60_lkpSWATwaterEffortLU">
+          <End Role="lkpSWATwaterEffortLU" Type="SWATModel.Store.lkpSWATwaterEffortLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwaterEffortLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="inwaterEffort" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_61_lkpSWATcollectDangerLU">
+          <End Role="lkpSWATcollectDangerLU" Type="SWATModel.Store.lkpSWATcollectDangerLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATcollectDangerLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="incollectDanger" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_62_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="indemoWaterFetch1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_63_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="indemoWaterFetch2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_64_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="indemoWaterFetch3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_65_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="indemoWaterFetch4" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_66_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="indemoWaterFetch5" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_67_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="ecSupply" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_68_lkpSWAT5rankLU">
+          <End Role="lkpSWAT5rankLU" Type="SWATModel.Store.lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaInterruptionFreq" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_69_lkpSWATwpaReliabilityMonthLU">
+          <End Role="lkpSWATwpaReliabilityMonthLU" Type="SWATModel.Store.lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_70_lkpSWATwpaReliabilityMonthLU">
+          <End Role="lkpSWATwpaReliabilityMonthLU" Type="SWATModel.Store.lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_71_lkpSWATwpaReliabilityMonthLU">
+          <End Role="lkpSWATwpaReliabilityMonthLU" Type="SWATModel.Store.lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_72_lkpSWATwpaReliabilityMonthLU">
+          <End Role="lkpSWATwpaReliabilityMonthLU" Type="SWATModel.Store.lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth4" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_73_lkpSWATwpaReliabilityMonthLU">
+          <End Role="lkpSWATwpaReliabilityMonthLU" Type="SWATModel.Store.lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth5" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_74_lkpSWATwpaReliabilityMonthLU">
+          <End Role="lkpSWATwpaReliabilityMonthLU" Type="SWATModel.Store.lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth6" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_75_lkpSWATwpaReliabilityMonthLU">
+          <End Role="lkpSWATwpaReliabilityMonthLU" Type="SWATModel.Store.lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth7" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_76_lkpSWATwpaReliabilityMonthLU">
+          <End Role="lkpSWATwpaReliabilityMonthLU" Type="SWATModel.Store.lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth8" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_77_lkpSWATwpaReliabilityMonthLU">
+          <End Role="lkpSWATwpaReliabilityMonthLU" Type="SWATModel.Store.lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth9" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_78_lkpSWATwpaReliabilityMonthLU">
+          <End Role="lkpSWATwpaReliabilityMonthLU" Type="SWATModel.Store.lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth10" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_79_lkpSWATwpaReliabilityMonthLU">
+          <End Role="lkpSWATwpaReliabilityMonthLU" Type="SWATModel.Store.lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth11" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_80_lkpSWATwpaReliabilityMonthLU">
+          <End Role="lkpSWATwpaReliabilityMonthLU" Type="SWATModel.Store.lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Role="tblSWATWPsupply" Type="SWATModel.Store.tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth12" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
@@ -5162,6 +6245,216 @@
             <End Role="tblSWATSurvey" EntitySet="tblSWATSurveys" />
             <End Role="tblSWATWPoverview" EntitySet="tblSWATWPoverviews" />
           </AssociationSet>
+          <EntitySet Name="tblSWATWPscores" EntityType="SWATModel.tblSWATWPscore" />
+          <AssociationSet Name="FK_tblSWATWPscore_2_tblSWATWPoverview" Association="SWATModel.FK_tblSWATWPscore_2_tblSWATWPoverview">
+            <End Role="tblSWATWPoverview" EntitySet="tblSWATWPoverviews" />
+            <End Role="tblSWATWPscore" EntitySet="tblSWATWPscores" />
+          </AssociationSet>
+          <EntitySet Name="lkpSWATWPscoreLUs" EntityType="SWATModel.lkpSWATWPscoreLU" />
+          <EntitySet Name="lkpSWATWPsectionLUs" EntityType="SWATModel.lkpSWATWPsectionLU" />
+          <AssociationSet Name="FK_lkpSWATWPscoreLU_3_lkpSWATWPsectionLU" Association="SWATModel.FK_lkpSWATWPscoreLU_3_lkpSWATWPsectionLU">
+            <End Role="lkpSWATWPsectionLU" EntitySet="lkpSWATWPsectionLUs" />
+            <End Role="lkpSWATWPscoreLU" EntitySet="lkpSWATWPscoreLUs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPscore_3_lkpSWATWPscoreLU" Association="SWATModel.FK_tblSWATWPscore_3_lkpSWATWPscoreLU">
+            <End Role="lkpSWATWPscoreLU" EntitySet="lkpSWATWPscoreLUs" />
+            <End Role="tblSWATWPscore" EntitySet="tblSWATWPscores" />
+          </AssociationSet>
+          <EntitySet Name="lkpSWATcollectDangerLUs" EntityType="SWATModel.lkpSWATcollectDangerLU" />
+          <EntitySet Name="lkpSWATdomWaterUsesLUs" EntityType="SWATModel.lkpSWATdomWaterUsesLU" />
+          <EntitySet Name="lkpSWATeaseUseLUs" EntityType="SWATModel.lkpSWATeaseUseLU" />
+          <EntitySet Name="lkpSWATscores_collectDanger" EntityType="SWATModel.lkpSWATscores_collectDanger" />
+          <EntitySet Name="lkpSWATscores_domWaterUses" EntityType="SWATModel.lkpSWATscores_domWaterUses" />
+          <EntitySet Name="lkpSWATscores_easeUse" EntityType="SWATModel.lkpSWATscores_easeUse" />
+          <EntitySet Name="lkpSWATscores_waterCollectTime" EntityType="SWATModel.lkpSWATscores_waterCollectTime" />
+          <EntitySet Name="lkpSWATscores_waterEffort" EntityType="SWATModel.lkpSWATscores_waterEffort" />
+          <EntitySet Name="lkpSWATscores_wpaReliabilityMonth" EntityType="SWATModel.lkpSWATscores_wpaReliabilityMonth" />
+          <EntitySet Name="lkpSWATwaterCollectTimeLUs" EntityType="SWATModel.lkpSWATwaterCollectTimeLU" />
+          <EntitySet Name="lkpSWATwaterEffortLUs" EntityType="SWATModel.lkpSWATwaterEffortLU" />
+          <EntitySet Name="lkpSWATwpaReliabilityMonthLUs" EntityType="SWATModel.lkpSWATwpaReliabilityMonthLU" />
+          <EntitySet Name="tblSWATWPsupplies" EntityType="SWATModel.tblSWATWPsupply" />
+          <AssociationSet Name="FK_tblSWATWPsupply_48_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATWPsupply_48_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_53_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATWPsupply_53_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_54_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATWPsupply_54_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_55_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATWPsupply_55_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_56_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATWPsupply_56_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_57_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATWPsupply_57_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_58_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATWPsupply_58_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_62_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATWPsupply_62_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_63_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATWPsupply_63_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_64_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATWPsupply_64_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_65_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATWPsupply_65_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_66_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATWPsupply_66_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_67_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATWPsupply_67_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_68_lkpSWAT5rankLU" Association="SWATModel.FK_tblSWATWPsupply_68_lkpSWAT5rankLU">
+            <End Role="lkpSWAT5rankLU" EntitySet="lkpSWAT5rankLU" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_52_lkpSWATcollectDangerLU" Association="SWATModel.FK_tblSWATWPsupply_52_lkpSWATcollectDangerLU">
+            <End Role="lkpSWATcollectDangerLU" EntitySet="lkpSWATcollectDangerLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_61_lkpSWATcollectDangerLU" Association="SWATModel.FK_tblSWATWPsupply_61_lkpSWATcollectDangerLU">
+            <End Role="lkpSWATcollectDangerLU" EntitySet="lkpSWATcollectDangerLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_49_lkpSWATdomWaterUsesLU" Association="SWATModel.FK_tblSWATWPsupply_49_lkpSWATdomWaterUsesLU">
+            <End Role="lkpSWATdomWaterUsesLU" EntitySet="lkpSWATdomWaterUsesLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_50_lkpSWATwaterCollectTimeLU" Association="SWATModel.FK_tblSWATWPsupply_50_lkpSWATwaterCollectTimeLU">
+            <End Role="lkpSWATwaterCollectTimeLU" EntitySet="lkpSWATwaterCollectTimeLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_59_lkpSWATwaterCollectTimeLU" Association="SWATModel.FK_tblSWATWPsupply_59_lkpSWATwaterCollectTimeLU">
+            <End Role="lkpSWATwaterCollectTimeLU" EntitySet="lkpSWATwaterCollectTimeLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_51_lkpSWATwaterEffortLU" Association="SWATModel.FK_tblSWATWPsupply_51_lkpSWATwaterEffortLU">
+            <End Role="lkpSWATwaterEffortLU" EntitySet="lkpSWATwaterEffortLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_60_lkpSWATwaterEffortLU" Association="SWATModel.FK_tblSWATWPsupply_60_lkpSWATwaterEffortLU">
+            <End Role="lkpSWATwaterEffortLU" EntitySet="lkpSWATwaterEffortLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_69_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.FK_tblSWATWPsupply_69_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_70_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.FK_tblSWATWPsupply_70_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_71_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.FK_tblSWATWPsupply_71_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_72_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.FK_tblSWATWPsupply_72_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_73_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.FK_tblSWATWPsupply_73_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_74_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.FK_tblSWATWPsupply_74_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_75_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.FK_tblSWATWPsupply_75_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_76_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.FK_tblSWATWPsupply_76_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_77_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.FK_tblSWATWPsupply_77_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_78_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.FK_tblSWATWPsupply_78_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_79_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.FK_tblSWATWPsupply_79_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_80_lkpSWATwpaReliabilityMonthLU" Association="SWATModel.FK_tblSWATWPsupply_80_lkpSWATwpaReliabilityMonthLU">
+            <End Role="lkpSWATwpaReliabilityMonthLU" EntitySet="lkpSWATwpaReliabilityMonthLUs" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPsupply_3_tblSWATWPoverview" Association="SWATModel.FK_tblSWATWPsupply_3_tblSWATWPoverview">
+            <End Role="tblSWATWPoverview" EntitySet="tblSWATWPoverviews" />
+            <End Role="tblSWATWPsupply" EntitySet="tblSWATWPsupplies" />
+          </AssociationSet>
+          <EntitySet Name="lkpSWATfaecalPathogensLUs" EntityType="SWATModel.lkpSWATfaecalPathogensLU" />
+          <EntitySet Name="lkpSWATqualTreatedLUs" EntityType="SWATModel.lkpSWATqualTreatedLU" />
+          <EntitySet Name="lkpSWATscores_faecalPathogens" EntityType="SWATModel.lkpSWATscores_faecalPathogens" />
+          <EntitySet Name="lkpSWATscores_qualTreated" EntityType="SWATModel.lkpSWATscores_qualTreated" />
+          <EntitySet Name="lkpSWATscores_userTreatedifTreatedbefore" EntityType="SWATModel.lkpSWATscores_userTreatedifTreatedbefore" />
+          <EntitySet Name="lkpSWATscores_userTreatedifUntreatedBefore" EntityType="SWATModel.lkpSWATscores_userTreatedifUntreatedBefore" />
+          <EntitySet Name="lkpSWATscores_userTreatmentMethod" EntityType="SWATModel.lkpSWATscores_userTreatmentMethod" />
+          <EntitySet Name="lkpSWATscores_waterTasteOdour" EntityType="SWATModel.lkpSWATscores_waterTasteOdour" />
+          <EntitySet Name="lkpSWATscores_waterTurbidity" EntityType="SWATModel.lkpSWATscores_waterTurbidity" />
+          <EntitySet Name="lkpSWATuserTreatedLUs" EntityType="SWATModel.lkpSWATuserTreatedLU" />
+          <EntitySet Name="lkpSWATuserTreatmentMethodLUs" EntityType="SWATModel.lkpSWATuserTreatmentMethodLU" />
+          <EntitySet Name="lkpSWATwaterTasteOdourLUs" EntityType="SWATModel.lkpSWATwaterTasteOdourLU" />
+          <EntitySet Name="lkpSWATwaterTurbidityLUs" EntityType="SWATModel.lkpSWATwaterTurbidityLU" />
+          <EntitySet Name="tblSWATWPqualities" EntityType="SWATModel.tblSWATWPquality" />
+          <AssociationSet Name="FK_tblSWATWPquality_8_lkpSWATfaecalPathogensLU" Association="SWATModel.FK_tblSWATWPquality_8_lkpSWATfaecalPathogensLU">
+            <End Role="lkpSWATfaecalPathogensLU" EntitySet="lkpSWATfaecalPathogensLUs" />
+            <End Role="tblSWATWPquality" EntitySet="tblSWATWPqualities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPquality_5_lkpSWATqualTreatedLU" Association="SWATModel.FK_tblSWATWPquality_5_lkpSWATqualTreatedLU">
+            <End Role="lkpSWATqualTreatedLU" EntitySet="lkpSWATqualTreatedLUs" />
+            <End Role="tblSWATWPquality" EntitySet="tblSWATWPqualities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPquality_6_lkpSWATuserTreatedLU" Association="SWATModel.FK_tblSWATWPquality_6_lkpSWATuserTreatedLU">
+            <End Role="lkpSWATuserTreatedLU" EntitySet="lkpSWATuserTreatedLUs" />
+            <End Role="tblSWATWPquality" EntitySet="tblSWATWPqualities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPquality_7_lkpSWATuserTreatmentMethodLU" Association="SWATModel.FK_tblSWATWPquality_7_lkpSWATuserTreatmentMethodLU">
+            <End Role="lkpSWATuserTreatmentMethodLU" EntitySet="lkpSWATuserTreatmentMethodLUs" />
+            <End Role="tblSWATWPquality" EntitySet="tblSWATWPqualities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPquality_10_lkpSWATwaterTasteOdourLU" Association="SWATModel.FK_tblSWATWPquality_10_lkpSWATwaterTasteOdourLU">
+            <End Role="lkpSWATwaterTasteOdourLU" EntitySet="lkpSWATwaterTasteOdourLUs" />
+            <End Role="tblSWATWPquality" EntitySet="tblSWATWPqualities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPquality_9_lkpSWATwaterTasteOdourLU" Association="SWATModel.FK_tblSWATWPquality_9_lkpSWATwaterTasteOdourLU">
+            <End Role="lkpSWATwaterTasteOdourLU" EntitySet="lkpSWATwaterTasteOdourLUs" />
+            <End Role="tblSWATWPquality" EntitySet="tblSWATWPqualities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPquality_11_lkpSWATwaterTurbidityLU" Association="SWATModel.FK_tblSWATWPquality_11_lkpSWATwaterTurbidityLU">
+            <End Role="lkpSWATwaterTurbidityLU" EntitySet="lkpSWATwaterTurbidityLUs" />
+            <End Role="tblSWATWPquality" EntitySet="tblSWATWPqualities" />
+          </AssociationSet>
+          <AssociationSet Name="FK_tblSWATWPquality_4_tblSWATWPoverview" Association="SWATModel.FK_tblSWATWPquality_4_tblSWATWPoverview">
+            <End Role="tblSWATWPoverview" EntitySet="tblSWATWPoverviews" />
+            <End Role="tblSWATWPquality" EntitySet="tblSWATWPqualities" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="lkpBiome">
           <Key>
@@ -5246,6 +6539,20 @@
           <NavigationProperty Name="tblSWATSFcentrals" Relationship="SWATModel.FK_tblSWATSFcentral_45_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATSFcentral" />
           <NavigationProperty Name="tblSWATSFseptics" Relationship="SWATModel.FK_tblSWATSFseptic_46_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATSFseptic" />
           <NavigationProperty Name="tblSWATSFseptics1" Relationship="SWATModel.FK_tblSWATSFseptic_47_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATSFseptic" />
+          <NavigationProperty Name="tblSWATWPsupplies" Relationship="SWATModel.FK_tblSWATWPsupply_48_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies1" Relationship="SWATModel.FK_tblSWATWPsupply_53_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies2" Relationship="SWATModel.FK_tblSWATWPsupply_54_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies3" Relationship="SWATModel.FK_tblSWATWPsupply_55_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies4" Relationship="SWATModel.FK_tblSWATWPsupply_56_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies5" Relationship="SWATModel.FK_tblSWATWPsupply_57_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies6" Relationship="SWATModel.FK_tblSWATWPsupply_58_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies7" Relationship="SWATModel.FK_tblSWATWPsupply_62_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies8" Relationship="SWATModel.FK_tblSWATWPsupply_63_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies9" Relationship="SWATModel.FK_tblSWATWPsupply_64_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies10" Relationship="SWATModel.FK_tblSWATWPsupply_65_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies11" Relationship="SWATModel.FK_tblSWATWPsupply_66_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies12" Relationship="SWATModel.FK_tblSWATWPsupply_67_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies13" Relationship="SWATModel.FK_tblSWATWPsupply_68_lkpSWAT5rankLU" FromRole="lkpSWAT5rankLU" ToRole="tblSWATWPsupply" />
         </EntityType>
         <EntityType Name="lkpSWATareaBMLU">
           <Key>
@@ -8979,6 +10286,10 @@
           <Property Type="Boolean" Name="wpaUseEc" Nullable="false" />
           <NavigationProperty Name="lkpSWATwpaLoc" Relationship="SWATModel.FK_tblSWATWPoverview_44_lkpSWATwpaLoc" FromRole="tblSWATWPoverview" ToRole="lkpSWATwpaLoc" />
           <NavigationProperty Name="tblSWATSurvey" Relationship="SWATModel.FK_tblSWATWPoverview_43_tblSWATSurvey" FromRole="tblSWATWPoverview" ToRole="tblSWATSurvey" />
+          <NavigationProperty Name="tblSWATWPscores" Relationship="SWATModel.FK_tblSWATWPscore_2_tblSWATWPoverview" FromRole="tblSWATWPoverview" ToRole="tblSWATWPscore" />
+          <Property Type="String" Name="wpaType" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblSWATWPsupplies" Relationship="SWATModel.FK_tblSWATWPsupply_3_tblSWATWPoverview" FromRole="tblSWATWPoverview" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPqualities" Relationship="SWATModel.FK_tblSWATWPquality_4_tblSWATWPoverview" FromRole="tblSWATWPoverview" ToRole="tblSWATWPquality" />
         </EntityType>
         <Association Name="FK_tblSWATWPoverview_44_lkpSWATwpaLoc">
           <End Type="SWATModel.lkpSWATwpaLoc" Role="lkpSWATwpaLoc" Multiplicity="0..1" />
@@ -9001,6 +10312,951 @@
             </Principal>
             <Dependent Role="tblSWATWPoverview">
               <PropertyRef Name="SurveyID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="tblSWATWPscore">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="wpID" Nullable="false" />
+          <Property Type="Int32" Name="ScoreID" Nullable="false" />
+          <Property Type="String" Name="ScoreName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="Value" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="tblSWATWPoverview" Relationship="SWATModel.FK_tblSWATWPscore_2_tblSWATWPoverview" FromRole="tblSWATWPscore" ToRole="tblSWATWPoverview" />
+          <NavigationProperty Name="lkpSWATWPscoreLU" Relationship="SWATModel.FK_tblSWATWPscore_3_lkpSWATWPscoreLU" FromRole="tblSWATWPscore" ToRole="lkpSWATWPscoreLU" />
+        </EntityType>
+        <Association Name="FK_tblSWATWPscore_2_tblSWATWPoverview">
+          <End Type="SWATModel.tblSWATWPoverview" Role="tblSWATWPoverview" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATWPscore" Role="tblSWATWPscore" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATWPoverview">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWPscore">
+              <PropertyRef Name="wpID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="lkpSWATWPscoreLU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="ScoreName" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="SectionID" />
+          <NavigationProperty Name="lkpSWATWPsectionLU" Relationship="SWATModel.FK_lkpSWATWPscoreLU_3_lkpSWATWPsectionLU" FromRole="lkpSWATWPscoreLU" ToRole="lkpSWATWPsectionLU" />
+          <NavigationProperty Name="tblSWATWPscores" Relationship="SWATModel.FK_tblSWATWPscore_3_lkpSWATWPscoreLU" FromRole="lkpSWATWPscoreLU" ToRole="tblSWATWPscore" />
+        </EntityType>
+        <EntityType Name="lkpSWATWPsectionLU">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="SectionName" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="lkpSWATWPscoreLUs" Relationship="SWATModel.FK_lkpSWATWPscoreLU_3_lkpSWATWPsectionLU" FromRole="lkpSWATWPsectionLU" ToRole="lkpSWATWPscoreLU" />
+        </EntityType>
+        <Association Name="FK_lkpSWATWPscoreLU_3_lkpSWATWPsectionLU">
+          <End Type="SWATModel.lkpSWATWPsectionLU" Role="lkpSWATWPsectionLU" Multiplicity="0..1" />
+          <End Type="SWATModel.lkpSWATWPscoreLU" Role="lkpSWATWPscoreLU" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATWPsectionLU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="lkpSWATWPscoreLU">
+              <PropertyRef Name="SectionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPscore_3_lkpSWATWPscoreLU">
+          <End Type="SWATModel.lkpSWATWPscoreLU" Role="lkpSWATWPscoreLU" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATWPscore" Role="tblSWATWPscore" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATWPscoreLU">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWPscore">
+              <PropertyRef Name="ScoreID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="lkpSWATcollectDangerLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWPsupplies" Relationship="SWATModel.FK_tblSWATWPsupply_52_lkpSWATcollectDangerLU" FromRole="lkpSWATcollectDangerLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies1" Relationship="SWATModel.FK_tblSWATWPsupply_61_lkpSWATcollectDangerLU" FromRole="lkpSWATcollectDangerLU" ToRole="tblSWATWPsupply" />
+        </EntityType>
+        <EntityType Name="lkpSWATdomWaterUsesLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWPsupplies" Relationship="SWATModel.FK_tblSWATWPsupply_49_lkpSWATdomWaterUsesLU" FromRole="lkpSWATdomWaterUsesLU" ToRole="tblSWATWPsupply" />
+        </EntityType>
+        <EntityType Name="lkpSWATeaseUseLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_collectDanger">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_domWaterUses">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_easeUse">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_waterCollectTime">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_waterEffort">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_wpaReliabilityMonth">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATwaterCollectTimeLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWPsupplies" Relationship="SWATModel.FK_tblSWATWPsupply_50_lkpSWATwaterCollectTimeLU" FromRole="lkpSWATwaterCollectTimeLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies1" Relationship="SWATModel.FK_tblSWATWPsupply_59_lkpSWATwaterCollectTimeLU" FromRole="lkpSWATwaterCollectTimeLU" ToRole="tblSWATWPsupply" />
+        </EntityType>
+        <EntityType Name="lkpSWATwaterEffortLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWPsupplies" Relationship="SWATModel.FK_tblSWATWPsupply_51_lkpSWATwaterEffortLU" FromRole="lkpSWATwaterEffortLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies1" Relationship="SWATModel.FK_tblSWATWPsupply_60_lkpSWATwaterEffortLU" FromRole="lkpSWATwaterEffortLU" ToRole="tblSWATWPsupply" />
+        </EntityType>
+        <EntityType Name="lkpSWATwpaReliabilityMonthLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWPsupplies" Relationship="SWATModel.FK_tblSWATWPsupply_69_lkpSWATwpaReliabilityMonthLU" FromRole="lkpSWATwpaReliabilityMonthLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies1" Relationship="SWATModel.FK_tblSWATWPsupply_70_lkpSWATwpaReliabilityMonthLU" FromRole="lkpSWATwpaReliabilityMonthLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies2" Relationship="SWATModel.FK_tblSWATWPsupply_71_lkpSWATwpaReliabilityMonthLU" FromRole="lkpSWATwpaReliabilityMonthLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies3" Relationship="SWATModel.FK_tblSWATWPsupply_72_lkpSWATwpaReliabilityMonthLU" FromRole="lkpSWATwpaReliabilityMonthLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies4" Relationship="SWATModel.FK_tblSWATWPsupply_73_lkpSWATwpaReliabilityMonthLU" FromRole="lkpSWATwpaReliabilityMonthLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies5" Relationship="SWATModel.FK_tblSWATWPsupply_74_lkpSWATwpaReliabilityMonthLU" FromRole="lkpSWATwpaReliabilityMonthLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies6" Relationship="SWATModel.FK_tblSWATWPsupply_75_lkpSWATwpaReliabilityMonthLU" FromRole="lkpSWATwpaReliabilityMonthLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies7" Relationship="SWATModel.FK_tblSWATWPsupply_76_lkpSWATwpaReliabilityMonthLU" FromRole="lkpSWATwpaReliabilityMonthLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies8" Relationship="SWATModel.FK_tblSWATWPsupply_77_lkpSWATwpaReliabilityMonthLU" FromRole="lkpSWATwpaReliabilityMonthLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies9" Relationship="SWATModel.FK_tblSWATWPsupply_78_lkpSWATwpaReliabilityMonthLU" FromRole="lkpSWATwpaReliabilityMonthLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies10" Relationship="SWATModel.FK_tblSWATWPsupply_79_lkpSWATwpaReliabilityMonthLU" FromRole="lkpSWATwpaReliabilityMonthLU" ToRole="tblSWATWPsupply" />
+          <NavigationProperty Name="tblSWATWPsupplies11" Relationship="SWATModel.FK_tblSWATWPsupply_80_lkpSWATwpaReliabilityMonthLU" FromRole="lkpSWATwpaReliabilityMonthLU" ToRole="tblSWATWPsupply" />
+        </EntityType>
+        <EntityType Name="tblSWATWPsupply">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="wpID" Nullable="false" />
+          <Property Type="Int32" Name="conflictWater" />
+          <Property Type="Double" Name="domPercentUse" />
+          <Property Type="Int32" Name="domCollectDry1" />
+          <Property Type="Double" Name="domCollectDryAmount1" />
+          <Property Type="Int32" Name="domCollectWet1" />
+          <Property Type="Double" Name="domCollectWetAmount1" />
+          <Property Type="Int32" Name="domCollectDry2" />
+          <Property Type="Double" Name="domCollectDryAmount2" />
+          <Property Type="Int32" Name="domCollectWet2" />
+          <Property Type="Double" Name="domCollectWetAmount2" />
+          <Property Type="Int32" Name="domCollectDry3" />
+          <Property Type="Double" Name="domCollectDryAmount3" />
+          <Property Type="Int32" Name="domCollectWet3" />
+          <Property Type="Double" Name="domCollectWetAmount3" />
+          <Property Type="Int32" Name="domPipedNumHHDry" />
+          <Property Type="Int32" Name="domPipedNumHHWet" />
+          <Property Type="Int32" Name="domWaterUses" />
+          <Property Type="Int32" Name="domwaterCollectTime" />
+          <Property Type="Int32" Name="domwaterEffort" />
+          <Property Type="Int32" Name="domcollectDanger" />
+          <Property Type="Boolean" Name="domdangerType1" Nullable="false" />
+          <Property Type="Boolean" Name="domdangerType2" Nullable="false" />
+          <Property Type="Boolean" Name="domdangerType3" Nullable="false" />
+          <Property Type="Int32" Name="domdemoWaterFetch1" />
+          <Property Type="Int32" Name="domdemoWaterFetch2" />
+          <Property Type="Int32" Name="domdemoWaterFetch3" />
+          <Property Type="Int32" Name="domdemoWaterFetch4" />
+          <Property Type="Int32" Name="domdemoWaterFetch5" />
+          <Property Type="Boolean" Name="wpaInstitutionHigh1" Nullable="false" />
+          <Property Type="Boolean" Name="wpaInstitutionHigh2" Nullable="false" />
+          <Property Type="Boolean" Name="wpaInstitutionHigh3" Nullable="false" />
+          <Property Type="Boolean" Name="wpaInstitutionHigh4" Nullable="false" />
+          <Property Type="Boolean" Name="wpaInstitutionLow1" Nullable="false" />
+          <Property Type="Boolean" Name="wpaInstitutionLow2" Nullable="false" />
+          <Property Type="Boolean" Name="wpaInstitutionLow3" Nullable="false" />
+          <Property Type="Boolean" Name="wpaInstitutionLow4" Nullable="false" />
+          <Property Type="Int32" Name="wpaInstitutionPeopleServedWet" />
+          <Property Type="Int32" Name="wpaInstitutionPeopleServedDry" />
+          <Property Type="Int32" Name="wpaInstitutionSupply" />
+          <Property Type="Int32" Name="inwaterCollectTime" />
+          <Property Type="Int32" Name="inwaterEffort" />
+          <Property Type="Int32" Name="incollectDanger" />
+          <Property Type="Boolean" Name="indangerType1" Nullable="false" />
+          <Property Type="Boolean" Name="indangerType2" Nullable="false" />
+          <Property Type="Boolean" Name="indangerType3" Nullable="false" />
+          <Property Type="Int32" Name="indemoWaterFetch1" />
+          <Property Type="Int32" Name="indemoWaterFetch2" />
+          <Property Type="Int32" Name="indemoWaterFetch3" />
+          <Property Type="Int32" Name="indemoWaterFetch4" />
+          <Property Type="Int32" Name="indemoWaterFetch5" />
+          <Property Type="Boolean" Name="ecWaterUse1" Nullable="false" />
+          <Property Type="Boolean" Name="ecWaterUse2" Nullable="false" />
+          <Property Type="Boolean" Name="ecWaterUse3" Nullable="false" />
+          <Property Type="Boolean" Name="ecWaterUse4" Nullable="false" />
+          <Property Type="Boolean" Name="ecWaterUse5" Nullable="false" />
+          <Property Type="Double" Name="ecWaterDemandDry" />
+          <Property Type="Double" Name="ecWaterDemandWet" />
+          <Property Type="Int32" Name="ecSupply" />
+          <Property Type="Int32" Name="wpaInterruptionFreq" />
+          <Property Type="Boolean" Name="wpaInterruption1" Nullable="false" />
+          <Property Type="Boolean" Name="wpaInterruption2" Nullable="false" />
+          <Property Type="Boolean" Name="wpaInterruption3" Nullable="false" />
+          <Property Type="Boolean" Name="wpaInterruption4" Nullable="false" />
+          <Property Type="Boolean" Name="wpaInterruption5" Nullable="false" />
+          <Property Type="Boolean" Name="wpaInterruption6" Nullable="false" />
+          <Property Type="Int32" Name="wpaReliabilityMonth1" />
+          <Property Type="Int32" Name="wpaReliabilityMonth2" />
+          <Property Type="Int32" Name="wpaReliabilityMonth3" />
+          <Property Type="Int32" Name="wpaReliabilityMonth4" />
+          <Property Type="Int32" Name="wpaReliabilityMonth5" />
+          <Property Type="Int32" Name="wpaReliabilityMonth6" />
+          <Property Type="Int32" Name="wpaReliabilityMonth7" />
+          <Property Type="Int32" Name="wpaReliabilityMonth8" />
+          <Property Type="Int32" Name="wpaReliabilityMonth9" />
+          <Property Type="Int32" Name="wpaReliabilityMonth10" />
+          <Property Type="Int32" Name="wpaReliabilityMonth11" />
+          <Property Type="Int32" Name="wpaReliabilityMonth12" />
+          <Property Type="Boolean" Name="wpaReliabilityProblem1" Nullable="false" />
+          <Property Type="Boolean" Name="wpaReliabilityProblem2" Nullable="false" />
+          <Property Type="Boolean" Name="wpaReliabilityProblem3" Nullable="false" />
+          <Property Type="Boolean" Name="wpaReliabilityProblem4" Nullable="false" />
+          <Property Type="Boolean" Name="wpaReliabilityProblem5" Nullable="false" />
+          <Property Type="Boolean" Name="wpaReliabilityProblem6" Nullable="false" />
+          <NavigationProperty Name="lkpSWAT5rankLU" Relationship="SWATModel.FK_tblSWATWPsupply_48_lkpSWAT5rankLU" FromRole="tblSWATWPsupply" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWAT5rankLU1" Relationship="SWATModel.FK_tblSWATWPsupply_53_lkpSWAT5rankLU" FromRole="tblSWATWPsupply" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWAT5rankLU2" Relationship="SWATModel.FK_tblSWATWPsupply_54_lkpSWAT5rankLU" FromRole="tblSWATWPsupply" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWAT5rankLU3" Relationship="SWATModel.FK_tblSWATWPsupply_55_lkpSWAT5rankLU" FromRole="tblSWATWPsupply" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWAT5rankLU4" Relationship="SWATModel.FK_tblSWATWPsupply_56_lkpSWAT5rankLU" FromRole="tblSWATWPsupply" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWAT5rankLU5" Relationship="SWATModel.FK_tblSWATWPsupply_57_lkpSWAT5rankLU" FromRole="tblSWATWPsupply" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWAT5rankLU6" Relationship="SWATModel.FK_tblSWATWPsupply_58_lkpSWAT5rankLU" FromRole="tblSWATWPsupply" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWAT5rankLU7" Relationship="SWATModel.FK_tblSWATWPsupply_62_lkpSWAT5rankLU" FromRole="tblSWATWPsupply" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWAT5rankLU8" Relationship="SWATModel.FK_tblSWATWPsupply_63_lkpSWAT5rankLU" FromRole="tblSWATWPsupply" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWAT5rankLU9" Relationship="SWATModel.FK_tblSWATWPsupply_64_lkpSWAT5rankLU" FromRole="tblSWATWPsupply" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWAT5rankLU10" Relationship="SWATModel.FK_tblSWATWPsupply_65_lkpSWAT5rankLU" FromRole="tblSWATWPsupply" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWAT5rankLU11" Relationship="SWATModel.FK_tblSWATWPsupply_66_lkpSWAT5rankLU" FromRole="tblSWATWPsupply" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWAT5rankLU12" Relationship="SWATModel.FK_tblSWATWPsupply_67_lkpSWAT5rankLU" FromRole="tblSWATWPsupply" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWAT5rankLU13" Relationship="SWATModel.FK_tblSWATWPsupply_68_lkpSWAT5rankLU" FromRole="tblSWATWPsupply" ToRole="lkpSWAT5rankLU" />
+          <NavigationProperty Name="lkpSWATcollectDangerLU" Relationship="SWATModel.FK_tblSWATWPsupply_52_lkpSWATcollectDangerLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATcollectDangerLU" />
+          <NavigationProperty Name="lkpSWATcollectDangerLU1" Relationship="SWATModel.FK_tblSWATWPsupply_61_lkpSWATcollectDangerLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATcollectDangerLU" />
+          <NavigationProperty Name="lkpSWATdomWaterUsesLU" Relationship="SWATModel.FK_tblSWATWPsupply_49_lkpSWATdomWaterUsesLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATdomWaterUsesLU" />
+          <NavigationProperty Name="lkpSWATwaterCollectTimeLU" Relationship="SWATModel.FK_tblSWATWPsupply_50_lkpSWATwaterCollectTimeLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATwaterCollectTimeLU" />
+          <NavigationProperty Name="lkpSWATwaterCollectTimeLU1" Relationship="SWATModel.FK_tblSWATWPsupply_59_lkpSWATwaterCollectTimeLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATwaterCollectTimeLU" />
+          <NavigationProperty Name="lkpSWATwaterEffortLU" Relationship="SWATModel.FK_tblSWATWPsupply_51_lkpSWATwaterEffortLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATwaterEffortLU" />
+          <NavigationProperty Name="lkpSWATwaterEffortLU1" Relationship="SWATModel.FK_tblSWATWPsupply_60_lkpSWATwaterEffortLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATwaterEffortLU" />
+          <NavigationProperty Name="lkpSWATwpaReliabilityMonthLU" Relationship="SWATModel.FK_tblSWATWPsupply_69_lkpSWATwpaReliabilityMonthLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATwpaReliabilityMonthLU" />
+          <NavigationProperty Name="lkpSWATwpaReliabilityMonthLU1" Relationship="SWATModel.FK_tblSWATWPsupply_70_lkpSWATwpaReliabilityMonthLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATwpaReliabilityMonthLU" />
+          <NavigationProperty Name="lkpSWATwpaReliabilityMonthLU2" Relationship="SWATModel.FK_tblSWATWPsupply_71_lkpSWATwpaReliabilityMonthLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATwpaReliabilityMonthLU" />
+          <NavigationProperty Name="lkpSWATwpaReliabilityMonthLU3" Relationship="SWATModel.FK_tblSWATWPsupply_72_lkpSWATwpaReliabilityMonthLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATwpaReliabilityMonthLU" />
+          <NavigationProperty Name="lkpSWATwpaReliabilityMonthLU4" Relationship="SWATModel.FK_tblSWATWPsupply_73_lkpSWATwpaReliabilityMonthLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATwpaReliabilityMonthLU" />
+          <NavigationProperty Name="lkpSWATwpaReliabilityMonthLU5" Relationship="SWATModel.FK_tblSWATWPsupply_74_lkpSWATwpaReliabilityMonthLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATwpaReliabilityMonthLU" />
+          <NavigationProperty Name="lkpSWATwpaReliabilityMonthLU6" Relationship="SWATModel.FK_tblSWATWPsupply_75_lkpSWATwpaReliabilityMonthLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATwpaReliabilityMonthLU" />
+          <NavigationProperty Name="lkpSWATwpaReliabilityMonthLU7" Relationship="SWATModel.FK_tblSWATWPsupply_76_lkpSWATwpaReliabilityMonthLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATwpaReliabilityMonthLU" />
+          <NavigationProperty Name="lkpSWATwpaReliabilityMonthLU8" Relationship="SWATModel.FK_tblSWATWPsupply_77_lkpSWATwpaReliabilityMonthLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATwpaReliabilityMonthLU" />
+          <NavigationProperty Name="lkpSWATwpaReliabilityMonthLU9" Relationship="SWATModel.FK_tblSWATWPsupply_78_lkpSWATwpaReliabilityMonthLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATwpaReliabilityMonthLU" />
+          <NavigationProperty Name="lkpSWATwpaReliabilityMonthLU10" Relationship="SWATModel.FK_tblSWATWPsupply_79_lkpSWATwpaReliabilityMonthLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATwpaReliabilityMonthLU" />
+          <NavigationProperty Name="lkpSWATwpaReliabilityMonthLU11" Relationship="SWATModel.FK_tblSWATWPsupply_80_lkpSWATwpaReliabilityMonthLU" FromRole="tblSWATWPsupply" ToRole="lkpSWATwpaReliabilityMonthLU" />
+          <NavigationProperty Name="tblSWATWPoverview" Relationship="SWATModel.FK_tblSWATWPsupply_3_tblSWATWPoverview" FromRole="tblSWATWPsupply" ToRole="tblSWATWPoverview" />
+        </EntityType>
+        <Association Name="FK_tblSWATWPsupply_48_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="conflictWater" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_53_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domdemoWaterFetch1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_54_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domdemoWaterFetch2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_55_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domdemoWaterFetch3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_56_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domdemoWaterFetch4" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_57_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domdemoWaterFetch5" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_58_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaInstitutionSupply" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_62_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="indemoWaterFetch1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_63_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="indemoWaterFetch2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_64_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="indemoWaterFetch3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_65_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="indemoWaterFetch4" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_66_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="indemoWaterFetch5" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_67_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="ecSupply" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_68_lkpSWAT5rankLU">
+          <End Type="SWATModel.lkpSWAT5rankLU" Role="lkpSWAT5rankLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWAT5rankLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaInterruptionFreq" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_52_lkpSWATcollectDangerLU">
+          <End Type="SWATModel.lkpSWATcollectDangerLU" Role="lkpSWATcollectDangerLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATcollectDangerLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domcollectDanger" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_61_lkpSWATcollectDangerLU">
+          <End Type="SWATModel.lkpSWATcollectDangerLU" Role="lkpSWATcollectDangerLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATcollectDangerLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="incollectDanger" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_49_lkpSWATdomWaterUsesLU">
+          <End Type="SWATModel.lkpSWATdomWaterUsesLU" Role="lkpSWATdomWaterUsesLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATdomWaterUsesLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domWaterUses" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_50_lkpSWATwaterCollectTimeLU">
+          <End Type="SWATModel.lkpSWATwaterCollectTimeLU" Role="lkpSWATwaterCollectTimeLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwaterCollectTimeLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domwaterCollectTime" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_59_lkpSWATwaterCollectTimeLU">
+          <End Type="SWATModel.lkpSWATwaterCollectTimeLU" Role="lkpSWATwaterCollectTimeLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwaterCollectTimeLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="inwaterCollectTime" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_51_lkpSWATwaterEffortLU">
+          <End Type="SWATModel.lkpSWATwaterEffortLU" Role="lkpSWATwaterEffortLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwaterEffortLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="domwaterEffort" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_60_lkpSWATwaterEffortLU">
+          <End Type="SWATModel.lkpSWATwaterEffortLU" Role="lkpSWATwaterEffortLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwaterEffortLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="inwaterEffort" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_69_lkpSWATwpaReliabilityMonthLU">
+          <End Type="SWATModel.lkpSWATwpaReliabilityMonthLU" Role="lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth1" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_70_lkpSWATwpaReliabilityMonthLU">
+          <End Type="SWATModel.lkpSWATwpaReliabilityMonthLU" Role="lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth2" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_71_lkpSWATwpaReliabilityMonthLU">
+          <End Type="SWATModel.lkpSWATwpaReliabilityMonthLU" Role="lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth3" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_72_lkpSWATwpaReliabilityMonthLU">
+          <End Type="SWATModel.lkpSWATwpaReliabilityMonthLU" Role="lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth4" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_73_lkpSWATwpaReliabilityMonthLU">
+          <End Type="SWATModel.lkpSWATwpaReliabilityMonthLU" Role="lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth5" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_74_lkpSWATwpaReliabilityMonthLU">
+          <End Type="SWATModel.lkpSWATwpaReliabilityMonthLU" Role="lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth6" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_75_lkpSWATwpaReliabilityMonthLU">
+          <End Type="SWATModel.lkpSWATwpaReliabilityMonthLU" Role="lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth7" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_76_lkpSWATwpaReliabilityMonthLU">
+          <End Type="SWATModel.lkpSWATwpaReliabilityMonthLU" Role="lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth8" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_77_lkpSWATwpaReliabilityMonthLU">
+          <End Type="SWATModel.lkpSWATwpaReliabilityMonthLU" Role="lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth9" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_78_lkpSWATwpaReliabilityMonthLU">
+          <End Type="SWATModel.lkpSWATwpaReliabilityMonthLU" Role="lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth10" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_79_lkpSWATwpaReliabilityMonthLU">
+          <End Type="SWATModel.lkpSWATwpaReliabilityMonthLU" Role="lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth11" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_80_lkpSWATwpaReliabilityMonthLU">
+          <End Type="SWATModel.lkpSWATwpaReliabilityMonthLU" Role="lkpSWATwpaReliabilityMonthLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwpaReliabilityMonthLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpaReliabilityMonth12" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPsupply_3_tblSWATWPoverview">
+          <End Type="SWATModel.tblSWATWPoverview" Role="tblSWATWPoverview" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATWPsupply" Role="tblSWATWPsupply" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATWPoverview">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWPsupply">
+              <PropertyRef Name="wpID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="lkpSWATfaecalPathogensLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWPqualities" Relationship="SWATModel.FK_tblSWATWPquality_8_lkpSWATfaecalPathogensLU" FromRole="lkpSWATfaecalPathogensLU" ToRole="tblSWATWPquality" />
+        </EntityType>
+        <EntityType Name="lkpSWATqualTreatedLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWPqualities" Relationship="SWATModel.FK_tblSWATWPquality_5_lkpSWATqualTreatedLU" FromRole="lkpSWATqualTreatedLU" ToRole="tblSWATWPquality" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_faecalPathogens">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_qualTreated">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_userTreatedifTreatedbefore">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_userTreatedifUntreatedBefore">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_userTreatmentMethod">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_waterTasteOdour">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATscores_waterTurbidity">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="lkpSWATuserTreatedLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWPqualities" Relationship="SWATModel.FK_tblSWATWPquality_6_lkpSWATuserTreatedLU" FromRole="lkpSWATuserTreatedLU" ToRole="tblSWATWPquality" />
+        </EntityType>
+        <EntityType Name="lkpSWATuserTreatmentMethodLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWPqualities" Relationship="SWATModel.FK_tblSWATWPquality_7_lkpSWATuserTreatmentMethodLU" FromRole="lkpSWATuserTreatmentMethodLU" ToRole="tblSWATWPquality" />
+        </EntityType>
+        <EntityType Name="lkpSWATwaterTasteOdourLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWPqualities" Relationship="SWATModel.FK_tblSWATWPquality_10_lkpSWATwaterTasteOdourLU" FromRole="lkpSWATwaterTasteOdourLU" ToRole="tblSWATWPquality" />
+          <NavigationProperty Name="tblSWATWPqualities1" Relationship="SWATModel.FK_tblSWATWPquality_9_lkpSWATwaterTasteOdourLU" FromRole="lkpSWATwaterTasteOdourLU" ToRole="tblSWATWPquality" />
+        </EntityType>
+        <EntityType Name="lkpSWATwaterTurbidityLU">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Description" MaxLength="254" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="intorder" annotation:StoreGeneratedPattern="Identity" />
+          <NavigationProperty Name="tblSWATWPqualities" Relationship="SWATModel.FK_tblSWATWPquality_11_lkpSWATwaterTurbidityLU" FromRole="lkpSWATwaterTurbidityLU" ToRole="tblSWATWPquality" />
+        </EntityType>
+        <EntityType Name="tblSWATWPquality">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int64" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int64" Name="wpID" Nullable="false" />
+          <Property Type="Int32" Name="qualTreated" />
+          <Property Type="Int32" Name="userTreated" />
+          <Property Type="Int32" Name="userTreatmentMethod" />
+          <Property Type="Int32" Name="faecalPathogens" />
+          <Property Type="Int32" Name="waterTaste" />
+          <Property Type="Int32" Name="waterOdour" />
+          <Property Type="Int32" Name="waterTurbidity" />
+          <NavigationProperty Name="lkpSWATfaecalPathogensLU" Relationship="SWATModel.FK_tblSWATWPquality_8_lkpSWATfaecalPathogensLU" FromRole="tblSWATWPquality" ToRole="lkpSWATfaecalPathogensLU" />
+          <NavigationProperty Name="lkpSWATqualTreatedLU" Relationship="SWATModel.FK_tblSWATWPquality_5_lkpSWATqualTreatedLU" FromRole="tblSWATWPquality" ToRole="lkpSWATqualTreatedLU" />
+          <NavigationProperty Name="lkpSWATuserTreatedLU" Relationship="SWATModel.FK_tblSWATWPquality_6_lkpSWATuserTreatedLU" FromRole="tblSWATWPquality" ToRole="lkpSWATuserTreatedLU" />
+          <NavigationProperty Name="lkpSWATuserTreatmentMethodLU" Relationship="SWATModel.FK_tblSWATWPquality_7_lkpSWATuserTreatmentMethodLU" FromRole="tblSWATWPquality" ToRole="lkpSWATuserTreatmentMethodLU" />
+          <NavigationProperty Name="lkpSWATwaterTasteOdourLU" Relationship="SWATModel.FK_tblSWATWPquality_10_lkpSWATwaterTasteOdourLU" FromRole="tblSWATWPquality" ToRole="lkpSWATwaterTasteOdourLU" />
+          <NavigationProperty Name="lkpSWATwaterTasteOdourLU1" Relationship="SWATModel.FK_tblSWATWPquality_9_lkpSWATwaterTasteOdourLU" FromRole="tblSWATWPquality" ToRole="lkpSWATwaterTasteOdourLU" />
+          <NavigationProperty Name="lkpSWATwaterTurbidityLU" Relationship="SWATModel.FK_tblSWATWPquality_11_lkpSWATwaterTurbidityLU" FromRole="tblSWATWPquality" ToRole="lkpSWATwaterTurbidityLU" />
+          <NavigationProperty Name="tblSWATWPoverview" Relationship="SWATModel.FK_tblSWATWPquality_4_tblSWATWPoverview" FromRole="tblSWATWPquality" ToRole="tblSWATWPoverview" />
+        </EntityType>
+        <Association Name="FK_tblSWATWPquality_8_lkpSWATfaecalPathogensLU">
+          <End Type="SWATModel.lkpSWATfaecalPathogensLU" Role="lkpSWATfaecalPathogensLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPquality" Role="tblSWATWPquality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATfaecalPathogensLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPquality">
+              <PropertyRef Name="faecalPathogens" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPquality_5_lkpSWATqualTreatedLU">
+          <End Type="SWATModel.lkpSWATqualTreatedLU" Role="lkpSWATqualTreatedLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPquality" Role="tblSWATWPquality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATqualTreatedLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPquality">
+              <PropertyRef Name="qualTreated" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPquality_6_lkpSWATuserTreatedLU">
+          <End Type="SWATModel.lkpSWATuserTreatedLU" Role="lkpSWATuserTreatedLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPquality" Role="tblSWATWPquality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATuserTreatedLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPquality">
+              <PropertyRef Name="userTreated" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPquality_7_lkpSWATuserTreatmentMethodLU">
+          <End Type="SWATModel.lkpSWATuserTreatmentMethodLU" Role="lkpSWATuserTreatmentMethodLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPquality" Role="tblSWATWPquality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATuserTreatmentMethodLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPquality">
+              <PropertyRef Name="userTreatmentMethod" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPquality_10_lkpSWATwaterTasteOdourLU">
+          <End Type="SWATModel.lkpSWATwaterTasteOdourLU" Role="lkpSWATwaterTasteOdourLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPquality" Role="tblSWATWPquality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwaterTasteOdourLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPquality">
+              <PropertyRef Name="waterOdour" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPquality_9_lkpSWATwaterTasteOdourLU">
+          <End Type="SWATModel.lkpSWATwaterTasteOdourLU" Role="lkpSWATwaterTasteOdourLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPquality" Role="tblSWATWPquality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwaterTasteOdourLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPquality">
+              <PropertyRef Name="waterTaste" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPquality_11_lkpSWATwaterTurbidityLU">
+          <End Type="SWATModel.lkpSWATwaterTurbidityLU" Role="lkpSWATwaterTurbidityLU" Multiplicity="0..1" />
+          <End Type="SWATModel.tblSWATWPquality" Role="tblSWATWPquality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="lkpSWATwaterTurbidityLU">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="tblSWATWPquality">
+              <PropertyRef Name="waterTurbidity" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_tblSWATWPquality_4_tblSWATWPoverview">
+          <End Type="SWATModel.tblSWATWPoverview" Role="tblSWATWPoverview" Multiplicity="1" />
+          <End Type="SWATModel.tblSWATWPquality" Role="tblSWATWPquality" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="tblSWATWPoverview">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="tblSWATWPquality">
+              <PropertyRef Name="wpID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -10765,12 +13021,375 @@
           <EntitySetMapping Name="tblSWATWPoverviews">
             <EntityTypeMapping TypeName="SWATModel.tblSWATWPoverview">
               <MappingFragment StoreEntitySet="tblSWATWPoverview">
+                <ScalarProperty Name="wpaType" ColumnName="wpaType" />
                 <ScalarProperty Name="wpaUseEc" ColumnName="wpaUseEc" />
                 <ScalarProperty Name="wpaUseInst" ColumnName="wpaUseInst" />
                 <ScalarProperty Name="wpaUseDom" ColumnName="wpaUseDom" />
                 <ScalarProperty Name="wpaLoc" ColumnName="wpaLoc" />
                 <ScalarProperty Name="wpname" ColumnName="wpname" />
                 <ScalarProperty Name="SurveyID" ColumnName="SurveyID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATWPscores">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATWPscore">
+              <MappingFragment StoreEntitySet="tblSWATWPscore">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Value" ColumnName="Value" />
+                <ScalarProperty Name="ScoreName" ColumnName="ScoreName" />
+                <ScalarProperty Name="ScoreID" ColumnName="ScoreID" />
+                <ScalarProperty Name="wpID" ColumnName="wpID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATWPscoreLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATWPscoreLU">
+              <MappingFragment StoreEntitySet="lkpSWATWPscoreLU">
+                <ScalarProperty Name="SectionID" ColumnName="SectionID" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="ScoreName" ColumnName="ScoreName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATWPsectionLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATWPsectionLU">
+              <MappingFragment StoreEntitySet="lkpSWATWPsectionLU">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="SectionName" ColumnName="SectionName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATcollectDangerLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATcollectDangerLU">
+              <MappingFragment StoreEntitySet="lkpSWATcollectDangerLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATdomWaterUsesLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATdomWaterUsesLU">
+              <MappingFragment StoreEntitySet="lkpSWATdomWaterUsesLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATeaseUseLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATeaseUseLU">
+              <MappingFragment StoreEntitySet="lkpSWATeaseUseLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_collectDanger">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_collectDanger">
+              <MappingFragment StoreEntitySet="lkpSWATscores_collectDanger">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_domWaterUses">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_domWaterUses">
+              <MappingFragment StoreEntitySet="lkpSWATscores_domWaterUses">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_easeUse">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_easeUse">
+              <MappingFragment StoreEntitySet="lkpSWATscores_easeUse">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_waterCollectTime">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_waterCollectTime">
+              <MappingFragment StoreEntitySet="lkpSWATscores_waterCollectTime">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_waterEffort">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_waterEffort">
+              <MappingFragment StoreEntitySet="lkpSWATscores_waterEffort">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_wpaReliabilityMonth">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_wpaReliabilityMonth">
+              <MappingFragment StoreEntitySet="lkpSWATscores_wpaReliabilityMonth">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATwaterCollectTimeLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATwaterCollectTimeLU">
+              <MappingFragment StoreEntitySet="lkpSWATwaterCollectTimeLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATwaterEffortLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATwaterEffortLU">
+              <MappingFragment StoreEntitySet="lkpSWATwaterEffortLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATwpaReliabilityMonthLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATwpaReliabilityMonthLU">
+              <MappingFragment StoreEntitySet="lkpSWATwpaReliabilityMonthLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATWPsupplies">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATWPsupply">
+              <MappingFragment StoreEntitySet="tblSWATWPsupply">
+                <ScalarProperty Name="wpaReliabilityProblem6" ColumnName="wpaReliabilityProblem6" />
+                <ScalarProperty Name="wpaReliabilityProblem5" ColumnName="wpaReliabilityProblem5" />
+                <ScalarProperty Name="wpaReliabilityProblem4" ColumnName="wpaReliabilityProblem4" />
+                <ScalarProperty Name="wpaReliabilityProblem3" ColumnName="wpaReliabilityProblem3" />
+                <ScalarProperty Name="wpaReliabilityProblem2" ColumnName="wpaReliabilityProblem2" />
+                <ScalarProperty Name="wpaReliabilityProblem1" ColumnName="wpaReliabilityProblem1" />
+                <ScalarProperty Name="wpaReliabilityMonth12" ColumnName="wpaReliabilityMonth12" />
+                <ScalarProperty Name="wpaReliabilityMonth11" ColumnName="wpaReliabilityMonth11" />
+                <ScalarProperty Name="wpaReliabilityMonth10" ColumnName="wpaReliabilityMonth10" />
+                <ScalarProperty Name="wpaReliabilityMonth9" ColumnName="wpaReliabilityMonth9" />
+                <ScalarProperty Name="wpaReliabilityMonth8" ColumnName="wpaReliabilityMonth8" />
+                <ScalarProperty Name="wpaReliabilityMonth7" ColumnName="wpaReliabilityMonth7" />
+                <ScalarProperty Name="wpaReliabilityMonth6" ColumnName="wpaReliabilityMonth6" />
+                <ScalarProperty Name="wpaReliabilityMonth5" ColumnName="wpaReliabilityMonth5" />
+                <ScalarProperty Name="wpaReliabilityMonth4" ColumnName="wpaReliabilityMonth4" />
+                <ScalarProperty Name="wpaReliabilityMonth3" ColumnName="wpaReliabilityMonth3" />
+                <ScalarProperty Name="wpaReliabilityMonth2" ColumnName="wpaReliabilityMonth2" />
+                <ScalarProperty Name="wpaReliabilityMonth1" ColumnName="wpaReliabilityMonth1" />
+                <ScalarProperty Name="wpaInterruption6" ColumnName="wpaInterruption6" />
+                <ScalarProperty Name="wpaInterruption5" ColumnName="wpaInterruption5" />
+                <ScalarProperty Name="wpaInterruption4" ColumnName="wpaInterruption4" />
+                <ScalarProperty Name="wpaInterruption3" ColumnName="wpaInterruption3" />
+                <ScalarProperty Name="wpaInterruption2" ColumnName="wpaInterruption2" />
+                <ScalarProperty Name="wpaInterruption1" ColumnName="wpaInterruption1" />
+                <ScalarProperty Name="wpaInterruptionFreq" ColumnName="wpaInterruptionFreq" />
+                <ScalarProperty Name="ecSupply" ColumnName="ecSupply" />
+                <ScalarProperty Name="ecWaterDemandWet" ColumnName="ecWaterDemandWet" />
+                <ScalarProperty Name="ecWaterDemandDry" ColumnName="ecWaterDemandDry" />
+                <ScalarProperty Name="ecWaterUse5" ColumnName="ecWaterUse5" />
+                <ScalarProperty Name="ecWaterUse4" ColumnName="ecWaterUse4" />
+                <ScalarProperty Name="ecWaterUse3" ColumnName="ecWaterUse3" />
+                <ScalarProperty Name="ecWaterUse2" ColumnName="ecWaterUse2" />
+                <ScalarProperty Name="ecWaterUse1" ColumnName="ecWaterUse1" />
+                <ScalarProperty Name="indemoWaterFetch5" ColumnName="indemoWaterFetch5" />
+                <ScalarProperty Name="indemoWaterFetch4" ColumnName="indemoWaterFetch4" />
+                <ScalarProperty Name="indemoWaterFetch3" ColumnName="indemoWaterFetch3" />
+                <ScalarProperty Name="indemoWaterFetch2" ColumnName="indemoWaterFetch2" />
+                <ScalarProperty Name="indemoWaterFetch1" ColumnName="indemoWaterFetch1" />
+                <ScalarProperty Name="indangerType3" ColumnName="indangerType3" />
+                <ScalarProperty Name="indangerType2" ColumnName="indangerType2" />
+                <ScalarProperty Name="indangerType1" ColumnName="indangerType1" />
+                <ScalarProperty Name="incollectDanger" ColumnName="incollectDanger" />
+                <ScalarProperty Name="inwaterEffort" ColumnName="inwaterEffort" />
+                <ScalarProperty Name="inwaterCollectTime" ColumnName="inwaterCollectTime" />
+                <ScalarProperty Name="wpaInstitutionSupply" ColumnName="wpaInstitutionSupply" />
+                <ScalarProperty Name="wpaInstitutionPeopleServedDry" ColumnName="wpaInstitutionPeopleServedDry" />
+                <ScalarProperty Name="wpaInstitutionPeopleServedWet" ColumnName="wpaInstitutionPeopleServedWet" />
+                <ScalarProperty Name="wpaInstitutionLow4" ColumnName="wpaInstitutionLow4" />
+                <ScalarProperty Name="wpaInstitutionLow3" ColumnName="wpaInstitutionLow3" />
+                <ScalarProperty Name="wpaInstitutionLow2" ColumnName="wpaInstitutionLow2" />
+                <ScalarProperty Name="wpaInstitutionLow1" ColumnName="wpaInstitutionLow1" />
+                <ScalarProperty Name="wpaInstitutionHigh4" ColumnName="wpaInstitutionHigh4" />
+                <ScalarProperty Name="wpaInstitutionHigh3" ColumnName="wpaInstitutionHigh3" />
+                <ScalarProperty Name="wpaInstitutionHigh2" ColumnName="wpaInstitutionHigh2" />
+                <ScalarProperty Name="wpaInstitutionHigh1" ColumnName="wpaInstitutionHigh1" />
+                <ScalarProperty Name="domdemoWaterFetch5" ColumnName="domdemoWaterFetch5" />
+                <ScalarProperty Name="domdemoWaterFetch4" ColumnName="domdemoWaterFetch4" />
+                <ScalarProperty Name="domdemoWaterFetch3" ColumnName="domdemoWaterFetch3" />
+                <ScalarProperty Name="domdemoWaterFetch2" ColumnName="domdemoWaterFetch2" />
+                <ScalarProperty Name="domdemoWaterFetch1" ColumnName="domdemoWaterFetch1" />
+                <ScalarProperty Name="domdangerType3" ColumnName="domdangerType3" />
+                <ScalarProperty Name="domdangerType2" ColumnName="domdangerType2" />
+                <ScalarProperty Name="domdangerType1" ColumnName="domdangerType1" />
+                <ScalarProperty Name="domcollectDanger" ColumnName="domcollectDanger" />
+                <ScalarProperty Name="domwaterEffort" ColumnName="domwaterEffort" />
+                <ScalarProperty Name="domwaterCollectTime" ColumnName="domwaterCollectTime" />
+                <ScalarProperty Name="domWaterUses" ColumnName="domWaterUses" />
+                <ScalarProperty Name="domPipedNumHHWet" ColumnName="domPipedNumHHWet" />
+                <ScalarProperty Name="domPipedNumHHDry" ColumnName="domPipedNumHHDry" />
+                <ScalarProperty Name="domCollectWetAmount3" ColumnName="domCollectWetAmount3" />
+                <ScalarProperty Name="domCollectWet3" ColumnName="domCollectWet3" />
+                <ScalarProperty Name="domCollectDryAmount3" ColumnName="domCollectDryAmount3" />
+                <ScalarProperty Name="domCollectDry3" ColumnName="domCollectDry3" />
+                <ScalarProperty Name="domCollectWetAmount2" ColumnName="domCollectWetAmount2" />
+                <ScalarProperty Name="domCollectWet2" ColumnName="domCollectWet2" />
+                <ScalarProperty Name="domCollectDryAmount2" ColumnName="domCollectDryAmount2" />
+                <ScalarProperty Name="domCollectDry2" ColumnName="domCollectDry2" />
+                <ScalarProperty Name="domCollectWetAmount1" ColumnName="domCollectWetAmount1" />
+                <ScalarProperty Name="domCollectWet1" ColumnName="domCollectWet1" />
+                <ScalarProperty Name="domCollectDryAmount1" ColumnName="domCollectDryAmount1" />
+                <ScalarProperty Name="domCollectDry1" ColumnName="domCollectDry1" />
+                <ScalarProperty Name="domPercentUse" ColumnName="domPercentUse" />
+                <ScalarProperty Name="conflictWater" ColumnName="conflictWater" />
+                <ScalarProperty Name="wpID" ColumnName="wpID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATfaecalPathogensLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATfaecalPathogensLU">
+              <MappingFragment StoreEntitySet="lkpSWATfaecalPathogensLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATqualTreatedLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATqualTreatedLU">
+              <MappingFragment StoreEntitySet="lkpSWATqualTreatedLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_faecalPathogens">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_faecalPathogens">
+              <MappingFragment StoreEntitySet="lkpSWATscores_faecalPathogens">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_qualTreated">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_qualTreated">
+              <MappingFragment StoreEntitySet="lkpSWATscores_qualTreated">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_userTreatedifTreatedbefore">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_userTreatedifTreatedbefore">
+              <MappingFragment StoreEntitySet="lkpSWATscores_userTreatedifTreatedbefore">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_userTreatedifUntreatedBefore">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_userTreatedifUntreatedBefore">
+              <MappingFragment StoreEntitySet="lkpSWATscores_userTreatedifUntreatedBefore">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_userTreatmentMethod">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_userTreatmentMethod">
+              <MappingFragment StoreEntitySet="lkpSWATscores_userTreatmentMethod">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_waterTasteOdour">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_waterTasteOdour">
+              <MappingFragment StoreEntitySet="lkpSWATscores_waterTasteOdour">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATscores_waterTurbidity">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATscores_waterTurbidity">
+              <MappingFragment StoreEntitySet="lkpSWATscores_waterTurbidity">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATuserTreatedLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATuserTreatedLU">
+              <MappingFragment StoreEntitySet="lkpSWATuserTreatedLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATuserTreatmentMethodLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATuserTreatmentMethodLU">
+              <MappingFragment StoreEntitySet="lkpSWATuserTreatmentMethodLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATwaterTasteOdourLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATwaterTasteOdourLU">
+              <MappingFragment StoreEntitySet="lkpSWATwaterTasteOdourLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="lkpSWATwaterTurbidityLUs">
+            <EntityTypeMapping TypeName="SWATModel.lkpSWATwaterTurbidityLU">
+              <MappingFragment StoreEntitySet="lkpSWATwaterTurbidityLU">
+                <ScalarProperty Name="intorder" ColumnName="intorder" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tblSWATWPqualities">
+            <EntityTypeMapping TypeName="SWATModel.tblSWATWPquality">
+              <MappingFragment StoreEntitySet="tblSWATWPquality">
+                <ScalarProperty Name="waterTurbidity" ColumnName="waterTurbidity" />
+                <ScalarProperty Name="waterOdour" ColumnName="waterOdour" />
+                <ScalarProperty Name="waterTaste" ColumnName="waterTaste" />
+                <ScalarProperty Name="faecalPathogens" ColumnName="faecalPathogens" />
+                <ScalarProperty Name="userTreatmentMethod" ColumnName="userTreatmentMethod" />
+                <ScalarProperty Name="userTreated" ColumnName="userTreated" />
+                <ScalarProperty Name="qualTreated" ColumnName="qualTreated" />
+                <ScalarProperty Name="wpID" ColumnName="wpID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

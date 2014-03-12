@@ -203,6 +203,10 @@
     <Compile Include="Controllers\WAPrecipitationController.cs" />
     <Compile Include="Controllers\WARiskPrepController.cs" />
     <Compile Include="Controllers\WASurfaceWaterController.cs" />
+    <Compile Include="Controllers\WaterPointController.cs" />
+    <Compile Include="Controllers\WPQualityController.cs" />
+    <Compile Include="Controllers\WPScoreLUController.cs" />
+    <Compile Include="Controllers\WPSupplyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -245,6 +249,9 @@
     <Compile Include="Models\lkpSWATcentralTreatmentTypeLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATcollectDangerLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATcomponentLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -255,6 +262,12 @@
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATdevSiteLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATdomWaterUsesLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATeaseUseLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATeconPrisLU.cs">
@@ -276,6 +289,9 @@
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATextVisitLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATfaecalPathogensLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATfundAppLU.cs">
@@ -350,6 +366,9 @@
     <Compile Include="Models\lkpSWATpubCleanLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATqualTreatedLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATroscaLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -386,10 +405,19 @@
     <Compile Include="Models\lkpSWATscores_centralTreatment.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATscores_collectDanger.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATscores_comSatisfaction.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATscores_cropLoss.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_domWaterUses.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_easeUse.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATscores_econPris.cs">
@@ -411,6 +439,9 @@
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATscores_extVisit.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_faecalPathogens.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATscores_fundAppFUND.cs">
@@ -473,6 +504,9 @@
     <Compile Include="Models\lkpSWATscores_pubClean.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATscores_qualTreated.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATscores_rosca.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -497,6 +531,15 @@
     <Compile Include="Models\lkpSWATscores_urbanDistance.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATscores_userTreatedifTreatedbefore.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_userTreatedifUntreatedBefore.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_userTreatmentMethod.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATscores_watActionPlan.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -512,10 +555,25 @@
     <Compile Include="Models\lkpSWATscores_watComConcerns.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATscores_waterCollectTime.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_waterEffort.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_waterTasteOdour.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_waterTurbidity.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATscores_watTechStaff.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATscores_watTechTraining.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATscores_wpaReliabilityMonth.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATscores_YesNoLUYesGood.cs">
@@ -548,6 +606,12 @@
     <Compile Include="Models\lkpSWATurbanDistanceLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATuserTreatedLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATuserTreatmentMethodLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATwatActionPlanLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -563,10 +627,22 @@
     <Compile Include="Models\lkpSWATwatComLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATwaterCollectTimeLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATwaterEffortLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATwaterMonthLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATWatershedsLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATwaterTasteOdourLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATwaterTurbidityLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATwatTechStaffLU.cs">
@@ -578,7 +654,16 @@
     <Compile Include="Models\lkpSWATwpaLoc.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\lkpSWATwpaReliabilityMonthLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\lkpSWATwpaTypeDesc.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATWPscoreLU.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\lkpSWATWPsectionLU.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\lkpSWATYesNoLU.cs">
@@ -714,6 +799,15 @@
     <Compile Include="Models\tblSWATWPoverview.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\tblSWATWPquality.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSWATWPscore.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\tblSWATWPsupply.cs">
+      <DependentUpon>SWATModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Userid.cs">
       <DependentUpon>SWATModel.tt</DependentUpon>
     </Compile>
@@ -721,11 +815,13 @@
     <Compile Include="ViewModels\ChartsModel.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\images\background.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\CCWaterManagement.js" />
     <Content Include="Content\CommunityInfo.js" />
     <Content Include="Content\CCExternal.js" />
+    <Content Include="Content\images\hydro.png" />
     <Content Include="Content\Location.js" />
     <Content Include="Content\PagedList.css" />
     <Content Include="Content\SFCentral.js" />
@@ -800,6 +896,7 @@
     <Content Include="Content\WAannualPrecip.js" />
     <Content Include="Content\WAExtremeEvent.js" />
     <Content Include="Content\WARiskPrep.js" />
+    <Content Include="Content\WPSupply.js" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <EntityDeploy Include="Models\SWATModel.edmx">
@@ -1044,6 +1141,35 @@
     <Content Include="Views\SFLat\Edit.cshtml" />
     <Content Include="Views\SFLat\Delete.cshtml" />
     <Content Include="Views\Survey\WaterPoints.cshtml" />
+    <Content Include="Views\WaterPoint\Index.cshtml" />
+    <Content Include="Views\WaterPoint\Details.cshtml" />
+    <Content Include="Views\WaterPoint\Create.cshtml" />
+    <Content Include="Views\WaterPoint\Edit.cshtml" />
+    <Content Include="Views\WaterPoint\Delete.cshtml" />
+    <Content Include="Views\Survey\_wpList.cshtml" />
+    <Content Include="Views\WPSupply\Index.cshtml" />
+    <Content Include="Views\WPSupply\Details.cshtml" />
+    <Content Include="Views\WPSupply\Create.cshtml" />
+    <Content Include="Views\WPSupply\Edit.cshtml" />
+    <Content Include="Views\WPSupply\Delete.cshtml" />
+    <Content Include="Views\WPScoreLU\Index.cshtml" />
+    <Content Include="Views\WPScoreLU\Details.cshtml" />
+    <Content Include="Views\WPScoreLU\Create.cshtml" />
+    <Content Include="Views\WPScoreLU\Edit.cshtml" />
+    <Content Include="Views\WPScoreLU\Delete.cshtml" />
+    <Content Include="Views\WPSupply\_General.cshtml" />
+    <Content Include="Views\WPSupply\_Domestic.cshtml" />
+    <Content Include="Views\WPSupply\_DomNPB.cshtml" />
+    <Content Include="Views\WPSupply\_DomPB.cshtml" />
+    <Content Include="Views\WPSupply\_Inst.cshtml" />
+    <Content Include="Views\WPSupply\_InstNPB.cshtml" />
+    <Content Include="Views\WPSupply\_Eco.cshtml" />
+    <Content Include="Views\WPSupply\_All.cshtml" />
+    <Content Include="Views\WPQuality\Index.cshtml" />
+    <Content Include="Views\WPQuality\Details.cshtml" />
+    <Content Include="Views\WPQuality\Create.cshtml" />
+    <Content Include="Views\WPQuality\Edit.cshtml" />
+    <Content Include="Views\WPQuality\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

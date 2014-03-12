@@ -1,0 +1,607 @@
+﻿@model SWAT.Models.tblSWATWPsupply
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>tblSWATWPsupply</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.tblSWATWPoverview.wpname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.tblSWATWPoverview.wpname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domPercentUse)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domPercentUse)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domCollectDry1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domCollectDry1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domCollectDryAmount1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domCollectDryAmount1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domCollectWet1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domCollectWet1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domCollectWetAmount1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domCollectWetAmount1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domCollectDry2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domCollectDry2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domCollectDryAmount2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domCollectDryAmount2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domCollectWet2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domCollectWet2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domCollectWetAmount2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domCollectWetAmount2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domCollectDry3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domCollectDry3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domCollectDryAmount3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domCollectDryAmount3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domCollectWet3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domCollectWet3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domCollectWetAmount3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domCollectWetAmount3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domPipedNumHHDry)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domPipedNumHHDry)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domPipedNumHHWet)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domPipedNumHHWet)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATdomWaterUsesLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATdomWaterUsesLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwaterCollectTimeLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwaterCollectTimeLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwaterEffortLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwaterEffortLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATcollectDangerLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATcollectDangerLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domdangerType1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domdangerType1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domdangerType2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domdangerType2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.domdangerType3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.domdangerType3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU1.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU1.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU2.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU2.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU3.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU3.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU4.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU4.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU5.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU5.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaInstitutionHigh1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaInstitutionHigh1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaInstitutionHigh2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaInstitutionHigh2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaInstitutionHigh3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaInstitutionHigh3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaInstitutionHigh4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaInstitutionHigh4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaInstitutionLow1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaInstitutionLow1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaInstitutionLow2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaInstitutionLow2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaInstitutionLow3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaInstitutionLow3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaInstitutionLow4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaInstitutionLow4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaInstitutionPeopleServedWet)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaInstitutionPeopleServedWet)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaInstitutionPeopleServedDry)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaInstitutionPeopleServedDry)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU6.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU6.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwaterCollectTimeLU1.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwaterCollectTimeLU1.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwaterEffortLU1.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwaterEffortLU1.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATcollectDangerLU1.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATcollectDangerLU1.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.indangerType1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.indangerType1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.indangerType2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.indangerType2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.indangerType3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.indangerType3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU7.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU7.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU8.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU8.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU9.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU9.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU10.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU10.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU11.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU11.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ecWaterUse1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ecWaterUse1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ecWaterUse2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ecWaterUse2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ecWaterUse3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ecWaterUse3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ecWaterUse4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ecWaterUse4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ecWaterUse5)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ecWaterUse5)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ecWaterDemandDry)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ecWaterDemandDry)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ecWaterDemandWet)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ecWaterDemandWet)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU12.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU12.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWAT5rankLU13.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWAT5rankLU13.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaInterruption1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaInterruption1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaInterruption2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaInterruption2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaInterruption3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaInterruption3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaInterruption4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaInterruption4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaInterruption5)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaInterruption5)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaInterruption6)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaInterruption6)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwpaReliabilityMonthLU.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU1.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwpaReliabilityMonthLU1.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU2.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwpaReliabilityMonthLU2.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU3.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwpaReliabilityMonthLU3.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU4.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwpaReliabilityMonthLU4.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU5.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwpaReliabilityMonthLU5.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU6.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwpaReliabilityMonthLU6.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU7.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwpaReliabilityMonthLU7.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU8.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwpaReliabilityMonthLU8.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU9.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwpaReliabilityMonthLU9.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU10.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwpaReliabilityMonthLU10.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lkpSWATwpaReliabilityMonthLU11.Description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lkpSWATwpaReliabilityMonthLU11.Description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaReliabilityProblem1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaReliabilityProblem1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaReliabilityProblem2)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaReliabilityProblem2)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaReliabilityProblem3)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaReliabilityProblem3)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaReliabilityProblem4)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaReliabilityProblem4)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaReliabilityProblem5)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaReliabilityProblem5)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.wpaReliabilityProblem6)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.wpaReliabilityProblem6)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

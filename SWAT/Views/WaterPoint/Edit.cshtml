@@ -1,0 +1,84 @@
+﻿@model SWAT.Models.tblSWATWPoverview
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit - Water Points Assessment</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Overview</legend>
+
+        @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.SurveyID, new { SurveyID = ViewBag.SurveyID })
+        
+        <p>
+            @ViewBag.Question1
+        </p>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.wpname)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.wpname)
+            @Html.ValidationMessageFor(model => model.wpname)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question2
+        </p>
+        <div class="editor-field">
+            @Html.DropDownList("wpaLoc", String.Empty)
+            @Html.ValidationMessageFor(model => model.wpaLoc)
+        </div>
+
+        <hr />
+        <p>
+            @ViewBag.Question3
+        </p>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.wpaUseDom)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.wpaUseDom)
+            @Html.ValidationMessageFor(model => model.wpaUseDom)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.wpaUseInst)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.wpaUseInst)
+            @Html.ValidationMessageFor(model => model.wpaUseInst)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.wpaUseEc)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.wpaUseEc)
+            @Html.ValidationMessageFor(model => model.wpaUseEc)
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <p>
+                    <br />
+                    <input type="submit" value="Save" class="btn btn-default" />
+                </p>
+            </div>
+        </div>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

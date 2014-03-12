@@ -1,0 +1,102 @@
+﻿@model SWAT.Models.tblSWATWPsupply
+
+<div id="DomNPB">
+    <hr />
+    <p>
+        @ViewBag.Question14
+    </p>
+    <div class="editor-field">
+        @Html.DropDownList("inwaterCollectTime", String.Empty)
+        @Html.ValidationMessageFor(model => model.inwaterCollectTime)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question15
+    </p>
+    <div class="editor-field">
+        @Html.DropDownList("inwaterEffort", String.Empty)
+        @Html.ValidationMessageFor(model => model.inwaterEffort)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question16
+    </p>
+    <div class="editor-field">
+        @Html.DropDownList("incollectDanger", String.Empty)
+        @Html.ValidationMessageFor(model => model.incollectDanger)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question17
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.indangerType1)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.indangerType1)
+        @Html.ValidationMessageFor(model => model.indangerType1)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.indangerType2)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.indangerType2)
+        @Html.ValidationMessageFor(model => model.indangerType2)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.indangerType3)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.indangerType3)
+        @Html.ValidationMessageFor(model => model.indangerType3)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question18
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.indemoWaterFetch1)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("indemoWaterFetch1", String.Empty)
+        @Html.ValidationMessageFor(model => model.indemoWaterFetch1)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.indemoWaterFetch2)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("indemoWaterFetch2", String.Empty)
+        @Html.ValidationMessageFor(model => model.indemoWaterFetch2)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.indemoWaterFetch3)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("indemoWaterFetch3", String.Empty)
+        @Html.ValidationMessageFor(model => model.indemoWaterFetch3)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.indemoWaterFetch4)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("indemoWaterFetch4", String.Empty)
+        @Html.ValidationMessageFor(model => model.indemoWaterFetch4)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.indemoWaterFetch5)
+    </div>
+    <div class="editor-field">
+        @Html.DropDownList("indemoWaterFetch5", String.Empty)
+        @Html.ValidationMessageFor(model => model.indemoWaterFetch5)
+    </div>
+</div>

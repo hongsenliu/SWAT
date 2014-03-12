@@ -139,17 +139,41 @@ namespace SWAT.Controllers
                     getGroupScorePoint((int)id, 2),
                     getGroupScorePoint((int)id, 3)
                 });
-            
+            YAxisPlotBands[] ygradient = new YAxisPlotBands[100];
+            const int step = 5;
+            string red = "FF";
+            string green = "00";
+            string blue = "00";
+
+            for (int i = 0; i < 50; i++)
+            {
+                int decVal = i * step;
+                green = decVal.ToString("X");
+                if (decVal < 16)
+                {
+                    green = "0" + green;
+                }
+
+                string colorCode1 = "#" + red + green + blue;
+                string colorCode2 = "#" + green + red + blue;
+                ygradient[i] = new YAxisPlotBands { From = i, To = i + 1, Color = ColorTranslator.FromHtml(colorCode1) };
+                ygradient[99 - i] = new YAxisPlotBands { From = 99 - i, To = 100 - i, Color = ColorTranslator.FromHtml(colorCode2) };
+            }
             
             Highcharts barColumn = new Highcharts("overallchart")
-                .InitChart(new Chart { DefaultSeriesType = ChartTypes.Column })
+                .InitChart(new Chart { DefaultSeriesType = ChartTypes.Column,
+                                       
+                })
                 .SetTitle(new Title { Text = "Overall Result - " + tblswatsurvey.tblSWATLocation.name })
                 .SetXAxis(new XAxis { Categories = new[] { "Water Resources", "Community Capacity", "Governance" } })
                 .SetYAxis(new YAxis
                 {
                     Min = 0,
                     Max = 100,
-                    Title = new YAxisTitle { Text = "Index" }
+                    Title = new YAxisTitle { Text = "Index" },
+                    PlotBands = ygradient,
+                    GridLineColor = ColorTranslator.FromHtml("#999999"),
+                    GridLineWidth = 1
                 })
                 .SetLegend(new Legend { Enabled = false })
                 .SetCredits(new Credits { Enabled = false })
@@ -159,7 +183,8 @@ namespace SWAT.Controllers
                     Column = new PlotOptionsColumn
                     {
                         PointPadding = 0,
-                        BorderWidth = 0
+                        BorderWidth = 1,
+                        BorderColor = ColorTranslator.FromHtml("#555555")
                     }
                 })
                 .SetSeries(
@@ -191,7 +216,10 @@ namespace SWAT.Controllers
                 {
                     Min = 0,
                     Max = 100,
-                    Title = new YAxisTitle { Text = "Index" }
+                    Title = new YAxisTitle { Text = "Index" },
+                    PlotBands = ygradient,
+                    GridLineColor = ColorTranslator.FromHtml("#999999"),
+                    GridLineWidth = 1
                 })
                 .SetLegend(new Legend { Enabled = false })
                 .SetCredits(new Credits { Enabled = false })
@@ -201,7 +229,8 @@ namespace SWAT.Controllers
                     Column = new PlotOptionsColumn
                     {
                         PointPadding = 0,
-                        BorderWidth = 0
+                        BorderWidth = 1,
+                        BorderColor = ColorTranslator.FromHtml("#555555")
                     }
                 })
                 .SetSeries(
@@ -245,7 +274,12 @@ namespace SWAT.Controllers
             {
                 return HttpNotFound();
             }
-
+            // TODO PieChart
+            int sec9scores = db.tblSWATScores.Include(t => t.lkpSWATScoreVarsLU).Where(e => e.lkpSWATScoreVarsLU.SectionID == 9 && e.SurveyID == id).Count();
+            int sec9ans = db.tblSWATScores.Include(t => t.lkpSWATScoreVarsLU).Where(e => e.lkpSWATScoreVarsLU.SectionID == 9 && e.SurveyID == id && e.Value != null).Count();
+            
+            double a = (double)sec9ans / sec9scores * 100;
+            double b = 100 - a;
             Highcharts chart = new Highcharts("chart")
                 .InitChart(new Chart { PlotShadow = false })
                 .SetTitle(new Title { Text = string.Empty})
@@ -271,13 +305,14 @@ namespace SWAT.Controllers
                     Name = "Background Information Progress",
                     Data = new Data(new object[]
                             {
-                                new object[] { "Answered", 45.0 },
+                                new object[] { "Answered", a },
                                 new Point
                                     {
                                         Name = "No Answer",
-                                        Y = 12.8,
+                                        Y = b,
                                         Sliced = true,
-                                        Selected = true
+                                        Selected = true, 
+                                        Color = ColorTranslator.FromHtml("#FFFF00")
                                     }
                             })
                 });
@@ -432,6 +467,14 @@ namespace SWAT.Controllers
 
         private void DeleteRelatedRecords(int id)
         {
+            var waterpts = db.tblSWATWPoverviews.Where(e => e.SurveyID == id);
+            foreach (tblSWATWPoverview w in waterpts)
+            {
+                var wpCtrl = new WaterPointController();
+                wpCtrl.DeleteRelatedForms(w.ID);
+                db.tblSWATWPoverviews.Remove(w);
+            }
+
             var centrals = db.tblSWATSFcentrals.Where(e => e.SurveyID == id);
             foreach (tblSWATSFcentral c in centrals)
             {

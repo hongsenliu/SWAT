@@ -188,5 +188,35 @@ namespace SWAT.Models
         public DbSet<lkpSWATwpaLoc> lkpSWATwpaLocs { get; set; }
         public DbSet<lkpSWATwpaTypeDesc> lkpSWATwpaTypeDescs { get; set; }
         public DbSet<tblSWATWPoverview> tblSWATWPoverviews { get; set; }
+        public DbSet<tblSWATWPscore> tblSWATWPscores { get; set; }
+        public DbSet<lkpSWATWPscoreLU> lkpSWATWPscoreLUs { get; set; }
+        public DbSet<lkpSWATWPsectionLU> lkpSWATWPsectionLUs { get; set; }
+        public DbSet<lkpSWATcollectDangerLU> lkpSWATcollectDangerLUs { get; set; }
+        public DbSet<lkpSWATdomWaterUsesLU> lkpSWATdomWaterUsesLUs { get; set; }
+        public DbSet<lkpSWATeaseUseLU> lkpSWATeaseUseLUs { get; set; }
+        public DbSet<lkpSWATscores_collectDanger> lkpSWATscores_collectDanger { get; set; }
+        public DbSet<lkpSWATscores_domWaterUses> lkpSWATscores_domWaterUses { get; set; }
+        public DbSet<lkpSWATscores_easeUse> lkpSWATscores_easeUse { get; set; }
+        public DbSet<lkpSWATscores_waterCollectTime> lkpSWATscores_waterCollectTime { get; set; }
+        public DbSet<lkpSWATscores_waterEffort> lkpSWATscores_waterEffort { get; set; }
+        public DbSet<lkpSWATscores_wpaReliabilityMonth> lkpSWATscores_wpaReliabilityMonth { get; set; }
+        public DbSet<lkpSWATwaterCollectTimeLU> lkpSWATwaterCollectTimeLUs { get; set; }
+        public DbSet<lkpSWATwaterEffortLU> lkpSWATwaterEffortLUs { get; set; }
+        public DbSet<lkpSWATwpaReliabilityMonthLU> lkpSWATwpaReliabilityMonthLUs { get; set; }
+        public DbSet<tblSWATWPsupply> tblSWATWPsupplies { get; set; }
+        public DbSet<lkpSWATfaecalPathogensLU> lkpSWATfaecalPathogensLUs { get; set; }
+        public DbSet<lkpSWATqualTreatedLU> lkpSWATqualTreatedLUs { get; set; }
+        public DbSet<lkpSWATscores_faecalPathogens> lkpSWATscores_faecalPathogens { get; set; }
+        public DbSet<lkpSWATscores_qualTreated> lkpSWATscores_qualTreated { get; set; }
+        public DbSet<lkpSWATscores_userTreatedifTreatedbefore> lkpSWATscores_userTreatedifTreatedbefore { get; set; }
+        public DbSet<lkpSWATscores_userTreatedifUntreatedBefore> lkpSWATscores_userTreatedifUntreatedBefore { get; set; }
+        public DbSet<lkpSWATscores_userTreatmentMethod> lkpSWATscores_userTreatmentMethod { get; set; }
+        public DbSet<lkpSWATscores_waterTasteOdour> lkpSWATscores_waterTasteOdour { get; set; }
+        public DbSet<lkpSWATscores_waterTurbidity> lkpSWATscores_waterTurbidity { get; set; }
+        public DbSet<lkpSWATuserTreatedLU> lkpSWATuserTreatedLUs { get; set; }
+        public DbSet<lkpSWATuserTreatmentMethodLU> lkpSWATuserTreatmentMethodLUs { get; set; }
+        public DbSet<lkpSWATwaterTasteOdourLU> lkpSWATwaterTasteOdourLUs { get; set; }
+        public DbSet<lkpSWATwaterTurbidityLU> lkpSWATwaterTurbidityLUs { get; set; }
+        public DbSet<tblSWATWPquality> tblSWATWPqualities { get; set; }
     }
 }

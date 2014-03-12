@@ -1,0 +1,92 @@
+﻿@model SWAT.Models.tblSWATWPquality
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>tblSWATWPquality</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.wpID, "tblSWATWPoverview")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("wpID", String.Empty)
+            @Html.ValidationMessageFor(model => model.wpID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.qualTreated, "lkpSWATqualTreatedLU")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("qualTreated", String.Empty)
+            @Html.ValidationMessageFor(model => model.qualTreated)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.userTreated, "lkpSWATuserTreatedLU")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("userTreated", String.Empty)
+            @Html.ValidationMessageFor(model => model.userTreated)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.userTreatmentMethod, "lkpSWATuserTreatmentMethodLU")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("userTreatmentMethod", String.Empty)
+            @Html.ValidationMessageFor(model => model.userTreatmentMethod)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.faecalPathogens, "lkpSWATfaecalPathogensLU")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("faecalPathogens", String.Empty)
+            @Html.ValidationMessageFor(model => model.faecalPathogens)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.waterTaste, "lkpSWATwaterTasteOdourLU1")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("waterTaste", String.Empty)
+            @Html.ValidationMessageFor(model => model.waterTaste)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.waterOdour, "lkpSWATwaterTasteOdourLU")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("waterOdour", String.Empty)
+            @Html.ValidationMessageFor(model => model.waterOdour)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.waterTurbidity, "lkpSWATwaterTurbidityLU")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("waterTurbidity", String.Empty)
+            @Html.ValidationMessageFor(model => model.waterTurbidity)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

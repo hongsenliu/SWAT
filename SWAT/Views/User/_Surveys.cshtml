@@ -11,9 +11,10 @@
         grid.Column("tblSWATLocation.lkpCountry.CommonName", header: "Country"),
         grid.Column("tblSWATLocation.lkpRegion.Name", header: "Region"),
         grid.Column("StartTime", header: "Start Date"),
-        grid.Column("Status", header: "Status"),
+        //grid.Column("Status", header: "Status"),
         grid.Column(header: "", format: (item) => new HtmlString(
-            @Html.ActionLink("Report", "Report", "Survey", new {id = item.id}, null).ToString() + " | " + @Html.ActionLink("Details", "Details", "Survey", new {id = item.id}, null).ToString() + " | " + @Html.ActionLink("Edit", "Edit", "Location", new { uid = Model.Userid1, id = item.LocationID, SurveyID=item.ID}, null).ToString() + " | "+
+            @Html.ActionLink("Report", "Report", "Survey", new {id = item.id}, null).ToString() + " | " + @Html.ActionLink("Water Points", "WaterPoints", "Survey", new {id = item.id}, null).ToString() + " | "+ 
+            @Html.ActionLink("Details", "Details", "Survey", new {id = item.id}, null).ToString() + " | " + @Html.ActionLink("Edit", "Edit", "Location", new { uid = Model.Userid1, id = item.LocationID, SurveyID=item.ID}, null).ToString() + " | "+
             @Html.ActionLink("Delete", "Delete", "Survey", new {id = item.id}, null).ToString()
                         )
         )));   

@@ -1,0 +1,79 @@
+﻿@model SWAT.Models.tblSWATWPsupply
+
+<div id="Eco">
+    <hr />
+    <h4>
+        Economic Use
+    </h4>
+    <p>
+        @ViewBag.Question19
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ecWaterUse1)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.ecWaterUse1)
+        @Html.ValidationMessageFor(model => model.ecWaterUse1)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ecWaterUse2)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.ecWaterUse2)
+        @Html.ValidationMessageFor(model => model.ecWaterUse2)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ecWaterUse3)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.ecWaterUse3)
+        @Html.ValidationMessageFor(model => model.ecWaterUse3)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ecWaterUse4)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.ecWaterUse4)
+        @Html.ValidationMessageFor(model => model.ecWaterUse4)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ecWaterUse5)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.ecWaterUse5)
+        @Html.ValidationMessageFor(model => model.ecWaterUse5)
+    </div>
+
+    <hr />
+    <p>
+        How much water is required each day?
+    </p>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ecWaterDemandDry)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.ecWaterDemandDry)
+        @Html.ValidationMessageFor(model => model.ecWaterDemandDry)
+    </div>
+
+    <div class="editor-label">
+        @Html.LabelFor(model => model.ecWaterDemandWet)
+    </div>
+    <div class="editor-field">
+        @Html.EditorFor(model => model.ecWaterDemandWet)
+        @Html.ValidationMessageFor(model => model.ecWaterDemandWet)
+    </div>
+
+    <hr />
+    <p>
+        @ViewBag.Question20
+    </p>
+    <div class="editor-field">
+        @Html.DropDownList("ecSupply", String.Empty)
+        @Html.ValidationMessageFor(model => model.ecSupply)
+    </div>
+</div>
